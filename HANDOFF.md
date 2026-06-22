@@ -62,40 +62,45 @@ and the dashboard.
 
 ---
 
-## 4. What still needs to be done — the routines
+## 4. Routines — current state
 
-### A. SCOUT — recurring research routine (NOT yet created)
+### A. SCOUT — recurring research routine  ✅ LIVE (Cowork scheduled task)
 
-- **What**: follow `SCOUT.md`. Reads the brain, scans the three channels, scores fit,
-  writes the research brief to `editions/<slug>/research-brief.md`, appends/enriches rows
-  in `data/opportunities.json`, links the brief in `documents`, commits + pushes.
-- **Two jobs in one**: (1) discover brand-new calls; (2) enrich user-suggested cards
-  that are sitting `researched: false` so they unlock for Pursuing.
-- **To wire**:
-  1. Decide the run environment — it must have the repo cloned and push access (a
-     machine/agent session that can `git push`, or a token-authenticated checkout).
-  2. Create it as a **scheduled task** (suggested cadence: weekly, Monday AM).
-  3. Have it email/report a digest: new finds, anything URGENT (deadline ≤ 21 days), top
-     by fit.
-  4. Rule: never overwrite human-owned fields (`status`, `owner`, `notes`, `flagged`).
+- **Where it runs**: a **Cowork scheduled task**, id `inland-opportunity-scout`, cron
+  `0 8 * * 1` (Mondays ~8am local). Manage it under Cowork → Scheduled.
+- **What it does**: follows `SCOUT.md` — reads the brain, scans the three channels,
+  scores fit, writes a research brief to `editions/<slug>/research-brief.md`,
+  appends/enriches rows in `data/opportunities.json`, links the brief in `documents`,
+  and reports a digest in the task result. Two jobs: discover new calls **and** enrich
+  user-suggested cards (`researched: false`) so they unlock for Pursuing.
+- **How it writes**: because Cowork is sandboxed (and the local clone can be diverged),
+  it commits to the LIVE repo via the **GitHub API helper** `scripts/inland-repo.mjs`,
+  which reads `GITHUB_TOKEN`/`GITHUB_REPO`/`GITHUB_BRANCH` from a gitignored **`.env`**
+  in the repo root. Pull that file once with `vercel env pull .env --environment=production`.
+  If `.env` is missing, the run stops and reports — it never `git push`es.
+- **Proven**: a manual run on 2026-06-22 added two Goethe opportunities + briefs and they
+  rendered on the dashboard.
 
-### B. PRODUCER — on-demand production routine (NOT yet created)
+### B. PRODUCER — on-demand production routine  ⚙️ command ready (Claude Code)
 
-- **What**: follow `PRODUCER.md`. Reads `data/opportunities.json`, takes
-  `status === "pursuing"` (flagged first, then deadline, then fit), sets
-  `production: "in_progress"`, runs deep research, produces the full asset set into
+- **Where it runs**: **Claude Code** on your Mac, as the `/producer` slash command.
+  Source lives at `claude-code/producer.md`; install it by moving it to
+  `.claude/commands/producer.md` (`mkdir -p .claude/commands && mv claude-code/producer.md .claude/commands/producer.md`).
+- **What it does**: follows `PRODUCER.md` — `git pull --rebase`, takes
+  `status === "pursuing"` (flagged → deadline → fit, or a target passed as an argument),
+  sets `production: "in_progress"`, runs deep research, produces the full asset set into
   `editions/<territory>/`, sets `production: "drafted"`, links every file in `documents`,
-  commits + pushes. Presents for review before submission.
-- **To wire**:
-  1. Build it as a **reusable skill / command** (not scheduled) — it's expensive and
-     wants human judgment. Trigger: "produce the pursued opportunities."
-  2. Confirm it has the document skills available (docx, xlsx, pptx, pdf) and the brain.
-  3. Keep it from changing `status` — leave Archive to the team.
+  then commits + pushes. Presents for review; never changes `status` (Archive is the
+  team's call).
+- **How it writes**: plain `git` — Claude Code has your real credentials and a synced
+  clone, so **no token/.env needed** here (unlike the Scout).
+- **Run it**: open Claude Code in the repo, then `/producer` (or `/producer <id>`). Needs
+  the document skills (docx, xlsx, pptx, pdf) available.
 
-### C. (Optional) DEADLINE WATCH — light scheduled reminder
+### C. (Optional) DEADLINE WATCH — not built
 
 - A small scheduled task that scans `pursuing` items and pings when a deadline is within
-  N days. Cheap; nice-to-have after A and B.
+  N days. Cheap; nice-to-have later.
 
 ---
 
