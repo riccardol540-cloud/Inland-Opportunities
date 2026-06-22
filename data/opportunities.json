@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-06-22T20:32:05.674Z",
+    "lastUpdated": "2026-06-22T20:32:08.732Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -92,11 +92,16 @@
           "changes": {
             "vote": 1
           }
+        },
+        {
+          "at": "2026-06-22T20:32:08.732Z",
+          "by": "anon",
+          "changes": {
+            "vote": 0
+          }
         }
       ],
-      "votes": {
-        "anon": 1
-      }
+      "votes": {}
     },
     {
       "id": "goethe-ikf-2026-r2",
