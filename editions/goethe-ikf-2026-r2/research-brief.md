@@ -25,3 +25,38 @@ Project description, budget, timeline, a co-production/partner agreement, and te
 - Strongest if paired with a concrete partner + territory before the Round 2 window opens.
 
 *Sources: goethe.de/en/kul/foe/int/ikf.html; fundsforNGOs IKF RFA.*
+
+---
+
+## ⚠️ Producer review — 2026-06-22 (corrects the fit above)
+
+A Producer session checked the IKF against the **official Goethe guidelines** before
+building an application and found a **scope mismatch** that the original brief missed.
+
+- **The IKF funds performing arts only** — *music, theatre, dance and performance*
+  (plus hybrid / interdisciplinary / digital formats). It **explicitly excludes**
+  "film or exhibition projects without a performative element" and "music recordings."
+  **Photography, literature, visual arts and publishing are not covered.**
+- **Applicant** must be an artist/ensemble whose main residence and work is **outside
+  Germany, Austria and Switzerland**, collaborating in dialogue with a **Germany-based**
+  artist/ensemble/initiative. (INLAND, Italy-based, *would* be an eligible applicant.)
+- Funding €15,000–30,000, **max 75%** of costs (≥25% co-financing). The relevant
+  **Goethe-Institut in-country must be informed before applying** or the project is
+  ineligible. The work must be **presented at least once outside Germany.**
+
+**Conclusion:** A standard INLAND magazine edition — INLAND's core output — **does not
+qualify** for the IKF. The earlier *fit 4* was over-generous.
+
+**Recommendation:**
+1. **Redirect effort to the Goethe Africa–Europe Partnerships fund** (`goethe-africa-europe-2026`),
+   whose *Visual Arts* strand does cover INLAND's work, for the Rwanda edition.
+2. *If* the team still wants IKF specifically, the only viable route is to **reframe** it
+   as a genuine **performing-arts co-production** built on Kashmir's living performance
+   traditions (Bhand Pather folk theatre; Dard-Shina music / Habba-Khatoon Dramatic Club;
+   Wanwun women's song) with a Germany-based theatre/production house, premiered in
+   Kashmir and Germany — with INLAND as the non-German producer and the magazine/film as
+   the documentation layer. This was offered and **not pursued** in this session.
+
+Production was reverted to `none`; no application assets were produced.
+
+*Source: goethe.de/en/kul/foe/int.html (official IKF guidelines, retrieved 2026-06-22).*

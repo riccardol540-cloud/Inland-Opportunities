@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-06-22T20:26:18.666Z",
+    "lastUpdated": "2026-06-22T20:29:36.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -76,8 +76,8 @@
       "deadline": "2026-10-01",
       "budget": "€15,000–30,000 (fees, travel, production)",
       "eligibility": "Cross-border collaboration with a German/Goethe partner; INLAND qualifies as EU producer with a co-production partner.",
-      "fit": 4,
-      "fitRationale": "Funds genuine cross-border, production-scale visual work — fits an INLAND edition co-produced with an in-country partner. Goethe is a prior funder.",
+      "fit": 2,
+      "fitRationale": "Producer review: the IKF funds PERFORMING ARTS ONLY (music, theatre, dance, performance) and explicitly excludes film/visual-arts/publishing — so a standard INLAND magazine edition does not qualify. Only viable as a reframed performing-arts co-production (e.g. Bhand Pather / Dard-Shina music) with a Germany-based theatre partner. Recommend redirecting to the Goethe Africa–Europe Visual Arts fund. See research brief, Producer review.",
       "territory": "Open — pairs with a new edition co-produced with a local partner",
       "requiredDocs": [
         "Project description",
@@ -88,7 +88,7 @@
       ],
       "researched": true,
       "flagged": false,
-      "production": "in_progress",
+      "production": "none",
       "documents": [
         {
           "label": "Research brief",
@@ -114,6 +114,15 @@
           "changes": {
             "production": "in_progress",
             "note": "Producer started: IKF R2 × Kashmir edition"
+          }
+        },
+        {
+          "at": "2026-06-22T20:29:36.000Z",
+          "by": "producer",
+          "changes": {
+            "production": "none",
+            "fit": 2,
+            "note": "Stopped: IKF is performing-arts-only per official Goethe guidelines; magazine edition ineligible. Reverted; recommend Africa–Europe fund or a reframed performing-arts co-production. No assets produced."
           }
         }
       ]
