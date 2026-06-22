@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-06-22T21:05:46.639Z",
+    "lastUpdated": "2026-06-22T21:06:11.382Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -293,7 +293,7 @@
       ],
       "status": "archived",
       "owner": "",
-      "notes": "Prendono solioperformance art",
+      "notes": "Prendono solo performance art",
       "addedBy": "scout",
       "addedAt": "2026-06-22",
       "history": [
@@ -354,6 +354,13 @@
           "by": "anon",
           "changes": {
             "status": "archived"
+          }
+        },
+        {
+          "at": "2026-06-22T21:06:11.382Z",
+          "by": "Riccardo",
+          "changes": {
+            "notes": "Prendono solo performance art"
           }
         }
       ]
