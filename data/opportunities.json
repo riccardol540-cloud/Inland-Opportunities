@@ -1,10 +1,92 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-06-22T20:58:33.984Z",
+    "lastUpdated": "2026-06-22T21:05:00.119Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
+    {
+      "id": "opp-1782162300119",
+      "title": "Goethe-Institut — Africa–Europe Partnerships for Culture (Visual Arts / Mobility)",
+      "funder": "Goethe-Institut",
+      "channel": "cultural-institute",
+      "link": "https://on-the-move.org/news/goethe-institut-mobility-grants-artists-and-culture-professionals-sub-saharan-africa-and",
+      "deadline": "2026-09-15",
+      "budget": "Mobility up to €4,000 (travel); Visual Arts strand larger (production)",
+      "eligibility": "Artists/cultural professionals collaborating between Sub-Saharan Africa and Europe.",
+      "fit": 4,
+      "fitRationale": "Direct territory match for the in-progress Rwanda edition; funds Africa–Europe co-creation. Mobility = scouting trip; Visual Arts = production.",
+      "territory": "Rwanda (in-progress edition)",
+      "requiredDocs": [
+        "Project description",
+        "Partner confirmation (African + European)",
+        "Budget"
+      ],
+      "researched": true,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/research-brief.md"
+        },
+        {
+          "label": "Deep-research report",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/deep-research-report.md"
+        },
+        {
+          "label": "Selected story leads",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/selected-story-leads.md"
+        },
+        {
+          "label": "Topics + Contacts (xlsx)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/INLAND_Rwanda_Topics_Contacts.xlsx"
+        },
+        {
+          "label": "Pitch deck (pptx)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/INLAND_Rwanda_Pitch.pptx"
+        },
+        {
+          "label": "Pitch (web/html)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/INLAND_Rwanda_Pitch.html"
+        },
+        {
+          "label": "Overview (PDF)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/INLAND_Rwanda_Overview.pdf"
+        },
+        {
+          "label": "Application — Project description",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/application/project-description.md"
+        },
+        {
+          "label": "Application — Partners & confirmation",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/application/partners.md"
+        },
+        {
+          "label": "Application — Budget",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/application/budget.md"
+        },
+        {
+          "label": "Application — Timeline",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/application/timeline.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "",
+      "addedBy": "Riccardo",
+      "addedAt": "2026-06-22",
+      "history": [
+        {
+          "at": "2026-06-22T21:05:00.119Z",
+          "by": "Riccardo",
+          "changes": {
+            "duplicatedFrom": "goethe-africa-europe-2026"
+          }
+        }
+      ],
+      "votes": {},
+      "country": ""
+    },
     {
       "id": "goethe-africa-europe-2026",
       "title": "Goethe-Institut — Africa–Europe Partnerships for Culture (Visual Arts / Mobility)",
