@@ -1,10 +1,35 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-06-22T20:26:04.752Z",
+    "lastUpdated": "2026-06-22T20:26:09.634Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
+    {
+      "title": "VERIFY grant",
+      "link": "https://ex.org",
+      "addedBy": "alice",
+      "country": "",
+      "id": "opp-1782159969633",
+      "status": "new",
+      "researched": true,
+      "fit": 5,
+      "votes": {},
+      "production": "none",
+      "documents": [],
+      "owner": "",
+      "history": [
+        {
+          "at": "2026-06-22T20:26:09.634Z",
+          "by": "alice",
+          "changes": {
+            "duplicatedFrom": "opp-1782159940831"
+          }
+        }
+      ],
+      "addedAt": "2026-06-22",
+      "notes": ""
+    },
     {
       "title": "VERIFY grant",
       "link": "https://ex.org",
