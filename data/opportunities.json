@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": null,
+    "lastUpdated": "2026-06-22T14:33:12.862Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -17,13 +17,26 @@
       "fit": 5,
       "fitRationale": "Funds place-based cultural documentation; natural fit for an INLAND edition.",
       "territory": "Open — candidate: a Central Asian or Caucasus territory",
-      "requiredDocs": ["Concept note (max 3 pages)", "Budget", "Timeline", "Team CVs"],
-      "status": "new",
+      "requiredDocs": [
+        "Concept note (max 3 pages)",
+        "Budget",
+        "Timeline",
+        "Team CVs"
+      ],
+      "status": "pursuing",
       "owner": "",
       "notes": "This is a sample row so the dashboard renders before the first real Scout run. Archive or delete it once real opportunities arrive.",
       "addedBy": "seed",
       "addedAt": "2026-06-22",
-      "history": []
+      "history": [
+        {
+          "at": "2026-06-22T14:33:12.862Z",
+          "by": "deploy-verify",
+          "changes": {
+            "status": "pursuing"
+          }
+        }
+      ]
     }
   ]
 }
