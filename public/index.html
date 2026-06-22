@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#f9f4ee" />
   <title>INLAND · Opportunities</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,600&family=Fraunces:opsz,wght@9..144,400;9..144,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
@@ -17,7 +18,7 @@
       <div class="gate-mark">INLAND</div>
       <div class="gate-sub">Opportunities</div>
       <input id="gate-pw" type="password" placeholder="Password" autocomplete="current-password" />
-      <button type="submit">Enter</button>
+      <button type="submit" class="btn">Enter</button>
       <div id="gate-error" class="gate-error"></div>
     </form>
   </div>
@@ -25,20 +26,29 @@
   <!-- Dashboard -->
   <div id="app" class="app hidden">
     <header class="topbar">
-      <div class="brand">
-        <span class="brand-mark">INLAND</span>
+      <a class="brand" href="/" aria-label="INLAND Opportunities">
+        <span class="brand-logo">
+          <svg viewBox="0 0 63.28 13.29" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="INLAND">
+            <g transform="translate(0, 0.14)"><path d="M2.17623 0C2.09433 0.198902 2.04753 0.391954 2.03583 0.579156C2.02413 0.766358 2.01828 0.906759 2.01828 1.00036V11.6709C2.01828 12.0453 2.02413 12.3495 2.03583 12.5835C2.05923 12.8175 2.08848 13.0047 2.12358 13.1451H0.0526506C0.0760509 13.0398 0.0936013 12.8935 0.105301 12.7063C0.117002 12.5074 0.122852 12.2208 0.122852 11.8464V1.24606C0.122852 0.91846 0.111151 0.661057 0.0877512 0.473854C0.0643508 0.274953 0.0351005 0.117001 0 0H2.17623Z" fill="currentColor"/></g>
+            <g transform="translate(4.73, 0.017)"><path d="M0 0H2.36928L10.0036 10.4073V13.2855L0 0ZM0 13.2679H1.42157C1.11737 13.0339 0.848262 12.7707 0.614259 12.4782C0.380255 12.1857 0.175502 11.8873 0 11.5831V13.2679ZM10.0036 0H8.58207C8.88627 0.234002 9.15538 0.497255 9.38938 0.789759C9.62338 1.08226 9.82813 1.38062 10.0036 1.68482V0Z" fill="currentColor"/></g>
+            <g transform="translate(17.56, 0.035)"><path d="M2.19378 0C2.11188 0.198902 2.06508 0.397805 2.05338 0.596707C2.04168 0.783909 2.03583 0.92431 2.03583 1.01791V11.7586C2.03583 12.133 2.04168 12.4372 2.05338 12.6712C2.06508 12.9052 2.08848 13.0983 2.12358 13.2504H0.0526505C0.0760508 13.1451 0.0936009 12.993 0.105301 12.7941C0.117001 12.5952 0.122853 12.3085 0.122853 11.9341V1.26361C0.122853 0.924311 0.111151 0.661058 0.0877509 0.473855C0.0643506 0.274953 0.0351005 0.117001 0 0H2.19378ZM8.52942 13.2504H7.1254C7.4296 13.0164 7.69286 12.759 7.91516 12.4782C8.14916 12.1857 8.35392 11.8815 8.52942 11.5656V13.2504Z" fill="currentColor"/></g>
+            <g transform="translate(27.93, 0)"><path d="M7.93271 13.2855C7.93271 13.2738 7.93856 13.2562 7.95026 13.2328C7.96196 13.2094 7.96781 13.186 7.96781 13.1626C7.95611 13.1041 7.93856 13.0105 7.91516 12.8818C7.89176 12.7531 7.8157 12.484 7.687 12.0745L7.24825 10.7232C7.20145 10.5945 7.14295 10.419 7.07274 10.1967C7.00254 9.97436 6.91479 9.69941 6.80949 9.3718L6.54624 8.54694C6.52284 8.51184 6.47019 8.37144 6.38828 8.12574C6.24788 7.71624 6.10163 7.30088 5.94953 6.87968C5.80913 6.45847 5.66872 6.06067 5.52832 5.68626C5.39962 5.30016 5.28262 4.955 5.17732 4.6508C5.07202 4.3466 4.98427 4.1126 4.91407 3.94879C4.89067 3.86689 4.85557 3.76159 4.80877 3.63289C4.76197 3.50419 4.70931 3.35209 4.65081 3.17658L4.29981 2.24643L4.82632 0.807309C4.86142 0.713708 4.90237 0.596707 4.94917 0.456305C5.00767 0.315904 5.06617 0.163802 5.12467 0C5.22997 0.315904 5.39377 0.783909 5.61607 1.40402C5.85008 2.02412 6.13088 2.77293 6.45849 3.65044C6.78609 4.51625 7.15465 5.49906 7.56415 6.59887C7.98536 7.69868 8.44167 8.8804 8.93307 10.144C9.07347 10.5184 9.21387 10.8928 9.35428 11.2672C9.49468 11.6299 9.62923 11.9985 9.75793 12.3729C9.82813 12.5484 9.89833 12.718 9.96854 12.8818C10.0504 13.0339 10.1265 13.1685 10.1967 13.2855H7.93271ZM0.754661 11.3725V11.355L0 13.2855H0.754661H1.31627H2.42193C2.04753 13.0164 1.72577 12.718 1.45667 12.3904C1.18757 12.0628 0.953563 11.7235 0.754661 11.3725Z" fill="currentColor"/></g>
+            <g transform="translate(40.59, 0.017)"><path d="M0 0H2.36928L10.0036 10.4073V13.2855L0 0ZM0 13.2679H1.42157C1.11737 13.0339 0.848263 12.7707 0.614259 12.4782C0.380256 12.1857 0.175502 11.8873 0 11.5831V13.2679ZM10.0036 0H8.58207C8.88627 0.234002 9.15538 0.497255 9.38938 0.789759C9.62338 1.08226 9.82814 1.38062 10.0036 1.68482V0Z" fill="currentColor"/></g>
+            <g transform="translate(51.96, 0)"><path d="M9.02082 1.49177C10.5535 2.67348 11.3199 4.3583 11.3199 6.54622C11.3199 8.02044 10.9864 9.28405 10.3195 10.3371C9.64093 11.4486 8.64642 12.2559 7.336 12.759C7.3126 12.7707 7.29505 12.7765 7.28335 12.7765C7.28335 12.7765 7.27165 12.7824 7.24825 12.7941C7.75136 12.2325 8.16086 11.4544 8.47676 10.4599C8.79267 9.45371 8.95062 8.14914 8.95062 6.54622C8.95062 4.10089 8.57037 2.29322 7.80986 1.12321C7.71625 0.971111 7.59925 0.813159 7.45885 0.649357C8.06726 0.85996 8.58792 1.14076 9.02082 1.49177ZM2.19378 0C2.11188 0.198902 2.06508 0.397805 2.05338 0.596706C2.04168 0.783909 2.03583 0.92431 2.03583 1.01791V11.7937C2.03583 12.1681 2.04168 12.4723 2.05338 12.7063C2.07678 12.9403 2.10603 13.1334 2.14113 13.2855H0.0526505C0.0760508 13.1802 0.0936009 13.0281 0.105301 12.8292C0.117001 12.6186 0.122854 12.3261 0.122854 11.9517V1.26361C0.122854 0.92431 0.111151 0.661057 0.0877509 0.473855C0.0643506 0.274953 0.0351005 0.117001 0 0H2.19378Z" fill="currentColor"/></g>
+          </svg>
+        </span>
         <span class="brand-sub">Opportunities</span>
-      </div>
+      </a>
       <div class="topbar-actions">
-        <span id="updated" class="updated"></span>
-        <button id="refresh" class="ghost">Refresh</button>
-        <button id="add" class="ghost">+ Add</button>
-        <button id="logout" class="ghost">Sign out</button>
+        <a href="/guide.html" class="tertiary">How it works</a>
+        <button id="add" class="btn" type="button">+ Suggest</button>
+        <button id="refresh" class="ghost" type="button">Refresh</button>
+        <button id="logout" class="ghost" type="button">Sign out</button>
       </div>
     </header>
 
     <div class="legend">
-      <span>Fit:</span>
+      <span class="legend-label">Fit</span>
       <span class="chip f5">5 bullseye</span>
       <span class="chip f4">4 strong</span>
       <span class="chip f3">3 possible</span>
@@ -48,21 +58,91 @@
 
     <main class="board">
       <section class="column" data-status="new">
-        <h2>Inbox <span class="count" id="count-new">0</span></h2>
-        <div class="cards" id="col-new"></div>
+        <div class="column-head"><h2>Inbox</h2><span class="count" id="count-new">0</span></div>
+
+        <div class="group-label">Ready to pursue</div>
+        <div class="cards" id="col-new-ready" data-list="ready"></div>
+
+        <div class="group-label locked">Awaiting research</div>
+        <div class="cards" id="col-new-awaiting" data-list="awaiting"></div>
       </section>
+
       <section class="column" data-status="pursuing">
-        <h2>Pursuing <span class="count" id="count-pursuing">0</span></h2>
-        <div class="cards" id="col-pursuing"></div>
+        <div class="column-head"><h2>Pursuing</h2><span class="count" id="count-pursuing">0</span></div>
+        <div class="cards" id="col-pursuing" data-list="pursuing"></div>
       </section>
+
       <section class="column" data-status="archived">
-        <h2>Archived <span class="count" id="count-archived">0</span></h2>
-        <div class="cards" id="col-archived"></div>
+        <div class="column-head"><h2>Archived</h2><span class="count" id="count-archived">0</span></div>
+        <div class="cards" id="col-archived" data-list="archived"></div>
       </section>
     </main>
+
+    <footer class="board-foot">
+      <button id="identity" class="identity" type="button" title="Set your name (used for the edit log and new suggestions)"></button>
+      <span id="savestate" class="savestate" aria-live="polite"></span>
+      <span id="updated" class="updated"></span>
+    </footer>
   </div>
 
+  <!-- Suggest-opportunity modal -->
+  <dialog id="add-dialog">
+    <form id="add-form" class="dialog-form" method="dialog">
+      <div class="dialog-title">Suggest an opportunity</div>
+      <div class="dialog-intro">It lands in <b>Awaiting research</b>. Claude scans it in the next research session, then it can move to Pursuing.</div>
+      <div class="field">
+        <label for="add-title">Opportunity name <span class="req">*</span></label>
+        <input id="add-title" name="title" type="text" placeholder="e.g. Prince Claus Fund — mobility grant" required />
+      </div>
+      <div class="field">
+        <label for="add-link">Link</label>
+        <input id="add-link" name="link" type="url" placeholder="https://…" inputmode="url" />
+        <div class="hint">The page describing the call. Helps the research session.</div>
+      </div>
+      <div class="field">
+        <label for="add-by">Added by <span class="req">*</span></label>
+        <input id="add-by" name="addedBy" type="text" placeholder="Your name" required />
+        <div class="hint">Tags you as the person on this one.</div>
+      </div>
+      <div id="add-error" class="dialog-error"></div>
+      <div class="dialog-actions">
+        <button type="button" class="ghost" data-close>Cancel</button>
+        <button type="submit" class="btn">Add suggestion</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Delete confirm -->
+  <dialog id="confirm-dialog">
+    <form class="dialog-form" method="dialog">
+      <div class="dialog-title">Delete opportunity</div>
+      <div class="dialog-intro" id="confirm-text">This removes it permanently and commits the change.</div>
+      <div class="dialog-actions">
+        <button type="button" class="ghost" data-close>Cancel</button>
+        <button type="button" class="btn" id="confirm-yes" style="background:var(--danger);border-color:var(--danger)">Delete</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Name capture -->
+  <dialog id="name-dialog">
+    <form id="name-form" class="dialog-form" method="dialog">
+      <div class="dialog-title">Your name</div>
+      <div class="dialog-intro">Used to tag who edited or suggested something.</div>
+      <div class="field">
+        <label for="name-input">Name</label>
+        <input id="name-input" type="text" placeholder="e.g. Riccardo" required />
+      </div>
+      <div class="dialog-actions">
+        <button type="button" class="ghost" data-close>Cancel</button>
+        <button type="submit" class="btn">Save</button>
+      </div>
+    </form>
+  </dialog>
+
   <div id="toast" class="toast hidden"></div>
+
+  <script src="/vendor/Sortable.min.js"></script>
   <script src="/app.js"></script>
 </body>
 </html>

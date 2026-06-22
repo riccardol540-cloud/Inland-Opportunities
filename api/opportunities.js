@@ -1,7 +1,12 @@
 import { isAuthed, readData, writeData, readBody } from "./_lib.js";
 
-const EDITABLE = ["status", "owner", "notes", "fit", "fitRationale", "territory", "title", "deadline", "budget"];
+const EDITABLE = [
+  "status", "owner", "notes", "fit", "fitRationale", "territory", "title", "deadline", "budget", "link",
+  // user can toggle priority; Claude (Scout/Producer) sets these too (also via git)
+  "flagged", "production", "documents", "requiredDocs", "channel", "eligibility", "researched",
+];
 const STATUSES = ["new", "pursuing", "archived"];
+const PRODUCTION = ["none", "in_progress", "drafted"];
 
 export default async function handler(req, res) {
   if (!isAuthed(req)) return res.status(401).json({ error: "Not authenticated" });
@@ -24,12 +29,20 @@ export default async function handler(req, res) {
         if (req.method === "POST") {
           const o = body.opportunity || {};
           o.id = o.id || `opp-${Date.now()}`;
-          o.status = STATUSES.includes(o.status) ? o.status : "new";
+          // Opportunities suggested via the dashboard are unresearched: they wait
+          // for Claude (the Scout) to scan them before they can advance to Pursuing.
+          o.status = "new";
+          o.researched = false;
+          o.fit = o.fit ?? null;
+          o.flagged = o.flagged ?? false;
+          o.production = "none";
+          o.documents = o.documents || [];
+          o.owner = o.owner || o.addedBy || "";
           o.history = o.history || [];
           o.addedBy = o.addedBy || "dashboard";
           o.addedAt = o.addedAt || new Date().toISOString().slice(0, 10);
           data.opportunities.unshift(o);
-          message = `Add opportunity: ${o.title || o.id}`;
+          message = `Suggest opportunity: ${o.title || o.id}`;
         } else {
           const idx = data.opportunities.findIndex((x) => x.id === body.id);
           if (idx === -1) return res.status(404).json({ error: "Opportunity not found" });
@@ -40,10 +53,16 @@ export default async function handler(req, res) {
           } else {
             const o = data.opportunities[idx];
             const changes = body.changes || {};
+            // Lock: an unresearched (user-suggested) opportunity cannot advance to
+            // Pursuing until the Scout has scanned it. Archiving it is still allowed.
+            if (changes.status === "pursuing" && o.researched === false) {
+              return res.status(400).json({ error: "Locked: needs research first" });
+            }
             const applied = {};
             for (const key of Object.keys(changes)) {
               if (!EDITABLE.includes(key)) continue;
               if (key === "status" && !STATUSES.includes(changes[key])) continue;
+              if (key === "production" && !PRODUCTION.includes(changes[key])) continue;
               applied[key] = changes[key];
               o[key] = changes[key];
             }
