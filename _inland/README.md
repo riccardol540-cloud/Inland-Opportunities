@@ -31,6 +31,9 @@ the GitHub repo, so Claude sees user edits natively.
 ## Files
 
 - `about-inland.md` — what INLAND is. Identity, voice, method, issues, funding model.
+- `research-angle.md` — the territory-agnostic blueprint of the editorial angle: how to
+  find and frame INLAND stories in *any* country (Rwanda/Kashmir as angle blueprints, not
+  subject templates). Read before researching or producing any edition.
 - `opportunity-criteria.md` — the Scout's scoring rubric and fit logic.
 - `sources.md` — where the Scout looks.
 - `deliverables.md` — the exact asset set the Producer builds, with house style.

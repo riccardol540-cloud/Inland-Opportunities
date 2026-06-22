@@ -24,7 +24,10 @@ If `.env` (with `GITHUB_TOKEN`) is missing, stop and report — do not attempt `
 ## Steps
 
 1. **Read context**: `_inland/about-inland.md`, `_inland/opportunity-criteria.md`,
-   `_inland/sources.md`.
+   `_inland/sources.md`, `_inland/research-angle.md`. Use `research-angle.md` when
+   proposing each opportunity's `territory` and candidate angle, so the territory you
+   suggest is one where the INLAND angle can actually be found — for *that* country, not by
+   defaulting to Rwanda/Kashmir.
 2. **Load current state**: read `data/opportunities.json`. Note every existing `id`,
    `title`, `funder`, and `link` so you can dedupe.
 3. **Scan** the three channels in `sources.md` (public/EU culture funds, cultural

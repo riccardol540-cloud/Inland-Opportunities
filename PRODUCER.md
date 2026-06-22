@@ -6,8 +6,11 @@ people chose, runs deep research, and produces the same asset set as Rwanda/Kash
 
 ## Steps
 
-1. **Read context**: `_inland/about-inland.md`, `_inland/deliverables.md`,
-   `_inland/opportunity-criteria.md`.
+1. **Read context**: `_inland/about-inland.md`, `_inland/research-angle.md`,
+   `_inland/deliverables.md`, `_inland/opportunity-criteria.md`. `research-angle.md` is the
+   territory-agnostic blueprint of the editorial angle — apply it to **whatever territory
+   this opportunity makes relevant**. Rwanda and Kashmir are blueprints of the angle, not
+   templates of the subject; never transplant their stories onto a new country.
 2. **Find the work**: read `data/opportunities.json` and select every opportunity with
    `status === "pursuing"`. The `owner` and `notes` fields tell you who asked and any
    steer they left.

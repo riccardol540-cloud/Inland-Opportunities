@@ -14,7 +14,7 @@ Work deliberately and present everything for review before anything is submitted
 
 ## 1. Sync and orient
 - `git pull --rebase` to get the latest (the dashboard and the Scout commit to `main`).
-- Read `_inland/about-inland.md`, `_inland/deliverables.md`, `_inland/opportunity-criteria.md`, and `PRODUCER.md`. Follow PRODUCER.md as the authoritative playbook.
+- Read `_inland/about-inland.md`, `_inland/research-angle.md`, `_inland/deliverables.md`, `_inland/opportunity-criteria.md`, and `PRODUCER.md`. Follow PRODUCER.md as the authoritative playbook and `research-angle.md` as the territory-agnostic guide to the editorial angle — Rwanda/Kashmir are blueprints of the angle, **not** templates of the subject; research the territory this opportunity makes relevant.
 
 ## 2. Pick the work
 - Read `data/opportunities.json`. Consider opportunities with `status: "pursuing"`.

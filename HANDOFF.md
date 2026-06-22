@@ -84,8 +84,8 @@ and the dashboard.
 ### B. PRODUCER — on-demand production routine  ⚙️ command ready (Claude Code)
 
 - **Where it runs**: **Claude Code** on your Mac, as the `/producer` slash command.
-  Source lives at `claude-code/producer.md`; install it by moving it to
-  `.claude/commands/producer.md` (`mkdir -p .claude/commands && mv claude-code/producer.md .claude/commands/producer.md`).
+  ✅ Installed — the command lives at `.claude/commands/producer.md` (moved there from
+  the old `claude-code/producer.md` staging location on 2026-06-22).
 - **What it does**: follows `PRODUCER.md` — `git pull --rebase`, takes
   `status === "pursuing"` (flagged → deadline → fit, or a target passed as an argument),
   sets `production: "in_progress"`, runs deep research, produces the full asset set into

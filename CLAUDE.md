@@ -7,6 +7,7 @@ application + edition assets for pursued opportunities).
 
 ## Read these first
 - `_inland/about-inland.md` — what INLAND is: identity, voice/tone, method, issues, funding model.
+- `_inland/research-angle.md` — territory-agnostic blueprint of the editorial angle; how to find/frame INLAND stories in *any* country (Rwanda/Kashmir are angle blueprints, not subject templates).
 - `_inland/deliverables.md` — the exact asset set and house style to produce.
 - `_inland/opportunity-criteria.md`, `_inland/sources.md` — fit rubric and where to look.
 - `SCOUT.md`, `PRODUCER.md` — the two playbooks.
