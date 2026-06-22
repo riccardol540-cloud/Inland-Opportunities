@@ -1,0 +1,10 @@
+{
+  "name": "inland-opportunities",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "INLAND opportunity pipeline dashboard — GitHub-backed, password-gated.",
+  "engines": {
+    "node": ">=18"
+  }
+}

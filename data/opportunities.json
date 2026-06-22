@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "lastUpdated": null,
+    "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
+  },
+  "opportunities": [
+    {
+      "id": "example-goethe-2026",
+      "title": "EXAMPLE — Goethe-Institut cultural documentation grant",
+      "funder": "Goethe-Institut",
+      "channel": "cultural-institute",
+      "link": "https://www.goethe.de/",
+      "deadline": "2026-09-30",
+      "budget": "up to €25,000",
+      "eligibility": "EU-based independent cultural publisher — INLAND qualifies.",
+      "fit": 5,
+      "fitRationale": "Funds place-based cultural documentation; natural fit for an INLAND edition.",
+      "territory": "Open — candidate: a Central Asian or Caucasus territory",
+      "requiredDocs": ["Concept note (max 3 pages)", "Budget", "Timeline", "Team CVs"],
+      "status": "new",
+      "owner": "",
+      "notes": "This is a sample row so the dashboard renders before the first real Scout run. Archive or delete it once real opportunities arrive.",
+      "addedBy": "seed",
+      "addedAt": "2026-06-22",
+      "history": []
+    }
+  ]
+}
