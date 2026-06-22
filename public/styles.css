@@ -108,10 +108,11 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   border-bottom: 1px solid var(--divider); padding-bottom: 16px;
 }
-.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand { display: flex; align-items: center; gap: 16px; text-decoration: none; }
 .brand-logo { display: flex; color: var(--fg); }
 .brand-logo svg { height: 22px; width: auto; display: block; }
-.brand-sub { font-family: var(--font-label); font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted); }
+.brand-divider { width: 1px; height: 18px; background: var(--divider); flex: 0 0 auto; }
+.brand-sub { font-family: var(--font-label); font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted); line-height: 1; }
 
 .nav { display: flex; gap: 4px; margin-left: 10px; }
 .nav a {
@@ -176,6 +177,7 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
 .group-label::after { content: ""; flex: 1; height: 1px; background: var(--divider-light); }
 .group-label.locked { color: var(--warn); }
 .group-label .lock { font-size: 11px; }
+.group-label.ghost { visibility: hidden; }   /* spacer to align first card across columns */
 
 .cards { display: flex; flex-direction: column; gap: 12px; min-height: 24px; padding: 2px 0; }
 .cards.is-drop-target { outline: 1.5px dashed var(--divider); outline-offset: 4px; border-radius: var(--radius); }
@@ -194,6 +196,10 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
 .card.awaiting { background: var(--card-awaiting); }
 
 .card-head { display: flex; align-items: flex-start; gap: 10px; padding: 13px 14px; cursor: pointer; user-select: none; }
+/* compact archived card — ~half height, minimal collapsed head */
+.card.compact .card-head { padding: 8px 12px; align-items: center; }
+.card.compact .card-title { font-size: 16px; line-height: 1.25; -webkit-line-clamp: 1; }
+.card.compact .card-aside { flex-direction: row; align-items: center; gap: 8px; }
 .drag-handle {
   flex: 0 0 auto; width: 22px; height: 22px; margin: 1px -4px 0 -2px; display: flex; align-items: center; justify-content: center;
   color: var(--muted-soft); cursor: grab; border-radius: 4px; touch-action: none; transition: color 0.15s ease, background 0.15s ease;
@@ -203,8 +209,11 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
 .drag-handle svg { width: 13px; height: 13px; display: block; }
 
 .card-headmain { flex: 1; min-width: 0; }
-.card-title { font-family: var(--font-head); font-weight: 600; font-size: 20px; line-height: 1.15; color: var(--fg); text-wrap: balance; }
+.card-title { font-family: var(--font-head); font-weight: 600; font-size: 20px; line-height: 1.18; color: var(--fg); text-wrap: balance; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .card-sub { font-family: var(--font-label); font-size: 10.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+.card-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 7px; }
+.grant-chip { font-family: var(--font-label); font-size: 10px; letter-spacing: 0.04em; color: var(--ink); border: 1px solid var(--divider); border-radius: var(--radius-pill); padding: 2px 9px; white-space: nowrap; }
+.country-chip { font-family: var(--font-label); font-size: 10px; letter-spacing: 0.04em; color: var(--accent); border: 1px solid var(--accent); border-radius: var(--radius-pill); padding: 2px 9px; white-space: nowrap; }
 
 .card-meta { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; font-size: 13.5px; color: var(--muted); }
 .card-meta .m-deadline.urgent { color: var(--accent); font-weight: 600; }
@@ -213,19 +222,22 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
 .card-aside { flex: 0 0 auto; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
 .fit-badge { font-family: var(--font-label); font-size: 10px; letter-spacing: 0.04em; color: #fff; border-radius: var(--radius-pill); padding: 3px 10px; white-space: nowrap; }
 
-/* flag / priority toggle */
-.flag-toggle {
+/* team rating — thumbs up / down */
+.votes { display: inline-flex; align-items: center; gap: 4px; }
+.vote-btn {
   display: flex; align-items: center; justify-content: center; width: 24px; height: 24px;
   border: none; background: transparent; color: var(--muted-soft); cursor: pointer; padding: 0;
   border-radius: 4px; transition: color 0.15s ease, background 0.15s ease, transform 0.08s ease;
 }
-.flag-toggle svg { width: 15px; height: 15px; display: block; fill: none; stroke: currentColor; stroke-width: 1.3; }
-.flag-toggle:hover { color: var(--warn); background: var(--accent-soft); }
-.flag-toggle:active { transform: scale(0.9); }
-.flag-toggle.on { color: var(--warn); }
-.flag-toggle.on svg { fill: var(--warn); stroke: var(--warn); }
-.flag-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.card.flagged { border-color: var(--warn); box-shadow: inset 3px 0 0 var(--warn), var(--shadow-1); }
+.vote-btn svg { width: 15px; height: 15px; display: block; }
+.vote-btn.down svg { transform: rotate(180deg); }
+.vote-btn:hover { background: var(--accent-soft); }
+.vote-btn:active { transform: scale(0.88); }
+.vote-btn.up:hover, .vote-btn.up.on { color: #1f6f43; }
+.vote-btn.down:hover, .vote-btn.down.on { color: var(--danger); }
+.vote-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.vote-score { font-family: var(--font-label); font-size: 12px; min-width: 18px; text-align: center; color: var(--muted); }
+.vote-score.pos { color: #1f6f43; } .vote-score.neg { color: var(--danger); }
 
 /* production status badge (pursuing cards) */
 .prod-badge {
@@ -249,21 +261,23 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
 .card-body-inner { overflow: hidden; min-height: 0; }
 .card-body-pad { padding: 0 14px 14px; border-top: 1px solid var(--divider-light); margin-top: 2px; }
 
-.card-row { font-size: 14.5px; margin-top: 9px; }
-.card-row .k { font-family: var(--font-label); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 1px; }
+.card-row { font-size: 15.5px; line-height: 1.5; margin-top: 11px; }
+.card-row .k { font-family: var(--font-label); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 3px; }
 .card-link { display: inline-flex; align-items: center; gap: 5px; margin-top: 10px; font-style: italic; }
-.docs { font-size: 13.5px; color: var(--muted); margin-top: 10px; }
-.docs .k { font-family: var(--font-label); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; }
+.docs { font-size: 14.5px; color: var(--muted); margin-top: 11px; }
+.docs .k { font-family: var(--font-label); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
 .docs ul { margin: 4px 0 0; padding-left: 18px; }
 .docs li { margin: 2px 0; }
 
-.documents { font-size: 14px; margin-top: 10px; }
-.documents .k { font-family: var(--font-label); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 3px; }
+.documents { font-size: 14.5px; margin-top: 11px; }
+.documents .k { font-family: var(--font-label); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 3px; }
 .documents ul { margin: 0; padding-left: 18px; }
 .documents li { margin: 3px 0; }
 .documents a { font-style: italic; }
 
-.card-field { width: 100%; border: 1px solid var(--divider); background: var(--field); border-radius: var(--radius); padding: 8px 10px; font-size: 14.5px; margin-top: 4px; }
+.card-field { width: 100%; border: 1px solid var(--divider); background: var(--field); border-radius: var(--radius); padding: 8px 10px; font-size: 15px; margin-top: 4px; }
+select.card-field { font-family: var(--font-body); cursor: pointer; }
+.field-select { width: 100%; border: 1px solid var(--divider); background: var(--field); border-radius: var(--radius); padding: 11px 12px; font-size: 16px; font-family: var(--font-body); color: var(--ink); cursor: pointer; }
 textarea.card-field { resize: vertical; min-height: 46px; line-height: 1.45; }
 
 .card-actions { display: flex; gap: 8px; align-items: center; margin-top: 14px; flex-wrap: wrap; }

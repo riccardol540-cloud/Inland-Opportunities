@@ -23,7 +23,7 @@ const PROD_LABEL = { none: "Awaiting production", in_progress: "Producing…", d
 // SVG glyphs
 const GRIP = '<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><circle cx="5" cy="3" r="1.4"/><circle cx="11" cy="3" r="1.4"/><circle cx="5" cy="8" r="1.4"/><circle cx="11" cy="8" r="1.4"/><circle cx="5" cy="13" r="1.4"/><circle cx="11" cy="13" r="1.4"/></svg>';
 const CHEV = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>';
-const STAR = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.6l1.9 3.85 4.25.62-3.07 3 .72 4.23L8 11.3l-3.8 2l.72-4.23-3.07-3 4.25-.62z"/></svg>';
+const THUMB = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 9.5h3.2V21H2zM21.6 11.1c0-1.05-.86-1.9-1.9-1.9h-5.13l.77-3.71.024-.26c0-.39-.16-.75-.42-1.01L13.96 3l-6.02 6.03c-.35.35-.56.83-.56 1.36V19c0 1.05.86 1.9 1.9 1.9h7.6c.76 0 1.42-.46 1.7-1.12l2.55-5.95c.08-.2.12-.4.12-.63z"/></svg>';
 
 // ---------- auth ----------
 async function checkAuth() {
@@ -115,6 +115,26 @@ function renderSaveState() {
   else if (n > 0) { el.textContent = `Unsaved · ${n}`; el.className = "savestate unsaved"; }
   else { el.textContent = "All changes saved"; el.className = "savestate ok"; }
 }
+async function duplicateOpp(id) {
+  saving++; renderSaveState();
+  let r;
+  try {
+    r = await fetch("/api/opportunities", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ duplicateFrom: id, actor: actor() }),
+    });
+  } catch { saving--; renderSaveState(); toast("Network error — not duplicated"); return; }
+  saving--;
+  if (!r.ok) {
+    let msg = "Duplicate failed";
+    try { const j = await r.json(); if (j.error) msg = j.error; } catch {}
+    toast(msg); return;
+  }
+  STATE = await r.json();
+  render();
+  toast("Duplicated — set its country");
+}
 async function removeOpp(id) {
   const r = await fetch("/api/opportunities", {
     method: "DELETE",
@@ -147,6 +167,30 @@ function daysUntil(d) {
 }
 function esc(s) { return (s ?? "").toString().replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
 
+// Team rating helpers — net score across all users' votes; the current user's vote.
+function score(o) { return Object.values(o.votes || {}).reduce((a, b) => a + (Number(b) || 0), 0); }
+function myVote(o) { return (o.votes || {})[actor()] || 0; }
+
+// Country options: blank (none), "Multiple / Open", then full country list.
+const COUNTRIES = ["", "Multiple / Open",
+  "Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia","Australia","Austria","Azerbaijan",
+  "Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi",
+  "Cambodia","Cameroon","Canada","Cape Verde","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo","Congo (DRC)","Costa Rica","Côte d’Ivoire","Croatia","Cuba","Cyprus","Czechia",
+  "Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Eswatini","Ethiopia",
+  "Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana",
+  "Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan",
+  "Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg",
+  "Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar",
+  "Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","North Macedonia","Norway","Oman",
+  "Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda",
+  "Saint Kitts and Nevis","Saint Lucia","Saint Vincent and the Grenadines","Samoa","San Marino","São Tomé and Príncipe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Sweden","Switzerland","Syria",
+  "Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan",
+  "Vanuatu","Vatican City","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"];
+function countryOptions(cur) {
+  return COUNTRIES.map((c) => `<option value="${esc(c)}"${c === (cur || "") ? " selected" : ""}>${c === "" ? "— (none)" : esc(c)}</option>`).join("");
+}
+function countrySelect(o) { return `<select class="card-field country-select" data-country data-id="${o.id}">${countryOptions(o.country)}</select>`; }
+
 function moveButtons(o, researched) {
   const cur = o.status || "new";
   let targets = [];
@@ -159,8 +203,10 @@ function moveButtons(o, researched) {
 function card(o) {
   const researched = isResearched(o);
   const awaiting = !researched;
-  const flagged = !!o.flagged;
+  const compact = o.status === "archived";   // archived cards get a slimmer collapsed head
   const open = EXPANDED.has(o.id);
+  const sc = score(o);
+  const mv = myVote(o);
   const draft = DRAFTS.get(o.id) || {};
   const dirty = Object.keys(draft).length > 0;
   const ownerVal = draft.owner !== undefined ? draft.owner : (o.owner || "");
@@ -169,9 +215,11 @@ function card(o) {
   const dleft = daysUntil(o.deadline);
   const urgent = dleft !== null && dleft <= 21 && o.status !== "archived";
 
-  const sub = awaiting
-    ? `Suggested by ${esc(o.addedBy || "—")}`
-    : `${esc(o.funder || "")}${o.channel ? " · " + esc(o.channel) : ""}`;
+  const chips = [];
+  if (o.funder) chips.push(`<span class="grant-chip">${esc(o.funder)}</span>`);
+  if (o.country) chips.push(`<span class="country-chip">${esc(o.country)}</span>`);
+  const chipsRow = chips.length ? `<div class="card-chips">${chips.join("")}</div>` : "";
+  const subText = awaiting ? `Suggested by ${esc(o.addedBy || "—")}` : (o.channel ? esc(o.channel) : "");
 
   const prod = o.production || "none";
   const metaBits = [];
@@ -180,7 +228,11 @@ function card(o) {
   if (o.status === "pursuing") metaBits.push(`<span class="prod-badge ${prod}">${PROD_LABEL[prod] || PROD_LABEL.none}</span>`);
   const meta = metaBits.length ? `<div class="card-meta">${metaBits.join("")}</div>` : "";
 
-  const flagBtn = `<button class="flag-toggle ${flagged ? "on" : ""}" data-flag="${o.id}" title="${flagged ? "Flagged as priority" : "Flag as priority"}" aria-label="Flag as priority" aria-pressed="${flagged}">${STAR}</button>`;
+  const votes = `<div class="votes">
+      <button class="vote-btn up ${mv === 1 ? "on" : ""}" data-vote="1" data-id="${o.id}" title="Upvote priority" aria-label="Upvote" aria-pressed="${mv === 1}">${THUMB}</button>
+      <span class="vote-score ${sc > 0 ? "pos" : sc < 0 ? "neg" : ""}" title="Net team score">${sc > 0 ? "+" + sc : sc}</span>
+      <button class="vote-btn down ${mv === -1 ? "on" : ""}" data-vote="-1" data-id="${o.id}" title="Downvote priority" aria-label="Downvote" aria-pressed="${mv === -1}">${THUMB}</button>
+    </div>`;
 
   const badge = awaiting
     ? `<span class="badge-awaiting">Awaiting</span>`
@@ -204,6 +256,9 @@ function card(o) {
     ${o.link ? `<div class="card-link"><a href="${esc(o.link)}" target="_blank" rel="noopener">Open call ↗</a></div>` : ""}
     ${docs}
     ${documents}
+    <div class="card-row"><span class="k">Country</span>
+      ${countrySelect(o)}
+    </div>
     <div class="card-row"><span class="k">Owner</span>
       <input class="card-field" data-field="owner" data-id="${o.id}" value="${esc(ownerVal)}" placeholder="unassigned" />
     </div>
@@ -217,20 +272,31 @@ function card(o) {
     </div>
     <div class="card-actions">
       ${moveButtons(o, researched)}
+      ${researched ? `<button class="mini" data-duplicate="${o.id}">Duplicate</button>` : ""}
       ${lockNote}
       <button class="mini danger" data-del="${o.id}">Delete</button>
     </div>
   </div></div></div>`;
 
-  return `<div class="card ${awaiting ? "awaiting" : ""} ${flagged ? "flagged" : ""} ${dirty ? "dirty" : ""} ${open ? "open" : ""} ${revealed ? "" : "reveal"}" data-id="${o.id}" data-researched="${researched}">
+  // Compact (archived) cards show only title + FIT + chevron in the collapsed head;
+  // the full body (incl. votes via expand) is unchanged.
+  const headMain = compact
+    ? `<div class="card-headmain"><div class="card-title">${esc(o.title)}</div></div>`
+    : `<div class="card-headmain">
+        <div class="card-title">${esc(o.title)}</div>
+        ${chipsRow}
+        ${subText ? `<div class="card-sub">${subText}</div>` : ""}
+        ${meta}
+      </div>`;
+  const headAside = compact
+    ? `<div class="card-aside">${badge}<span class="chevron">${CHEV}</span></div>`
+    : `<div class="card-aside">${votes}${badge}<span class="chevron">${CHEV}</span></div>`;
+
+  return `<div class="card ${awaiting ? "awaiting" : ""} ${compact ? "compact" : ""} ${dirty ? "dirty" : ""} ${open ? "open" : ""} ${revealed ? "" : "reveal"}" data-id="${o.id}" data-researched="${researched}">
     <div class="card-head" data-toggle="${o.id}">
       <span class="drag-handle" title="Drag to move" aria-label="Drag to move">${GRIP}</span>
-      <div class="card-headmain">
-        <div class="card-title">${esc(o.title)}</div>
-        <div class="card-sub">${sub}</div>
-        ${meta}
-      </div>
-      <div class="card-aside">${flagBtn}${badge}<span class="chevron">${CHEV}</span></div>
+      ${headMain}
+      ${headAside}
     </div>
     ${body}
   </div>`;
@@ -243,8 +309,8 @@ function fillList(id, items) {
 
 function render() {
   const all = STATE.opportunities || [];
-  // priority order: flagged first, then higher fit
-  const byPriority = (a, b) => (Number(!!b.flagged) - Number(!!a.flagged)) || ((b.fit || 0) - (a.fit || 0));
+  // priority order: highest net team vote first, then higher fit
+  const byPriority = (a, b) => (score(b) - score(a)) || ((b.fit || 0) - (a.fit || 0));
 
   const inbox = all.filter((o) => (o.status || "new") === "new");
   const ready = inbox.filter(isResearched).sort(byPriority);
@@ -287,12 +353,19 @@ function bindCards() {
     }));
   document.querySelectorAll(".drag-handle").forEach((h) =>
     h.addEventListener("click", (e) => e.stopPropagation()));
-  document.querySelectorAll("[data-flag]").forEach((b) =>
+  document.querySelectorAll("[data-vote]").forEach((b) =>
     b.addEventListener("click", (e) => {
       e.stopPropagation();
-      const o = (STATE.opportunities || []).find((x) => x.id === b.dataset.flag);
-      patch(b.dataset.flag, { flagged: !(o && o.flagged) });
+      const id = b.dataset.id;
+      const o = (STATE.opportunities || []).find((x) => x.id === id);
+      const cur = (o && o.votes && o.votes[actor()]) || 0;
+      const want = Number(b.dataset.vote);
+      patch(id, { vote: cur === want ? 0 : want });   // click again to clear your vote
     }));
+  document.querySelectorAll("[data-country]").forEach((el) =>
+    el.addEventListener("change", (e) => { e.stopPropagation(); patch(el.dataset.id, { country: el.value }); }));
+  document.querySelectorAll("[data-duplicate]").forEach((b) =>
+    b.addEventListener("click", (e) => { e.stopPropagation(); duplicateOpp(b.dataset.duplicate); }));
   document.querySelectorAll("[data-move]").forEach((b) =>
     b.addEventListener("click", () => patch(b.dataset.id, { status: b.dataset.move })));
   document.querySelectorAll("[data-del]").forEach((b) =>
@@ -363,6 +436,7 @@ document.querySelectorAll("dialog").forEach((d) =>
 // add / suggest
 $("#add").addEventListener("click", () => {
   $("#add-error").textContent = "";
+  if ($("#add-country") && !$("#add-country").options.length) $("#add-country").innerHTML = countryOptions("");
   $("#add-form").reset();
   $("#add-by").value = localStorage.getItem("inland_actor") || "";
   openDialog($("#add-dialog"));
@@ -373,13 +447,14 @@ $("#add-form").addEventListener("submit", async (e) => {
   const title = $("#add-title").value.trim();
   const link = $("#add-link").value.trim();
   const addedBy = $("#add-by").value.trim();
+  const country = $("#add-country") ? $("#add-country").value : "";
   if (!title) { $("#add-error").textContent = "Give the opportunity a name."; return; }
   if (!addedBy) { $("#add-error").textContent = "Add your name so it’s tagged to you."; return; }
   setActor(addedBy);
   const r = await fetch("/api/opportunities", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ opportunity: { title, link, addedBy } }),
+    body: JSON.stringify({ opportunity: { title, link, addedBy, country } }),
   });
   if (!r.ok) { $("#add-error").textContent = "Could not save — try again."; return; }
   STATE = await r.json();

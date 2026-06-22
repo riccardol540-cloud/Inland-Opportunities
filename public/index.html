@@ -37,6 +37,7 @@
             <g transform="translate(51.96, 0)"><path d="M9.02082 1.49177C10.5535 2.67348 11.3199 4.3583 11.3199 6.54622C11.3199 8.02044 10.9864 9.28405 10.3195 10.3371C9.64093 11.4486 8.64642 12.2559 7.336 12.759C7.3126 12.7707 7.29505 12.7765 7.28335 12.7765C7.28335 12.7765 7.27165 12.7824 7.24825 12.7941C7.75136 12.2325 8.16086 11.4544 8.47676 10.4599C8.79267 9.45371 8.95062 8.14914 8.95062 6.54622C8.95062 4.10089 8.57037 2.29322 7.80986 1.12321C7.71625 0.971111 7.59925 0.813159 7.45885 0.649357C8.06726 0.85996 8.58792 1.14076 9.02082 1.49177ZM2.19378 0C2.11188 0.198902 2.06508 0.397805 2.05338 0.596706C2.04168 0.783909 2.03583 0.92431 2.03583 1.01791V11.7937C2.03583 12.1681 2.04168 12.4723 2.05338 12.7063C2.07678 12.9403 2.10603 13.1334 2.14113 13.2855H0.0526505C0.0760508 13.1802 0.0936009 13.0281 0.105301 12.8292C0.117001 12.6186 0.122854 12.3261 0.122854 11.9517V1.26361C0.122854 0.92431 0.111151 0.661057 0.0877509 0.473855C0.0643506 0.274953 0.0351005 0.117001 0 0H2.19378Z" fill="currentColor"/></g>
           </svg>
         </span>
+        <span class="brand-divider" aria-hidden="true"></span>
         <span class="brand-sub">Opportunities</span>
       </a>
       <div class="topbar-actions">
@@ -69,11 +70,13 @@
 
       <section class="column" data-status="pursuing">
         <div class="column-head"><h2>Pursuing</h2><span class="count" id="count-pursuing">0</span></div>
+        <div class="group-label ghost" aria-hidden="true">&nbsp;</div>
         <div class="cards" id="col-pursuing" data-list="pursuing"></div>
       </section>
 
       <section class="column" data-status="archived">
         <div class="column-head"><h2>Archived</h2><span class="count" id="count-archived">0</span></div>
+        <div class="group-label ghost" aria-hidden="true">&nbsp;</div>
         <div class="cards" id="col-archived" data-list="archived"></div>
       </section>
     </main>
@@ -92,12 +95,18 @@
       <div class="dialog-intro">It lands in <b>Awaiting research</b>. Claude scans it in the next research session, then it can move to Pursuing.</div>
       <div class="field">
         <label for="add-title">Opportunity name <span class="req">*</span></label>
-        <input id="add-title" name="title" type="text" placeholder="e.g. Prince Claus Fund — mobility grant" required />
+        <input id="add-title" name="title" type="text" maxlength="60" placeholder="e.g. Prince Claus mobility grant" required />
+        <div class="hint">Keep it short — this is the card headline.</div>
       </div>
       <div class="field">
         <label for="add-link">Link</label>
         <input id="add-link" name="link" type="url" placeholder="https://…" inputmode="url" />
         <div class="hint">The page describing the call. Helps the research session.</div>
+      </div>
+      <div class="field">
+        <label for="add-country">Country</label>
+        <select id="add-country" name="country" class="field-select"></select>
+        <div class="hint">Optional — the country you have in mind, or leave blank / “Multiple / Open”.</div>
       </div>
       <div class="field">
         <label for="add-by">Added by <span class="req">*</span></label>
