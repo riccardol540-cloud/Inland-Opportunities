@@ -4,5 +4,74 @@
     "lastUpdated": "2026-06-22T15:28:11.554Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
-  "opportunities": []
+  "opportunities": [
+    {
+      "id": "goethe-africa-europe-2026",
+      "title": "Goethe-Institut — Africa–Europe Partnerships for Culture (Visual Arts / Mobility)",
+      "funder": "Goethe-Institut",
+      "channel": "cultural-institute",
+      "link": "https://on-the-move.org/news/goethe-institut-mobility-grants-artists-and-culture-professionals-sub-saharan-africa-and",
+      "deadline": "2026-09-15",
+      "budget": "Mobility up to €4,000 (travel); Visual Arts strand larger (production)",
+      "eligibility": "Artists/cultural professionals collaborating between Sub-Saharan Africa and Europe.",
+      "fit": 4,
+      "fitRationale": "Direct territory match for the in-progress Rwanda edition; funds Africa–Europe co-creation. Mobility = scouting trip; Visual Arts = production.",
+      "territory": "Rwanda (in-progress edition)",
+      "requiredDocs": [
+        "Project description",
+        "Partner confirmation (African + European)",
+        "Budget"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "Quarterly mobility deadlines (next 15 Sep 2026); Visual Arts strand within €8M 2025–28 programme.",
+      "addedBy": "scout",
+      "addedAt": "2026-06-22",
+      "history": []
+    },
+    {
+      "id": "goethe-ikf-2026-r2",
+      "title": "Goethe-Institut — International Coproduction Fund (IKF), Round 2",
+      "funder": "Goethe-Institut",
+      "channel": "cultural-institute",
+      "link": "https://www.goethe.de/en/kul/foe/int/ikf.html",
+      "deadline": "2026-10-01",
+      "budget": "€15,000–30,000 (fees, travel, production)",
+      "eligibility": "Cross-border collaboration with a German/Goethe partner; INLAND qualifies as EU producer with a co-production partner.",
+      "fit": 4,
+      "fitRationale": "Funds genuine cross-border, production-scale visual work — fits an INLAND edition co-produced with an in-country partner. Goethe is a prior funder.",
+      "territory": "Open — pairs with a new edition co-produced with a local partner",
+      "requiredDocs": [
+        "Project description",
+        "Budget",
+        "Timeline",
+        "Co-production/partner agreement",
+        "Team CVs"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-ikf-2026-r2/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "Round 2 window: mid-July–1 Oct 2026, for projects starting 2027.",
+      "addedBy": "scout",
+      "addedAt": "2026-06-22",
+      "history": []
+    }
+  ]
 }
