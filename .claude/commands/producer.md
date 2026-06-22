@@ -22,9 +22,12 @@ Work deliberately and present everything for review before anything is submitted
   `deadline`, then highest `fit`, and confirm with the user which to build now.
 - Note its `requiredDocs` — those are mandatory outputs. Use `owner`/`notes` for any steer.
 
-## 3. Mark in progress
-- Set that opportunity's `production` to `"in_progress"`, commit, and push so the
-  dashboard shows "Producing…". (`git add data/opportunities.json && git commit && git push`)
+## 3. Mark in progress (and move it to Pursuing)
+- Set that opportunity's `production` to `"in_progress"`. **If its `status` is still
+  `"new"`, also set `status` to `"pursuing"`** — producing an opportunity means it has been
+  pursued, and this is what moves the card out of the Inbox into the Pursuing column.
+  (Never regress or touch a `pursuing`/`archived` status.) Commit and push so the dashboard
+  shows it under Pursuing with "Producing…". (`git add data/opportunities.json && git commit && git push`)
 
 ## 4. Deep research
 - Research the territory/angle in INLAND's method: named, locatable custodians; specific
@@ -45,13 +48,15 @@ Per `_inland/deliverables.md`, in INLAND house style:
 - Set `production` to `"drafted"` and add each produced file to the opportunity's
   `documents` array as `{ "label": "...", "url": "..." }` using its GitHub URL:
   `https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/<territory>/<file>`
-- Append a `history` entry. Do **not** change `status` — leave Archive to the team.
+- Append a `history` entry. Do **not** archive — leave Archive to the team (the only
+  `status` change the Producer makes is the `new → pursuing` promotion in step 3).
 - `git pull --rebase` then `git add -A && git commit -m "producer: <territory> assets" && git push`.
 
 ## 7. Report
 - Summarise what you produced, where it lives, and any gaps needing human input (missing
   contacts, budget assumptions, etc.). Remind the user to review before submission.
 
-Rules: never overwrite human-owned fields (`status`, `owner`, `notes`, `flagged`); keep
-INLAND's voice from `about-inland.md`; commit produced files into the repo so dashboard
-links resolve.
+Rules: never overwrite human-owned fields `owner`, `notes`, `flagged`; the **only** `status`
+change the Producer may make is advancing `new → pursuing` when it starts production (step 3)
+— never regress a status and never archive (leave Archive to the team). Keep INLAND's voice
+from `about-inland.md`; commit produced files into the repo so dashboard links resolve.

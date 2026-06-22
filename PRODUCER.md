@@ -17,8 +17,11 @@ people chose, runs deep research, and produces the same asset set as Rwanda/Kash
 3. **Prioritise**: do **`flagged: true` opportunities first**, then by deadline urgency,
    then by `fit`. If more than one is pursuing, confirm with the user which to build now.
    Note the `requiredDocs` — those are mandatory outputs.
-4. **Mark in-progress**: set that opportunity's `production` to `"in_progress"` and
-   commit, so the dashboard shows "Producing…" while you work.
+4. **Mark in-progress (and move it to Pursuing)**: set that opportunity's `production` to
+   `"in_progress"`; **if its `status` is still `"new"`, also set `status` to `"pursuing"`**
+   so the card leaves the Inbox and shows under Pursuing with "Producing…". (Producing
+   implies the opportunity has been pursued. Never regress or touch a `pursuing`/`archived`
+   status.) Commit.
 5. **Deep research** the chosen territory/angle following INLAND's method: named,
    locatable custodians; specific places; living traditions; sources/links throughout.
 6. **Produce the asset set** into the repo at **`editions/<territory>/`** (so the files
@@ -38,7 +41,8 @@ people chose, runs deep research, and produces the same asset set as Rwanda/Kash
    Append a `history` entry, then commit and push. The card now shows "✓ Docs drafted"
    with working links.
 8. **Hand back**: present the drafted assets for review before anything is submitted.
-   Leave `status` to the collaborators (they move it to Archived once submitted).
+   Leave Archive to the collaborators (they move it to Archived once submitted) — the only
+   `status` change the Producer makes is the `new → pursuing` promotion in step 4.
 
 ## Notes
 
