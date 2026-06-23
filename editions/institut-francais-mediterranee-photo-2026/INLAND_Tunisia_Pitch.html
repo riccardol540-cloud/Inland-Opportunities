@@ -1,0 +1,648 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>INLAND Tunisia — A Mediterranean Edition</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Fraunces:wght@400;600&display=swap" rel="stylesheet"><style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #F9F4EE; --fg: #000000; --accent: #400505;
+    --muted: rgba(0,0,0,0.58); --muted-soft: rgba(0,0,0,0.38);
+    --divider: rgba(0,0,0,0.18); --divider-light: rgba(0,0,0,0.1);
+    --dark-bg: #0e0e0e; --dark-fg: #ffffff; --tag-border: #B0A89E;
+    --font-heading: 'Cormorant', Georgia, serif;
+    --font-body: 'Cormorant Garamond', Georgia, serif;
+    --font-label: 'Fraunces', sans-serif;
+    --track-blue: #1B4965; --track-green: #3A5A40; --track-purple: #5B2C6F;
+  }
+  html { scroll-snap-type: y mandatory; overflow-x: hidden; background: var(--bg);
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body { background: var(--bg); color: var(--fg); font-family: var(--font-body); }
+
+  .slide { width: 100vw; height: 100vh; scroll-snap-align: start; display: flex;
+    flex-direction: column; justify-content: center; padding: 60px 80px;
+    position: relative; overflow: hidden; }
+  .slide--dark { background: var(--dark-bg); color: var(--dark-fg); }
+
+  .reveal { opacity: 0; transform: translateY(36px);
+    transition: opacity 0.7s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-title { opacity: 0; clip-path: inset(0 0 100% 0); transform: translateY(24px);
+    transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1),
+      transform 0.8s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.6s ease; }
+  .reveal-title.visible { opacity: 1; clip-path: inset(0 0 0% 0); transform: translateY(0); }
+  .reveal-line { transform: scaleX(0); transform-origin: left;
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1); }
+  .reveal-line.visible { transform: scaleX(1); }
+  .reveal-scale { opacity: 0; transform: scale(0.82);
+    transition: opacity 0.9s ease, transform 1.1s cubic-bezier(0.16, 1, 0.3, 1); }
+  .reveal-scale.visible { opacity: 1; transform: scale(1); }
+  .reveal-vline { transform: scaleY(0); transform-origin: top;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+  .reveal-vline.visible { transform: scaleY(1); }
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+  .d4{transition-delay:.32s}.d5{transition-delay:.4s}.d6{transition-delay:.5s}
+  .d7{transition-delay:.6s}.d8{transition-delay:.7s}.d9{transition-delay:.8s}
+  .d10{transition-delay:.9s}
+
+  .label { font-family: var(--font-label); font-size: 11px; font-weight: 400;
+    text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); }
+  .heading-xl { font-family: var(--font-heading); font-weight: 600;
+    font-size: clamp(52px, 5.5vw, 72px); line-height: 1.05; }
+  .heading-lg { font-family: var(--font-heading); font-weight: 600;
+    font-size: clamp(32px, 3.2vw, 42px); line-height: 1.15; }
+  .heading-story { font-family: var(--font-heading); font-weight: 600;
+    font-size: clamp(30px, 3.2vw, 42px); line-height: 1.15; }
+  .subtitle-story { font-family: var(--font-heading); font-weight: 600; font-style: italic;
+    font-size: clamp(18px, 2vw, 26px); line-height: 1.3; color: var(--muted); margin-top: 8px; }
+  .body-text { font-family: var(--font-body); font-weight: 400;
+    font-size: clamp(16px, 1.4vw, 20px); line-height: 1.65; max-width: 720px; }
+  .body-secondary { font-family: var(--font-body); font-weight: 400;
+    font-size: clamp(15px, 1.2vw, 18px); line-height: 1.6; color: var(--muted);
+    max-width: 720px; margin-top: 20px; }
+  .accent-text { font-family: var(--font-heading); font-weight: 600; font-style: italic;
+    color: var(--accent); font-size: clamp(20px, 2vw, 26px); line-height: 1.35; }
+  .divider { width: 100%; height: 1px; background: var(--divider); margin: 24px 0; }
+  .divider--short { width: 160px; margin: 24px auto; }
+  .divider--white { background: rgba(255,255,255,0.2); }
+
+  .stat-num { font-family: var(--font-heading); font-weight: 600; font-size: 80px;
+    line-height: 1; color: var(--accent); }
+  .stat-label { font-family: var(--font-label); font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--muted); margin-top: 6px; }
+
+  .story-num { font-family: var(--font-heading); font-weight: 600;
+    font-size: clamp(48px, 5vw, 68px); color: var(--accent); line-height: 1;
+    position: absolute; top: 56px; right: 80px; }
+
+  .tag-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tag { font-family: var(--font-label); font-size: 9px; font-weight: 400;
+    text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted);
+    border: 1px solid var(--tag-border); border-radius: 20px; padding: 4px 14px; white-space: nowrap; }
+
+  .logo-svg { width: clamp(180px, 18vw, 240px); height: auto; display: block; }
+  .logo-svg--sm { width: clamp(100px, 10vw, 140px); height: auto; display: block; margin: 0 auto; }
+
+  .slide--title { text-align: center; align-items: center; }
+  .slide--title .subtitle { font-family: var(--font-body); font-size: clamp(16px, 1.3vw, 20px);
+    color: var(--muted); margin-top: 8px; }
+  .slide--title .meta { font-family: var(--font-label); font-size: 11px; letter-spacing: 0.12em;
+    color: var(--muted-soft); text-transform: uppercase; margin-top: 48px; }
+
+  .slide--breaker { text-align: center; align-items: center; background: var(--dark-bg); color: var(--dark-fg); }
+  .breaker-label { font-family: var(--font-label); font-size: 11px; font-weight: 400;
+    text-transform: uppercase; letter-spacing: 0.2em; color: rgba(255,255,255,0.35); }
+  .breaker-heading { font-family: var(--font-heading); font-weight: 600;
+    font-size: clamp(40px, 4.5vw, 60px); line-height: 1.1; color: var(--dark-fg); margin-top: 12px; }
+  .breaker-sub { font-family: var(--font-body); font-size: clamp(16px, 1.3vw, 20px);
+    color: rgba(255,255,255,0.45); max-width: 600px; line-height: 1.55; margin-top: 20px; }
+
+  .intro-layout { display: flex; gap: 80px; align-items: flex-start; width: 100%; }
+  .intro-main { flex: 1; min-width: 0; }
+  .intro-side { flex: 0 0 300px; padding-top: 4px; }
+  .category-list { display: flex; flex-direction: column; }
+  .category-item { font-family: var(--font-body); font-size: 17px; padding: 10px 0;
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid var(--divider-light); opacity: 0; transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+  .category-item:first-child { border-top: 1px solid var(--divider); }
+  .category-item:last-child { border-bottom: 1px solid var(--divider); }
+  .category-item.visible { opacity: 1; transform: translateX(0); }
+  .category-count { font-family: var(--font-body); font-weight: 600; font-size: 17px; color: var(--accent); }
+  .stat-block { display: flex; flex-direction: column; gap: 40px; }
+
+  .index-list { list-style: none; width: min(700px, 80%); margin-top: 16px; }
+  .index-item { display: flex; align-items: baseline; gap: 24px; padding: 16px 0;
+    border-bottom: 1px solid var(--divider-light); }
+  .index-item:last-child { border-bottom: none; }
+  .index-num { font-family: var(--font-heading); font-weight: 600; font-size: 28px;
+    color: var(--accent); min-width: 40px; }
+  .index-title { font-family: var(--font-body); font-size: 22px; color: var(--fg); }
+
+  .slide--story { justify-content: flex-start; padding-top: 72px; }
+  .story-header { margin-top: 20px; }
+  .story-content { display: flex; gap: 48px; width: 100%; align-items: flex-start; }
+  .story-main { flex: 1; min-width: 0; }
+  .story-quote { flex: 0 0 280px; display: flex; gap: 16px; align-items: stretch; padding-top: 4px; }
+  .quote-bar { width: 2px; min-height: 60px; background: var(--accent); flex-shrink: 0; align-self: stretch; }
+  .quote-text { font-family: var(--font-heading); font-weight: 600; font-style: italic;
+    font-size: clamp(17px, 1.5vw, 21px); line-height: 1.4; color: var(--accent); }
+  .story-angle { font-family: var(--font-body); font-size: clamp(15px, 1.3vw, 18px);
+    line-height: 1.65; color: var(--fg); margin-top: 28px; }
+  .story-angle-pill { display: inline-block; font-family: var(--font-label); font-size: 9px;
+    text-transform: uppercase; letter-spacing: 0.1em; color: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.15); border-radius: 3px;
+    padding: 3px 8px; margin-bottom: 8px; white-space: nowrap; }
+  .story-places { font-family: var(--font-label); font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--muted); margin-top: 20px; }
+  .story-toggle { display: none; gap: 8px; margin-bottom: 12px; }
+  .story-toggle-btn { font-family: var(--font-label); font-size: 9px; text-transform: uppercase;
+    letter-spacing: 0.1em; color: rgba(0,0,0,0.4); background: rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.12); border-radius: 3px; padding: 5px 12px; cursor: pointer;
+    transition: all 0.2s ease; }
+  .story-toggle-btn.active { color: #ffffff; background: #0e0e0e; border-color: #0e0e0e; }
+  .story-footer { position: absolute; bottom: 48px; left: 80px; right: 80px;
+    display: flex; justify-content: space-between; align-items: flex-end; }
+  .story-ref { font-family: var(--font-label); font-size: 9px; letter-spacing: 0.08em; color: var(--muted-soft); }
+
+  .tracks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; width: 100%; margin-top: 8px; }
+  .track-card { border-top: 3px solid var(--accent); padding: 28px 0 0; }
+  .track-card--blue { border-color: var(--track-blue); }
+  .track-card--green { border-color: var(--track-green); }
+  .track-card--purple { border-color: var(--track-purple); }
+  .track-name { font-family: var(--font-heading); font-weight: 600; font-size: clamp(22px, 2.2vw, 28px);
+    line-height: 1.2; margin-bottom: 4px; }
+  .track-card--blue .track-name { color: var(--track-blue); }
+  .track-card--green .track-name { color: var(--track-green); }
+  .track-card--purple .track-name { color: var(--track-purple); }
+  .track-stories { font-family: var(--font-label); font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--muted); margin-top: 12px; }
+  .track-desc { font-family: var(--font-body); font-size: clamp(15px, 1.2vw, 17px); line-height: 1.55;
+    color: var(--fg); margin-top: 14px; }
+  .track-meta { font-family: var(--font-label); font-size: 9px; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--muted-soft); margin-top: 18px; line-height: 1.7; }
+  .track-note { font-family: var(--font-body); font-size: 14px; color: var(--muted-soft);
+    text-align: center; max-width: 100%; margin-top: 28px; }
+
+  .partner-grid { display: grid; grid-template-columns: 220px 1fr; gap: 18px 40px;
+    width: 100%; max-width: 920px; margin-top: 8px; }
+  .partner-h { font-family: var(--font-label); text-transform: uppercase; letter-spacing: 0.08em;
+    font-size: 12px; color: var(--accent); font-weight: 600; padding-top: 4px; }
+  .partner-b { font-family: var(--font-body); font-size: clamp(15px, 1.2vw, 18px); line-height: 1.55; }
+
+  .slide--closing { text-align: center; align-items: center; }
+  .closing-headline { font-family: var(--font-heading); font-weight: 600;
+    font-size: clamp(36px, 4vw, 52px); line-height: 1.2; color: var(--dark-fg); }
+  .closing-tagline { font-family: var(--font-label); font-size: 14px; font-weight: 400;
+    letter-spacing: 0.12em; color: rgba(255,255,255,0.4); text-transform: uppercase; }
+
+  .nav-counter { position: fixed; bottom: 24px; right: 32px; font-family: var(--font-label);
+    font-size: 11px; color: var(--muted-soft); letter-spacing: 0.08em; z-index: 100;
+    transition: color 0.4s ease; }
+  .nav-counter--dark { color: rgba(255,255,255,0.3); }
+  .progress-bar { position: fixed; top: 0; left: 0; height: 2px; background: var(--accent);
+    width: 0%; z-index: 100; transition: width 0.35s ease; }
+
+  @media (max-width: 768px) {
+    .slide { padding: 40px 24px; height: auto; min-height: 100vh; }
+    .slide--story { padding-top: 56px; padding-bottom: 80px; }
+    .intro-layout { flex-direction: column; gap: 40px; }
+    .intro-side { flex: none; width: 100%; }
+    .story-num { top: 40px; right: 24px; font-size: 40px; }
+    .story-content { flex-direction: column; gap: 0; }
+    .story-quote { display: none; }
+    .story-ref { display: none; }
+    .story-places { display: none; }
+    .body-text { font-size: 18px; }
+    .story-angle { font-size: 18px; display: none; margin-top: 0; }
+    .story-angle-pill { display: none; }
+    .body-text .story-angle-pill { display: none; }
+    .story-toggle { display: flex; margin-bottom: 6px; }
+    .story-toggle-active .body-text { display: none; }
+    .story-toggle-active .story-angle { display: block; }
+    .story-footer { position: absolute; bottom: 24px; left: 24px; right: 24px;
+      justify-content: flex-start; flex-wrap: wrap; gap: 8px; }
+    .tracks-grid { grid-template-columns: 1fr; gap: 32px; }
+    .partner-grid { grid-template-columns: 1fr; gap: 6px 0; }
+    .partner-h { padding-top: 14px; }
+    .nav-counter { bottom: 16px; right: 16px; }
+    .stat-num { font-size: 56px; }
+  }
+  ::-webkit-scrollbar { width: 0; background: transparent; }
+  html { scrollbar-width: none; }
+</style></head><body>
+<div class="progress-bar" id="progressBar"></div>
+
+<section class="slide slide--title" data-theme="light">
+  <div class="reveal reveal-scale" style="margin-bottom:12px;"><svg class="logo-svg" viewBox="0 0 63.28 13.29" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0, 0.14)"><path d="M2.17623 0C2.09433 0.198902 2.04753 0.391954 2.03583 0.579156C2.02413 0.766358 2.01828 0.906759 2.01828 1.00036V11.6709C2.01828 12.0453 2.02413 12.3495 2.03583 12.5835C2.05923 12.8175 2.08848 13.0047 2.12358 13.1451H0.0526506C0.0760509 13.0398 0.0936013 12.8935 0.105301 12.7063C0.117002 12.5074 0.122852 12.2208 0.122852 11.8464V1.24606C0.122852 0.91846 0.111151 0.661057 0.0877512 0.473854C0.0643508 0.274953 0.0351005 0.117001 0 0H2.17623Z"/></g><g transform="translate(4.73, 0.017)"><path d="M0 0H2.36928L10.0036 10.4073V13.2855L0 0ZM0 13.2679H1.42157C1.11737 13.0339 0.848262 12.7707 0.614259 12.4782C0.380255 12.1857 0.175502 11.8873 0 11.5831V13.2679ZM10.0036 0H8.58207C8.88627 0.234002 9.15538 0.497255 9.38938 0.789759C9.62338 1.08226 9.82813 1.38062 10.0036 1.68482V0Z"/></g><g transform="translate(17.56, 0.035)"><path d="M2.19378 0C2.11188 0.198902 2.06508 0.397805 2.05338 0.596707C2.04168 0.783909 2.03583 0.92431 2.03583 1.01791V11.7586C2.03583 12.133 2.04168 12.4372 2.05338 12.6712C2.06508 12.9052 2.08848 13.0983 2.12358 13.2504H0.0526505C0.0760508 13.1451 0.0936009 12.993 0.105301 12.7941C0.117001 12.5952 0.122853 12.3085 0.122853 11.9341V1.26361C0.122853 0.924311 0.111151 0.661058 0.0877509 0.473855C0.0643506 0.274953 0.0351005 0.117001 0 0H2.19378ZM8.52942 13.2504H7.1254C7.4296 13.0164 7.69286 12.759 7.91516 12.4782C8.14916 12.1857 8.35392 11.8815 8.52942 11.5656V13.2504Z"/></g><g transform="translate(27.93, 0)"><path d="M7.93271 13.2855C7.93271 13.2738 7.93856 13.2562 7.95026 13.2328C7.96196 13.2094 7.96781 13.186 7.96781 13.1626C7.95611 13.1041 7.93856 13.0105 7.91516 12.8818C7.89176 12.7531 7.8157 12.484 7.687 12.0745L7.24825 10.7232C7.20145 10.5945 7.14295 10.419 7.07274 10.1967C7.00254 9.97436 6.91479 9.69941 6.80949 9.3718L6.54624 8.54694C6.52284 8.51184 6.47019 8.37144 6.38828 8.12574C6.24788 7.71624 6.10163 7.30088 5.94953 6.87968C5.80913 6.45847 5.66872 6.06067 5.52832 5.68626C5.39962 5.30016 5.28262 4.955 5.17732 4.6508C5.07202 4.3466 4.98427 4.1126 4.91407 3.94879C4.89067 3.86689 4.85557 3.76159 4.80877 3.63289C4.76197 3.50419 4.70931 3.35209 4.65081 3.17658L4.29981 2.24643L4.82632 0.807309C4.86142 0.713708 4.90237 0.596707 4.94917 0.456305C5.00767 0.315904 5.06617 0.163802 5.12467 0C5.22997 0.315904 5.39377 0.783909 5.61607 1.40402C5.85008 2.02412 6.13088 2.77293 6.45849 3.65044C6.78609 4.51625 7.15465 5.49906 7.56415 6.59887C7.98536 7.69868 8.44167 8.8804 8.93307 10.144C9.07347 10.5184 9.21387 10.8928 9.35428 11.2672C9.49468 11.6299 9.62923 11.9985 9.75793 12.3729C9.82813 12.5484 9.89833 12.718 9.96854 12.8818C10.0504 13.0339 10.1265 13.1685 10.1967 13.2855H7.93271ZM0.754661 11.3725V11.355L0 13.2855H0.754661H1.31627H2.42193C2.04753 13.0164 1.72577 12.718 1.45667 12.3904C1.18757 12.0628 0.953563 11.7235 0.754661 11.3725Z"/></g><g transform="translate(40.59, 0.017)"><path d="M0 0H2.36928L10.0036 10.4073V13.2855L0 0ZM0 13.2679H1.42157C1.11737 13.0339 0.848263 12.7707 0.614259 12.4782C0.380256 12.1857 0.175502 11.8873 0 11.5831V13.2679ZM10.0036 0H8.58207C8.88627 0.234002 9.15538 0.497255 9.38938 0.789759C9.62338 1.08226 9.82814 1.38062 10.0036 1.68482V0Z"/></g><g transform="translate(51.96, 0)"><path d="M9.02082 1.49177C10.5535 2.67348 11.3199 4.3583 11.3199 6.54622C11.3199 8.02044 10.9864 9.28405 10.3195 10.3371C9.64093 11.4486 8.64642 12.2559 7.336 12.759C7.3126 12.7707 7.29505 12.7765 7.28335 12.7765C7.28335 12.7765 7.27165 12.7824 7.24825 12.7941C7.75136 12.2325 8.16086 11.4544 8.47676 10.4599C8.79267 9.45371 8.95062 8.14914 8.95062 6.54622C8.95062 4.10089 8.57037 2.29322 7.80986 1.12321C7.71625 0.971111 7.59925 0.813159 7.45885 0.649357C8.06726 0.85996 8.58792 1.14076 9.02082 1.49177ZM2.19378 0C2.11188 0.198902 2.06508 0.397805 2.05338 0.596706C2.04168 0.783909 2.03583 0.92431 2.03583 1.01791V11.7937C2.03583 12.1681 2.04168 12.4723 2.05338 12.7063C2.07678 12.9403 2.10603 13.1334 2.14113 13.2855H0.0526505C0.0760508 13.1802 0.0936009 13.0281 0.105301 12.8292C0.117001 12.6186 0.122854 12.3261 0.122854 11.9517V1.26361C0.122854 0.92431 0.111151 0.661057 0.0877509 0.473855C0.0643506 0.274953 0.0351005 0.117001 0 0H2.19378Z"/></g></svg></div>
+  <div class="heading-xl reveal reveal-title d2" style="margin-top:8px;">Tunisia</div>
+  <div class="divider divider--short reveal-line d3"></div>
+  <div class="subtitle reveal d4">A Mediterranean Edition</div>
+  <div class="meta reveal d5">12 Selected Stories · Institut français — Mediterranean Photography Support · 2026</div>
+</section>
+
+<section class="slide" data-theme="light">
+  <div class="label reveal">CONTENTS</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top:16px;">Overview</h2>
+  <div class="divider reveal-line d2"></div>
+  <ul class="index-list"><li class="index-item reveal d3"><span class="index-num">01</span><span class="index-title">About INLAND</span></li><li class="index-item reveal d4"><span class="index-num">02</span><span class="index-title">Tunisia — What Survived</span></li><li class="index-item reveal d5"><span class="index-num">03</span><span class="index-title">Our Angle &amp; Categories</span></li><li class="index-item reveal d6"><span class="index-num">04</span><span class="index-title">The 12 Storylines</span></li><li class="index-item reveal d7"><span class="index-num">05</span><span class="index-title">Production Tracks</span></li><li class="index-item reveal d8"><span class="index-num">06</span><span class="index-title">An Equitable Co-Production</span></li></ul>
+</section>
+
+<section class="slide" data-theme="light">
+  <div class="label reveal">ABOUT</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top:16px;">About INLAND</h2>
+  <div class="divider reveal-line d2"></div>
+  <div class="intro-layout">
+    <div class="intro-main">
+      <div class="body-text reveal d3">INLAND is a yearly publication documenting the soul of countries before they change. Each issue embeds with named, locatable custodians of living traditions — artisans, pastoralists, cooks, singers, border families — whose stories have not yet been narrated internationally. Previous issues have covered the Faroe Islands, Georgia and Italy’s minor islands.</div>
+      <div class="body-secondary reveal d4">The editorial method is slow, place-based and built on trust. We spend months in pre-production research, identify specific custodians and communities, then commission photographers, writers and filmmakers to embed with them over extended field periods. The result is long-form visual storytelling grounded in named people and real places.</div>
+    </div>
+    <div class="intro-side"><div class="accent-text reveal-scale d5">Intimacy with custodians, not thematic surveys.</div></div>
+  </div>
+</section>
+
+<section class="slide" data-theme="light">
+  <div class="label reveal">THE RESEARCH</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top:16px;">Tunisia — What Survived</h2>
+  <div class="divider reveal-line d2"></div>
+  <div class="intro-layout">
+    <div class="intro-main">
+      <div class="body-text reveal d3">Tunisia is internationally legible through three loud stories — the 2011 revolution that began the Arab Spring, the Mediterranean migration crossings that leave from Sfax and Zarzis, and the beach-resort coast. All three are loud; all three crowd out the quieter country. INLAND asks one question across every lead: what survived? What persists on the shore and the islands that has been absorbed by neither the Phoenician–Roman antiquity the tour buses visit, the French protectorate, the resort economy, nor the post-revolution turbulence — and can still be witnessed and photographed today.</div>
+      <div class="body-secondary reveal d4">Our desk research identified 17 story leads across craft, ritual, fishing, food, language and landscape. From these, twelve storylines have been selected for editorial development — each centred on a practice that can still be witnessed, a specific place, and a named custodian or custodian community on Tunisia’s Mediterranean shores.</div>
+    </div>
+    <div class="intro-side">
+      <div class="stat-block">
+        <div class="stat-item reveal-scale d4"><div class="stat-num" data-count="17">0</div><div class="stat-label">Story leads researched</div></div>
+        <div class="stat-item reveal-scale d6"><div class="stat-num" data-count="12">0</div><div class="stat-label">Selected for this round</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-theme="light">
+  <div class="label reveal">EDITORIAL ANGLE</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top:16px;">Our Angle</h2>
+  <div class="divider reveal-line d2"></div>
+  <div class="intro-layout">
+    <div class="intro-main">
+      <div class="body-text reveal d3">We read Tunisia as a Mediterranean palimpsest — Phoenician, Roman, Amazigh, Andalusian, Jewish, Ibadi, sub-Saharan and Ottoman — through the people who keep its endangered knowledge: the palm-frond charfia fences of Kerkennah, the hand-built pottery of the women of Sejnane, the Stambeli trance liturgy of Black Tunisia. The sea is crossing, frontier, larder and memory. The revolution and the migration crisis are context, never the lens; the state is never cast as villain.</div>
+      <div class="body-secondary reveal d4">This is the Mediterranean photographic work the Institut français support exists to fund: a finished INLAND edition on the monde méditerranéen, in the register of Issue 03 (Isole Minori). The publication strand covers the edition’s editing and printing; the production strand funds the field shoot across three coastal and island clusters — made with the custodians, not about them.</div>
+    </div>
+    <div class="intro-side">
+      <div class="label reveal d5" style="margin-bottom:8px;">CATEGORIES</div>
+      <div class="category-list"><div class="category-item d5"><span>Arts &amp; Culture</span><span class="category-count">3</span></div><div class="category-item d6"><span>Food</span><span class="category-count">2</span></div><div class="category-item d7"><span>Local communities</span><span class="category-count">2</span></div><div class="category-item d8"><span>Myth &amp; Religion</span><span class="category-count">2</span></div><div class="category-item d9"><span>Geopolitics</span><span class="category-count">1</span></div><div class="category-item d10"><span>History</span><span class="category-count">1</span></div><div class="category-item d10"><span>Nature</span><span class="category-count">1</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide--breaker" data-theme="dark">
+  <div class="breaker-label reveal">PART TWO</div>
+  <div class="breaker-heading reveal reveal-title d1">The Storylines</div>
+  <div class="divider divider--short divider--white reveal-line d2"></div>
+  <div class="breaker-sub reveal d3">Twelve selected stories across the shore and the islands — craft, ritual, fishing, food, language and landscape. Each centres a custodian, a specific place, and a practice that can still be witnessed.</div>
+</section>
+
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">01</div>
+  <div class="label reveal">Nature</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Palm in the Sea</h2>
+    <div class="subtitle-story reveal d2">The Charfia of the Kerkennah Islands</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>On the low, palm-fringed Kerkennah Islands off Sfax, fishermen still plant date-palm fronds in rows across the shallows to build the charfia — a great V of woven palm that channels fish on the ebb tide into capture chambers, the grounds shared by a draw of lots and worked to a maritime calendar. UNESCO inscribed it in 2020.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND follows one charfia family through the autumn setting of the fronds and a dawn lift of the traps — a fishing architecture built entirely from the palm, standing in the Mediterranean. The edition’s signature recurring image.</div>
+      <div class="story-places reveal d5">Places: Kerkennah Islands · Sfax</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“A fence of palm leaves, planted in the sea, older than any net.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: UNESCO ICH 2020 (Charfia fishing); Earth Journalism Network; New Arab</div>
+    <div class="tag-row reveal d5"><span class="tag">UNESCO</span><span class="tag">Endangered</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">02</div>
+  <div class="label reveal">Arts &amp; Culture</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Women Who Build with Earth</h2>
+    <div class="subtitle-story reveal d2">Sejnane’s Amazigh Potters</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>In the Mogods hills behind Bizerte, the women of Sejnane hand-build pots, animals and the famous Sejnane dolls from wadi clay with no wheel and no kiln, firing them in open ground and painting them with two-tone geometric signs from tattoo and Berber weaving — a craft passed mother to daughter for some three thousand years.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND portraits one named potter through a full cycle — digging and kneading the clay, shaping by hand, the open firing, the painting — a Mediterranean ceramics tradition that predates the wheel and belongs entirely to women. UNESCO-inscribed 2018.</div>
+      <div class="story-places reveal d5">Places: Sejnane · Mogods · Bizerte</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“No wheel, no kiln — only the hand, the fire, and three thousand years.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: UNESCO ICH 2018 (Pottery of the women of Sejnane); The Arab Weekly; phys.org</div>
+    <div class="tag-row reveal d5"><span class="tag">UNESCO</span><span class="tag">Women</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">03</div>
+  <div class="label reveal">Myth &amp; Religion</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Island of Three Prayers</h2>
+    <div class="subtitle-story reveal d2">Djerba’s Ibadis &amp; El Ghriba</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>On Djerba, Ibadi Muslims built low, fortified, sometimes half-underground mosques across an island of menzel farmsteads and rain-cisterns, while at El Ghriba — held to be Africa’s oldest synagogue — Jewish pilgrims still gather each spring for the Lag BaOmer procession. UNESCO listed the whole island in 2023.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND works the island as one fabric — a fortified Ibadi mosque at prayer, a menzel courtyard, the El Ghriba pilgrimage — documenting the only place in the Arab world where Ibadi, Maliki, Hanafi, Christian and Jewish communities have shared a small island for centuries.</div>
+      <div class="story-places reveal d5">Places: Djerba · Hara Kebira · Erriadh</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“Three kinds of mosque, a church and a synagogue, on one waterless island.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: UNESCO WHC 2023 (Djerba); El Ghriba (Wikipedia); The Arab Weekly</div>
+    <div class="tag-row reveal d5"><span class="tag">UNESCO</span><span class="tag">Coexistence</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">04</div>
+  <div class="label reveal">Local communities</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Villages That Speak the Old Tongue</h2>
+    <div class="subtitle-story reveal d2">The Amazigh Ksour of the Dahar</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>On the ridges of the Dahar above Tataouine, the Amazigh villages of Chenini and Douiret cling to the rock around honeycombed ghorfa granaries and a white mosque, and a dwindling number of elders still speak Tamazight where a generation ago far more did. Below, families have moved to ‘new’ villages with roads and water.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND follows a family that still keeps a hill house and a ghorfa — the olive-and-barley year, the granary, the Tamazight spoken at home — documenting one of the last living Berber-speaking pockets of a country that mostly forgot it was Amazigh.</div>
+      <div class="story-places reveal d5">Places: Chenini · Douiret · Tataouine</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“A language kept like seed-grain, in a granary on a hill.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: Carthage Magazine (Amazigh heritage); WildyNess; Discover Tunisia</div>
+    <div class="tag-row reveal d5"><span class="tag">Amazigh</span><span class="tag">Language</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">05</div>
+  <div class="label reveal">Arts &amp; Culture</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Clock That Runs Backward</h2>
+    <div class="subtitle-story reveal d2">Testour’s Andalusians &amp; the Malouf</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Testour, in the Medjerda valley, was rebuilt in the 17th century by Moriscos expelled from Spain; its Great Mosque carries a clock whose hands turn counter-clockwise — read locally as the exiles’ longing to wind time back toward Andalusia — and the town keeps the malouf, the Arab-Andalusian music carried across the sea.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND spends the malouf festival with a family of Testour musicians and follows the Andalusian thread through the town — the backward clock, the brick mosque, the pomegranate orchards — a four-century-old Mediterranean exile still audible.</div>
+      <div class="story-places reveal d5">Places: Testour · Medjerda · Béja</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“They set the clock to run home, across a sea they could not recross.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: The Arab Weekly; The National; Tunisian malouf (Wikipedia)</div>
+    <div class="tag-row reveal d5"><span class="tag">Andalusian</span><span class="tag">Music</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">06</div>
+  <div class="label reveal">Geopolitics</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Oasis by the Sea</h2>
+    <div class="subtitle-story reveal d2">Gabès, the Last Maritime Oasis</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Gabès holds the Mediterranean’s only seaside oasis — a three-tier garden of date palm, pomegranate, henna and vegetable running down to the shore, watered for millennia — now poisoned at its edge by the state phosphate works that have piled phosphogypsum into the gulf for fifty years. Farmers describe henna and pomegranate failing.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND documents the oasis from inside — a henna grower, the layered garden, the old irrigation — against the chimneys at its margin: a living agricultural landscape and the industry pressing on it. Tension, not indictment; the gardeners are the subject.</div>
+      <div class="story-places reveal d5">Places: Gabès · Chenini Gabès · Gulf of Gabès</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“A garden that has met the sea for three thousand years, now meeting the factory.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: Med-O-Med (Gabès oasis); Coda Story; TIMEP; SEVENSEAS</div>
+    <div class="tag-row reveal d5"><span class="tag">Ecology</span><span class="tag">Henna</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">07</div>
+  <div class="label reveal">Myth &amp; Religion</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Spirits Carried North</h2>
+    <div class="subtitle-story reveal d2">Stambeli, Black Tunisia’s Healing Trance</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>In a few houses in Tunis — above all Dar Barnou, once a refuge for freed slaves — the descendants of sub-Saharan people brought across the Sahara keep Stambeli, a night music of the gambri lute and iron shqasheq that calls a pantheon of sub-Saharan spirits and Muslim saints to heal through trance. It survives in a handful of brotherhoods.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND sits a full Stambeli night with one of the last troupes — the tuning, the incense, the colours each spirit demands, the dance — documenting Black Tunisia’s living liturgy with consent, as ritual rather than spectacle.</div>
+      <div class="story-places reveal d5">Places: Tunis · Dar Barnou · Sidi Saad</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“The drum crossed the desert in chains, and it is still healing.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: Stambeli (Wikipedia); Jankowsky, Stambeli (U. Chicago); Pan-African Music</div>
+    <div class="tag-row reveal d5"><span class="tag">Ritual</span><span class="tag">Minority</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">08</div>
+  <div class="label reveal">Food</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Last Matanza</h2>
+    <div class="subtitle-story reveal d2">The Bluefin Trap of Cap Bon</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>At Sidi Daoud, on the tip of Cap Bon, fishermen set the madrague — a labyrinth of nets the locals call the matanza — to trap migrating Atlantic bluefin between May and July, a Phoenician-old technique that ends in a churning chamber of tuna hauled by hand. Quotas, industrial fleets and warming water have all but stilled it.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND embeds for a season at one of the Mediterranean’s last working tuna traps — the building of the net-rooms, the watch for the school, the matanza itself — a violent, ancient sea-harvest at the edge of disappearing.</div>
+      <div class="story-places reveal d5">Places: Sidi Daoud · Cap Bon · El Haouaria</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“A maze of nets the Phoenicians would recognise, sprung once a year.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: INSTM Bulletin (madrague Sidi Daoud); Mattanza (Wikipedia); harissa.com</div>
+    <div class="tag-row reveal d5"><span class="tag">Sea</span><span class="tag">Endangered</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">09</div>
+  <div class="label reveal">Food</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">White Gold</h2>
+    <div class="subtitle-story reveal d2">Distilling Neroli at Nabeul</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Each April and May around Nabeul, families pick the bitter-orange blossom by hand before dawn, when the scent is strongest, and distil it over slow fire in copper alembics into zhar — orange-blossom water for sweets and grief and celebration — and the precious neroli oil. A million flowers make a kilogram of oil.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND follows one family’s blossom week — the pre-dawn picking, the qattara still, the bottling — a Mediterranean perfume-and-kitchen tradition where the whole coast smells of one tree for a fortnight a year.</div>
+      <div class="story-places reveal d5">Places: Nabeul · Hammamet · Cap Bon</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“For two weeks the whole coast smells of one flower.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: Africanews (Nabeul orange blossom); Middle East Eye; Biolandes</div>
+    <div class="tag-row reveal d5"><span class="tag">Distillation</span><span class="tag">Season</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">10</div>
+  <div class="label reveal">Arts &amp; Culture</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Gold-Threaded Loom</h2>
+    <div class="subtitle-story reveal d2">Wedding Silk of Mahdia</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>In the sea-walled medina of Mahdia, weavers still work tall draw-looms — a technology that came across the Mediterranean from Iberia — to make narrow silk strips threaded with gold and silver for the keswa el-kbira, the layered wedding dress that tells a Sahel woman’s married status. The craft was brought by Jewish artisans.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND portraits a master weaver and a bride’s family through the making and wearing of a gold-silk keswa — the loom, the shuttle, the dressing — a coastal textile tradition where a wedding is still woven by hand.</div>
+      <div class="story-places reveal d5">Places: Mahdia · the Sahel coast</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“A marriage you can read in the gold of the cloth.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: Carthage Magazine (Tunisian wedding); Discover Tunisia; shirahime.ch</div>
+    <div class="tag-row reveal d5"><span class="tag">Weaving</span><span class="tag">Women</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">11</div>
+  <div class="label reveal">History</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Knot and the Sweet</h2>
+    <div class="subtitle-story reveal d2">The Holy City’s Carpets</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Kairouan, Islam’s fourth holy city and its first in Africa, is also Tunisia’s carpet capital, where women knot the zerbia — hundreds of thousands of knots a square metre — in workshops around the Great Mosque, and bake the date-and-semolina makroudh the city claims as its own. Both loom and oven are pressed by cheaper imports.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND works the medina with one weaving family and one makroudh house — the dyed wool, the knotting frame, the honeyed pastry — documenting the holy city through the women’s hands that keep its two famous crafts.</div>
+      <div class="story-places reveal d5">Places: Kairouan · the Medina</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“Half a million knots, said like a prayer, in the city of the first mosque.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: Discover Tunisia (weaving &amp; carpets); Folk Culture (Kairouan carpet); WildyNess</div>
+    <div class="tag-row reveal d5"><span class="tag">Carpets</span><span class="tag">Holy city</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">12</div>
+  <div class="label reveal">Local communities</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Green Mountain</h2>
+    <div class="subtitle-story reveal d2">Cork Oak and the Khroumir</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>In the Kroumirie range above Tabarka, where it snows in winter and the cork-oak forest is unlike anywhere else in Tunisia, the Khroumir mountain people harvest cork on its long bark-cycle, herd and gather among the trees, and keep a green, wet, half-forgotten north that contradicts the country’s Saharan image.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND follows a cork-harvesting family through a summer stripping season and the forest year — the orange-stripped trunks, the herding, the highland village — documenting the Mediterranean Tunisia of oak and rain rather than palm and dune.</div>
+      <div class="story-places reveal d5">Places: Aïn Draham · Kroumirie · Tabarka</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“A Tunisia of oak bark and snow, where you expected only sand.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: Carthage Magazine (Aïn Draham); Tunisi.info (Kroumirie); Take Your Backpack</div>
+    <div class="tag-row reveal d5"><span class="tag">Forest</span><span class="tag">Cork</span></div>
+  </div>
+</section>
+
+<section class="slide" data-theme="light">
+  <div class="label reveal">THREE TRACKS</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top:16px;">Production Tracks</h2>
+  <div class="divider reveal-line d2"></div>
+  <div class="tracks-grid">
+    <div class="track-card track-card--blue reveal d3">
+      <div class="track-name">The South &amp; the Islands</div>
+      <div class="track-stories">Stories 01 + 03 + 04 + 06</div>
+      <div class="track-desc">The Mediterranean south: the charfia palm-fences of Kerkennah, the coexistence-island of Djerba (Ibadi mosques + El Ghriba), the Amazigh ksour of the Dahar, and the threatened seaside oasis of Gabès. One southern deployment.</div>
+      <div class="track-meta">Geography: Kerkennah/Sfax → Gabès → Djerba → Tataouine<br>Season: Charfia autumn-set; El Ghriba pilgrimage (spring)<br>4 stories, 1 southern base</div>
+    </div>
+    <div class="track-card track-card--green reveal d4">
+      <div class="track-name">Cap Bon &amp; the Sahel</div>
+      <div class="track-stories">Stories 08 + 09 + 10 + 11</div>
+      <div class="track-desc">The eastern shoulder: the Sidi Daoud bluefin matanza and the Nabeul orange-blossom stills of Cap Bon, the wedding silk of Mahdia and the carpets and makroudh of holy Kairouan. Sea and craft on the Sahel.</div>
+      <div class="track-meta">Geography: Cap Bon (Sidi Daoud/Nabeul) → Kairouan → Mahdia<br>Season: Blossom Apr–May; matanza May–Jul<br>4 stories, spring window</div>
+    </div>
+    <div class="track-card track-card--purple reveal d5">
+      <div class="track-name">The Green North</div>
+      <div class="track-stories">Stories 02 + 05 + 07 + 12</div>
+      <div class="track-desc">The wet, layered north: the women potters of Sejnane, the Andalusian malouf of Testour, the Stambeli brotherhoods of Tunis, and the Kroumirie cork-oak country above Tabarka. The Tunisia of oak, exile and rain.</div>
+      <div class="track-meta">Geography: Tunis → Testour (Medjerda) → Sejnane (Bizerte) → Aïn Draham<br>Season: Cork stripping &amp; malouf festival (summer)<br>4 stories, 1 northern loop</div>
+    </div></div>
+  <div class="track-note reveal d8">Signature: <b>The Charfia of Kerkennah</b> (autumn net-setting) runs across the project as its recurring image; <b>El Ghriba</b> (spring pilgrimage) and the <b>Stambeli</b> nights anchor a faith-and-memory strand.</div>
+</section>
+
+<section class="slide" data-theme="light">
+  <div class="label reveal">THE EDITION</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top:16px;">Two Strands, One Edition</h2>
+  <div class="divider reveal-line d2"></div>
+  <div class="partner-grid"><div class="partner-h reveal d3">The publication</div><div class="partner-b reveal d3">INLAND — yearly publication (Italy / EU). A finished Tunisia edition (~170–240 pp) on the Mediterranean theme, in the register of Issue 03, Isole Minori. The Institut français publication aid covers editing and printing in full.</div><div class="partner-h reveal d4">The production</div><div class="partner-b reveal d4">The field shoot across three coastal-and-island clusters — Kerkennah, Cap Bon–Sahel, the green north — funded by the production strand for new Mediterranean photographic work.</div><div class="partner-h reveal d5">Why the Mediterranean</div><div class="partner-b reveal d5">Tunisia is a Mediterranean palimpsest — Phoenician, Roman, Amazigh, Andalusian, Jewish, Ibadi and sub-Saharan — read through living custodians on its shores and islands, exactly the ‘monde méditerranéen’ the programme funds.</div><div class="partner-h reveal d6">The principle</div><div class="partner-b reveal d6">Named custodians, locatable places, seasonal scenes — made with the people who keep these traditions, not about them. The loud Tunisia of revolution and migration stays as context; the quieter country is the subject.</div></div>
+</section>
+
+<section class="slide slide--closing slide--dark" data-theme="dark">
+  <div class="closing-headline reveal reveal-title">12 Storylines.<br>One Tunisia.</div>
+  <div class="divider divider--short divider--white reveal-line d1"></div>
+  <div class="reveal reveal-scale d2" style="margin-bottom:8px;color:var(--dark-fg);"><svg class="logo-svg--sm" viewBox="0 0 63.28 13.29" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0, 0.14)"><path d="M2.17623 0C2.09433 0.198902 2.04753 0.391954 2.03583 0.579156C2.02413 0.766358 2.01828 0.906759 2.01828 1.00036V11.6709C2.01828 12.0453 2.02413 12.3495 2.03583 12.5835C2.05923 12.8175 2.08848 13.0047 2.12358 13.1451H0.0526506C0.0760509 13.0398 0.0936013 12.8935 0.105301 12.7063C0.117002 12.5074 0.122852 12.2208 0.122852 11.8464V1.24606C0.122852 0.91846 0.111151 0.661057 0.0877512 0.473854C0.0643508 0.274953 0.0351005 0.117001 0 0H2.17623Z"/></g><g transform="translate(4.73, 0.017)"><path d="M0 0H2.36928L10.0036 10.4073V13.2855L0 0ZM0 13.2679H1.42157C1.11737 13.0339 0.848262 12.7707 0.614259 12.4782C0.380255 12.1857 0.175502 11.8873 0 11.5831V13.2679ZM10.0036 0H8.58207C8.88627 0.234002 9.15538 0.497255 9.38938 0.789759C9.62338 1.08226 9.82813 1.38062 10.0036 1.68482V0Z"/></g><g transform="translate(17.56, 0.035)"><path d="M2.19378 0C2.11188 0.198902 2.06508 0.397805 2.05338 0.596707C2.04168 0.783909 2.03583 0.92431 2.03583 1.01791V11.7586C2.03583 12.133 2.04168 12.4372 2.05338 12.6712C2.06508 12.9052 2.08848 13.0983 2.12358 13.2504H0.0526505C0.0760508 13.1451 0.0936009 12.993 0.105301 12.7941C0.117001 12.5952 0.122853 12.3085 0.122853 11.9341V1.26361C0.122853 0.924311 0.111151 0.661058 0.0877509 0.473855C0.0643506 0.274953 0.0351005 0.117001 0 0H2.19378ZM8.52942 13.2504H7.1254C7.4296 13.0164 7.69286 12.759 7.91516 12.4782C8.14916 12.1857 8.35392 11.8815 8.52942 11.5656V13.2504Z"/></g><g transform="translate(27.93, 0)"><path d="M7.93271 13.2855C7.93271 13.2738 7.93856 13.2562 7.95026 13.2328C7.96196 13.2094 7.96781 13.186 7.96781 13.1626C7.95611 13.1041 7.93856 13.0105 7.91516 12.8818C7.89176 12.7531 7.8157 12.484 7.687 12.0745L7.24825 10.7232C7.20145 10.5945 7.14295 10.419 7.07274 10.1967C7.00254 9.97436 6.91479 9.69941 6.80949 9.3718L6.54624 8.54694C6.52284 8.51184 6.47019 8.37144 6.38828 8.12574C6.24788 7.71624 6.10163 7.30088 5.94953 6.87968C5.80913 6.45847 5.66872 6.06067 5.52832 5.68626C5.39962 5.30016 5.28262 4.955 5.17732 4.6508C5.07202 4.3466 4.98427 4.1126 4.91407 3.94879C4.89067 3.86689 4.85557 3.76159 4.80877 3.63289C4.76197 3.50419 4.70931 3.35209 4.65081 3.17658L4.29981 2.24643L4.82632 0.807309C4.86142 0.713708 4.90237 0.596707 4.94917 0.456305C5.00767 0.315904 5.06617 0.163802 5.12467 0C5.22997 0.315904 5.39377 0.783909 5.61607 1.40402C5.85008 2.02412 6.13088 2.77293 6.45849 3.65044C6.78609 4.51625 7.15465 5.49906 7.56415 6.59887C7.98536 7.69868 8.44167 8.8804 8.93307 10.144C9.07347 10.5184 9.21387 10.8928 9.35428 11.2672C9.49468 11.6299 9.62923 11.9985 9.75793 12.3729C9.82813 12.5484 9.89833 12.718 9.96854 12.8818C10.0504 13.0339 10.1265 13.1685 10.1967 13.2855H7.93271ZM0.754661 11.3725V11.355L0 13.2855H0.754661H1.31627H2.42193C2.04753 13.0164 1.72577 12.718 1.45667 12.3904C1.18757 12.0628 0.953563 11.7235 0.754661 11.3725Z"/></g><g transform="translate(40.59, 0.017)"><path d="M0 0H2.36928L10.0036 10.4073V13.2855L0 0ZM0 13.2679H1.42157C1.11737 13.0339 0.848263 12.7707 0.614259 12.4782C0.380256 12.1857 0.175502 11.8873 0 11.5831V13.2679ZM10.0036 0H8.58207C8.88627 0.234002 9.15538 0.497255 9.38938 0.789759C9.62338 1.08226 9.82814 1.38062 10.0036 1.68482V0Z"/></g><g transform="translate(51.96, 0)"><path d="M9.02082 1.49177C10.5535 2.67348 11.3199 4.3583 11.3199 6.54622C11.3199 8.02044 10.9864 9.28405 10.3195 10.3371C9.64093 11.4486 8.64642 12.2559 7.336 12.759C7.3126 12.7707 7.29505 12.7765 7.28335 12.7765C7.28335 12.7765 7.27165 12.7824 7.24825 12.7941C7.75136 12.2325 8.16086 11.4544 8.47676 10.4599C8.79267 9.45371 8.95062 8.14914 8.95062 6.54622C8.95062 4.10089 8.57037 2.29322 7.80986 1.12321C7.71625 0.971111 7.59925 0.813159 7.45885 0.649357C8.06726 0.85996 8.58792 1.14076 9.02082 1.49177ZM2.19378 0C2.11188 0.198902 2.06508 0.397805 2.05338 0.596706C2.04168 0.783909 2.03583 0.92431 2.03583 1.01791V11.7937C2.03583 12.1681 2.04168 12.4723 2.05338 12.7063C2.07678 12.9403 2.10603 13.1334 2.14113 13.2855H0.0526505C0.0760508 13.1802 0.0936009 13.0281 0.105301 12.8292C0.117001 12.6186 0.122854 12.3261 0.122854 11.9517V1.26361C0.122854 0.92431 0.111151 0.661057 0.0877509 0.473855C0.0643506 0.274953 0.0351005 0.117001 0 0H2.19378Z"/></g></svg></div>
+  <div class="closing-tagline reveal d3">A Mediterranean photographic edition by INLAND</div>
+</section>
+
+<div class="nav-counter" id="navCounter">1 / 1</div>
+<script>
+(function() {
+  const slides = document.querySelectorAll('.slide');
+  const counter = document.getElementById('navCounter');
+  const progressBar = document.getElementById('progressBar');
+  const total = slides.length;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const slide = entry.target;
+        slide.querySelectorAll('.reveal, .reveal-title, .reveal-line, .reveal-scale, .reveal-vline')
+          .forEach(el => el.classList.add('visible'));
+        slide.querySelectorAll('.category-item').forEach(el => el.classList.add('visible'));
+        const idx = Array.from(slides).indexOf(slide);
+        counter.textContent = (idx + 1) + ' / ' + total;
+        const isDark = slide.dataset.theme === 'dark';
+        counter.classList.toggle('nav-counter--dark', isDark);
+        progressBar.style.width = (((idx + 1) / total) * 100) + '%';
+        progressBar.style.background = isDark ? 'rgba(255,255,255,0.3)' : 'var(--accent)';
+        slide.querySelectorAll('[data-count]').forEach(el => {
+          if (!el.dataset.counted) { el.dataset.counted = 'true'; animateCounter(el, parseInt(el.dataset.count)); }
+        });
+      } else {
+        entry.target.querySelectorAll('.reveal, .reveal-title, .reveal-line, .reveal-scale, .reveal-vline')
+          .forEach(el => el.classList.remove('visible'));
+        entry.target.querySelectorAll('.category-item').forEach(el => el.classList.remove('visible'));
+        entry.target.querySelectorAll('[data-count]').forEach(el => { el.dataset.counted = ''; el.textContent = '0'; });
+      }
+    });
+  }, { threshold: 0.35 });
+  slides.forEach(s => observer.observe(s));
+  function animateCounter(el, target, duration) {
+    duration = duration || 1200; var start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  let current = 0;
+  function goTo(i) { if (i < 0 || i >= total) return; current = i; slides[current].scrollIntoView({ behavior: 'smooth' }); }
+  document.addEventListener('keydown', (e) => {
+    if (['ArrowDown','ArrowRight',' '].includes(e.key)) { e.preventDefault(); goTo(current + 1); }
+    else if (['ArrowUp','ArrowLeft','Backspace'].includes(e.key)) { e.preventDefault(); goTo(current - 1); }
+  });
+  const scrollObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) current = Array.from(slides).indexOf(entry.target); });
+  }, { threshold: 0.55 });
+  slides.forEach(s => scrollObs.observe(s));
+  document.querySelectorAll('.story-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const main = this.closest('.story-main');
+      main.querySelectorAll('.story-toggle-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      main.classList.toggle('story-toggle-active', this.dataset.show === 'proposal');
+    });
+  });
+})();
+</script>
+</body></html>

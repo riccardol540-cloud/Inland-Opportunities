@@ -447,11 +447,55 @@
       ],
       "researched": true,
       "flagged": false,
-      "production": "none",
+      "production": "drafted",
       "documents": [
         {
           "label": "Research brief",
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/research-brief.md"
+        },
+        {
+          "label": "Deep-research report",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/deep-research-report.md"
+        },
+        {
+          "label": "Selected story leads",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/selected-story-leads.md"
+        },
+        {
+          "label": "Topics + Contacts (xlsx)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/INLAND_Tunisia_Topics_Contacts.xlsx"
+        },
+        {
+          "label": "Pitch deck (pptx)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/INLAND_Tunisia_Pitch.pptx"
+        },
+        {
+          "label": "Pitch (web/html)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/INLAND_Tunisia_Pitch.html"
+        },
+        {
+          "label": "Overview (PDF)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/INLAND_Tunisia_Overview.pdf"
+        },
+        {
+          "label": "Application — Project description (Mediterranean theme)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/application/project-description.md"
+        },
+        {
+          "label": "Application — Photographic project (image edit)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/application/photographic-project.md"
+        },
+        {
+          "label": "Application — Track record",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/application/track-record.md"
+        },
+        {
+          "label": "Application — Budget",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/application/budget.md"
+        },
+        {
+          "label": "Application — Timeline",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/application/timeline.md"
         }
       ],
       "status": "pursuing",
@@ -472,6 +516,22 @@
           "by": "Riccardo",
           "changes": {
             "status": "pursuing"
+          }
+        },
+        {
+          "at": "2026-06-23T16:00:00.000Z",
+          "by": "producer",
+          "changes": {
+            "production": "in_progress",
+            "note": "Producer started: Tunisia edition for the Institut français Mediterranean photography support (publication + production strands)"
+          }
+        },
+        {
+          "at": "2026-06-23T17:30:00.000Z",
+          "by": "producer",
+          "changes": {
+            "production": "drafted",
+            "note": "Drafted full INLAND Tunisia asset set + Institut français application docs (working title 'The Palm in the Sea'): deep-research report, 12 selected leads, Topics+Contacts xlsx, pitch (pptx/html), overview PDF, and application (project description + Mediterranean-theme statement, photographic project/image edit, track record, budget, timeline). Desk research; named custodians, IF strand/routing and budget to confirm. For review before submission."
           }
         }
       ],
