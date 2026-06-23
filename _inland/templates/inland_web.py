@@ -33,6 +33,13 @@ Data contract — `cfg` dict passed to build_pitch / build_overview / write_edit
   breaker_sub       str   optional storylines breaker blurb; sensible default.
   tracks_note       str   optional HTML rendered under the tracks (Angola uses
                           this for its "Signature:" line). Omit for none.
+  partners_label    str   optional partner-slide eyebrow label; default
+                          "THE PARTNERSHIP".
+  partners_heading  str   optional partner-slide heading (pitch + overview);
+                          default "An Equitable Co-Production".
+  closing_tagline   str   optional closing-slide tagline; default
+                          "An Africa–Europe co-production proposal by INLAND".
+                          (Override these three for non-Goethe funders.)
   title             str   optional <title>; default "INLAND <territory> — …".
 
 Editions consume it via a thin shim (see editions/*/generate_web.py).
@@ -436,6 +443,9 @@ def build_pitch(cfg):
     )
     tracks_note = cfg.get("tracks_note", "")
     title = cfg.get("title", f"INLAND {territory} — Africa–Europe Co-Production")
+    partners_heading = cfg.get("partners_heading", "An Equitable Co-Production")
+    partners_label = cfg.get("partners_label", "THE PARTNERSHIP")
+    closing_tagline = cfg.get("closing_tagline", "An Africa–Europe co-production proposal by INLAND")
 
     cats = "".join(
         f'<div class="category-item d{min(i + 5, 10)}"><span>{esc(c)}</span>'
@@ -452,8 +462,8 @@ def build_pitch(cfg):
     if partners:
         partner_slide = f"""
 <section class="slide" data-theme="light">
-  <div class="label reveal">THE PARTNERSHIP</div>
-  <h2 class="heading-lg reveal reveal-title d1" style="margin-top:16px;">An Equitable Co-Production</h2>
+  <div class="label reveal">{esc(partners_label)}</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top:16px;">{esc(partners_heading)}</h2>
   <div class="divider reveal-line d2"></div>
   <div class="partner-grid">{partner_rows}</div>
 </section>"""
@@ -553,7 +563,7 @@ def build_pitch(cfg):
   <div class="closing-headline reveal reveal-title">{n_sel} Storylines.<br>One {esc(territory)}.</div>
   <div class="divider divider--short divider--white reveal-line d1"></div>
   <div class="reveal reveal-scale d2" style="margin-bottom:8px;color:var(--dark-fg);">{_logo("logo-svg--sm")}</div>
-  <div class="closing-tagline reveal d3">An Africa–Europe co-production proposal by INLAND</div>
+  <div class="closing-tagline reveal d3">{esc(closing_tagline)}</div>
 </section>
 
 <div class="nav-counter" id="navCounter">1 / 1</div>
@@ -638,6 +648,7 @@ def build_overview(cfg):
         "Goethe-Institut Africa–Europe Partnerships for Culture · 2026",
     )
     title = cfg.get("title", f"INLAND {territory} — Overview")
+    partners_heading = cfg.get("partners_heading", "An Equitable Co-Production")
 
     cats = "".join(f"<div><span>{esc(c)}</span><b>{n}</b></div>" for c, n in intro["categories"])
     track_cards = "".join(
@@ -651,7 +662,7 @@ def build_overview(cfg):
     partner_block = ""
     if partners:
         partner_block = (
-            f'<h2 class="sec-h">An Equitable Co-Production</h2><hr>'
+            f'<h2 class="sec-h">{esc(partners_heading)}</h2><hr>'
             f'<div class="partner">{partner_rows}</div>'
         )
 
