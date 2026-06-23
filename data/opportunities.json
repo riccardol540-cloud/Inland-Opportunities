@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-06-23T10:00:00.000Z",
+    "lastUpdated": "2026-06-23T11:30:00.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -23,51 +23,47 @@
         "Budget"
       ],
       "researched": true,
-      "production": "in_progress",
+      "production": "drafted",
       "documents": [
         {
-          "label": "Research brief",
-          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/research-brief.md"
-        },
-        {
           "label": "Deep-research report",
-          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/deep-research-report.md"
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/deep-research-report.md"
         },
         {
           "label": "Selected story leads",
-          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/selected-story-leads.md"
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/selected-story-leads.md"
         },
         {
           "label": "Topics + Contacts (xlsx)",
-          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/INLAND_Rwanda_Topics_Contacts.xlsx"
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/INLAND_Angola_Topics_Contacts.xlsx"
         },
         {
           "label": "Pitch deck (pptx)",
-          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/INLAND_Rwanda_Pitch.pptx"
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/INLAND_Angola_Pitch.pptx"
         },
         {
           "label": "Pitch (web/html)",
-          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/INLAND_Rwanda_Pitch.html"
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/INLAND_Angola_Pitch.html"
         },
         {
           "label": "Overview (PDF)",
-          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/INLAND_Rwanda_Overview.pdf"
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/INLAND_Angola_Overview.pdf"
         },
         {
           "label": "Application — Project description",
-          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/application/project-description.md"
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/application/project-description.md"
         },
         {
           "label": "Application — Partners & confirmation",
-          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/application/partners.md"
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/application/partners.md"
         },
         {
           "label": "Application — Budget",
-          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/application/budget.md"
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/application/budget.md"
         },
         {
           "label": "Application — Timeline",
-          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/application/timeline.md"
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/application/timeline.md"
         }
       ],
       "status": "pursuing",
@@ -131,6 +127,14 @@
           "changes": {
             "production": "in_progress",
             "note": "Producer started: Angola edition, Africa–Europe Visual Arts/Mobility strand"
+          }
+        },
+        {
+          "at": "2026-06-23T11:30:00.000Z",
+          "by": "producer",
+          "changes": {
+            "production": "drafted",
+            "note": "Drafted full INLAND Angola asset set + Goethe application docs (working title 'The Fire That Stays Lit'): deep-research report, 12 selected leads, Topics+Contacts xlsx, pitch (pptx/html), overview PDF, project description/partners/budget/timeline. Desk research; named custodians, partner confirmation and budget to confirm in the field. For review before submission."
           }
         }
       ],
