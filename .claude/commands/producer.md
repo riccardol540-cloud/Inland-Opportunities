@@ -39,8 +39,11 @@ Per `_inland/deliverables.md`, in INLAND house style:
 - deep-research report (`.md`)
 - selected story leads (`.md`)
 - Topics + Contacts spreadsheet (`.xlsx`, two sheets)
-- pitch presentation (`.pptx`, plus `.html`)
-- overview PDF
+- pitch presentation (`.pptx`, plus `.html`) — render the `.html` via the shared
+  module `_inland/templates/inland_web.py` (thin-shim `generate_web.py`: supply the
+  edition data, call `inland_web.write_edition(cfg)`). **Never hand-roll/minify CSS.**
+  Gold standard: `_inland/templates/REFERENCE_INLAND_pitch.html`.
+- overview PDF (export `INLAND_<Territory>_Overview.html`, also from `inland_web.py`)
 - the opportunity's **required application documents** (concept note, budget, timeline,
   CVs, letters — whatever `requiredDocs` lists)
 

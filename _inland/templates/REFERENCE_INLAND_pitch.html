@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INLAND — Kashmir Research Storylines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Fraunces:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #F9F4EE;
+    --fg: #000000;
+    --accent: #400505;
+    --muted: rgba(0,0,0,0.58);
+    --muted-soft: rgba(0,0,0,0.38);
+    --divider: rgba(0,0,0,0.18);
+    --divider-light: rgba(0,0,0,0.1);
+    --dark-bg: #0e0e0e;
+    --dark-fg: #ffffff;
+    --tag-border: #B0A89E;
+    --font-heading: 'Cormorant', Georgia, serif;
+    --font-body: 'Cormorant Garamond', Georgia, serif;
+    --font-label: 'Fraunces', sans-serif;
+    --track-blue: #1B4965;
+    --track-green: #3A5A40;
+    --track-purple: #5B2C6F;
+  }
+
+  html {
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+  }
+
+  /* ─── Slide base ─── */
+  .slide {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide--dark {
+    background: var(--dark-bg);
+    color: var(--dark-fg);
+  }
+
+  /* ─── Reveal animations ─── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 0.7s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  .reveal-title {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+    transform: translateY(24px);
+    transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1),
+                transform 0.8s cubic-bezier(0.77, 0, 0.175, 1),
+                opacity 0.6s ease;
+  }
+  .reveal-title.visible { opacity: 1; clip-path: inset(0 0 0% 0); transform: translateY(0); }
+
+  .reveal-line {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal-line.visible { transform: scaleX(1); }
+
+  .reveal-scale {
+    opacity: 0;
+    transform: scale(0.82);
+    transition: opacity 0.9s ease, transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal-scale.visible { opacity: 1; transform: scale(1); }
+
+  .reveal-vline {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal-vline.visible { transform: scaleY(1); }
+
+  .d1 { transition-delay: 0.08s; }
+  .d2 { transition-delay: 0.16s; }
+  .d3 { transition-delay: 0.24s; }
+  .d4 { transition-delay: 0.32s; }
+  .d5 { transition-delay: 0.4s; }
+  .d6 { transition-delay: 0.5s; }
+  .d7 { transition-delay: 0.6s; }
+  .d8 { transition-delay: 0.7s; }
+  .d9 { transition-delay: 0.8s; }
+  .d10 { transition-delay: 0.9s; }
+
+  /* ─── Typography ─── */
+  .label {
+    font-family: var(--font-label);
+    font-size: 11px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+  }
+
+  .heading-xl {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(52px, 5.5vw, 72px);
+    line-height: 1.05;
+  }
+
+  .heading-lg {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(32px, 3.2vw, 42px);
+    line-height: 1.15;
+  }
+
+  .heading-story {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(30px, 3.2vw, 42px);
+    line-height: 1.15;
+  }
+
+  .subtitle-story {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-style: italic;
+    font-size: clamp(18px, 2vw, 26px);
+    line-height: 1.3;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+
+  .body-text {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: clamp(16px, 1.4vw, 20px);
+    line-height: 1.65;
+    max-width: 720px;
+  }
+
+  .body-secondary {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: clamp(15px, 1.2vw, 18px);
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: 720px;
+    margin-top: 20px;
+  }
+
+  .accent-text {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-style: italic;
+    color: var(--accent);
+    font-size: clamp(20px, 2vw, 26px);
+    line-height: 1.35;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: var(--divider);
+    margin: 24px 0;
+  }
+
+  .divider--short {
+    width: 160px;
+    margin: 24px auto;
+  }
+
+  .divider--white {
+    background: rgba(255,255,255,0.2);
+  }
+
+  /* ─── Stat number ─── */
+  .stat-num {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 1;
+    color: var(--accent);
+  }
+
+  .stat-label {
+    font-family: var(--font-label);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  /* ─── Story number ─── */
+  .story-num {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(48px, 5vw, 68px);
+    color: var(--accent);
+    line-height: 1;
+    position: absolute;
+    top: 56px;
+    right: 80px;
+  }
+
+  /* ─── Tags ─── */
+  .tag-row { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  .tag {
+    font-family: var(--font-label);
+    font-size: 9px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    border: 1px solid var(--tag-border);
+    border-radius: 20px;
+    padding: 4px 14px;
+    white-space: nowrap;
+  }
+
+  /* ─── Logo ─── */
+  .logo-svg { width: clamp(180px, 18vw, 240px); height: auto; display: block; }
+  .logo-svg--sm { width: clamp(100px, 10vw, 140px); height: auto; display: block; margin: 0 auto; }
+
+  /* ─── Title slide ─── */
+  .slide--title {
+    text-align: center;
+    align-items: center;
+  }
+
+  .slide--title .subtitle {
+    font-family: var(--font-body);
+    font-size: clamp(16px, 1.3vw, 20px);
+    color: var(--muted);
+    margin-top: 8px;
+  }
+
+  .slide--title .meta {
+    font-family: var(--font-label);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--muted-soft);
+    text-transform: uppercase;
+    margin-top: 48px;
+  }
+
+  /* ─── Breaker slide ─── */
+  .slide--breaker {
+    text-align: center;
+    align-items: center;
+    background: var(--dark-bg);
+    color: var(--dark-fg);
+  }
+
+  .breaker-label {
+    font-family: var(--font-label);
+    font-size: 11px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.35);
+  }
+
+  .breaker-heading {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(40px, 4.5vw, 60px);
+    line-height: 1.1;
+    color: var(--dark-fg);
+    margin-top: 12px;
+  }
+
+  .breaker-sub {
+    font-family: var(--font-body);
+    font-size: clamp(16px, 1.3vw, 20px);
+    color: rgba(255,255,255,0.45);
+    max-width: 600px;
+    line-height: 1.55;
+    margin-top: 20px;
+  }
+
+  /* ─── Intro layout ─── */
+  .intro-layout {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .intro-main { flex: 1; min-width: 0; }
+  .intro-side { flex: 0 0 300px; padding-top: 4px; }
+
+  .category-list { display: flex; flex-direction: column; }
+
+  .category-item {
+    font-family: var(--font-body);
+    font-size: 17px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--divider-light);
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .category-item:first-child { border-top: 1px solid var(--divider); }
+  .category-item:last-child { border-bottom: 1px solid var(--divider); }
+  .category-item.visible { opacity: 1; transform: translateX(0); }
+
+  .category-count {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--accent);
+  }
+
+  .stat-block {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* ─── Story slide ─── */
+  .slide--story {
+    justify-content: flex-start;
+    padding-top: 72px;
+  }
+
+  .story-header { margin-top: 20px; }
+
+  .story-content {
+    display: flex;
+    gap: 48px;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .story-main { flex: 1; min-width: 0; }
+
+  .story-quote {
+    flex: 0 0 280px;
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+    padding-top: 4px;
+  }
+
+  .quote-bar {
+    width: 2px;
+    min-height: 60px;
+    background: var(--accent);
+    flex-shrink: 0;
+    align-self: stretch;
+  }
+
+  .quote-text {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-style: italic;
+    font-size: clamp(17px, 1.5vw, 21px);
+    line-height: 1.4;
+    color: var(--accent);
+  }
+
+  .story-angle {
+    font-family: var(--font-body);
+    font-size: clamp(15px, 1.3vw, 18px);
+    line-height: 1.65;
+    color: var(--fg);
+    margin-top: 28px;
+  }
+
+  .story-angle-pill {
+    display: inline-block;
+    font-family: var(--font-label);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 3px;
+    padding: 3px 8px;
+    margin-bottom: 8px;
+    white-space: nowrap;
+  }
+
+  .story-places {
+    font-family: var(--font-label);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-top: 20px;
+  }
+
+  .story-toggle {
+    display: none;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .story-toggle-btn {
+    font-family: var(--font-label);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 3px;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .story-toggle-btn.active {
+    color: #ffffff;
+    background: #0e0e0e;
+    border-color: #0e0e0e;
+  }
+
+  .story-footer {
+    position: absolute;
+    bottom: 48px;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .story-ref {
+    font-family: var(--font-label);
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    color: var(--muted-soft);
+  }
+
+  /* ─── Track cards ─── */
+  .tracks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .track-card {
+    border-top: 3px solid var(--accent);
+    padding: 28px 0 0;
+  }
+
+  .track-card--blue { border-color: var(--track-blue); }
+  .track-card--green { border-color: var(--track-green); }
+  .track-card--purple { border-color: var(--track-purple); }
+
+  .track-name {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(22px, 2.2vw, 28px);
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .track-card--blue .track-name { color: var(--track-blue); }
+  .track-card--green .track-name { color: var(--track-green); }
+  .track-card--purple .track-name { color: var(--track-purple); }
+
+  .track-stories {
+    font-family: var(--font-label);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-top: 12px;
+  }
+
+  .track-desc {
+    font-family: var(--font-body);
+    font-size: clamp(15px, 1.2vw, 17px);
+    line-height: 1.55;
+    color: var(--fg);
+    margin-top: 14px;
+  }
+
+  .track-meta {
+    font-family: var(--font-label);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted-soft);
+    margin-top: 18px;
+    line-height: 1.7;
+  }
+
+  /* ─── Index slide ─── */
+  .index-list {
+    list-style: none;
+    width: min(700px, 80%);
+    margin-top: 16px;
+  }
+  .index-item {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--divider-light);
+  }
+  .index-item:last-child { border-bottom: none; }
+  .index-num {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--accent);
+    min-width: 40px;
+  }
+  .index-title {
+    font-family: var(--font-body);
+    font-size: 22px;
+    color: var(--fg);
+  }
+
+  /* ─── Closing slide ─── */
+  .slide--closing {
+    text-align: center;
+    align-items: center;
+  }
+
+  .closing-headline {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(36px, 4vw, 52px);
+    line-height: 1.2;
+    color: var(--dark-fg);
+  }
+
+  .closing-tagline {
+    font-family: var(--font-label);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+  }
+
+  /* ─── Navigation counter ─── */
+  .nav-counter {
+    position: fixed;
+    bottom: 24px;
+    right: 32px;
+    font-family: var(--font-label);
+    font-size: 11px;
+    color: var(--muted-soft);
+    letter-spacing: 0.08em;
+    z-index: 100;
+    transition: color 0.4s ease;
+  }
+  .nav-counter--dark { color: rgba(255,255,255,0.3); }
+
+  /* ─── Progress bar ─── */
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: var(--accent);
+    width: 0%;
+    z-index: 100;
+    transition: width 0.35s ease;
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 768px) {
+    .slide { padding: 40px 24px; height: auto; min-height: 100vh; }
+    .slide--story { padding-top: 56px; padding-bottom: 80px; }
+    .intro-layout { flex-direction: column; gap: 40px; }
+    .intro-side { flex: none; width: 100%; }
+    .story-num { top: 40px; right: 24px; font-size: 40px; }
+    .story-content { flex-direction: column; gap: 0; }
+    .story-quote { display: none; }
+    .story-ref { display: none; }
+    .story-places { display: none; }
+    .body-text { font-size: 18px; }
+    .story-angle { font-size: 18px; }
+    .story-angle-pill { display: none; }
+    .story-angle { display: none; margin-top: 0; }
+    .body-text .story-angle-pill { display: none; }
+    .story-toggle { display: flex; margin-bottom: 6px; }
+    .story-toggle-active .body-text { display: none; }
+    .story-toggle-active .story-angle { display: block; }
+    .story-footer {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      right: 24px;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tracks-grid { grid-template-columns: 1fr; gap: 32px; }
+    .nav-counter { bottom: 16px; right: 16px; }
+    .stat-num { font-size: 56px; }
+  }
+
+  ::-webkit-scrollbar { width: 0; background: transparent; }
+  html { scrollbar-width: none; }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ═══ Slide 0: Title ═══ -->
+<section class="slide slide--title" data-theme="light">
+  <div class="reveal reveal-scale" style="margin-bottom: 12px;">
+    <svg class="logo-svg" viewBox="0 0 63.28 13.29" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(0, 0.14)"><path d="M2.17623 0C2.09433 0.198902 2.04753 0.391954 2.03583 0.579156C2.02413 0.766358 2.01828 0.906759 2.01828 1.00036V11.6709C2.01828 12.0453 2.02413 12.3495 2.03583 12.5835C2.05923 12.8175 2.08848 13.0047 2.12358 13.1451H0.0526506C0.0760509 13.0398 0.0936013 12.8935 0.105301 12.7063C0.117002 12.5074 0.122852 12.2208 0.122852 11.8464V1.24606C0.122852 0.91846 0.111151 0.661057 0.0877512 0.473854C0.0643508 0.274953 0.0351005 0.117001 0 0H2.17623Z"/></g>
+      <g transform="translate(4.73, 0.017)"><path d="M0 0H2.36928L10.0036 10.4073V13.2855L0 0ZM0 13.2679H1.42157C1.11737 13.0339 0.848262 12.7707 0.614259 12.4782C0.380255 12.1857 0.175502 11.8873 0 11.5831V13.2679ZM10.0036 0H8.58207C8.88627 0.234002 9.15538 0.497255 9.38938 0.789759C9.62338 1.08226 9.82813 1.38062 10.0036 1.68482V0Z"/></g>
+      <g transform="translate(17.56, 0.035)"><path d="M2.19378 0C2.11188 0.198902 2.06508 0.397805 2.05338 0.596707C2.04168 0.783909 2.03583 0.92431 2.03583 1.01791V11.7586C2.03583 12.133 2.04168 12.4372 2.05338 12.6712C2.06508 12.9052 2.08848 13.0983 2.12358 13.2504H0.0526505C0.0760508 13.1451 0.0936009 12.993 0.105301 12.7941C0.117001 12.5952 0.122853 12.3085 0.122853 11.9341V1.26361C0.122853 0.924311 0.111151 0.661058 0.0877509 0.473855C0.0643506 0.274953 0.0351005 0.117001 0 0H2.19378ZM8.52942 13.2504H7.1254C7.4296 13.0164 7.69286 12.759 7.91516 12.4782C8.14916 12.1857 8.35392 11.8815 8.52942 11.5656V13.2504Z"/></g>
+      <g transform="translate(27.93, 0)"><path d="M7.93271 13.2855C7.93271 13.2738 7.93856 13.2562 7.95026 13.2328C7.96196 13.2094 7.96781 13.186 7.96781 13.1626C7.95611 13.1041 7.93856 13.0105 7.91516 12.8818C7.89176 12.7531 7.8157 12.484 7.687 12.0745L7.24825 10.7232C7.20145 10.5945 7.14295 10.419 7.07274 10.1967C7.00254 9.97436 6.91479 9.69941 6.80949 9.3718L6.54624 8.54694C6.52284 8.51184 6.47019 8.37144 6.38828 8.12574C6.24788 7.71624 6.10163 7.30088 5.94953 6.87968C5.80913 6.45847 5.66872 6.06067 5.52832 5.68626C5.39962 5.30016 5.28262 4.955 5.17732 4.6508C5.07202 4.3466 4.98427 4.1126 4.91407 3.94879C4.89067 3.86689 4.85557 3.76159 4.80877 3.63289C4.76197 3.50419 4.70931 3.35209 4.65081 3.17658L4.29981 2.24643L4.82632 0.807309C4.86142 0.713708 4.90237 0.596707 4.94917 0.456305C5.00767 0.315904 5.06617 0.163802 5.12467 0C5.22997 0.315904 5.39377 0.783909 5.61607 1.40402C5.85008 2.02412 6.13088 2.77293 6.45849 3.65044C6.78609 4.51625 7.15465 5.49906 7.56415 6.59887C7.98536 7.69868 8.44167 8.8804 8.93307 10.144C9.07347 10.5184 9.21387 10.8928 9.35428 11.2672C9.49468 11.6299 9.62923 11.9985 9.75793 12.3729C9.82813 12.5484 9.89833 12.718 9.96854 12.8818C10.0504 13.0339 10.1265 13.1685 10.1967 13.2855H7.93271ZM0.754661 11.3725V11.355L0 13.2855H0.754661H1.31627H2.42193C2.04753 13.0164 1.72577 12.718 1.45667 12.3904C1.18757 12.0628 0.953563 11.7235 0.754661 11.3725Z"/></g>
+      <g transform="translate(40.59, 0.017)"><path d="M0 0H2.36928L10.0036 10.4073V13.2855L0 0ZM0 13.2679H1.42157C1.11737 13.0339 0.848263 12.7707 0.614259 12.4782C0.380256 12.1857 0.175502 11.8873 0 11.5831V13.2679ZM10.0036 0H8.58207C8.88627 0.234002 9.15538 0.497255 9.38938 0.789759C9.62338 1.08226 9.82814 1.38062 10.0036 1.68482V0Z"/></g>
+      <g transform="translate(51.96, 0)"><path d="M9.02082 1.49177C10.5535 2.67348 11.3199 4.3583 11.3199 6.54622C11.3199 8.02044 10.9864 9.28405 10.3195 10.3371C9.64093 11.4486 8.64642 12.2559 7.336 12.759C7.3126 12.7707 7.29505 12.7765 7.28335 12.7765C7.28335 12.7765 7.27165 12.7824 7.24825 12.7941C7.75136 12.2325 8.16086 11.4544 8.47676 10.4599C8.79267 9.45371 8.95062 8.14914 8.95062 6.54622C8.95062 4.10089 8.57037 2.29322 7.80986 1.12321C7.71625 0.971111 7.59925 0.813159 7.45885 0.649357C8.06726 0.85996 8.58792 1.14076 9.02082 1.49177ZM2.19378 0C2.11188 0.198902 2.06508 0.397805 2.05338 0.596706C2.04168 0.783909 2.03583 0.92431 2.03583 1.01791V11.7937C2.03583 12.1681 2.04168 12.4723 2.05338 12.7063C2.07678 12.9403 2.10603 13.1334 2.14113 13.2855H0.0526505C0.0760508 13.1802 0.0936009 13.0281 0.105301 12.8292C0.117001 12.6186 0.122854 12.3261 0.122854 11.9517V1.26361C0.122854 0.92431 0.111151 0.661057 0.0877509 0.473855C0.0643506 0.274953 0.0351005 0.117001 0 0H2.19378Z"/></g>
+    </svg>
+  </div>
+  <div class="heading-xl reveal reveal-title d2" style="margin-top: 8px;">Kashmir</div>
+  <div class="divider divider--short reveal-line d3"></div>
+  <div class="subtitle reveal d4">Research Storylines for Editorial Collaboration</div>
+  <div class="meta reveal d5">12 Selected Stories · May 2026</div>
+</section>
+
+<!-- ═══ Index Slide ═══ -->
+<section class="slide" data-theme="light">
+  <div class="label reveal">CONTENTS</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top: 16px;">Overview</h2>
+  <div class="divider reveal-line d2"></div>
+  <ul class="index-list">
+    <li class="index-item reveal d3"><span class="index-num">01</span><span class="index-title">About INLAND</span></li>
+    <li class="index-item reveal d3"><span class="index-num">02</span><span class="index-title">Kashmir — First Round</span></li>
+    <li class="index-item reveal d4"><span class="index-num">03</span><span class="index-title">Our Angle & Categories</span></li>
+    <li class="index-item reveal d4"><span class="index-num">04</span><span class="index-title">The 12 Storylines</span></li>
+    <li class="index-item reveal d5"><span class="index-num">05</span><span class="index-title">Suggested Editorial Tracks</span></li>
+  </ul>
+</section>
+
+<!-- ═══ Slide 1: About INLAND ═══ -->
+<section class="slide" data-theme="light">
+  <div class="label reveal">ABOUT</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top: 16px;">About INLAND</h2>
+  <div class="divider reveal-line d2"></div>
+  <div class="intro-layout">
+    <div class="intro-main">
+      <div class="body-text reveal d3">INLAND is a yearly publication documenting the soul of countries before they change. Each issue embeds with named, locatable custodians of living traditions — artisans, pastoralists, cooks, singers, border families — whose stories have not yet been narrated internationally. Previous issues have covered the Faroe Islands, Georgia and Italy's minor islands.</div>
+      <div class="body-secondary reveal d4">The editorial method is slow, place-based and built on trust. We spend months in pre-production research, identify specific custodians and communities, then commission photographers, writers and filmmakers to embed with them over extended field periods. The result is long-form visual storytelling grounded in named people and real places.</div>
+    </div>
+    <div class="intro-side">
+      <div class="accent-text reveal-scale d5">Intimacy with custodians, not thematic surveys.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Slide 2: The Research ═══ -->
+<section class="slide" data-theme="light">
+  <div class="label reveal">THE RESEARCH</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top: 16px;">Kashmir — First Round</h2>
+  <div class="divider reveal-line d2"></div>
+  <div class="intro-layout">
+    <div class="intro-main">
+      <div class="body-text reveal d3">The Kashmir Valley is not a single story of conflict or tourism. It is a layered ecology of living traditions held together by named people and places — from pastoralists crossing the Pir Panjal to Dard-Shina speakers in border valleys, from 200-year-old food traditions in old Srinagar to women keeping alive wedding songs that predate partition.</div>
+      <div class="body-secondary reveal d4">Our first round of research identified 22 story leads spanning communities, borderlands, food cultures, ecology, music and performance. From these, twelve storylines have been selected for editorial development — each centred on a named community, a specific place, and a practice that can still be witnessed.</div>
+    </div>
+    <div class="intro-side">
+      <div class="stat-block">
+        <div class="stat-item reveal-scale d4">
+          <div class="stat-num" data-count="22">0</div>
+          <div class="stat-label">Story leads researched</div>
+        </div>
+        <div class="stat-item reveal-scale d6">
+          <div class="stat-num" data-count="12">0</div>
+          <div class="stat-label">Selected for this round</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Slide 3: Angle & Categories ═══ -->
+<section class="slide" data-theme="light">
+  <div class="label reveal">EDITORIAL ANGLE</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top: 16px;">Our Angle</h2>
+  <div class="divider reveal-line d2"></div>
+  <div class="intro-layout">
+    <div class="intro-main">
+      <div class="body-text reveal d3">We focus on endangered knowledge systems, cross-border cultural continuity, and the under-documented living practices that survive despite climate pressure, policy change, and generational drift. Every storyline centres a named community, a specific place, and a practice that can still be witnessed.</div>
+      <div class="body-secondary reveal d4">Kashmir's living traditions are internationally under-narrated. What exists in media is dominated by conflict and tourism. INLAND offers something different: intimate, custodian-led storytelling that foregrounds cultural continuity over crisis.</div>
+    </div>
+    <div class="intro-side">
+      <div class="label reveal d5" style="margin-bottom: 8px;">CATEGORIES</div>
+      <div class="category-list">
+        <div class="category-item d5"><span>Communities</span><span class="category-count">7</span></div>
+        <div class="category-item d6"><span>Borderlands</span><span class="category-count">2</span></div>
+        <div class="category-item d7"><span>Food</span><span class="category-count">2</span></div>
+        <div class="category-item d8"><span>Nature &amp; Ecology</span><span class="category-count">1</span></div>
+        <div class="category-item d9"><span>Music &amp; Performance</span><span class="category-count">1</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Breaker: The Storylines ═══ -->
+<section class="slide slide--breaker" data-theme="dark">
+  <div class="breaker-label reveal">PART TWO</div>
+  <div class="breaker-heading reveal reveal-title d1">The Storylines</div>
+  <div class="divider divider--short divider--white reveal-line d2"></div>
+  <div class="breaker-sub reveal d3">Twelve selected stories across communities, borderlands, food, ecology, music and performance. Each one centres a named community, a specific place, and a practice that can still be witnessed.</div>
+</section>
+
+<!-- ═══ Story Slides ═══ -->
+
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">01</div>
+  <div class="label reveal">COMMUNITIES</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">Walking the Pir Panjal</h2>
+    <div class="subtitle-story reveal d2">Gujjar-Bakarwal Transhumance</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Gujjar and Bakarwal pastoralists practise twice-yearly transhumance across the Pir Panjal, moving from winter bases in Rajouri and Poonch to summer dhoks at 3,500–4,500 m. The journey takes 6–8 weeks each way with kafilas of hundreds of sheep and goats. 39% of surveyed families have already abandoned migration. A 2025 study describes mobility as a social asset rooted in indigenous knowledge — reading snow, grass, springs, animal health and intergenerational teaching.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND embeds with a single extended family for the full upward crossing — documenting the daily decisions that make the route legible: when to move, how to read a slope, where to birth a lamb. The narrative follows the knowledge, not the landscape, making visible a system of ecological intelligence that disappears each time a family settles.</div>
+      <div class="story-places reveal d5">Places: Rajouri · Poonch · Pir Panjal passes · Kashmir Valley &nbsp;|&nbsp; Field timing: April–May or July–August</div>
+    </div>
+    <div class="story-quote">
+      <div class="quote-bar reveal-vline d4"></div>
+      <div class="quote-text reveal d5">"The route itself is the archive."</div>
+    </div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: J&amp;K Tribal Affairs; Sage Journals 2025 mobility study; Tribal Research and Cultural Foundation</div>
+    <div class="tag-row reveal d5">
+      <span class="tag">Endangered Knowledge</span>
+      <span class="tag">Cross-Border</span>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">02</div>
+  <div class="label reveal">BORDERLANDS</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">A Border Language Survives</h2>
+    <div class="subtitle-story reveal d2">Dard-Shina Life in Gurez and Tulail</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Gurez and Tulail valleys are home to ~25,000 Dard-Shins speaking Shina, a language closely linked to Astori Shina across the LoC. Accessible only May–November via Razdan Pass. The Habba-Khatoon Dramatic Club (founded 1978, led by Farid Kaloo) performs Shina-language songs. Recent preservation efforts include a keyboard app, community radio and dictionary work. Singer Yousuf Naseem connects Shina communities across Gurez, Drass, Kargil and Gilgit.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND follows the language through its living channels — a rehearsal with Kaloo's dramatic club, a radio broadcast in Shina, a kitchen where grandmothers speak words their grandchildren may not inherit. The narrative maps how a tongue survives: not through institutions but through song, app keyboards and valley roads that close each winter.</div>
+      <div class="story-places reveal d5">Places: Gurez Valley · Tulail · Dawar · Bandipora · 130 km from Srinagar &nbsp;|&nbsp; Field season: May–November</div>
+    </div>
+    <div class="story-quote">
+      <div class="quote-bar reveal-vline d4"></div>
+      <div class="quote-text reveal d5">"The clearest linguistic continuity across a militarised border."</div>
+    </div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: HKDC documentation; Free Press Kashmir 2026; Kashmir Life; Songlines (Yousuf Naseem)</div>
+    <div class="tag-row reveal d5">
+      <span class="tag">Endangered Knowledge</span>
+      <span class="tag">Cross-Border</span>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">03</div>
+  <div class="label reveal">COMMUNITIES</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Ones Who Remained</h2>
+    <div class="subtitle-story reveal d2">Kashmiri Pandits Who Never Left</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>808 non-migrant Kashmiri Pandit families live across the Valley, the largest concentrations in old Srinagar. In Ranipora, the Ganjoo family is one of three Pandit households remaining from an original sixty; Muslim neighbours protected the Nagbal temple. The Kheer Bhawani Mela at Tulmulla draws 80,000 Pandit pilgrims annually.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND spends time with one family through the small rituals that define staying — a winter morning around the kangri, a joint wanwun sung at a neighbour's wedding, the quiet upkeep of a shared temple. The narrative centres the micro-ethics of remaining: not the politics of return, but what rootedness looks like when practised daily alongside regret.</div>
+      <div class="story-places reveal d5">Places: Ranipora (Anantnag) · Habba Kadal · Barbarshah · Ganpatyar (Srinagar) · Tulmulla (Ganderbal)</div>
+    </div>
+    <div class="story-quote">
+      <div class="quote-bar reveal-vline d4"></div>
+      <div class="quote-text reveal d5">"Stubborn rootedness alongside regret."</div>
+    </div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: KPSS 2009 survey (808 families); Sanjay Tickoo interviews; Ranipora community testimonies</div>
+    <div class="tag-row reveal d5">
+      <span class="tag">Endangered Knowledge</span>
+      <span class="tag">Sacred &amp; Hidden</span>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">04</div>
+  <div class="label reveal">COMMUNITIES</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">Giving Birth on the Route</h2>
+    <div class="subtitle-story reveal d2">Bakarwal Women's Migration</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Women's labour — pregnancy, childbirth, carrying, camp-making, cooking, care, health decisions — is largely invisible in pastoral reporting. Migration depends on gendered labour absent from existing storytelling. Where does one give birth on a route? Who knows medicinal plants, danger signs, emergency paths?</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND embeds with Bakarwal women during the spring crossing, centring their knowledge and agency rather than hardship alone. The team documents the daily decisions only women make — camp placement, water sourcing, plant medicine, the choreography of moving children and livestock at altitude. Can nest within the broader transhumance trip or stand alone.</div>
+      <div class="story-places reveal d5">Places: Migration corridors · Rajouri · Poonch · Pir Panjal &nbsp;|&nbsp; Can nest within Story 01 field trip</div>
+    </div>
+    <div class="story-quote">
+      <div class="quote-bar reveal-vline d4"></div>
+      <div class="quote-text reveal d5">"What does it mean to be pregnant on a route?"</div>
+    </div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: Guardian Nov 2025; PubMed health research; Gujjar-Bakarwal women's groups</div>
+    <div class="tag-row reveal d5">
+      <span class="tag">Gender</span>
+      <span class="tag">Endangered Knowledge</span>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">05</div>
+  <div class="label reveal">COMMUNITIES</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">Floating Homes Sinking</h2>
+    <div class="subtitle-story reveal d2">Hanji and the Vanishing Doonga World</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Fewer than 750 houseboats remain across Kashmir; on the Jhelum, only ~61 are still afloat. Only four senior craftsmen with hull construction knowledge were on record in 2025. The British Museum's EMKP programme is documenting oral histories of remaining Hanji community members. On Anchar Lake, families face toxic landfill seepage.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND documents a single hull repair or construction alongside the last craftsmen who know how — recording the material intelligence of joints, timber selection and water-reading before it is lost. The team shifts the narrative from Dal Lake tourism to the Jhelum and Anchar communities living in precarity, where the story is urgent rather than picturesque.</div>
+      <div class="story-places reveal d5">Places: Dal Lake · Jhelum River · Anchar Lake · Srinagar</div>
+    </div>
+    <div class="story-quote">
+      <div class="quote-bar reveal-vline d4"></div>
+      <div class="quote-text reveal d5">"Material intelligence disappearing in real time."</div>
+    </div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: EMKP / British Museum; Indian Express; The Wire; Kashmir Houseboat Owners Association</div>
+    <div class="tag-row reveal d5">
+      <span class="tag">Endangered Knowledge</span>
+      <span class="tag">Land &amp; Displacement</span>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">06</div>
+  <div class="label reveal">NATURE &amp; ECOLOGY</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">A Lake Gives Back a Taste</h2>
+    <div class="subtitle-story reveal d2">Wular Fisherfolk and the Return of Nadru</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Lotus flowers returned to Wular Lake after ~30 years following large-scale desilting and willow removal. The return of nadru (lotus stem), central to Kashmiri cooking, reorders food memory and market livelihoods. Wular supports ~32,000 rural families and 2,914 active fishers.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND traces nadru from lake to kitchen — following fisherfolk harvesting at dawn, women cooking dishes their mothers described but never prepared, and the market dynamics of a returning ingredient. The narrative asks what a community remembers through taste, and how ecological restoration reshapes daily life from the plate outward.</div>
+      <div class="story-places reveal d5">Places: Wular Lake · Bandipora district</div>
+    </div>
+    <div class="story-quote">
+      <div class="quote-bar reveal-vline d4"></div>
+      <div class="quote-text reveal d5">"The return of nadru reorders food memory."</div>
+    </div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: The Guardian 2025; Wular Conservation and Management Authority; Kashmir Life; fisheries preprint</div>
+    <div class="tag-row reveal d5">
+      <span class="tag">Endangered Knowledge</span>
+      <span class="tag">Land &amp; Displacement</span>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">07</div>
+  <div class="label reveal">FOOD</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">Harissa Before Dawn</h2>
+    <div class="subtitle-story reveal d2">The 200-Year Kadals of Old Srinagar</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Harissa is a slow-cooked mutton-rice porridge sold in 200-year-old eateries at three kadals in Old Srinagar, served only between 5–9 am during the three cold-season periods. Prepared overnight in underground earthen pots, pounded with a panje. Ghulam Mohammad runs a 200-year-old shop at Aali Kadal.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND arrives before dawn and stays through the morning rush — documenting the overnight preparation, the pounding rhythm, the regulars who have eaten here for decades. The team captures a food ritual that has never been properly photographed: the most intimate culinary story in Kashmir, told through the hands that make it and the cold that demands it.</div>
+      <div class="story-places reveal d5">Places: Aali Kadal · Fateh Kadal · Rajouri Kadal · Sarai Bal · Old Srinagar &nbsp;|&nbsp; Field timing: Dec–Feb</div>
+    </div>
+    <div class="story-quote">
+      <div class="quote-bar reveal-vline d4"></div>
+      <div class="quote-text reveal d5">"The most intimate, least-photographed food story."</div>
+    </div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: Ahmad family documentation (4th generation); Wazpur guild records; chillai-kalan food culture reporting</div>
+    <div class="tag-row reveal d5">
+      <span class="tag">Endangered Knowledge</span>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">08</div>
+  <div class="label reveal">COMMUNITIES</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">From Tent to Talim</h2>
+    <div class="subtitle-story reveal d2">Changpa Pastoralists and the Source of Pashmina</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>The finest pashmina originates on the Changthang plateau, where semi-nomadic Changpa herd Changthangi goats at 3,700–4,500 m. The region produces ~35,000 kg of raw pashmina annually. Pashm is combed once yearly in June–July; families read the goats' coats to decide the right day, singing during combing.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND follows a single fibre from tent to talim — the combing on the plateau, the sorting in Leh, the spinning and weaving in Srinagar. The team builds a material biography that connects high-altitude pastoral life to the urban textile world, revealing how many hands and how much knowledge a single shawl carries from goat to finished garment.</div>
+      <div class="story-places reveal d5">Places: Changthang plateau · Nyoma/Rupshu · Leh · 3,700–4,500 m &nbsp;|&nbsp; Combing season: June–July</div>
+    </div>
+    <div class="story-quote">
+      <div class="quote-bar reveal-vline d4"></div>
+      <div class="quote-text reveal d5">"From tent to talim, from goat to shawl."</div>
+    </div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: ICAR Changthang studies; Mongabay 2026; ladakhpashmina.org; Textile Paths research</div>
+    <div class="tag-row reveal d5">
+      <span class="tag">Endangered Knowledge</span>
+      <span class="tag">Cross-Border</span>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">09</div>
+  <div class="label reveal">FOOD</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">Dawn in Pampore</h2>
+    <div class="subtitle-story reveal d2">Saffron Harvesting at the Edge of Viability</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Saffron production fell ~67.5% over two decades. Area contracted from 5,707 ha to ~3,715 ha. ~30,000 families farm saffron; ~11,000 women do harvesting and stigma-separation. Mushtaq Mir, a 4th-generation Pampore grower, leads the fight against adulteration. The harvest window is just 14–28 days.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND positions the reader in a pre-dawn Pampore field during the brief autumn harvest, following a multigenerational family from plucking to stigma-separation. The team documents the 14-day window when five hundred years of cultivation knowledge compresses into a single intense season — the hands, the light, the economics of a crop at the edge of viability.</div>
+      <div class="story-places reveal d5">Places: Pampore · Lethpora · Samboora · Pulwama district &nbsp;|&nbsp; Harvest window: late Oct–mid Nov (14–28 days)</div>
+    </div>
+    <div class="story-quote">
+      <div class="quote-bar reveal-vline d4"></div>
+      <div class="quote-text reveal d5">"14–28 days. That is all the harvest allows."</div>
+    </div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: FAO GIAHS designation; J&amp;K Dept of Agriculture; Goya magazine; SKUAST-K Dussu</div>
+    <div class="tag-row reveal d5">
+      <span class="tag">Endangered Knowledge</span>
+      <span class="tag">State vs. Tradition</span>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">10</div>
+  <div class="label reveal">MUSIC &amp; PERFORMANCE</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Last Wanwun Nights</h2>
+    <div class="subtitle-story reveal d2">Women Keeping the Wedding Song</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Wanwun is a Kashmiri wedding song form: rows of women, arms on shoulders, sway and sing responsorial couplets improvised on the spot. Both Muslim and Pandit women share variants. Threatened by DJ culture and compressed wedding schedules, the tradition survives in rural villages and diaspora preservation efforts.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND embeds in a single maenzraat — the pre-wedding henna night where wanwun unfolds — capturing the nocturnal scene rather than surveying the tradition. The team records the voices, the swaying rows, the improvised verses that carry blessings and teasing in equal measure. An embodied archive of language, ethics and women's sociality, documented as it happens.</div>
+      <div class="story-places reveal d5">Places: Rural weddings around Anantnag · Budgam · Shopian &nbsp;|&nbsp; Needs access to a real maenzraat</div>
+    </div>
+    <div class="story-quote">
+      <div class="quote-bar reveal-vline d4"></div>
+      <div class="quote-text reveal d5">"Embodied archive of language, ethics and women's sociality."</div>
+    </div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: Kashmiri wedding song ethnography; diaspora wanwun compilations; community documentation</div>
+    <div class="tag-row reveal d5">
+      <span class="tag">Gender</span>
+      <span class="tag">Endangered Knowledge</span>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">11</div>
+  <div class="label reveal">BORDERLANDS</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">Turtuk</h2>
+    <div class="subtitle-story reveal d2">Border-Divided Balti Families</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Turtuk and Tyakshi in Ladakh are exceptional for cross-border family memory. Fixed villages, Balti language, orchards, domestic architecture. Communities divided by India's 1971 advance into Pakistani-controlled Baltistan. Families remember relatives across the divide.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND sits with families who remember the other side — documenting the domestic details that carry memory: an orchard planted by a grandfather now across the border, a Balti lullaby shared with cousins who became foreigners overnight. The narrative frames home not as geography but as continuity, making it ideal for a later extension into Baltistan itself.</div>
+      <div class="story-places reveal d5">Places: Turtuk · Tyakshi · Nubra Valley · Ladakh &nbsp;|&nbsp; Border permits required</div>
+    </div>
+    <div class="story-quote">
+      <div class="quote-bar reveal-vline d4"></div>
+      <div class="quote-text reveal d5">"What home means after borders move."</div>
+    </div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: Mountain Communities research; Baltistan community records; border-permit documentation</div>
+    <div class="tag-row reveal d5">
+      <span class="tag">Cross-Border</span>
+      <span class="tag">Land &amp; Displacement</span>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">12</div>
+  <div class="label reveal">COMMUNITIES</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">Chopan Shepherds</h2>
+    <div class="subtitle-story reveal d2">Remembering the Mountain for Other People's Herds</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>The Chopan are specialised transhumant shepherds who often do not own land or flocks, yet possess detailed ecological knowledge of rotational grazing and marginal pastures. A 2025 study argues their grazing is ecologically efficient, based on adaptive mobility and traditional ecological knowledge. Less internationally covered than Gujjar-Bakarwal pastoralists.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND walks with a Chopan shepherd through a grazing rotation — recording the decisions that make marginal pastures productive: which slope, which season, which grass to leave. The narrative reveals knowledge without ownership, showing how people who remember the mountain for other people's herds carry an ecological intelligence that policy rarely recognises.</div>
+      <div class="story-places reveal d5">Places: Alpine meadows across Kashmir Valley · Trajan pasture &nbsp;|&nbsp; Can nest within Story 01 trip</div>
+    </div>
+    <div class="story-quote">
+      <div class="quote-bar reveal-vline d4"></div>
+      <div class="quote-text reveal d5">"Knowledge without ownership."</div>
+    </div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: Frontiers Partnerships 2025; Greater Kashmir; highland pasture rights research</div>
+    <div class="tag-row reveal d5">
+      <span class="tag">Endangered Knowledge</span>
+      <span class="tag">Indigenous Rights</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Breaker: Suggested Tracks ═══ -->
+<section class="slide slide--breaker" data-theme="dark">
+  <div class="breaker-label reveal">OUR SUGGESTION</div>
+  <div class="breaker-heading reveal reveal-title d1">Suggested Editorial Tracks</div>
+  <div class="divider divider--short divider--white reveal-line d2"></div>
+  <div class="breaker-sub reveal d3">From the twelve storylines, we propose three production tracks as a starting point for a pilot project — each grouping stories that share geography, field timing and editorial logic into a single deployable trip. The remaining storylines provide a foundation for expansion once the pilot is complete.</div>
+</section>
+
+<!-- ═══ Tracks Overview ═══ -->
+<section class="slide" data-theme="light">
+  <div class="label reveal">THREE TRACKS</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top: 16px;">Production Tracks</h2>
+  <div class="divider reveal-line d2"></div>
+  <div class="tracks-grid">
+
+    <div class="track-card track-card--blue reveal d3">
+      <div class="track-name">The Highland Route</div>
+      <div class="track-stories">Stories 01 + 04 + 12</div>
+      <div class="track-desc">A multi-week field trip embedded with Gujjar-Bakarwal and Chopan pastoralists during the spring migration. Three nested angles within a single journey: the transhumance itself, women's invisible labour on the route, and the Chopan shepherds who remember the mountain for other people's herds.</div>
+      <div class="track-meta">Geography: Rajouri → Pir Panjal → Kashmir Valley<br>Season: April–May (upward migration) or July–Aug (summer dhok)<br>3 stories, 1 field deployment</div>
+    </div>
+
+    <div class="track-card track-card--green reveal d4">
+      <div class="track-name">The Textile Path</div>
+      <div class="track-stories">Story 08 — extends to Srinagar artisan world</div>
+      <div class="track-desc">A material biography following pashmina from Changpa herders on the Changthang plateau through dehairing, spinning and weaving to the finished shawl. One fibre, many hands — the story connects high-altitude pastoral life to Srinagar's textile communities in a single narrative arc.</div>
+      <div class="track-meta">Geography: Changthang plateau → Leh → Srinagar<br>Season: June–July (combing season)<br>Material biography format</div>
+    </div>
+
+    <div class="track-card track-card--purple reveal d5">
+      <div class="track-name">Srinagar Seasons</div>
+      <div class="track-stories">Stories 07 + 09 + 10</div>
+      <div class="track-desc">A seasonal food-and-culture cluster anchored in Old Srinagar's pre-dawn harissa kadals, Pampore's autumn saffron harvest, and the nocturnal wanwun wedding song tradition. Three stories bound by seasonality, women's knowledge and under-photographed intimacy.</div>
+      <div class="track-meta">Geography: Old Srinagar → Pampore → Rural villages<br>Season: Oct–Nov (saffron), Dec–Feb (harissa), wedding season<br>3 stories, seasonal field windows</div>
+    </div>
+
+    <div class="body-secondary reveal d6" style="margin-top: 24px; max-width: 100%; text-align: center; color: var(--muted-soft); font-size: 14px;">
+      These three tracks represent a suggested starting point for a pilot project. The full set of twelve storylines offers scope for expansion across subsequent editorial cycles.
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ Closing Slide ═══ -->
+<section class="slide slide--closing slide--dark" data-theme="dark">
+  <div class="closing-headline reveal reveal-title">12 Storylines.<br>One Kashmir.</div>
+  <div class="divider divider--short divider--white reveal-line d1"></div>
+  <div class="reveal reveal-scale d2" style="margin-bottom: 8px; color: var(--dark-fg);">
+    <svg class="logo-svg--sm" viewBox="0 0 63.28 13.29" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(0, 0.14)"><path d="M2.17623 0C2.09433 0.198902 2.04753 0.391954 2.03583 0.579156C2.02413 0.766358 2.01828 0.906759 2.01828 1.00036V11.6709C2.01828 12.0453 2.02413 12.3495 2.03583 12.5835C2.05923 12.8175 2.08848 13.0047 2.12358 13.1451H0.0526506C0.0760509 13.0398 0.0936013 12.8935 0.105301 12.7063C0.117002 12.5074 0.122852 12.2208 0.122852 11.8464V1.24606C0.122852 0.91846 0.111151 0.661057 0.0877512 0.473854C0.0643508 0.274953 0.0351005 0.117001 0 0H2.17623Z"/></g>
+      <g transform="translate(4.73, 0.017)"><path d="M0 0H2.36928L10.0036 10.4073V13.2855L0 0ZM0 13.2679H1.42157C1.11737 13.0339 0.848262 12.7707 0.614259 12.4782C0.380255 12.1857 0.175502 11.8873 0 11.5831V13.2679ZM10.0036 0H8.58207C8.88627 0.234002 9.15538 0.497255 9.38938 0.789759C9.62338 1.08226 9.82813 1.38062 10.0036 1.68482V0Z"/></g>
+      <g transform="translate(17.56, 0.035)"><path d="M2.19378 0C2.11188 0.198902 2.06508 0.397805 2.05338 0.596707C2.04168 0.783909 2.03583 0.92431 2.03583 1.01791V11.7586C2.03583 12.133 2.04168 12.4372 2.05338 12.6712C2.06508 12.9052 2.08848 13.0983 2.12358 13.2504H0.0526505C0.0760508 13.1451 0.0936009 12.993 0.105301 12.7941C0.117001 12.5952 0.122853 12.3085 0.122853 11.9341V1.26361C0.122853 0.924311 0.111151 0.661058 0.0877509 0.473855C0.0643506 0.274953 0.0351005 0.117001 0 0H2.19378ZM8.52942 13.2504H7.1254C7.4296 13.0164 7.69286 12.759 7.91516 12.4782C8.14916 12.1857 8.35392 11.8815 8.52942 11.5656V13.2504Z"/></g>
+      <g transform="translate(27.93, 0)"><path d="M7.93271 13.2855C7.93271 13.2738 7.93856 13.2562 7.95026 13.2328C7.96196 13.2094 7.96781 13.186 7.96781 13.1626C7.95611 13.1041 7.93856 13.0105 7.91516 12.8818C7.89176 12.7531 7.8157 12.484 7.687 12.0745L7.24825 10.7232C7.20145 10.5945 7.14295 10.419 7.07274 10.1967C7.00254 9.97436 6.91479 9.69941 6.80949 9.3718L6.54624 8.54694C6.52284 8.51184 6.47019 8.37144 6.38828 8.12574C6.24788 7.71624 6.10163 7.30088 5.94953 6.87968C5.80913 6.45847 5.66872 6.06067 5.52832 5.68626C5.39962 5.30016 5.28262 4.955 5.17732 4.6508C5.07202 4.3466 4.98427 4.1126 4.91407 3.94879C4.89067 3.86689 4.85557 3.76159 4.80877 3.63289C4.76197 3.50419 4.70931 3.35209 4.65081 3.17658L4.29981 2.24643L4.82632 0.807309C4.86142 0.713708 4.90237 0.596707 4.94917 0.456305C5.00767 0.315904 5.06617 0.163802 5.12467 0C5.22997 0.315904 5.39377 0.783909 5.61607 1.40402C5.85008 2.02412 6.13088 2.77293 6.45849 3.65044C6.78609 4.51625 7.15465 5.49906 7.56415 6.59887C7.98536 7.69868 8.44167 8.8804 8.93307 10.144C9.07347 10.5184 9.21387 10.8928 9.35428 11.2672C9.49468 11.6299 9.62923 11.9985 9.75793 12.3729C9.82813 12.5484 9.89833 12.718 9.96854 12.8818C10.0504 13.0339 10.1265 13.1685 10.1967 13.2855H7.93271ZM0.754661 11.3725V11.355L0 13.2855H0.754661H1.31627H2.42193C2.04753 13.0164 1.72577 12.718 1.45667 12.3904C1.18757 12.0628 0.953563 11.7235 0.754661 11.3725Z"/></g>
+      <g transform="translate(40.59, 0.017)"><path d="M0 0H2.36928L10.0036 10.4073V13.2855L0 0ZM0 13.2679H1.42157C1.11737 13.0339 0.848263 12.7707 0.614259 12.4782C0.380256 12.1857 0.175502 11.8873 0 11.5831V13.2679ZM10.0036 0H8.58207C8.88627 0.234002 9.15538 0.497255 9.38938 0.789759C9.62338 1.08226 9.82814 1.38062 10.0036 1.68482V0Z"/></g>
+      <g transform="translate(51.96, 0)"><path d="M9.02082 1.49177C10.5535 2.67348 11.3199 4.3583 11.3199 6.54622C11.3199 8.02044 10.9864 9.28405 10.3195 10.3371C9.64093 11.4486 8.64642 12.2559 7.336 12.759C7.3126 12.7707 7.29505 12.7765 7.28335 12.7765C7.28335 12.7765 7.27165 12.7824 7.24825 12.7941C7.75136 12.2325 8.16086 11.4544 8.47676 10.4599C8.79267 9.45371 8.95062 8.14914 8.95062 6.54622C8.95062 4.10089 8.57037 2.29322 7.80986 1.12321C7.71625 0.971111 7.59925 0.813159 7.45885 0.649357C8.06726 0.85996 8.58792 1.14076 9.02082 1.49177ZM2.19378 0C2.11188 0.198902 2.06508 0.397805 2.05338 0.596706C2.04168 0.783909 2.03583 0.92431 2.03583 1.01791V11.7937C2.03583 12.1681 2.04168 12.4723 2.05338 12.7063C2.07678 12.9403 2.10603 13.1334 2.14113 13.2855H0.0526505C0.0760508 13.1802 0.0936009 13.0281 0.105301 12.8292C0.117001 12.6186 0.122854 12.3261 0.122854 11.9517V1.26361C0.122854 0.92431 0.111151 0.661057 0.0877509 0.473855C0.0643506 0.274953 0.0351005 0.117001 0 0H2.19378Z"/></g>
+    </svg>
+  </div>
+  <div class="closing-tagline reveal d3">A pilot collaboration proposal</div>
+</section>
+
+<!-- Navigation counter -->
+<div class="nav-counter" id="navCounter">1 / 21</div>
+
+<script>
+(function() {
+  const slides = document.querySelectorAll('.slide');
+  const counter = document.getElementById('navCounter');
+  const progressBar = document.getElementById('progressBar');
+  const total = slides.length;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const slide = entry.target;
+        const els = slide.querySelectorAll('.reveal, .reveal-title, .reveal-line, .reveal-scale, .reveal-vline');
+        els.forEach(el => el.classList.add('visible'));
+        slide.querySelectorAll('.category-item').forEach(el => el.classList.add('visible'));
+        const idx = Array.from(slides).indexOf(slide);
+        counter.textContent = `${idx + 1} / ${total}`;
+        const isDark = slide.dataset.theme === 'dark';
+        counter.classList.toggle('nav-counter--dark', isDark);
+        progressBar.style.width = `${((idx + 1) / total) * 100}%`;
+        progressBar.style.background = isDark ? 'rgba(255,255,255,0.3)' : 'var(--accent)';
+        slide.querySelectorAll('[data-count]').forEach(el => {
+          if (!el.dataset.counted) {
+            el.dataset.counted = 'true';
+            animateCounter(el, parseInt(el.dataset.count));
+          }
+        });
+      } else {
+        const els = entry.target.querySelectorAll('.reveal, .reveal-title, .reveal-line, .reveal-scale, .reveal-vline');
+        els.forEach(el => el.classList.remove('visible'));
+        entry.target.querySelectorAll('.category-item').forEach(el => el.classList.remove('visible'));
+        entry.target.querySelectorAll('[data-count]').forEach(el => {
+          el.dataset.counted = '';
+          el.textContent = '0';
+        });
+      }
+    });
+  }, { threshold: 0.35 });
+
+  slides.forEach(s => observer.observe(s));
+
+  function animateCounter(el, target, duration) {
+    duration = duration || 1200;
+    var start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  let current = 0;
+  function goTo(i) {
+    if (i < 0 || i >= total) return;
+    current = i;
+    slides[current].scrollIntoView({ behavior: 'smooth' });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (['ArrowDown','ArrowRight',' '].includes(e.key)) { e.preventDefault(); goTo(current + 1); }
+    else if (['ArrowUp','ArrowLeft','Backspace'].includes(e.key)) { e.preventDefault(); goTo(current - 1); }
+  });
+
+  const scrollObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) current = Array.from(slides).indexOf(entry.target);
+    });
+  }, { threshold: 0.55 });
+  slides.forEach(s => scrollObs.observe(s));
+
+  document.querySelectorAll('.story-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const main = this.closest('.story-main');
+      const btns = main.querySelectorAll('.story-toggle-btn');
+      btns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      if (this.dataset.show === 'proposal') {
+        main.classList.add('story-toggle-active');
+      } else {
+        main.classList.remove('story-toggle-active');
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

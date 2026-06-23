@@ -1,221 +1,648 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>INLAND Rwanda — Africa–Europe Co-Production</title><style>
-:root{--bg:#F9F4EE;--fg:#000;--accent:#400505;--muted:#5c5c5c;--ref:#857f76;--rule:#d8d2ca;--dark:#0e0e0e}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:Baskerville,'Times New Roman',Georgia,serif;line-height:1.6}
-.label{font-family:Fraunces,Georgia,serif;letter-spacing:.12em;text-transform:uppercase;font-size:.72rem;color:var(--muted)}
-.wrap{max-width:1000px;margin:0 auto;padding:0 40px}
-h1,h2,h3{font-weight:600;margin:0}
-hr{border:0;border-top:1px solid var(--fg);margin:18px 0 30px}
-.hero{min-height:78vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 20px}
-.hero .mark{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:.35em;font-size:2rem}
-.hero h1{font-size:5rem;margin:.3em 0 .15em}
-.hero .rule{width:120px;border-top:1px solid var(--fg);margin:14px 0 22px}
-.hero .sub{font-size:1.4rem;color:var(--muted)}
-.hero .meta{margin-top:34px}
-section{padding:46px 0}
-section.dark{background:var(--dark);color:#fff}
-section.dark .label{color:#999}
-.sec-h{font-size:2.4rem;margin:.2em 0}
-.lead{font-size:1.18rem;max-width:46ch}
-.muted{color:var(--muted)}
-.cats{display:flex;flex-wrap:wrap;gap:10px 30px;margin-top:18px}
-.cats div{display:flex;justify-content:space-between;min-width:240px;border-bottom:1px solid var(--rule);padding:6px 0}
-.cats b{color:var(--accent)}
-.stat{display:inline-block;margin-right:48px}
-.stat .n{font-size:4.5rem;color:var(--accent);line-height:1}
-.story{padding:30px 0;border-top:1px solid var(--rule)}
-.story .top{display:flex;justify-content:space-between;align-items:baseline}
-.story .num{font-size:2.6rem;color:var(--accent)}
-.story h3{font-size:1.9rem}
-.story .st{font-style:italic;color:var(--muted);font-size:1.2rem;margin:.1em 0 .2em}
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:14px}
-.cols .label{display:block;margin-bottom:6px}
-.foot{margin-top:14px;font-size:.85rem;color:var(--ref)}
-.tags{margin-top:8px}
-.tag{font-family:Fraunces,Georgia,serif;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:1px solid #b0a89e;border-radius:20px;padding:3px 10px;margin-right:8px;white-space:nowrap}
-.tracks{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:24px}
-.track .bar{height:3px;margin-bottom:12px}
-.track h3{font-size:1.4rem}
-.track .ts{font-family:Fraunces,Georgia,serif;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:6px 0 10px}
-.track .meta{margin-top:14px;font-family:Fraunces,Georgia,serif;font-size:.66rem;color:var(--ref);line-height:1.7}
-.partner{display:grid;grid-template-columns:200px 1fr;gap:10px 28px;margin-top:20px}
-.partner .h{font-family:Fraunces,Georgia,serif;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;color:var(--accent);font-weight:600;padding-top:3px}
-.center{text-align:center}
-.dark h2{font-size:3rem}
-@media(max-width:760px){.cols,.tracks,.partner{grid-template-columns:1fr}.hero h1{font-size:3.2rem}}
-</style></head>
-<body>
-<div class="hero">
-  <div class="mark">INLAND</div>
-  <h1>Rwanda</h1><div class="rule"></div>
-  <div class="sub">An Africa–Europe Cultural Co-Production</div>
-  <div class="meta label">12 Selected Stories · Goethe-Institut Africa–Europe Partnerships for Culture · 2026</div>
-</div>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>INLAND Rwanda — Africa–Europe Co-Production</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Fraunces:wght@400;600&display=swap" rel="stylesheet"><style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #F9F4EE; --fg: #000000; --accent: #400505;
+    --muted: rgba(0,0,0,0.58); --muted-soft: rgba(0,0,0,0.38);
+    --divider: rgba(0,0,0,0.18); --divider-light: rgba(0,0,0,0.1);
+    --dark-bg: #0e0e0e; --dark-fg: #ffffff; --tag-border: #B0A89E;
+    --font-heading: 'Cormorant', Georgia, serif;
+    --font-body: 'Cormorant Garamond', Georgia, serif;
+    --font-label: 'Fraunces', sans-serif;
+    --track-blue: #1B4965; --track-green: #3A5A40; --track-purple: #5B2C6F;
+  }
+  html { scroll-snap-type: y mandatory; overflow-x: hidden; background: var(--bg);
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body { background: var(--bg); color: var(--fg); font-family: var(--font-body); }
 
-<section><div class="wrap"><div class="label">About</div><h2 class="sec-h">About INLAND</h2><hr>
-<p class="lead">INLAND is a yearly publication documenting the soul of countries before they change. Each issue embeds with named, locatable custodians of living traditions — artisans, pastoralists, cooks, singers, border families — whose stories have not yet been narrated internationally. Previous issues have covered the Faroe Islands, Georgia and Italy’s minor islands.</p><p class="muted">The editorial method is slow, place-based and built on trust. We spend months in pre-production research, identify specific custodians and communities, then commission photographers, writers and filmmakers to embed with them over extended field periods. The result is long-form visual storytelling grounded in named people and real places.</p></div></section>
+  .slide { width: 100vw; height: 100vh; scroll-snap-align: start; display: flex;
+    flex-direction: column; justify-content: center; padding: 60px 80px;
+    position: relative; overflow: hidden; }
+  .slide--dark { background: var(--dark-bg); color: var(--dark-fg); }
 
-<section style="background:#fff"><div class="wrap"><div class="label">The Research</div><h2 class="sec-h">Rwanda — What Survived</h2><hr>
-<p class="lead">Rwanda is internationally legible through two stories — the 1994 genocide and the development ‘miracle’. Both are loud; both crowd out the quieter country. INLAND asks one question across every lead: what survived? What persists in specific families, villages and practices that has been absorbed by neither the colonial inheritance, the Christian mission, nor the modernisation project — and can still be witnessed and photographed today.</p><p class="muted">Our first round of research identified 20 story leads spanning communities, ritual, food, ecology, craft and music. From these, twelve storylines have been selected for editorial development — each centred on a named custodian, a specific place, and a practice that can still be witnessed.</p>
-<p><span class="stat"><span class="n">20</span><br><span class="label">story leads researched</span></span>
-<span class="stat"><span class="n">12</span><br><span class="label">selected for this round</span></span></p></div></section>
+  .reveal { opacity: 0; transform: translateY(36px);
+    transition: opacity 0.7s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-title { opacity: 0; clip-path: inset(0 0 100% 0); transform: translateY(24px);
+    transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1),
+      transform 0.8s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.6s ease; }
+  .reveal-title.visible { opacity: 1; clip-path: inset(0 0 0% 0); transform: translateY(0); }
+  .reveal-line { transform: scaleX(0); transform-origin: left;
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1); }
+  .reveal-line.visible { transform: scaleX(1); }
+  .reveal-scale { opacity: 0; transform: scale(0.82);
+    transition: opacity 0.9s ease, transform 1.1s cubic-bezier(0.16, 1, 0.3, 1); }
+  .reveal-scale.visible { opacity: 1; transform: scale(1); }
+  .reveal-vline { transform: scaleY(0); transform-origin: top;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+  .reveal-vline.visible { transform: scaleY(1); }
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+  .d4{transition-delay:.32s}.d5{transition-delay:.4s}.d6{transition-delay:.5s}
+  .d7{transition-delay:.6s}.d8{transition-delay:.7s}.d9{transition-delay:.8s}
+  .d10{transition-delay:.9s}
 
-<section><div class="wrap"><div class="label">Editorial Angle</div><h2 class="sec-h">Our Angle</h2><hr>
-<p class="lead">We focus on endangered knowledge systems and under-documented living practices surviving despite standardisation, policy change and generational drift. The genocide is context, never the lens; the state is never cast as villain. Every storyline centres a named custodian, a specific place, and a practice that can still be witnessed.</p><p class="muted">This is the equitable, co-created Africa–Europe cultural work the Goethe programme exists to fund: a Rwandan cultural partner and a European publication building a long-form visual record of living Rwandan traditions — made with custodians, not about them, and presented in both Rwanda and Europe.</p>
-<div class="cats"><div><span>Food</span><b>4</b></div><div><span>Myth &amp; Religion</span><b>3</b></div><div><span>Local communities</span><b>2</b></div><div><span>Arts &amp; Culture</span><b>2</b></div><div><span>Geopolitics</span><b>1</b></div></div></div></section>
+  .label { font-family: var(--font-label); font-size: 11px; font-weight: 400;
+    text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); }
+  .heading-xl { font-family: var(--font-heading); font-weight: 600;
+    font-size: clamp(52px, 5.5vw, 72px); line-height: 1.05; }
+  .heading-lg { font-family: var(--font-heading); font-weight: 600;
+    font-size: clamp(32px, 3.2vw, 42px); line-height: 1.15; }
+  .heading-story { font-family: var(--font-heading); font-weight: 600;
+    font-size: clamp(30px, 3.2vw, 42px); line-height: 1.15; }
+  .subtitle-story { font-family: var(--font-heading); font-weight: 600; font-style: italic;
+    font-size: clamp(18px, 2vw, 26px); line-height: 1.3; color: var(--muted); margin-top: 8px; }
+  .body-text { font-family: var(--font-body); font-weight: 400;
+    font-size: clamp(16px, 1.4vw, 20px); line-height: 1.65; max-width: 720px; }
+  .body-secondary { font-family: var(--font-body); font-weight: 400;
+    font-size: clamp(15px, 1.2vw, 18px); line-height: 1.6; color: var(--muted);
+    max-width: 720px; margin-top: 20px; }
+  .accent-text { font-family: var(--font-heading); font-weight: 600; font-style: italic;
+    color: var(--accent); font-size: clamp(20px, 2vw, 26px); line-height: 1.35; }
+  .divider { width: 100%; height: 1px; background: var(--divider); margin: 24px 0; }
+  .divider--short { width: 160px; margin: 24px auto; }
+  .divider--white { background: rgba(255,255,255,0.2); }
 
-<section class="dark center"><div class="wrap"><div class="label">Part Two</div><h2>The Storylines</h2>
-<p class="lead" style="margin:14px auto 0;max-width:60ch">Twelve selected stories across communities, ritual, food, ecology, craft and music. Each centres a named custodian, a specific place, and a practice that can still be witnessed.</p></div></section>
+  .stat-num { font-family: var(--font-heading); font-weight: 600; font-size: 80px;
+    line-height: 1; color: var(--accent); }
+  .stat-label { font-family: var(--font-label); font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--muted); margin-top: 6px; }
 
-<section><div class="wrap"><div class="story">
-  <div class="top"><div><div class="label">Local communities</div>
-  <h3>What They Carry</h3><div class="st">Batwa Forest Knowledge</div></div>
-  <div class="num">01</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>Batwa elders around Musanze hold centuries-deep ecological knowledge of the Nyungwe and Virunga forests — plant identification, animal behaviour, spatial memory — now sought by conservation biologists before it disappears. ~25,000–30,000 Batwa, officially ‘historically marginalised’.</div>
-    <div><span class="label">Our proposal</span>INLAND embeds with elders on a plant walk and records the forest songs — documenting the knowledge itself rather than the (already filmed) displacement. The narrative asks what becomes of forest knowledge when there is no forest left to use it in.</div>
-  </div>
-  <div class="tags"><span class="tag">Endangered Knowledge</span><span class="tag">Indigenous</span></div>
-  <div class="foot">Places: Musanze · Kibingo · forest margins &nbsp;·&nbsp; Sources: AIMPO; INLAND Rwanda research corpus</div>
-</div><div class="story">
-  <div class="top"><div><div class="label">Myth &amp; Religion</div>
-  <h3>The Rites That Won’t Die</h3><div class="st">Kubandwa / Ryangombe</div></div>
-  <div class="num">02</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>A pre-colonial spirit-possession system centred on Ryangombe that missionaries tried to erase, surviving underground in a 92.8% Christian country. A 2021 academic recorded students attending rites ‘even in the centre of Kigali’.</div>
-    <div><span class="label">Our proposal</span>INLAND follows the practice through discreet, consent-led fieldwork and academic introductions — documenting an adaptive ritual that crosses linguistic, political and temporal frontiers. If confirmed in the field, the edition’s signature story.</div>
-  </div>
-  <div class="tags"><span class="tag">Endangered Knowledge</span><span class="tag">Sacred &amp; Hidden</span></div>
-  <div class="foot">Places: Kigali · discreet rural sites &nbsp;·&nbsp; Sources: Pennacini (Turin); Bizimana, RCSP Rwanda 2018</div>
-</div><div class="story">
-  <div class="top"><div><div class="label">Myth &amp; Religion</div>
-  <h3>The Hospital Sends You to a Healer</h3><div class="st">Uburozi and Traditional Medicine</div></div>
-  <div class="num">03</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>In Kinigi, Musanze — ‘the core location for healers’ — hospitals refer patients to traditional healers for uburozi, a sorcery/poisoning illness conventional medicine doesn’t recognise. ~5,000 healers nationally; a 2022 Traditional Medicine policy exists.</div>
-    <div><span class="label">Our proposal</span>INLAND shadows a referral from clinic to healer and back, with portraits of both — documenting a state-acknowledged parallel healthcare system operating in the open and almost entirely unreported internationally.</div>
-  </div>
-  <div class="tags"><span class="tag">State &amp; Tradition</span><span class="tag">Endangered Knowledge</span></div>
-  <div class="foot">Places: Kinigi · Burera · Bushozi · Musenyi &nbsp;·&nbsp; Sources: BMC Compl. Med. &amp; Therapies 2021; Rwanda FDA 2022</div>
-</div><div class="story">
-  <div class="top"><div><div class="label">Food</div>
-  <h3>Crushed by Foot</h3><div class="st">Urwagwa, the Banana Beer of Rites</div></div>
-  <div class="num">04</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>Banana beer is ritual infrastructure — the medium of marriage negotiations, ancestral offerings and reconciliation. Named brewer Agatha Tuyisenge (Mushubati, Rutsiro), mother of five, built a livelihood from inherited brewing knowledge.</div>
-    <div><span class="label">Our proposal</span>INLAND follows one full brewing cycle toward a wedding — variety selection, foot-crushing, sorghum fermentation — and the ceremonial economy around the beer. A named protagonist with a full story arc.</div>
-  </div>
-  <div class="tags"><span class="tag">Endangered Knowledge</span><span class="tag">Ritual</span></div>
-  <div class="foot">Places: Mushubati · Rutsiro District &nbsp;·&nbsp; Sources: SENS Magazine (Tuyisenge profile)</div>
-</div><div class="story">
-  <div class="top"><div><div class="label">Food</div>
-  <h3>The Last Sorghum Beer</h3><div class="st">Ikigage on the Volcano Slopes</div></div>
-  <div class="num">05</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>A sorghum beer of feasts, dowries and harvests near Kinigi and Musanze, now on the Slow Food Ark of Taste — declining as sorghum is squeezed out by the Crop Intensification Programme.</div>
-    <div><span class="label">Our proposal</span>INLAND documents a household that still grows sorghum and brews ikigage for weddings — a compressed portrait of what agricultural policy does to cultural memory.</div>
-  </div>
-  <div class="tags"><span class="tag">Endangered Knowledge</span><span class="tag">State &amp; Tradition</span></div>
-  <div class="foot">Places: Kinigi · Musanze &nbsp;·&nbsp; Sources: Slow Food Ark of Taste; Slow Food Rwanda</div>
-</div><div class="story">
-  <div class="top"><div><div class="label">Myth &amp; Religion</div>
-  <h3>A Harvest Without Its Secrets</h3><div class="st">Umuganura and the Abiru</div></div>
-  <div class="num">06</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>Umuganura was a sacred rite of ubwiru guarded by the hereditary Abiru, needing sacred sorghum from Huro (Gakenke). Abolished by the Belgians in 1925; revived in 2011 as a secular holiday — without the Abiru, the plants, or the secret language.</div>
-    <div><span class="label">Our proposal</span>INLAND shoots the intact-but-vacant ritual site at Huro against the August state festival — a ceremony hollowed of meaning and repurposed for nation-building. A story about what revival leaves out.</div>
-  </div>
-  <div class="tags"><span class="tag">History</span><span class="tag">Sacred &amp; Hidden</span></div>
-  <div class="foot">Places: Huro · Bumbogo · Gakenke District &nbsp;·&nbsp; Sources: ubwiru / Abiru historiography</div>
-</div><div class="story">
-  <div class="top"><div><div class="label">Food</div>
-  <h3>The Morality of Milk</h3><div class="st">Kivuguto and the Inkongoro Gourd</div></div>
-  <div class="num">07</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>Fermented milk made in handmade inkongoro gourds carrying unique indigenous microbial cultures — the moral order encoded in how milk is stored, fermented and shared, now replaced by steel tanks and controlled starters.</div>
-    <div><span class="label">Our proposal</span>INLAND builds a diptych: morning milking and gourd fermentation in a pastoral household, against a modern dairy plant making packaged ‘yogurt drinks’. Elders speak to the symbolism of the gourd.</div>
-  </div>
-  <div class="tags"><span class="tag">Endangered Knowledge</span><span class="tag">Ritual</span></div>
-  <div class="foot">Places: Pastoral households · Musanze / Gishwati &nbsp;·&nbsp; Sources: INLAND Rwanda research corpus</div>
-</div><div class="story">
-  <div class="top"><div><div class="label">Local communities</div>
-  <h3>Life After the Forest</h3><div class="st">The Gishwati Resettlement</div></div>
-  <div class="num">08</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>Families moved off the Gishwati–Mukura forests now farm ~0.5 ha on steep, flood-prone slopes in Nyabihu, Rutsiro and Rubavu. Some, like Laurent Hategekimana, patrol as unpaid auxiliaries the forest margins their families were removed from.</div>
-    <div><span class="label">Our proposal</span>INLAND walks the forest margin with a patroller and spends time in the resettlement villages — the long, quiet afterlife of displacement on a landscape remade by ranching, floods and restoration.</div>
-  </div>
-  <div class="tags"><span class="tag">Land &amp; Displacement</span><span class="tag">Nature</span></div>
-  <div class="foot">Places: Nyabihu · Rutsiro · Rubavu · Bigogwe &nbsp;·&nbsp; Sources: Rainforest Journalism Fund; Pulitzer Center</div>
-</div><div class="story">
-  <div class="top"><div><div class="label">Food</div>
-  <h3>Thirty Years On</h3><div class="st">The Reconciliation Coffee Cooperatives</div></div>
-  <div class="num">09</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>Cooperatives built post-1994 to put Hutu and Tutsi farmers in the same washing stations — Maraba (Huye) and Dukunde Kawa Musasa (Gakenke). The origin story is told; the present is unfilmed.</div>
-    <div><span class="label">Our proposal</span>INLAND follows one or two families through a harvest — picking, sorting, washing — asking quietly what changed in a generation and what didn’t. The founders are middle-aged now; their children work side by side.</div>
-  </div>
-  <div class="tags"><span class="tag">History</span><span class="tag">Reconciliation</span></div>
-  <div class="foot">Places: Maraba (Huye) · Dukunde Kawa (Gakenke) &nbsp;·&nbsp; Sources: Alliance for Coffee Excellence; cooperative profiles</div>
-</div><div class="story">
-  <div class="top"><div><div class="label">Arts &amp; Culture</div>
-  <h3>The Last Maestro</h3><div class="st">Vianey Mushabizi and the Inanga</div></div>
-  <div class="num">10</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>A single instrument and the man who may be the end of its line: Vianey Mushabizi (Gatagara), possibly the last living master of the inanga zither — the sound of a pre-radio Rwanda held in one pair of hands.</div>
-    <div><span class="label">Our proposal</span>INLAND records his repertoire and tuning, and asks the question of transmission: is there an apprentice, or does the line end here? A portrait in sound and image.</div>
-  </div>
-  <div class="tags"><span class="tag">Endangered Knowledge</span><span class="tag">Music</span></div>
-  <div class="foot">Places: Gatagara &nbsp;·&nbsp; Sources: INLAND Rwanda research corpus</div>
-</div><div class="story">
-  <div class="top"><div><div class="label">Arts &amp; Culture</div>
-  <h3>Geometry of the Widows</h3><div class="st">Imigongo and the Market</div></div>
-  <div class="num">11</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>Geometric cow-dung relief paintings made by genocide widows in Kakira, Eastern Province — now commercialised. A tension between cultural preservation, livelihood and market co-option.</div>
-    <div><span class="label">Our proposal</span>INLAND documents the making and the market in one place — who paints, who sells, who profits when a domestic craft scales into a souvenir.</div>
-  </div>
-  <div class="tags"><span class="tag">Craft</span><span class="tag">History</span></div>
-  <div class="foot">Places: Kakira · Eastern Province &nbsp;·&nbsp; Sources: INLAND Rwanda research corpus</div>
-</div><div class="story">
-  <div class="top"><div><div class="label">Geopolitics</div>
-  <h3>The Data Centre and the Hill</h3><div class="st">Two Relationships to Electricity</div></div>
-  <div class="num">12</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>A windowless server warehouse runs 24 hours at full load a few kilometres from villages where electricity arrived three years ago. The guard at the gate is from such a village.</div>
-    <div><span class="label">Our proposal</span>INLAND anchors the development showcase in one human — the guard — to portray two relationships to electricity, land and the future coexisting within a few kilometres, without abstraction.</div>
-  </div>
-  <div class="tags"><span class="tag">Modernisation</span><span class="tag">Land</span></div>
-  <div class="foot">Places: Eastern Province / peri-Kigali &nbsp;·&nbsp; Sources: INLAND Rwanda research corpus</div>
-</div></div></section>
+  .story-num { font-family: var(--font-heading); font-weight: 600;
+    font-size: clamp(48px, 5vw, 68px); color: var(--accent); line-height: 1;
+    position: absolute; top: 56px; right: 80px; }
 
-<section style="background:#fff"><div class="wrap"><div class="label">Three Tracks</div><h2 class="sec-h">Production Tracks</h2><hr>
-<div class="tracks"><div class="track">
-  <div class="bar" style="background:#2C5F2D"></div>
-  <h3 style="color:#2C5F2D">The Musanze Cluster</h3>
-  <div class="ts">Stories 01 + 03 + 05</div>
-  <div>A single northern base yields three nested stories: Batwa forest knowledge, the hospital-to-healer uburozi referral, and the last sorghum beer. One deployment, three custodian-led narratives around Musanze and Kinigi.</div>
-  <div class="meta">Geography: Musanze → Kinigi → forest margins<br>Season: Flexible (dry season for access)<br>3 stories, 1 field base</div>
-</div><div class="track">
-  <div class="bar" style="background:#B85042"></div>
-  <h3 style="color:#B85042">Brewing &amp; Land</h3>
-  <div class="ts">Stories 04 + 08 (+ 07)</div>
-  <div>A western cluster binding the urwagwa brewing cycle in Rutsiro, the Gishwati resettlement in Nyabihu, and the kivuguto milk diptych. Ritual food and the afterlife of displacement on the same hillsides.</div>
-  <div class="meta">Geography: Rutsiro → Nyabihu → Rubavu<br>Season: Toward a wedding / harvest<br>2–3 stories, 1 deployment</div>
-</div><div class="track">
-  <div class="bar" style="background:#5B2C6F"></div>
-  <h3 style="color:#5B2C6F">Coffee &amp; Memory</h3>
-  <div class="ts">Stories 09 + 06 (+ 11)</div>
-  <div>A southern/eastern cluster: the reconciliation coffee cooperatives thirty years on, the hollowed Umuganura harvest at Huro, and the imigongo widows. Memory, harvest and craft across Huye, Gakenke and the East.</div>
-  <div class="meta">Geography: Huye → Gakenke → Eastern Province<br>Season: Coffee harvest; August (Umuganura)<br>2–3 stories, seasonal windows</div>
-</div></div></div></section>
+  .tag-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tag { font-family: var(--font-label); font-size: 9px; font-weight: 400;
+    text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted);
+    border: 1px solid var(--tag-border); border-radius: 20px; padding: 4px 14px; white-space: nowrap; }
 
-<section><div class="wrap"><div class="label">The Partnership</div><h2 class="sec-h">An Equitable Co-Production</h2><hr>
-<div class="partner"><div class="h">European partner</div><div>INLAND — yearly publication (Italy / EU). Editorial, photography and publishing; presentation of the work in Europe.</div><div class="h">African partner</div><div>A Rwandan cultural organisation (lead candidate: Red Rocks Initiatives, Musanze) — co-creation, community access, custodian liaison, presentation in Rwanda.</div><div class="h">Funding path</div><div>Mobility grant (≤€4,000) funds the scouting trip; the Visual Arts grant funds collaborative production and a public presentation in Rwanda and Europe.</div><div class="h">The principle</div><div>Made with custodians, not about them — equitable Africa–Europe co-creation, exactly the dialogue the Goethe programme exists to fund.</div></div></div></section>
+  .logo-svg { width: clamp(180px, 18vw, 240px); height: auto; display: block; }
+  .logo-svg--sm { width: clamp(100px, 10vw, 140px); height: auto; display: block; margin: 0 auto; }
 
-<section class="dark center"><div class="wrap"><h2>12 Storylines. One Rwanda.</h2>
-<div class="rule" style="margin:18px auto;width:120px;border-color:#fff"></div>
-<div class="label">An Africa–Europe co-production proposal by INLAND</div></div></section>
+  .slide--title { text-align: center; align-items: center; }
+  .slide--title .subtitle { font-family: var(--font-body); font-size: clamp(16px, 1.3vw, 20px);
+    color: var(--muted); margin-top: 8px; }
+  .slide--title .meta { font-family: var(--font-label); font-size: 11px; letter-spacing: 0.12em;
+    color: var(--muted-soft); text-transform: uppercase; margin-top: 48px; }
+
+  .slide--breaker { text-align: center; align-items: center; background: var(--dark-bg); color: var(--dark-fg); }
+  .breaker-label { font-family: var(--font-label); font-size: 11px; font-weight: 400;
+    text-transform: uppercase; letter-spacing: 0.2em; color: rgba(255,255,255,0.35); }
+  .breaker-heading { font-family: var(--font-heading); font-weight: 600;
+    font-size: clamp(40px, 4.5vw, 60px); line-height: 1.1; color: var(--dark-fg); margin-top: 12px; }
+  .breaker-sub { font-family: var(--font-body); font-size: clamp(16px, 1.3vw, 20px);
+    color: rgba(255,255,255,0.45); max-width: 600px; line-height: 1.55; margin-top: 20px; }
+
+  .intro-layout { display: flex; gap: 80px; align-items: flex-start; width: 100%; }
+  .intro-main { flex: 1; min-width: 0; }
+  .intro-side { flex: 0 0 300px; padding-top: 4px; }
+  .category-list { display: flex; flex-direction: column; }
+  .category-item { font-family: var(--font-body); font-size: 17px; padding: 10px 0;
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid var(--divider-light); opacity: 0; transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+  .category-item:first-child { border-top: 1px solid var(--divider); }
+  .category-item:last-child { border-bottom: 1px solid var(--divider); }
+  .category-item.visible { opacity: 1; transform: translateX(0); }
+  .category-count { font-family: var(--font-body); font-weight: 600; font-size: 17px; color: var(--accent); }
+  .stat-block { display: flex; flex-direction: column; gap: 40px; }
+
+  .index-list { list-style: none; width: min(700px, 80%); margin-top: 16px; }
+  .index-item { display: flex; align-items: baseline; gap: 24px; padding: 16px 0;
+    border-bottom: 1px solid var(--divider-light); }
+  .index-item:last-child { border-bottom: none; }
+  .index-num { font-family: var(--font-heading); font-weight: 600; font-size: 28px;
+    color: var(--accent); min-width: 40px; }
+  .index-title { font-family: var(--font-body); font-size: 22px; color: var(--fg); }
+
+  .slide--story { justify-content: flex-start; padding-top: 72px; }
+  .story-header { margin-top: 20px; }
+  .story-content { display: flex; gap: 48px; width: 100%; align-items: flex-start; }
+  .story-main { flex: 1; min-width: 0; }
+  .story-quote { flex: 0 0 280px; display: flex; gap: 16px; align-items: stretch; padding-top: 4px; }
+  .quote-bar { width: 2px; min-height: 60px; background: var(--accent); flex-shrink: 0; align-self: stretch; }
+  .quote-text { font-family: var(--font-heading); font-weight: 600; font-style: italic;
+    font-size: clamp(17px, 1.5vw, 21px); line-height: 1.4; color: var(--accent); }
+  .story-angle { font-family: var(--font-body); font-size: clamp(15px, 1.3vw, 18px);
+    line-height: 1.65; color: var(--fg); margin-top: 28px; }
+  .story-angle-pill { display: inline-block; font-family: var(--font-label); font-size: 9px;
+    text-transform: uppercase; letter-spacing: 0.1em; color: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.06); border: 1px solid rgba(0,0,0,0.15); border-radius: 3px;
+    padding: 3px 8px; margin-bottom: 8px; white-space: nowrap; }
+  .story-places { font-family: var(--font-label); font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--muted); margin-top: 20px; }
+  .story-toggle { display: none; gap: 8px; margin-bottom: 12px; }
+  .story-toggle-btn { font-family: var(--font-label); font-size: 9px; text-transform: uppercase;
+    letter-spacing: 0.1em; color: rgba(0,0,0,0.4); background: rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.12); border-radius: 3px; padding: 5px 12px; cursor: pointer;
+    transition: all 0.2s ease; }
+  .story-toggle-btn.active { color: #ffffff; background: #0e0e0e; border-color: #0e0e0e; }
+  .story-footer { position: absolute; bottom: 48px; left: 80px; right: 80px;
+    display: flex; justify-content: space-between; align-items: flex-end; }
+  .story-ref { font-family: var(--font-label); font-size: 9px; letter-spacing: 0.08em; color: var(--muted-soft); }
+
+  .tracks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; width: 100%; margin-top: 8px; }
+  .track-card { border-top: 3px solid var(--accent); padding: 28px 0 0; }
+  .track-card--blue { border-color: var(--track-blue); }
+  .track-card--green { border-color: var(--track-green); }
+  .track-card--purple { border-color: var(--track-purple); }
+  .track-name { font-family: var(--font-heading); font-weight: 600; font-size: clamp(22px, 2.2vw, 28px);
+    line-height: 1.2; margin-bottom: 4px; }
+  .track-card--blue .track-name { color: var(--track-blue); }
+  .track-card--green .track-name { color: var(--track-green); }
+  .track-card--purple .track-name { color: var(--track-purple); }
+  .track-stories { font-family: var(--font-label); font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.1em; color: var(--muted); margin-top: 12px; }
+  .track-desc { font-family: var(--font-body); font-size: clamp(15px, 1.2vw, 17px); line-height: 1.55;
+    color: var(--fg); margin-top: 14px; }
+  .track-meta { font-family: var(--font-label); font-size: 9px; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--muted-soft); margin-top: 18px; line-height: 1.7; }
+  .track-note { font-family: var(--font-body); font-size: 14px; color: var(--muted-soft);
+    text-align: center; max-width: 100%; margin-top: 28px; }
+
+  .partner-grid { display: grid; grid-template-columns: 220px 1fr; gap: 18px 40px;
+    width: 100%; max-width: 920px; margin-top: 8px; }
+  .partner-h { font-family: var(--font-label); text-transform: uppercase; letter-spacing: 0.08em;
+    font-size: 12px; color: var(--accent); font-weight: 600; padding-top: 4px; }
+  .partner-b { font-family: var(--font-body); font-size: clamp(15px, 1.2vw, 18px); line-height: 1.55; }
+
+  .slide--closing { text-align: center; align-items: center; }
+  .closing-headline { font-family: var(--font-heading); font-weight: 600;
+    font-size: clamp(36px, 4vw, 52px); line-height: 1.2; color: var(--dark-fg); }
+  .closing-tagline { font-family: var(--font-label); font-size: 14px; font-weight: 400;
+    letter-spacing: 0.12em; color: rgba(255,255,255,0.4); text-transform: uppercase; }
+
+  .nav-counter { position: fixed; bottom: 24px; right: 32px; font-family: var(--font-label);
+    font-size: 11px; color: var(--muted-soft); letter-spacing: 0.08em; z-index: 100;
+    transition: color 0.4s ease; }
+  .nav-counter--dark { color: rgba(255,255,255,0.3); }
+  .progress-bar { position: fixed; top: 0; left: 0; height: 2px; background: var(--accent);
+    width: 0%; z-index: 100; transition: width 0.35s ease; }
+
+  @media (max-width: 768px) {
+    .slide { padding: 40px 24px; height: auto; min-height: 100vh; }
+    .slide--story { padding-top: 56px; padding-bottom: 80px; }
+    .intro-layout { flex-direction: column; gap: 40px; }
+    .intro-side { flex: none; width: 100%; }
+    .story-num { top: 40px; right: 24px; font-size: 40px; }
+    .story-content { flex-direction: column; gap: 0; }
+    .story-quote { display: none; }
+    .story-ref { display: none; }
+    .story-places { display: none; }
+    .body-text { font-size: 18px; }
+    .story-angle { font-size: 18px; display: none; margin-top: 0; }
+    .story-angle-pill { display: none; }
+    .body-text .story-angle-pill { display: none; }
+    .story-toggle { display: flex; margin-bottom: 6px; }
+    .story-toggle-active .body-text { display: none; }
+    .story-toggle-active .story-angle { display: block; }
+    .story-footer { position: absolute; bottom: 24px; left: 24px; right: 24px;
+      justify-content: flex-start; flex-wrap: wrap; gap: 8px; }
+    .tracks-grid { grid-template-columns: 1fr; gap: 32px; }
+    .partner-grid { grid-template-columns: 1fr; gap: 6px 0; }
+    .partner-h { padding-top: 14px; }
+    .nav-counter { bottom: 16px; right: 16px; }
+    .stat-num { font-size: 56px; }
+  }
+  ::-webkit-scrollbar { width: 0; background: transparent; }
+  html { scrollbar-width: none; }
+</style></head><body>
+<div class="progress-bar" id="progressBar"></div>
+
+<section class="slide slide--title" data-theme="light">
+  <div class="reveal reveal-scale" style="margin-bottom:12px;"><svg class="logo-svg" viewBox="0 0 63.28 13.29" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0, 0.14)"><path d="M2.17623 0C2.09433 0.198902 2.04753 0.391954 2.03583 0.579156C2.02413 0.766358 2.01828 0.906759 2.01828 1.00036V11.6709C2.01828 12.0453 2.02413 12.3495 2.03583 12.5835C2.05923 12.8175 2.08848 13.0047 2.12358 13.1451H0.0526506C0.0760509 13.0398 0.0936013 12.8935 0.105301 12.7063C0.117002 12.5074 0.122852 12.2208 0.122852 11.8464V1.24606C0.122852 0.91846 0.111151 0.661057 0.0877512 0.473854C0.0643508 0.274953 0.0351005 0.117001 0 0H2.17623Z"/></g><g transform="translate(4.73, 0.017)"><path d="M0 0H2.36928L10.0036 10.4073V13.2855L0 0ZM0 13.2679H1.42157C1.11737 13.0339 0.848262 12.7707 0.614259 12.4782C0.380255 12.1857 0.175502 11.8873 0 11.5831V13.2679ZM10.0036 0H8.58207C8.88627 0.234002 9.15538 0.497255 9.38938 0.789759C9.62338 1.08226 9.82813 1.38062 10.0036 1.68482V0Z"/></g><g transform="translate(17.56, 0.035)"><path d="M2.19378 0C2.11188 0.198902 2.06508 0.397805 2.05338 0.596707C2.04168 0.783909 2.03583 0.92431 2.03583 1.01791V11.7586C2.03583 12.133 2.04168 12.4372 2.05338 12.6712C2.06508 12.9052 2.08848 13.0983 2.12358 13.2504H0.0526505C0.0760508 13.1451 0.0936009 12.993 0.105301 12.7941C0.117001 12.5952 0.122853 12.3085 0.122853 11.9341V1.26361C0.122853 0.924311 0.111151 0.661058 0.0877509 0.473855C0.0643506 0.274953 0.0351005 0.117001 0 0H2.19378ZM8.52942 13.2504H7.1254C7.4296 13.0164 7.69286 12.759 7.91516 12.4782C8.14916 12.1857 8.35392 11.8815 8.52942 11.5656V13.2504Z"/></g><g transform="translate(27.93, 0)"><path d="M7.93271 13.2855C7.93271 13.2738 7.93856 13.2562 7.95026 13.2328C7.96196 13.2094 7.96781 13.186 7.96781 13.1626C7.95611 13.1041 7.93856 13.0105 7.91516 12.8818C7.89176 12.7531 7.8157 12.484 7.687 12.0745L7.24825 10.7232C7.20145 10.5945 7.14295 10.419 7.07274 10.1967C7.00254 9.97436 6.91479 9.69941 6.80949 9.3718L6.54624 8.54694C6.52284 8.51184 6.47019 8.37144 6.38828 8.12574C6.24788 7.71624 6.10163 7.30088 5.94953 6.87968C5.80913 6.45847 5.66872 6.06067 5.52832 5.68626C5.39962 5.30016 5.28262 4.955 5.17732 4.6508C5.07202 4.3466 4.98427 4.1126 4.91407 3.94879C4.89067 3.86689 4.85557 3.76159 4.80877 3.63289C4.76197 3.50419 4.70931 3.35209 4.65081 3.17658L4.29981 2.24643L4.82632 0.807309C4.86142 0.713708 4.90237 0.596707 4.94917 0.456305C5.00767 0.315904 5.06617 0.163802 5.12467 0C5.22997 0.315904 5.39377 0.783909 5.61607 1.40402C5.85008 2.02412 6.13088 2.77293 6.45849 3.65044C6.78609 4.51625 7.15465 5.49906 7.56415 6.59887C7.98536 7.69868 8.44167 8.8804 8.93307 10.144C9.07347 10.5184 9.21387 10.8928 9.35428 11.2672C9.49468 11.6299 9.62923 11.9985 9.75793 12.3729C9.82813 12.5484 9.89833 12.718 9.96854 12.8818C10.0504 13.0339 10.1265 13.1685 10.1967 13.2855H7.93271ZM0.754661 11.3725V11.355L0 13.2855H0.754661H1.31627H2.42193C2.04753 13.0164 1.72577 12.718 1.45667 12.3904C1.18757 12.0628 0.953563 11.7235 0.754661 11.3725Z"/></g><g transform="translate(40.59, 0.017)"><path d="M0 0H2.36928L10.0036 10.4073V13.2855L0 0ZM0 13.2679H1.42157C1.11737 13.0339 0.848263 12.7707 0.614259 12.4782C0.380256 12.1857 0.175502 11.8873 0 11.5831V13.2679ZM10.0036 0H8.58207C8.88627 0.234002 9.15538 0.497255 9.38938 0.789759C9.62338 1.08226 9.82814 1.38062 10.0036 1.68482V0Z"/></g><g transform="translate(51.96, 0)"><path d="M9.02082 1.49177C10.5535 2.67348 11.3199 4.3583 11.3199 6.54622C11.3199 8.02044 10.9864 9.28405 10.3195 10.3371C9.64093 11.4486 8.64642 12.2559 7.336 12.759C7.3126 12.7707 7.29505 12.7765 7.28335 12.7765C7.28335 12.7765 7.27165 12.7824 7.24825 12.7941C7.75136 12.2325 8.16086 11.4544 8.47676 10.4599C8.79267 9.45371 8.95062 8.14914 8.95062 6.54622C8.95062 4.10089 8.57037 2.29322 7.80986 1.12321C7.71625 0.971111 7.59925 0.813159 7.45885 0.649357C8.06726 0.85996 8.58792 1.14076 9.02082 1.49177ZM2.19378 0C2.11188 0.198902 2.06508 0.397805 2.05338 0.596706C2.04168 0.783909 2.03583 0.92431 2.03583 1.01791V11.7937C2.03583 12.1681 2.04168 12.4723 2.05338 12.7063C2.07678 12.9403 2.10603 13.1334 2.14113 13.2855H0.0526505C0.0760508 13.1802 0.0936009 13.0281 0.105301 12.8292C0.117001 12.6186 0.122854 12.3261 0.122854 11.9517V1.26361C0.122854 0.92431 0.111151 0.661057 0.0877509 0.473855C0.0643506 0.274953 0.0351005 0.117001 0 0H2.19378Z"/></g></svg></div>
+  <div class="heading-xl reveal reveal-title d2" style="margin-top:8px;">Rwanda</div>
+  <div class="divider divider--short reveal-line d3"></div>
+  <div class="subtitle reveal d4">An Africa–Europe Cultural Co-Production</div>
+  <div class="meta reveal d5">12 Selected Stories · Goethe-Institut Africa–Europe Partnerships for Culture · 2026</div>
+</section>
+
+<section class="slide" data-theme="light">
+  <div class="label reveal">CONTENTS</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top:16px;">Overview</h2>
+  <div class="divider reveal-line d2"></div>
+  <ul class="index-list"><li class="index-item reveal d3"><span class="index-num">01</span><span class="index-title">About INLAND</span></li><li class="index-item reveal d4"><span class="index-num">02</span><span class="index-title">Rwanda — What Survived</span></li><li class="index-item reveal d5"><span class="index-num">03</span><span class="index-title">Our Angle &amp; Categories</span></li><li class="index-item reveal d6"><span class="index-num">04</span><span class="index-title">The 12 Storylines</span></li><li class="index-item reveal d7"><span class="index-num">05</span><span class="index-title">Production Tracks</span></li><li class="index-item reveal d8"><span class="index-num">06</span><span class="index-title">An Equitable Co-Production</span></li></ul>
+</section>
+
+<section class="slide" data-theme="light">
+  <div class="label reveal">ABOUT</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top:16px;">About INLAND</h2>
+  <div class="divider reveal-line d2"></div>
+  <div class="intro-layout">
+    <div class="intro-main">
+      <div class="body-text reveal d3">INLAND is a yearly publication documenting the soul of countries before they change. Each issue embeds with named, locatable custodians of living traditions — artisans, pastoralists, cooks, singers, border families — whose stories have not yet been narrated internationally. Previous issues have covered the Faroe Islands, Georgia and Italy’s minor islands.</div>
+      <div class="body-secondary reveal d4">The editorial method is slow, place-based and built on trust. We spend months in pre-production research, identify specific custodians and communities, then commission photographers, writers and filmmakers to embed with them over extended field periods. The result is long-form visual storytelling grounded in named people and real places.</div>
+    </div>
+    <div class="intro-side"><div class="accent-text reveal-scale d5">Intimacy with custodians, not thematic surveys.</div></div>
+  </div>
+</section>
+
+<section class="slide" data-theme="light">
+  <div class="label reveal">THE RESEARCH</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top:16px;">Rwanda — What Survived</h2>
+  <div class="divider reveal-line d2"></div>
+  <div class="intro-layout">
+    <div class="intro-main">
+      <div class="body-text reveal d3">Rwanda is internationally legible through two stories — the 1994 genocide and the development ‘miracle’. Both are loud; both crowd out the quieter country. INLAND asks one question across every lead: what survived? What persists in specific families, villages and practices that has been absorbed by neither the colonial inheritance, the Christian mission, nor the modernisation project — and can still be witnessed and photographed today.</div>
+      <div class="body-secondary reveal d4">Our first round of research identified 20 story leads spanning communities, ritual, food, ecology, craft and music. From these, twelve storylines have been selected for editorial development — each centred on a named custodian, a specific place, and a practice that can still be witnessed.</div>
+    </div>
+    <div class="intro-side">
+      <div class="stat-block">
+        <div class="stat-item reveal-scale d4"><div class="stat-num" data-count="20">0</div><div class="stat-label">Story leads researched</div></div>
+        <div class="stat-item reveal-scale d6"><div class="stat-num" data-count="12">0</div><div class="stat-label">Selected for this round</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-theme="light">
+  <div class="label reveal">EDITORIAL ANGLE</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top:16px;">Our Angle</h2>
+  <div class="divider reveal-line d2"></div>
+  <div class="intro-layout">
+    <div class="intro-main">
+      <div class="body-text reveal d3">We focus on endangered knowledge systems and under-documented living practices surviving despite standardisation, policy change and generational drift. The genocide is context, never the lens; the state is never cast as villain. Every storyline centres a named custodian, a specific place, and a practice that can still be witnessed.</div>
+      <div class="body-secondary reveal d4">This is the equitable, co-created Africa–Europe cultural work the Goethe programme exists to fund: a Rwandan cultural partner and a European publication building a long-form visual record of living Rwandan traditions — made with custodians, not about them, and presented in both Rwanda and Europe.</div>
+    </div>
+    <div class="intro-side">
+      <div class="label reveal d5" style="margin-bottom:8px;">CATEGORIES</div>
+      <div class="category-list"><div class="category-item d5"><span>Food</span><span class="category-count">4</span></div><div class="category-item d6"><span>Myth &amp; Religion</span><span class="category-count">3</span></div><div class="category-item d7"><span>Local communities</span><span class="category-count">2</span></div><div class="category-item d8"><span>Arts &amp; Culture</span><span class="category-count">2</span></div><div class="category-item d9"><span>Geopolitics</span><span class="category-count">1</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide slide--breaker" data-theme="dark">
+  <div class="breaker-label reveal">PART TWO</div>
+  <div class="breaker-heading reveal reveal-title d1">The Storylines</div>
+  <div class="divider divider--short divider--white reveal-line d2"></div>
+  <div class="breaker-sub reveal d3">Twelve selected stories across communities, ritual, food, ecology, craft and music. Each centres a named custodian, a specific place, and a practice that can still be witnessed.</div>
+</section>
+
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">01</div>
+  <div class="label reveal">Local communities</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">What They Carry</h2>
+    <div class="subtitle-story reveal d2">Batwa Forest Knowledge</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Batwa elders around Musanze hold centuries-deep ecological knowledge of the Nyungwe and Virunga forests — plant identification, animal behaviour, spatial memory — now sought by conservation biologists before it disappears. ~25,000–30,000 Batwa, officially ‘historically marginalised’.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND embeds with elders on a plant walk and records the forest songs — documenting the knowledge itself rather than the (already filmed) displacement. The narrative asks what becomes of forest knowledge when there is no forest left to use it in.</div>
+      <div class="story-places reveal d5">Places: Musanze · Kibingo · forest margins</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“Not what was taken — what they still carry.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: AIMPO; INLAND Rwanda research corpus</div>
+    <div class="tag-row reveal d5"><span class="tag">Endangered Knowledge</span><span class="tag">Indigenous</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">02</div>
+  <div class="label reveal">Myth &amp; Religion</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Rites That Won’t Die</h2>
+    <div class="subtitle-story reveal d2">Kubandwa / Ryangombe</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>A pre-colonial spirit-possession system centred on Ryangombe that missionaries tried to erase, surviving underground in a 92.8% Christian country. A 2021 academic recorded students attending rites ‘even in the centre of Kigali’.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND follows the practice through discreet, consent-led fieldwork and academic introductions — documenting an adaptive ritual that crosses linguistic, political and temporal frontiers. If confirmed in the field, the edition’s signature story.</div>
+      <div class="story-places reveal d5">Places: Kigali · discreet rural sites</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“Gone underground, not extinct.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: Pennacini (Turin); Bizimana, RCSP Rwanda 2018</div>
+    <div class="tag-row reveal d5"><span class="tag">Endangered Knowledge</span><span class="tag">Sacred &amp; Hidden</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">03</div>
+  <div class="label reveal">Myth &amp; Religion</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Hospital Sends You to a Healer</h2>
+    <div class="subtitle-story reveal d2">Uburozi and Traditional Medicine</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>In Kinigi, Musanze — ‘the core location for healers’ — hospitals refer patients to traditional healers for uburozi, a sorcery/poisoning illness conventional medicine doesn’t recognise. ~5,000 healers nationally; a 2022 Traditional Medicine policy exists.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND shadows a referral from clinic to healer and back, with portraits of both — documenting a state-acknowledged parallel healthcare system operating in the open and almost entirely unreported internationally.</div>
+      <div class="story-places reveal d5">Places: Kinigi · Burera · Bushozi · Musenyi</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“A parallel medicine, acknowledged and unseen.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: BMC Compl. Med. &amp; Therapies 2021; Rwanda FDA 2022</div>
+    <div class="tag-row reveal d5"><span class="tag">State &amp; Tradition</span><span class="tag">Endangered Knowledge</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">04</div>
+  <div class="label reveal">Food</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">Crushed by Foot</h2>
+    <div class="subtitle-story reveal d2">Urwagwa, the Banana Beer of Rites</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Banana beer is ritual infrastructure — the medium of marriage negotiations, ancestral offerings and reconciliation. Named brewer Agatha Tuyisenge (Mushubati, Rutsiro), mother of five, built a livelihood from inherited brewing knowledge.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND follows one full brewing cycle toward a wedding — variety selection, foot-crushing, sorghum fermentation — and the ceremonial economy around the beer. A named protagonist with a full story arc.</div>
+      <div class="story-places reveal d5">Places: Mushubati · Rutsiro District</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“Not a drink — the medium ceremonies happen in.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: SENS Magazine (Tuyisenge profile)</div>
+    <div class="tag-row reveal d5"><span class="tag">Endangered Knowledge</span><span class="tag">Ritual</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">05</div>
+  <div class="label reveal">Food</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Last Sorghum Beer</h2>
+    <div class="subtitle-story reveal d2">Ikigage on the Volcano Slopes</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>A sorghum beer of feasts, dowries and harvests near Kinigi and Musanze, now on the Slow Food Ark of Taste — declining as sorghum is squeezed out by the Crop Intensification Programme.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND documents a household that still grows sorghum and brews ikigage for weddings — a compressed portrait of what agricultural policy does to cultural memory.</div>
+      <div class="story-places reveal d5">Places: Kinigi · Musanze</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“A beer on the Ark of Taste, brewed for one more wedding.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: Slow Food Ark of Taste; Slow Food Rwanda</div>
+    <div class="tag-row reveal d5"><span class="tag">Endangered Knowledge</span><span class="tag">State &amp; Tradition</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">06</div>
+  <div class="label reveal">Myth &amp; Religion</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">A Harvest Without Its Secrets</h2>
+    <div class="subtitle-story reveal d2">Umuganura and the Abiru</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Umuganura was a sacred rite of ubwiru guarded by the hereditary Abiru, needing sacred sorghum from Huro (Gakenke). Abolished by the Belgians in 1925; revived in 2011 as a secular holiday — without the Abiru, the plants, or the secret language.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND shoots the intact-but-vacant ritual site at Huro against the August state festival — a ceremony hollowed of meaning and repurposed for nation-building. A story about what revival leaves out.</div>
+      <div class="story-places reveal d5">Places: Huro · Bumbogo · Gakenke District</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“The site survived. The secret did not.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: ubwiru / Abiru historiography</div>
+    <div class="tag-row reveal d5"><span class="tag">History</span><span class="tag">Sacred &amp; Hidden</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">07</div>
+  <div class="label reveal">Food</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Morality of Milk</h2>
+    <div class="subtitle-story reveal d2">Kivuguto and the Inkongoro Gourd</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Fermented milk made in handmade inkongoro gourds carrying unique indigenous microbial cultures — the moral order encoded in how milk is stored, fermented and shared, now replaced by steel tanks and controlled starters.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND builds a diptych: morning milking and gourd fermentation in a pastoral household, against a modern dairy plant making packaged ‘yogurt drinks’. Elders speak to the symbolism of the gourd.</div>
+      <div class="story-places reveal d5">Places: Pastoral households · Musanze / Gishwati</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“A microbial culture is also a moral one.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: INLAND Rwanda research corpus</div>
+    <div class="tag-row reveal d5"><span class="tag">Endangered Knowledge</span><span class="tag">Ritual</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">08</div>
+  <div class="label reveal">Local communities</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">Life After the Forest</h2>
+    <div class="subtitle-story reveal d2">The Gishwati Resettlement</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Families moved off the Gishwati–Mukura forests now farm ~0.5 ha on steep, flood-prone slopes in Nyabihu, Rutsiro and Rubavu. Some, like Laurent Hategekimana, patrol as unpaid auxiliaries the forest margins their families were removed from.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND walks the forest margin with a patroller and spends time in the resettlement villages — the long, quiet afterlife of displacement on a landscape remade by ranching, floods and restoration.</div>
+      <div class="story-places reveal d5">Places: Nyabihu · Rutsiro · Rubavu · Bigogwe</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“Guarding the forest that displaced them.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: Rainforest Journalism Fund; Pulitzer Center</div>
+    <div class="tag-row reveal d5"><span class="tag">Land &amp; Displacement</span><span class="tag">Nature</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">09</div>
+  <div class="label reveal">Food</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">Thirty Years On</h2>
+    <div class="subtitle-story reveal d2">The Reconciliation Coffee Cooperatives</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Cooperatives built post-1994 to put Hutu and Tutsi farmers in the same washing stations — Maraba (Huye) and Dukunde Kawa Musasa (Gakenke). The origin story is told; the present is unfilmed.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND follows one or two families through a harvest — picking, sorting, washing — asking quietly what changed in a generation and what didn’t. The founders are middle-aged now; their children work side by side.</div>
+      <div class="story-places reveal d5">Places: Maraba (Huye) · Dukunde Kawa (Gakenke)</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“The origin story is told. The present is not.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: Alliance for Coffee Excellence; cooperative profiles</div>
+    <div class="tag-row reveal d5"><span class="tag">History</span><span class="tag">Reconciliation</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">10</div>
+  <div class="label reveal">Arts &amp; Culture</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Last Maestro</h2>
+    <div class="subtitle-story reveal d2">Vianey Mushabizi and the Inanga</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>A single instrument and the man who may be the end of its line: Vianey Mushabizi (Gatagara), possibly the last living master of the inanga zither — the sound of a pre-radio Rwanda held in one pair of hands.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND records his repertoire and tuning, and asks the question of transmission: is there an apprentice, or does the line end here? A portrait in sound and image.</div>
+      <div class="story-places reveal d5">Places: Gatagara</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“A whole tradition in one pair of hands.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: INLAND Rwanda research corpus</div>
+    <div class="tag-row reveal d5"><span class="tag">Endangered Knowledge</span><span class="tag">Music</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">11</div>
+  <div class="label reveal">Arts &amp; Culture</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">Geometry of the Widows</h2>
+    <div class="subtitle-story reveal d2">Imigongo and the Market</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>Geometric cow-dung relief paintings made by genocide widows in Kakira, Eastern Province — now commercialised. A tension between cultural preservation, livelihood and market co-option.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND documents the making and the market in one place — who paints, who sells, who profits when a domestic craft scales into a souvenir.</div>
+      <div class="story-places reveal d5">Places: Kakira · Eastern Province</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“Who profits when a tradition scales?”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: INLAND Rwanda research corpus</div>
+    <div class="tag-row reveal d5"><span class="tag">Craft</span><span class="tag">History</span></div>
+  </div>
+</section>
+<section class="slide slide--story" data-theme="light">
+  <div class="story-num reveal d1">12</div>
+  <div class="label reveal">Geopolitics</div>
+  <div class="story-header">
+    <h2 class="heading-story reveal reveal-title d1">The Data Centre and the Hill</h2>
+    <div class="subtitle-story reveal d2">Two Relationships to Electricity</div>
+  </div>
+  <div class="divider reveal-line d3"></div>
+  <div class="story-content">
+    <div class="story-main">
+      <div class="story-toggle"><button class="story-toggle-btn active" data-show="story">The Story</button><button class="story-toggle-btn" data-show="proposal">Our Proposal</button></div>
+      <div class="body-text reveal d4"><span class="story-angle-pill">The Story</span><br>A windowless server warehouse runs 24 hours at full load a few kilometres from villages where electricity arrived three years ago. The guard at the gate is from such a village.</div>
+      <div class="story-angle reveal d4"><span class="story-angle-pill">Our Proposal</span><br>INLAND anchors the development showcase in one human — the guard — to portray two relationships to electricity, land and the future coexisting within a few kilometres, without abstraction.</div>
+      <div class="story-places reveal d5">Places: Eastern Province / peri-Kigali</div>
+    </div>
+    <div class="story-quote"><div class="quote-bar reveal-vline d4"></div><div class="quote-text reveal d5">“Two centuries, a few kilometres apart.”</div></div>
+  </div>
+  <div class="story-footer">
+    <div class="story-ref reveal d6">Sources: INLAND Rwanda research corpus</div>
+    <div class="tag-row reveal d5"><span class="tag">Modernisation</span><span class="tag">Land</span></div>
+  </div>
+</section>
+
+<section class="slide" data-theme="light">
+  <div class="label reveal">THREE TRACKS</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top:16px;">Production Tracks</h2>
+  <div class="divider reveal-line d2"></div>
+  <div class="tracks-grid">
+    <div class="track-card track-card--blue reveal d3">
+      <div class="track-name">The Musanze Cluster</div>
+      <div class="track-stories">Stories 01 + 03 + 05</div>
+      <div class="track-desc">A single northern base yields three nested stories: Batwa forest knowledge, the hospital-to-healer uburozi referral, and the last sorghum beer. One deployment, three custodian-led narratives around Musanze and Kinigi.</div>
+      <div class="track-meta">Geography: Musanze → Kinigi → forest margins<br>Season: Flexible (dry season for access)<br>3 stories, 1 field base</div>
+    </div>
+    <div class="track-card track-card--green reveal d4">
+      <div class="track-name">Brewing &amp; Land</div>
+      <div class="track-stories">Stories 04 + 08 (+ 07)</div>
+      <div class="track-desc">A western cluster binding the urwagwa brewing cycle in Rutsiro, the Gishwati resettlement in Nyabihu, and the kivuguto milk diptych. Ritual food and the afterlife of displacement on the same hillsides.</div>
+      <div class="track-meta">Geography: Rutsiro → Nyabihu → Rubavu<br>Season: Toward a wedding / harvest<br>2–3 stories, 1 deployment</div>
+    </div>
+    <div class="track-card track-card--purple reveal d5">
+      <div class="track-name">Coffee &amp; Memory</div>
+      <div class="track-stories">Stories 09 + 06 (+ 11)</div>
+      <div class="track-desc">A southern/eastern cluster: the reconciliation coffee cooperatives thirty years on, the hollowed Umuganura harvest at Huro, and the imigongo widows. Memory, harvest and craft across Huye, Gakenke and the East.</div>
+      <div class="track-meta">Geography: Huye → Gakenke → Eastern Province<br>Season: Coffee harvest; August (Umuganura)<br>2–3 stories, seasonal windows</div>
+    </div></div>
+  
+</section>
+
+<section class="slide" data-theme="light">
+  <div class="label reveal">THE PARTNERSHIP</div>
+  <h2 class="heading-lg reveal reveal-title d1" style="margin-top:16px;">An Equitable Co-Production</h2>
+  <div class="divider reveal-line d2"></div>
+  <div class="partner-grid"><div class="partner-h reveal d3">European partner</div><div class="partner-b reveal d3">INLAND — yearly publication (Italy / EU). Editorial, photography and publishing; presentation of the work in Europe.</div><div class="partner-h reveal d4">African partner</div><div class="partner-b reveal d4">A Rwandan cultural organisation (lead candidate: Red Rocks Initiatives, Musanze) — co-creation, community access, custodian liaison, presentation in Rwanda.</div><div class="partner-h reveal d5">Funding path</div><div class="partner-b reveal d5">Mobility grant (≤€4,000) funds the scouting trip; the Visual Arts grant funds collaborative production and a public presentation in Rwanda and Europe.</div><div class="partner-h reveal d6">The principle</div><div class="partner-b reveal d6">Made with custodians, not about them — equitable Africa–Europe co-creation, exactly the dialogue the Goethe programme exists to fund.</div></div>
+</section>
+
+<section class="slide slide--closing slide--dark" data-theme="dark">
+  <div class="closing-headline reveal reveal-title">12 Storylines.<br>One Rwanda.</div>
+  <div class="divider divider--short divider--white reveal-line d1"></div>
+  <div class="reveal reveal-scale d2" style="margin-bottom:8px;color:var(--dark-fg);"><svg class="logo-svg--sm" viewBox="0 0 63.28 13.29" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0, 0.14)"><path d="M2.17623 0C2.09433 0.198902 2.04753 0.391954 2.03583 0.579156C2.02413 0.766358 2.01828 0.906759 2.01828 1.00036V11.6709C2.01828 12.0453 2.02413 12.3495 2.03583 12.5835C2.05923 12.8175 2.08848 13.0047 2.12358 13.1451H0.0526506C0.0760509 13.0398 0.0936013 12.8935 0.105301 12.7063C0.117002 12.5074 0.122852 12.2208 0.122852 11.8464V1.24606C0.122852 0.91846 0.111151 0.661057 0.0877512 0.473854C0.0643508 0.274953 0.0351005 0.117001 0 0H2.17623Z"/></g><g transform="translate(4.73, 0.017)"><path d="M0 0H2.36928L10.0036 10.4073V13.2855L0 0ZM0 13.2679H1.42157C1.11737 13.0339 0.848262 12.7707 0.614259 12.4782C0.380255 12.1857 0.175502 11.8873 0 11.5831V13.2679ZM10.0036 0H8.58207C8.88627 0.234002 9.15538 0.497255 9.38938 0.789759C9.62338 1.08226 9.82813 1.38062 10.0036 1.68482V0Z"/></g><g transform="translate(17.56, 0.035)"><path d="M2.19378 0C2.11188 0.198902 2.06508 0.397805 2.05338 0.596707C2.04168 0.783909 2.03583 0.92431 2.03583 1.01791V11.7586C2.03583 12.133 2.04168 12.4372 2.05338 12.6712C2.06508 12.9052 2.08848 13.0983 2.12358 13.2504H0.0526505C0.0760508 13.1451 0.0936009 12.993 0.105301 12.7941C0.117001 12.5952 0.122853 12.3085 0.122853 11.9341V1.26361C0.122853 0.924311 0.111151 0.661058 0.0877509 0.473855C0.0643506 0.274953 0.0351005 0.117001 0 0H2.19378ZM8.52942 13.2504H7.1254C7.4296 13.0164 7.69286 12.759 7.91516 12.4782C8.14916 12.1857 8.35392 11.8815 8.52942 11.5656V13.2504Z"/></g><g transform="translate(27.93, 0)"><path d="M7.93271 13.2855C7.93271 13.2738 7.93856 13.2562 7.95026 13.2328C7.96196 13.2094 7.96781 13.186 7.96781 13.1626C7.95611 13.1041 7.93856 13.0105 7.91516 12.8818C7.89176 12.7531 7.8157 12.484 7.687 12.0745L7.24825 10.7232C7.20145 10.5945 7.14295 10.419 7.07274 10.1967C7.00254 9.97436 6.91479 9.69941 6.80949 9.3718L6.54624 8.54694C6.52284 8.51184 6.47019 8.37144 6.38828 8.12574C6.24788 7.71624 6.10163 7.30088 5.94953 6.87968C5.80913 6.45847 5.66872 6.06067 5.52832 5.68626C5.39962 5.30016 5.28262 4.955 5.17732 4.6508C5.07202 4.3466 4.98427 4.1126 4.91407 3.94879C4.89067 3.86689 4.85557 3.76159 4.80877 3.63289C4.76197 3.50419 4.70931 3.35209 4.65081 3.17658L4.29981 2.24643L4.82632 0.807309C4.86142 0.713708 4.90237 0.596707 4.94917 0.456305C5.00767 0.315904 5.06617 0.163802 5.12467 0C5.22997 0.315904 5.39377 0.783909 5.61607 1.40402C5.85008 2.02412 6.13088 2.77293 6.45849 3.65044C6.78609 4.51625 7.15465 5.49906 7.56415 6.59887C7.98536 7.69868 8.44167 8.8804 8.93307 10.144C9.07347 10.5184 9.21387 10.8928 9.35428 11.2672C9.49468 11.6299 9.62923 11.9985 9.75793 12.3729C9.82813 12.5484 9.89833 12.718 9.96854 12.8818C10.0504 13.0339 10.1265 13.1685 10.1967 13.2855H7.93271ZM0.754661 11.3725V11.355L0 13.2855H0.754661H1.31627H2.42193C2.04753 13.0164 1.72577 12.718 1.45667 12.3904C1.18757 12.0628 0.953563 11.7235 0.754661 11.3725Z"/></g><g transform="translate(40.59, 0.017)"><path d="M0 0H2.36928L10.0036 10.4073V13.2855L0 0ZM0 13.2679H1.42157C1.11737 13.0339 0.848263 12.7707 0.614259 12.4782C0.380256 12.1857 0.175502 11.8873 0 11.5831V13.2679ZM10.0036 0H8.58207C8.88627 0.234002 9.15538 0.497255 9.38938 0.789759C9.62338 1.08226 9.82814 1.38062 10.0036 1.68482V0Z"/></g><g transform="translate(51.96, 0)"><path d="M9.02082 1.49177C10.5535 2.67348 11.3199 4.3583 11.3199 6.54622C11.3199 8.02044 10.9864 9.28405 10.3195 10.3371C9.64093 11.4486 8.64642 12.2559 7.336 12.759C7.3126 12.7707 7.29505 12.7765 7.28335 12.7765C7.28335 12.7765 7.27165 12.7824 7.24825 12.7941C7.75136 12.2325 8.16086 11.4544 8.47676 10.4599C8.79267 9.45371 8.95062 8.14914 8.95062 6.54622C8.95062 4.10089 8.57037 2.29322 7.80986 1.12321C7.71625 0.971111 7.59925 0.813159 7.45885 0.649357C8.06726 0.85996 8.58792 1.14076 9.02082 1.49177ZM2.19378 0C2.11188 0.198902 2.06508 0.397805 2.05338 0.596706C2.04168 0.783909 2.03583 0.92431 2.03583 1.01791V11.7937C2.03583 12.1681 2.04168 12.4723 2.05338 12.7063C2.07678 12.9403 2.10603 13.1334 2.14113 13.2855H0.0526505C0.0760508 13.1802 0.0936009 13.0281 0.105301 12.8292C0.117001 12.6186 0.122854 12.3261 0.122854 11.9517V1.26361C0.122854 0.92431 0.111151 0.661057 0.0877509 0.473855C0.0643506 0.274953 0.0351005 0.117001 0 0H2.19378Z"/></g></svg></div>
+  <div class="closing-tagline reveal d3">An Africa–Europe co-production proposal by INLAND</div>
+</section>
+
+<div class="nav-counter" id="navCounter">1 / 1</div>
+<script>
+(function() {
+  const slides = document.querySelectorAll('.slide');
+  const counter = document.getElementById('navCounter');
+  const progressBar = document.getElementById('progressBar');
+  const total = slides.length;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const slide = entry.target;
+        slide.querySelectorAll('.reveal, .reveal-title, .reveal-line, .reveal-scale, .reveal-vline')
+          .forEach(el => el.classList.add('visible'));
+        slide.querySelectorAll('.category-item').forEach(el => el.classList.add('visible'));
+        const idx = Array.from(slides).indexOf(slide);
+        counter.textContent = (idx + 1) + ' / ' + total;
+        const isDark = slide.dataset.theme === 'dark';
+        counter.classList.toggle('nav-counter--dark', isDark);
+        progressBar.style.width = (((idx + 1) / total) * 100) + '%';
+        progressBar.style.background = isDark ? 'rgba(255,255,255,0.3)' : 'var(--accent)';
+        slide.querySelectorAll('[data-count]').forEach(el => {
+          if (!el.dataset.counted) { el.dataset.counted = 'true'; animateCounter(el, parseInt(el.dataset.count)); }
+        });
+      } else {
+        entry.target.querySelectorAll('.reveal, .reveal-title, .reveal-line, .reveal-scale, .reveal-vline')
+          .forEach(el => el.classList.remove('visible'));
+        entry.target.querySelectorAll('.category-item').forEach(el => el.classList.remove('visible'));
+        entry.target.querySelectorAll('[data-count]').forEach(el => { el.dataset.counted = ''; el.textContent = '0'; });
+      }
+    });
+  }, { threshold: 0.35 });
+  slides.forEach(s => observer.observe(s));
+  function animateCounter(el, target, duration) {
+    duration = duration || 1200; var start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(eased * target);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  let current = 0;
+  function goTo(i) { if (i < 0 || i >= total) return; current = i; slides[current].scrollIntoView({ behavior: 'smooth' }); }
+  document.addEventListener('keydown', (e) => {
+    if (['ArrowDown','ArrowRight',' '].includes(e.key)) { e.preventDefault(); goTo(current + 1); }
+    else if (['ArrowUp','ArrowLeft','Backspace'].includes(e.key)) { e.preventDefault(); goTo(current - 1); }
+  });
+  const scrollObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) current = Array.from(slides).indexOf(entry.target); });
+  }, { threshold: 0.55 });
+  slides.forEach(s => scrollObs.observe(s));
+  document.querySelectorAll('.story-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const main = this.closest('.story-main');
+      main.querySelectorAll('.story-toggle-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      main.classList.toggle('story-toggle-active', this.dataset.show === 'proposal');
+    });
+  });
+})();
+</script>
 </body></html>

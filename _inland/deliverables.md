@@ -37,15 +37,36 @@ formats and house style below so every edition looks and reads like INLAND.*
      **Angle / why this matters**, **Category breakdown**, then one slide per selected
      **story** (headline, subtitle, hook, proposal, category, tags, pull-quote,
      places, reference).
+   - **HTML: always render via the shared module `_inland/templates/inland_web.py`.
+     Do NOT hand-roll or minify CSS in an edition.** That module owns the canonical
+     house style and produces a Kashmir-quality, self-contained deck: Google Fonts
+     (Cormorant / Cormorant Garamond / Fraunces), a full-screen **scroll-snap** slide
+     deck, reveal animations + animated stat counters, per-story **Story / Proposal**
+     toggle, nav counter + progress bar, and the inline INLAND logo. The visual gold
+     standard is `_inland/templates/REFERENCE_INLAND_pitch.html` (the original Kashmir
+     pitch) — match it.
+   - The edition's `generate_web.py` is a **thin shim**: it imports
+     `STORIES / INTRO / TRACKS` from its own `build_presentation.py`, defines edition
+     `PARTNERS` + `leads_researched` (+ optional `breaker_sub`, `tracks_note`), and
+     calls `inland_web.write_edition(cfg)`. See `editions/goethe-africa-europe-2026/`
+     or `editions/angola-goethe-2026/` for the pattern, and the `inland_web.py`
+     docstring for the full `cfg` data contract.
 
 5. **Overview PDF** (e.g. `INLAND_<Territory>_Overview.pdf`)
    - A concise, designed one-document summary of the edition for sharing.
+   - Built from `INLAND_<Territory>_Overview.html` — also produced by
+     `_inland/templates/inland_web.py` (print/A4 layout in the same house style).
+     Export that HTML to PDF; don't author the overview separately.
 
 6. **Application-specific documents** — whatever the opportunity's brief lists as
    required (concept note, budget, timeline, CVs, letters of support). Build these from
    the opportunity brief in `pursuing/` plus the research above.
 
 ## House style (from the Kashmir pitch builder)
+
+*For HTML/PDF deliverables the source of truth is `_inland/templates/inland_web.py`
+(palette, fonts, layout, animations). The values below are the reference it encodes —
+use them for the `.pptx` and any other asset.*
 
 - **Palette**: background `#F9F4EE`, foreground `#000000`, accent `#400505`; dark mode
   background `#0e0e0e` / foreground `#FFFFFF`.

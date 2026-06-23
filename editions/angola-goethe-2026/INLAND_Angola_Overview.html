@@ -1,209 +1,153 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
-<title>INLAND Angola — Overview</title><style>
-:root{--bg:#F9F4EE;--fg:#000;--accent:#400505;--muted:#5c5c5c;--ref:#857f76;--rule:#d8d2ca;--dark:#0e0e0e}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:Baskerville,'Times New Roman',Georgia,serif;line-height:1.6}
-.label{font-family:Fraunces,Georgia,serif;letter-spacing:.12em;text-transform:uppercase;font-size:.72rem;color:var(--muted)}
-.wrap{max-width:1000px;margin:0 auto;padding:0 40px}
-h1,h2,h3{font-weight:600;margin:0}
-hr{border:0;border-top:1px solid var(--fg);margin:18px 0 30px}
-.hero{min-height:78vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 20px}
-.hero .mark{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:.35em;font-size:2rem}
-.hero h1{font-size:5rem;margin:.3em 0 .15em}
-.hero .rule{width:120px;border-top:1px solid var(--fg);margin:14px 0 22px}
-.hero .sub{font-size:1.4rem;color:var(--muted)}
-.hero .meta{margin-top:34px}
-section{padding:46px 0}
-section.dark{background:var(--dark);color:#fff}
-section.dark .label{color:#999}
-.sec-h{font-size:2.4rem;margin:.2em 0}
-.lead{font-size:1.18rem;max-width:46ch}
-.muted{color:var(--muted)}
-.cats{display:flex;flex-wrap:wrap;gap:10px 30px;margin-top:18px}
-.cats div{display:flex;justify-content:space-between;min-width:240px;border-bottom:1px solid var(--rule);padding:6px 0}
-.cats b{color:var(--accent)}
-.stat{display:inline-block;margin-right:48px}
-.stat .n{font-size:4.5rem;color:var(--accent);line-height:1}
-.story{padding:30px 0;border-top:1px solid var(--rule)}
-.story .top{display:flex;justify-content:space-between;align-items:baseline}
-.story .num{font-size:2.6rem;color:var(--accent)}
-.story h3{font-size:1.9rem}
-.story .st{font-style:italic;color:var(--muted);font-size:1.2rem;margin:.1em 0 .2em}
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:14px}
-.cols .label{display:block;margin-bottom:6px}
-.foot{margin-top:14px;font-size:.85rem;color:var(--ref)}
-.tags{margin-top:8px}
-.tag{font-family:Fraunces,Georgia,serif;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:1px solid #b0a89e;border-radius:20px;padding:3px 10px;margin-right:8px;white-space:nowrap}
-.tracks{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:24px}
-.track .bar{height:3px;margin-bottom:12px}
-.track h3{font-size:1.4rem}
-.track .ts{font-family:Fraunces,Georgia,serif;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:6px 0 10px}
-.track .meta{margin-top:14px;font-family:Fraunces,Georgia,serif;font-size:.66rem;color:var(--ref);line-height:1.7}
-.partner{display:grid;grid-template-columns:200px 1fr;gap:10px 28px;margin-top:20px}
-.partner .h{font-family:Fraunces,Georgia,serif;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;color:var(--accent);font-weight:600;padding-top:3px}
-.center{text-align:center}
-.dark h2{font-size:3rem}
-@media(max-width:760px){.cols,.tracks,.partner{grid-template-columns:1fr}.hero h1{font-size:3.2rem}}
-
-@page{size:A4;margin:18mm 16mm}
-body{font-size:10.5pt} .hero{min-height:auto;padding:0 0 14px}
-.hero h1{font-size:3rem} section{padding:14px 0} .wrap{padding:0}
-.sec-h{font-size:1.5rem} .story{padding:10px 0;break-inside:avoid}
-.story h3{font-size:1.1rem} .cols{gap:18px;margin-top:6px;font-size:9.5pt}
-.lead{font-size:11pt;max-width:none} .num{font-size:1.4rem!important}
-.tags{display:none} section.dark{background:#fff;color:#000} .dark h2{font-size:1.5rem;color:var(--accent)}
-.dark .label{color:var(--muted)}
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<title>INLAND Angola — Overview</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,600;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Fraunces:wght@400;600&display=swap" rel="stylesheet"><style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root { --bg:#F9F4EE; --fg:#000; --accent:#400505; --muted:rgba(0,0,0,0.6);
+    --ref:#857f76; --rule:rgba(0,0,0,0.16);
+    --font-heading:'Cormorant',Georgia,serif; --font-body:'Cormorant Garamond',Georgia,serif;
+    --font-label:'Fraunces',sans-serif; }
+  body { background: var(--bg); color: var(--fg); font-family: var(--font-body);
+    line-height: 1.55; font-size: 11pt; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 28px 32px; }
+  .label { font-family: var(--font-label); text-transform: uppercase; letter-spacing: .12em;
+    font-size: 8.5pt; color: var(--muted); }
+  h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; }
+  hr { border: 0; border-top: 1px solid var(--fg); margin: 12px 0 18px; }
+  .hero { text-align: center; padding: 8px 0 18px; }
+  .hero .mark { font-family: var(--font-label); font-weight: 600; letter-spacing: .35em; font-size: 11pt; }
+  .hero h1 { font-size: 34pt; margin: 6px 0 4px; }
+  .hero .sub { color: var(--muted); font-size: 13pt; }
+  .sec-h { font-size: 17pt; margin-top: 16px; }
+  .lead { font-size: 12pt; }
+  .muted { color: var(--muted); }
+  .cats { display: flex; flex-wrap: wrap; gap: 6px 30px; margin-top: 12px; }
+  .cats div { display: flex; justify-content: space-between; min-width: 230px;
+    border-bottom: 1px solid var(--rule); padding: 4px 0; }
+  .cats b { color: var(--accent); }
+  .story { padding: 12px 0; border-top: 1px solid var(--rule); break-inside: avoid; }
+  .story .top { display: flex; justify-content: space-between; align-items: baseline; }
+  .story h3 { font-size: 14pt; }
+  .story .num { font-family: var(--font-heading); font-size: 18pt; color: var(--accent); }
+  .story .st { font-style: italic; color: var(--muted); font-size: 11.5pt; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 6px; font-size: 10pt; }
+  .cols .label { display: block; margin-bottom: 3px; }
+  .quote { font-family: var(--font-heading); font-style: italic; color: var(--accent);
+    font-size: 11pt; margin-top: 6px; border-left: 2px solid var(--accent); padding-left: 10px; }
+  .foot { margin-top: 8px; font-size: 8.5pt; color: var(--ref); font-family: var(--font-label); letter-spacing: .04em; }
+  .tracks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 14px; }
+  .track .bar { height: 3px; margin-bottom: 8px; }
+  .track h3 { font-size: 12pt; }
+  .track .ts { font-family: var(--font-label); font-size: 8pt; text-transform: uppercase;
+    letter-spacing: .08em; color: var(--muted); margin: 4px 0 6px; }
+  .track .meta { margin-top: 8px; font-family: var(--font-label); font-size: 8pt; color: var(--ref); line-height: 1.6; }
+  .partner { display: grid; grid-template-columns: 180px 1fr; gap: 8px 24px; margin-top: 12px; }
+  .partner .h { font-family: var(--font-label); text-transform: uppercase; letter-spacing: .08em;
+    font-size: 9pt; color: var(--accent); font-weight: 600; }
+  @page { size: A4; margin: 16mm 15mm; }
 </style></head>
 <body><div class="wrap">
-<div class="hero"><div class="mark label" style="font-size:1rem">INLAND</div>
-<h1>Angola</h1><div class="sub" style="font-size:1.1rem">An Africa–Europe Cultural Co-Production · Overview</div>
-<div class="label">Goethe-Institut Africa–Europe Partnerships for Culture · 2026</div></div>
+<div class="hero"><div class="mark">INLAND</div><h1>Angola</h1>
+<div class="sub">An Africa–Europe Cultural Co-Production · Overview</div>
+<div class="label" style="margin-top:6px;">Goethe-Institut Africa–Europe Partnerships for Culture · 2026</div></div>
 <hr>
 <p class="lead">Angola is internationally legible through two stories — the 1975–2002 civil war and the oil-and-diamond economy that made Luanda one of the world’s most expensive cities. Both are loud; both crowd out the quieter country. INLAND asks one question across every lead: what survived? What persists in specific families, villages and practices that has been absorbed by neither the colonial inheritance, the Catholic mission, the long war, nor the petro-modernisation of the coast — and can still be witnessed and photographed today.</p>
-<p class="muted" style="font-size:10pt">We focus on endangered knowledge systems and under-documented living practices surviving despite rupture, standardisation and generational drift — from the UNESCO-listed but fragile sona sand-writing of the Lunda-Chokwe to the Kianda sea-offerings of Luanda’s original fishing people. The civil war is context, never the lens; the state is never cast as villain. Every storyline centres a custodian, a place, and a practice that can still be witnessed.</p>
+<p class="muted" style="margin-top:8px;">We focus on endangered knowledge systems and under-documented living practices surviving despite rupture, standardisation and generational drift — from the UNESCO-listed but fragile sona sand-writing of the Lunda-Chokwe to the Kianda sea-offerings of Luanda’s original fishing people. The civil war is context, never the lens; the state is never cast as villain. Every storyline centres a custodian, a place, and a practice that can still be witnessed.</p>
 <div class="cats"><div><span>Arts &amp; Culture</span><b>3</b></div><div><span>History</span><b>3</b></div><div><span>Food</span><b>2</b></div><div><span>Myth &amp; Religion</span><b>2</b></div><div><span>Nature</span><b>1</b></div><div><span>Geopolitics</span><b>1</b></div></div>
-<h2 class="sec-h" style="margin-top:18px">The 12 Storylines</h2><hr>
+<h2 class="sec-h">The 12 Storylines</h2><hr>
 <div class="story">
-  <div class="top"><div><div class="label">Arts &amp; Culture</div>
-  <h3>The Men Who Write in Sand</h3><div class="st">Sona, the Lunda-Chokwe Script</div></div>
-  <div class="num">01</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>In the cleaned, dotted sand of the Lunda, elder masters called akwa kuta sona draw a single unbroken geometric line that holds a proverb or a cosmology — a tradition perhaps over two thousand years old. UNESCO inscribed it as Intangible Cultural Heritage in December 2023.</div>
-    <div><span class="label">Our proposal</span>INLAND follows one master through a night of storytelling around Saurimo and Dundo, with access via Lueji A’Nkonde University — documenting a writing-in-sand recognised at the very moment it is most fragile. The defining image of the edition.</div>
-  </div>
-  <div class="tags"><span class="tag">Endangered Knowledge</span><span class="tag">UNESCO</span></div>
+  <div class="top"><div><div class="label">Arts &amp; Culture</div><h3>The Men Who Write in Sand</h3>
+  <div class="st">Sona, the Lunda-Chokwe Script</div></div><div class="num">01</div></div>
+  <div class="cols"><div><span class="label">The story</span>In the cleaned, dotted sand of the Lunda, elder masters called akwa kuta sona draw a single unbroken geometric line that holds a proverb or a cosmology — a tradition perhaps over two thousand years old. UNESCO inscribed it as Intangible Cultural Heritage in December 2023.</div>
+  <div><span class="label">Our proposal</span>INLAND follows one master through a night of storytelling around Saurimo and Dundo, with access via Lueji A’Nkonde University — documenting a writing-in-sand recognised at the very moment it is most fragile. The defining image of the edition.</div></div>
+  <div class="quote">“A whole cosmology in one unbroken line.”</div>
   <div class="foot">Places: Saurimo · Dundo · Lunda &nbsp;·&nbsp; Sources: UNESCO ICH 2023; Lusona (Wikipedia); FLM Journal</div>
 </div><div class="story">
-  <div class="top"><div><div class="label">History</div>
-  <h3>The Fire That Stays Lit</h3><div class="st">The Ovimbundu Ondjango</div></div>
-  <div class="num">02</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>The ondjango council house is built around a fire kept permanently alight — a sign of the soba’s lineage and continuity. Bailundo (Huambo) is the centre of Angola’s largest people; King Ekuikui VI, enthroned by the ombala elders in 2021, is a living authority.</div>
-    <div><span class="label">Our proposal</span>INLAND sits in on a council night and traces the wood the young bring to feed the fire — a living institution of speech and consensus, not a museum piece. The hearth is the edition’s emblem.</div>
-  </div>
-  <div class="tags"><span class="tag">Governance</span><span class="tag">Continuity</span></div>
+  <div class="top"><div><div class="label">History</div><h3>The Fire That Stays Lit</h3>
+  <div class="st">The Ovimbundu Ondjango</div></div><div class="num">02</div></div>
+  <div class="cols"><div><span class="label">The story</span>The ondjango council house is built around a fire kept permanently alight — a sign of the soba’s lineage and continuity. Bailundo (Huambo) is the centre of Angola’s largest people; King Ekuikui VI, enthroned by the ombala elders in 2021, is a living authority.</div>
+  <div><span class="label">Our proposal</span>INLAND sits in on a council night and traces the wood the young bring to feed the fire — a living institution of speech and consensus, not a museum piece. The hearth is the edition’s emblem.</div></div>
+  <div class="quote">“A hearth that has never been allowed to go out.”</div>
   <div class="foot">Places: Bailundo · Huambo &nbsp;·&nbsp; Sources: Bailundo (Wikipedia); UNILAB; Africanews</div>
 </div><div class="story">
-  <div class="top"><div><div class="label">Nature</div>
-  <h3>Hair, Herd and Drought</h3><div class="st">The Mwila and the Mucubal</div></div>
-  <div class="num">03</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>On the Huíla plateau and in Namibe, the Mwila wear ochre nontombi plaits and the Mucubal the ompota headdress — hairstyles that read as a language of life-stage and mourning. The cattle economy is the base of identity, and its herd-healing knowledge is endangered.</div>
-    <div><span class="label">Our proposal</span>INLAND walks a leg of the dry-season transhumance and documents a hairstyle being made and read — a culture worn on the body and carried in the herd, under climate pressure. Custodian-led, never the tourist ‘tribal portrait’.</div>
-  </div>
-  <div class="tags"><span class="tag">Pastoralism</span><span class="tag">Climate</span></div>
+  <div class="top"><div><div class="label">Nature</div><h3>Hair, Herd and Drought</h3>
+  <div class="st">The Mwila and the Mucubal</div></div><div class="num">03</div></div>
+  <div class="cols"><div><span class="label">The story</span>On the Huíla plateau and in Namibe, the Mwila wear ochre nontombi plaits and the Mucubal the ompota headdress — hairstyles that read as a language of life-stage and mourning. The cattle economy is the base of identity, and its herd-healing knowledge is endangered.</div>
+  <div><span class="label">Our proposal</span>INLAND walks a leg of the dry-season transhumance and documents a hairstyle being made and read — a culture worn on the body and carried in the herd, under climate pressure. Custodian-led, never the tourist ‘tribal portrait’.</div></div>
+  <div class="quote">“The archive is worn in the hair and walked with the cattle.”</div>
   <div class="foot">Places: Huíla plateau · Namibe &nbsp;·&nbsp; Sources: Minority Rights Group; PMC ethnoveterinary study 2024</div>
 </div><div class="story">
-  <div class="top"><div><div class="label">Myth &amp; Religion</div>
-  <h3>Offerings to Kianda</h3><div class="st">The Festa da Ilha</div></div>
-  <div class="num">04</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>Every second Friday of November the Axiluanda — Luanda’s original fishing people, whose name is the city’s own — cast offerings into the sea to Kianda, the water spirit who protects fishermen, as a luxury waterfront pushes them off their own sandbar.</div>
-    <div><span class="label">Our proposal</span>INLAND shoots the full midnight feast and portraits the fishers, pairing the rite with the redevelopment squeezing it out — two relationships to the same sea. The project’s signature recurring scene.</div>
-  </div>
-  <div class="tags"><span class="tag">Ritual</span><span class="tag">Coast</span></div>
+  <div class="top"><div><div class="label">Myth &amp; Religion</div><h3>Offerings to Kianda</h3>
+  <div class="st">The Festa da Ilha</div></div><div class="num">04</div></div>
+  <div class="cols"><div><span class="label">The story</span>Every second Friday of November the Axiluanda — Luanda’s original fishing people, whose name is the city’s own — cast offerings into the sea to Kianda, the water spirit who protects fishermen, as a luxury waterfront pushes them off their own sandbar.</div>
+  <div><span class="label">Our proposal</span>INLAND shoots the full midnight feast and portraits the fishers, pairing the rite with the redevelopment squeezing it out — two relationships to the same sea. The project’s signature recurring scene.</div></div>
+  <div class="quote">“The city forgot her name; the fishermen never did.”</div>
   <div class="foot">Places: Ilha de Luanda &nbsp;·&nbsp; Sources: Kianda (Wikipedia); Ilha de Luanda (Wikipedia)</div>
 </div><div class="story">
-  <div class="top"><div><div class="label">Arts &amp; Culture</div>
-  <h3>The Mask That Dances a Woman</h3><div class="st">Mukanda and Mwana Pwo</div></div>
-  <div class="num">05</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>The world’s museums are full of Chokwe masks; the rite that animates them is barely filmed. During mukanda, the months-long boys’ initiation camp, a male dancer becomes mwana pwo — an idealised female ancestor — for the mothers separated from their sons.</div>
-    <div><span class="label">Our proposal</span>INLAND documents a mwana pwo performance and a carver, building a diptych of the museum vitrine against the dust of the camp. Discretion and consent around the seclusion itself.</div>
-  </div>
-  <div class="tags"><span class="tag">Initiation</span><span class="tag">Masks</span></div>
+  <div class="top"><div><div class="label">Arts &amp; Culture</div><h3>The Mask That Dances a Woman</h3>
+  <div class="st">Mukanda and Mwana Pwo</div></div><div class="num">05</div></div>
+  <div class="cols"><div><span class="label">The story</span>The world’s museums are full of Chokwe masks; the rite that animates them is barely filmed. During mukanda, the months-long boys’ initiation camp, a male dancer becomes mwana pwo — an idealised female ancestor — for the mothers separated from their sons.</div>
+  <div><span class="label">Our proposal</span>INLAND documents a mwana pwo performance and a carver, building a diptych of the museum vitrine against the dust of the camp. Discretion and consent around the seclusion itself.</div></div>
+  <div class="quote">“The mask is in the museum; the dance is in the dust.”</div>
   <div class="foot">Places: Lunda · Moxico · Dundo Museum &nbsp;·&nbsp; Sources: Chokwe people (Wikipedia); High Museum / DIA</div>
 </div><div class="story">
-  <div class="top"><div><div class="label">Food</div>
-  <h3>The Coffee That Went Wild</h3><div class="st">Amboim Robusta</div></div>
-  <div class="num">06</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>Angola was the world’s third-largest coffee producer until the war turned plantations into wild bush. Now families harvest from trees their grandparents planted, and the EU/AFD-financed Mukafe scheme is replanting Amboim’s prized robusta in Kwanza Sul.</div>
-    <div><span class="label">Our proposal</span>INLAND follows one family through a harvest — the abandoned colonial roça now forest, the replant beside it — a story of return on land the war made wild. The family is named in the field.</div>
-  </div>
-  <div class="tags"><span class="tag">Return</span><span class="tag">Land</span></div>
+  <div class="top"><div><div class="label">Food</div><h3>The Coffee That Went Wild</h3>
+  <div class="st">Amboim Robusta</div></div><div class="num">06</div></div>
+  <div class="cols"><div><span class="label">The story</span>Angola was the world’s third-largest coffee producer until the war turned plantations into wild bush. Now families harvest from trees their grandparents planted, and the EU/AFD-financed Mukafe scheme is replanting Amboim’s prized robusta in Kwanza Sul.</div>
+  <div><span class="label">Our proposal</span>INLAND follows one family through a harvest — the abandoned colonial roça now forest, the replant beside it — a story of return on land the war made wild. The family is named in the field.</div></div>
+  <div class="quote">“They pick from trees the war turned back into forest.”</div>
   <div class="foot">Places: Amboim · Gabela · Kwanza Sul · Uíge &nbsp;·&nbsp; Sources: Perfect Daily Grind; STiR; Coffee in Angola (Wikipedia)</div>
 </div><div class="story">
-  <div class="top"><div><div class="label">History</div>
-  <h3>The Council That Outlived the King</h3><div class="st">The Lumbu of Mbanza Kongo</div></div>
-  <div class="num">07</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>At Mbanza Kongo, UNESCO-listed capital of the old Kongo kingdom, there has been no king for decades — yet the lumbu, a tribunal of twenty-one elders that advised the throne for over five hundred years, still meets.</div>
-    <div><span class="label">Our proposal</span>INLAND attends a council sitting and maps the sacred topography of a city where the royal past lies underfoot — an institution that outlived the institution it served.</div>
-  </div>
-  <div class="tags"><span class="tag">Memory</span><span class="tag">Kingdoms</span></div>
+  <div class="top"><div><div class="label">History</div><h3>The Council That Outlived the King</h3>
+  <div class="st">The Lumbu of Mbanza Kongo</div></div><div class="num">07</div></div>
+  <div class="cols"><div><span class="label">The story</span>At Mbanza Kongo, UNESCO-listed capital of the old Kongo kingdom, there has been no king for decades — yet the lumbu, a tribunal of twenty-one elders that advised the throne for over five hundred years, still meets.</div>
+  <div><span class="label">Our proposal</span>INLAND attends a council sitting and maps the sacred topography of a city where the royal past lies underfoot — an institution that outlived the institution it served.</div></div>
+  <div class="quote">“The throne is empty; the council still sits.”</div>
   <div class="foot">Places: Mbanza Kongo · Zaire &nbsp;·&nbsp; Sources: UNESCO WHC 2017; Met Museum (Kongo)</div>
 </div><div class="story">
-  <div class="top"><div><div class="label">History</div>
-  <h3>Njinga’s Footprints</h3><div class="st">The Black Rocks of Pungo Andongo</div></div>
-  <div class="num">08</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>At the black monoliths of Pungo Andongo — the Ndongo capital and Queen Njinga’s 17th-century stronghold against the Portuguese — footprints worn into the rock are venerated locally as the queen’s own.</div>
-    <div><span class="label">Our proposal</span>INLAND shoots the footprints as a living place of veneration and the rocks as refuge — national memory made physical, a 400-year-old resistance still touched by hand.</div>
-  </div>
-  <div class="tags"><span class="tag">Memory</span><span class="tag">Resistance</span></div>
+  <div class="top"><div><div class="label">History</div><h3>Njinga’s Footprints</h3>
+  <div class="st">The Black Rocks of Pungo Andongo</div></div><div class="num">08</div></div>
+  <div class="cols"><div><span class="label">The story</span>At the black monoliths of Pungo Andongo — the Ndongo capital and Queen Njinga’s 17th-century stronghold against the Portuguese — footprints worn into the rock are venerated locally as the queen’s own.</div>
+  <div><span class="label">Our proposal</span>INLAND shoots the footprints as a living place of veneration and the rocks as refuge — national memory made physical, a 400-year-old resistance still touched by hand.</div></div>
+  <div class="quote">“A shrine without a temple.”</div>
   <div class="foot">Places: Pungo Andongo · Malanje &nbsp;·&nbsp; Sources: Black Rocks at Pungo Andongo (Wikipedia); Atlas Obscura</div>
 </div><div class="story">
-  <div class="top"><div><div class="label">Myth &amp; Religion</div>
-  <h3>Those Who Ate the Ox</h3><div class="st">Efundula in Cunene</div></div>
-  <div class="num">09</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>The efundula female initiation marks a girl’s passage to womanhood among the Kwanyama and Handa of Cunene — historically the symbolic ‘eating of the ox’ — surviving in tension with the school and the state.</div>
-    <div><span class="label">Our proposal</span>INLAND follows the cycle with the community’s lead and the voices of young mothers caught between the rite and schooling — continuity and its costs, consent-led, never staged.</div>
-  </div>
-  <div class="tags"><span class="tag">Initiation</span><span class="tag">Women</span></div>
+  <div class="top"><div><div class="label">Myth &amp; Religion</div><h3>Those Who Ate the Ox</h3>
+  <div class="st">Efundula in Cunene</div></div><div class="num">09</div></div>
+  <div class="cols"><div><span class="label">The story</span>The efundula female initiation marks a girl’s passage to womanhood among the Kwanyama and Handa of Cunene — historically the symbolic ‘eating of the ox’ — surviving in tension with the school and the state.</div>
+  <div><span class="label">Our proposal</span>INLAND follows the cycle with the community’s lead and the voices of young mothers caught between the rite and schooling — continuity and its costs, consent-led, never staged.</div></div>
+  <div class="quote">“To become a woman, you first ate the ox.”</div>
   <div class="foot">Places: Cunene · southern Huíla &nbsp;·&nbsp; Sources: Academia.edu; UCP study (Cunene)</div>
 </div><div class="story">
-  <div class="top"><div><div class="label">Food</div>
-  <h3>Salt and the Long Boats</h3><div class="st">Baía Farta</div></div>
-  <div class="num">10</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>In one Benguela bay, two squeezed coastal trades: solar salt evaporated in the pans that named the beach, and an artisanal fishing economy of tens of thousands — both pressed by industrial trawling and packaged substitutes.</div>
-    <div><span class="label">Our proposal</span>INLAND shoots a salt-raking day and a fishing dawn at the Casa dos Pescadores Artesanais — the food infrastructure of the coast, still made by hand.</div>
-  </div>
-  <div class="tags"><span class="tag">Coast</span><span class="tag">Craft</span></div>
+  <div class="top"><div><div class="label">Food</div><h3>Salt and the Long Boats</h3>
+  <div class="st">Baía Farta</div></div><div class="num">10</div></div>
+  <div class="cols"><div><span class="label">The story</span>In one Benguela bay, two squeezed coastal trades: solar salt evaporated in the pans that named the beach, and an artisanal fishing economy of tens of thousands — both pressed by industrial trawling and packaged substitutes.</div>
+  <div><span class="label">Our proposal</span>INLAND shoots a salt-raking day and a fishing dawn at the Casa dos Pescadores Artesanais — the food infrastructure of the coast, still made by hand.</div></div>
+  <div class="quote">“Salt by sun, fish by hand, on one shore.”</div>
   <div class="foot">Places: Baía Farta · Benguela &nbsp;·&nbsp; Sources: Journey Gourmet; trackstick; DLIST Benguela</div>
 </div><div class="story">
-  <div class="top"><div><div class="label">Arts &amp; Culture</div>
-  <h3>Clay and Fibre</h3><div class="st">Women Potters and Weavers</div></div>
-  <div class="num">11</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>Coil pottery and sisal and palm basketry, made by methods passed down generations across the highlands and east, now half-commercialised for an urban market — the domestic vessels of Angolan household life, and the women who still make them.</div>
-    <div><span class="label">Our proposal</span>INLAND portraits one named maker through a full firing or weaving and the market stall beyond — women’s craft as both heritage and household economy.</div>
-  </div>
-  <div class="tags"><span class="tag">Craft</span><span class="tag">Women</span></div>
+  <div class="top"><div><div class="label">Arts &amp; Culture</div><h3>Clay and Fibre</h3>
+  <div class="st">Women Potters and Weavers</div></div><div class="num">11</div></div>
+  <div class="cols"><div><span class="label">The story</span>Coil pottery and sisal and palm basketry, made by methods passed down generations across the highlands and east, now half-commercialised for an urban market — the domestic vessels of Angolan household life, and the women who still make them.</div>
+  <div><span class="label">Our proposal</span>INLAND portraits one named maker through a full firing or weaving and the market stall beyond — women’s craft as both heritage and household economy.</div></div>
+  <div class="quote">“The pot, the basket, and the hands that still make them.”</div>
   <div class="foot">Places: Huambo · Bié · Moxico &nbsp;·&nbsp; Sources: African Sahara; Design Milk</div>
 </div><div class="story">
-  <div class="top"><div><div class="label">Geopolitics</div>
-  <h3>The Most Expensive City and the Musseque</h3><div class="st">Two Relationships to One Shore</div></div>
-  <div class="num">12</div></div>
-  <div class="cols">
-    <div><span class="label">The story</span>Luanda’s oil-built towers stand a few hundred metres from self-built musseques and the kitanda markets that feed the city — and from the sandbar where families still fish and pray to Kianda.</div>
-    <div><span class="label">Our proposal</span>INLAND anchors the petro-city in one human — an Ilha fisher, a market woman — so the contradiction is portrait, not abstraction: two economies sharing one shore.</div>
-  </div>
-  <div class="tags"><span class="tag">Modernisation</span><span class="tag">Inequality</span></div>
+  <div class="top"><div><div class="label">Geopolitics</div><h3>The Most Expensive City and the Musseque</h3>
+  <div class="st">Two Relationships to One Shore</div></div><div class="num">12</div></div>
+  <div class="cols"><div><span class="label">The story</span>Luanda’s oil-built towers stand a few hundred metres from self-built musseques and the kitanda markets that feed the city — and from the sandbar where families still fish and pray to Kianda.</div>
+  <div><span class="label">Our proposal</span>INLAND anchors the petro-city in one human — an Ilha fisher, a market woman — so the contradiction is portrait, not abstraction: two economies sharing one shore.</div></div>
+  <div class="quote">“Two economies, one shore.”</div>
   <div class="foot">Places: Luanda · Ilha de Luanda &nbsp;·&nbsp; Sources: Ilha de Luanda (Wikipedia); INLAND field framing</div>
 </div>
-<h2 class="sec-h" style="margin-top:14px">Production Tracks</h2><hr>
-<div class="tracks"><div class="track">
-  <div class="bar" style="background:#2C5F2D"></div>
-  <h3 style="color:#2C5F2D">The Lunda Cluster</h3>
-  <div class="ts">Stories 01 + 05</div>
-  <div>The eastern art heartland: the sona sand-writing masters around Saurimo and Dundo, and the mukanda / mwana pwo mask rite. One deployment, access via Lueji A’Nkonde University and the Dundo Museum.</div>
-  <div class="meta">Geography: Saurimo → Dundo (Lunda) → Moxico<br>Season: Dry-season camps (≈May–Sep)<br>2 stories, 1 field base</div>
-</div><div class="track">
-  <div class="bar" style="background:#B85042"></div>
-  <h3 style="color:#B85042">The Planalto Cluster</h3>
-  <div class="ts">Stories 02 + 06 + 11</div>
-  <div>The central highlands: the ondjango council fire at Bailundo (King Ekuikui VI’s court), the Amboim robusta revival in Kwanza Sul, and highland potters and weavers. Governance, return and craft.</div>
-  <div class="meta">Geography: Bailundo (Huambo) → Amboim (Kwanza Sul)<br>Season: Coffee harvest (≈May–Aug)<br>3 stories, 1 deployment</div>
-</div><div class="track">
-  <div class="bar" style="background:#5B2C6F"></div>
+<h2 class="sec-h">Production Tracks</h2><hr>
+<div class="tracks"><div class="track"><div class="bar" style="background:#1B4965"></div>
+  <h3 style="color:#1B4965">The Lunda Cluster</h3>
+  <div class="ts">Stories 01 + 05</div><div>The eastern art heartland: the sona sand-writing masters around Saurimo and Dundo, and the mukanda / mwana pwo mask rite. One deployment, access via Lueji A’Nkonde University and the Dundo Museum.</div>
+  <div class="meta">Geography: Saurimo → Dundo (Lunda) → Moxico<br>Season: Dry-season camps (≈May–Sep)<br>2 stories, 1 field base</div></div><div class="track"><div class="bar" style="background:#3A5A40"></div>
+  <h3 style="color:#3A5A40">The Planalto Cluster</h3>
+  <div class="ts">Stories 02 + 06 + 11</div><div>The central highlands: the ondjango council fire at Bailundo (King Ekuikui VI’s court), the Amboim robusta revival in Kwanza Sul, and highland potters and weavers. Governance, return and craft.</div>
+  <div class="meta">Geography: Bailundo (Huambo) → Amboim (Kwanza Sul)<br>Season: Coffee harvest (≈May–Aug)<br>3 stories, 1 deployment</div></div><div class="track"><div class="bar" style="background:#5B2C6F"></div>
   <h3 style="color:#5B2C6F">South &amp; Coast</h3>
-  <div class="ts">Stories 03 + 09 + 10</div>
-  <div>Mwila and Mucubal pastoral knowledge on the Huíla plateau and Namibe, the efundula female initiation in Cunene (consent-led), and salt and artisanal fishing at Baía Farta. Body, herd and sea.</div>
-  <div class="meta">Geography: Lubango → Cunene → Benguela coast<br>Season: Dry-season transhumance<br>3 stories, seasonal windows</div>
-</div></div>
-<h2 class="sec-h" style="margin-top:16px">The Partnership</h2><hr>
-<div class="partner"><div class="h">European partner</div><div>INLAND — yearly publication (Italy / EU). Editorial, photography and publishing; presentation of the work in Europe.</div><div class="h">African partner</div><div>An Angolan cultural organisation (lead candidate: Lueji A’Nkonde University, Lunda Norte — which coordinated the sona UNESCO nomination) — co-creation, community access, custodian liaison, presentation in Angola.</div><div class="h">Funding path</div><div>Mobility grant (≤€4,000) funds the scouting trip; the Visual Arts grant funds collaborative production and a public presentation in Angola and Europe.</div><div class="h">The principle</div><div>Made with custodians, not about them — equitable Africa–Europe co-creation, exactly the dialogue the Goethe programme exists to fund.</div></div>
+  <div class="ts">Stories 03 + 09 + 10</div><div>Mwila and Mucubal pastoral knowledge on the Huíla plateau and Namibe, the efundula female initiation in Cunene (consent-led), and salt and artisanal fishing at Baía Farta. Body, herd and sea.</div>
+  <div class="meta">Geography: Lubango → Cunene → Benguela coast<br>Season: Dry-season transhumance<br>3 stories, seasonal windows</div></div></div>
+<h2 class="sec-h">An Equitable Co-Production</h2><hr><div class="partner"><div class="h">European partner</div><div>INLAND — yearly publication (Italy / EU). Editorial, photography and publishing; presentation of the work in Europe.</div><div class="h">African partner</div><div>An Angolan cultural organisation (lead candidate: Lueji A’Nkonde University, Lunda Norte — which coordinated the sona UNESCO nomination) — co-creation, community access, custodian liaison, presentation in Angola.</div><div class="h">Funding path</div><div>Mobility grant (≤€4,000) funds the scouting trip; the Visual Arts grant funds collaborative production and a public presentation in Angola and Europe.</div><div class="h">The principle</div><div>Made with custodians, not about them — equitable Africa–Europe co-creation, exactly the dialogue the Goethe programme exists to fund.</div></div>
 </div></body></html>

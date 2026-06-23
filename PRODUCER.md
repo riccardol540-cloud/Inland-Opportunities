@@ -30,8 +30,10 @@ people chose, runs deep research, and produces the same asset set as Rwanda/Kash
    - deep-research report (`.md`)
    - selected story leads (`.md`)
    - Topics + Contacts spreadsheet (`.xlsx`, two sheets)
-   - pitch presentation (`.pptx` + `.html`) in INLAND house style
-   - overview PDF
+   - pitch presentation (`.pptx` + `.html`) in INLAND house style — render the `.html`
+     via the shared module `_inland/templates/inland_web.py` (never hand-roll CSS; gold
+     standard `_inland/templates/REFERENCE_INLAND_pitch.html`)
+   - overview PDF (export the `_Overview.html` that `inland_web.py` produces)
    - **the opportunity's required application documents** (concept note, budget,
      timeline, CVs, letters — whatever `requiredDocs` lists)
 7. **Link the documents**: set the opportunity's `production` to `"drafted"` and add each
