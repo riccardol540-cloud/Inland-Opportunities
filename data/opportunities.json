@@ -447,7 +447,7 @@
       ],
       "researched": true,
       "flagged": false,
-      "production": "none",
+      "production": "in_progress",
       "documents": [
         {
           "label": "Research brief",
@@ -472,6 +472,14 @@
           "by": "Riccardo",
           "changes": {
             "status": "pursuing"
+          }
+        },
+        {
+          "at": "2026-06-23T16:00:00.000Z",
+          "by": "producer",
+          "changes": {
+            "production": "in_progress",
+            "note": "Producer started: Tunisia edition for the Institut français Mediterranean photography support (publication + production strands)"
           }
         }
       ],
