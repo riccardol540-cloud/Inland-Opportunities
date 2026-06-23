@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-06-22T21:14:27.281Z",
+    "lastUpdated": "2026-06-23T00:00:00.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -392,6 +392,75 @@
           }
         }
       ]
+    },
+    {
+      "id": "institut-francais-mediterranee-photo-2026",
+      "title": "Institut français — Mediterranean photography support (publication + production)",
+      "funder": "Institut français",
+      "channel": "cultural-institute",
+      "link": "https://www.institutfrancais.com/en/programs",
+      "deadline": "2026-10-01",
+      "budget": "Publication: editing & printing costs covered in full; Production: support for new photographic work (Mediterranean theme)",
+      "eligibility": "Open to all professional photographers who have already exhibited or published, regardless of age or nationality; project must take the Mediterranean world as its theme. INLAND (Italy-based) qualifies.",
+      "fit": 4,
+      "fitRationale": "Nationality-open, theme-locked to the Mediterranean, and it covers INLAND's exact cost centres — editing/printing a finished edition (publication) or a fresh field shoot (production). Issue 03 (Isole Minori) already proves the register.",
+      "territory": "Mediterranean world (open) — candidate angles: northern Morocco/Rif–Tétouan; Tunisian islands; southern Italy/Basilicata",
+      "requiredDocs": [
+        "Photographic project / image edit (completed for publication strand)",
+        "Editorial / publication project description + Mediterranean-theme statement",
+        "Photographer track record (prior exhibition/publication)",
+        "Budget (editing & production costs)",
+        "Timeline to publication"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "",
+      "addedBy": "scout",
+      "addedAt": "2026-06-23",
+      "history": []
+    },
+    {
+      "id": "anna-lindh-med-capitals-2026",
+      "title": "Anna Lindh Foundation — Mediterranean Capitals of Culture & Dialogue 2026 (2nd Call, Matera & Tétouan)",
+      "funder": "Anna Lindh Foundation",
+      "channel": "partnership",
+      "link": "https://on-the-move.org/news/anna-lindh-foundation-projects-mediterranean-capitals-culture-2026-italy-morocco",
+      "deadline": "2026-07-04",
+      "budget": "Small up to €2,500; Medium €2,500–5,000",
+      "eligibility": "Intercultural entities from the 43 Euro-Med countries running cultural/intercultural activities in Matera (Italy) or Tétouan (Morocco), non-profit, no ticket sales. INLAND (Italy) eligible.",
+      "fit": 3,
+      "fitRationale": "Both cities are genuine INLAND territory (Matera/Basilicata; Tétouan→Rif), but the call funds participatory city activities/dialogue, not a publication, and the budget is small — best as a pilot/relationship + scouting foothold, not edition funding. URGENT: deadline 4 Jul 2026.",
+      "territory": "Tétouan/Rif (Morocco) or Matera (Italy)",
+      "requiredDocs": [
+        "Activity concept (intercultural aims, location)",
+        "Work plan & budget (≤ €5,000, non-profit, no ticketing)",
+        "Team (3–5 people)",
+        "Local venue / partner indication"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/anna-lindh-med-capitals-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "",
+      "addedBy": "scout",
+      "addedAt": "2026-06-23",
+      "history": []
     }
   ]
 }
