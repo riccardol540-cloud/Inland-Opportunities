@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-06-24T07:50:01.841Z",
+    "lastUpdated": "2026-06-24T07:50:21.805Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -628,8 +628,18 @@
       "notes": "",
       "addedBy": "scout",
       "addedAt": "2026-06-24",
-      "history": [],
-      "votes": {}
+      "history": [
+        {
+          "at": "2026-06-24T07:50:21.805Z",
+          "by": "Riccardo",
+          "changes": {
+            "vote": 1
+          }
+        }
+      ],
+      "votes": {
+        "Riccardo": 1
+      }
     },
     {
       "id": "lucie-foundation-scholarship-2026",
