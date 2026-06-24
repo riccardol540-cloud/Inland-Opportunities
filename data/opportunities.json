@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-06-23T15:21:02.921Z",
+    "lastUpdated": "2026-06-24T09:00:00.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -578,6 +578,113 @@
           }
         }
       ]
+    },
+    {
+      "id": "w-eugene-smith-humanistic-2026",
+      "title": "W. Eugene Smith Grant in Humanistic Photography 2026",
+      "funder": "W. Eugene Smith Memorial Fund",
+      "channel": "public-fund",
+      "link": "https://www.smithfund.org/eugene-smith-grant",
+      "deadline": "2026-09-30",
+      "budget": "US$30,000 main grant + two US$10,000 finalist grants",
+      "eligibility": "Open to photographers of any nationality; honours long-form humanistic documentary in the tradition of W. Eugene Smith. INLAND applies via/with a commissioned photographer on an edition's body of work.",
+      "fit": 4,
+      "fitRationale": "Humanistic, long-term documentary essay about the human condition — INLAND's exact register; production-scale budget. Applicant is the photographer, so INLAND partners with / nominates its edition photographer. Deadline recurs ~late Sept (call opens ~1 July); confirm when the 2026 cycle posts.",
+      "territory": "Open — pairs with any in-progress INLAND edition (the photographer's body of work on its custodians)",
+      "requiredDocs": [
+        "Project proposal / statement",
+        "Portfolio of past work (prior cohesive project)",
+        "Proposed-project image edit",
+        "Photographer bio / CV",
+        "Application fee (fee waiver available)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "",
+      "addedBy": "scout",
+      "addedAt": "2026-06-24",
+      "history": [],
+      "votes": {}
+    },
+    {
+      "id": "lucie-foundation-scholarship-2026",
+      "title": "Lucie Foundation Scholarship 2026 (Documentary / Photojournalism)",
+      "funder": "Lucie Foundation",
+      "channel": "public-fund",
+      "link": "https://www.luciefoundation.org/programs/scholarship/",
+      "deadline": "2026-08-31",
+      "budget": "Cash US$3,000 (Professional) / US$1,000 (Emerging) + camera gear; group exhibition touring House of Lucie galleries incl. Ostuni (Italy)",
+      "eligibility": "Open worldwide to professional and emerging photographers 18+; dedicated Documentary/Photojournalism category. INLAND-commissioned photographer eligible.",
+      "fit": 3,
+      "fitRationale": "Documentary/photojournalism category fits INLAND's register; budget is modest (a prize, not edition funding), but the touring exhibition — including Ostuni (Italy) — is a useful visibility/relationship foothold and the entry is low-burden. Deadline to confirm (winners announced Oct 2026; call is live now).",
+      "territory": "Open — any INLAND edition's documentary body of work",
+      "requiredDocs": [
+        "20-image project edit",
+        "Project proposal / statement",
+        "Photographer bio",
+        "Submission fee (~US$15–25 per entry)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/lucie-foundation-scholarship-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "",
+      "addedBy": "scout",
+      "addedAt": "2026-06-24",
+      "history": [],
+      "votes": {}
+    },
+    {
+      "id": "carmignac-photojournalism-2026",
+      "title": "Carmignac Photojournalism Award — 15th Edition (Southeast Asia)",
+      "funder": "Fondation Carmignac",
+      "channel": "public-fund",
+      "link": "https://www.fondationcarmignac.com/en/photojournalism-award/",
+      "deadline": "2026-08-19",
+      "budget": "€50,000 production grant + travelling exhibition and monograph (premiered at Visa pour l'Image)",
+      "eligibility": "Open to photographers of all nationalities, individual or collaborative; INLAND-eligible via a commissioned photographer. 2026 edition theme/territory is fixed: Southeast Asia.",
+      "fit": 2,
+      "fitRationale": "Big budget (€50k) and a real territory (SE Asia coastal/fishing communities hold rich living traditions), BUT the 15th-edition brief is investigative reporting on illegal fishing and human/environmental rights violations — an adversarial/exposé register that clashes with INLAND's 'continuity over crisis, tension not attack' discipline. Stretch; surfaced for the humans to weigh. Recommend not pursuing unless an INLAND-register angle on the set theme is found.",
+      "territory": "Southeast Asia (coastal/fishing communities) — set by the 15th-edition theme",
+      "requiredDocs": [
+        "Project proposal on the set theme",
+        "Portfolio of past work",
+        "Budget / production plan",
+        "CV",
+        "Letter of intent"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/carmignac-photojournalism-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "",
+      "addedBy": "scout",
+      "addedAt": "2026-06-24",
+      "history": [],
+      "votes": {}
     }
   ]
 }
