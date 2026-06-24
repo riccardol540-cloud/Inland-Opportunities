@@ -1,26 +1,10 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-06-24T08:42:16.984Z",
+    "lastUpdated": "2026-06-24T08:42:21.522Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
-    {
-      "title": "Let's find something in Rwanda",
-      "link": "",
-      "addedBy": "Riccardo",
-      "country": "Rwanda",
-      "id": "opp-1782287401841",
-      "status": "new",
-      "researched": false,
-      "fit": null,
-      "votes": {},
-      "production": "none",
-      "documents": [],
-      "owner": "Riccardo",
-      "history": [],
-      "addedAt": "2026-06-24"
-    },
     {
       "id": "opp-1782162300119",
       "title": "Goethe-Institut — Africa–Europe Partnerships for Culture (Visual Arts / Mobility)",
