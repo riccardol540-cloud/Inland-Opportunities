@@ -24,6 +24,7 @@ const PROD_LABEL = { none: "Awaiting production", in_progress: "Producing…", d
 const GRIP = '<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><circle cx="5" cy="3" r="1.4"/><circle cx="11" cy="3" r="1.4"/><circle cx="5" cy="8" r="1.4"/><circle cx="11" cy="8" r="1.4"/><circle cx="5" cy="13" r="1.4"/><circle cx="11" cy="13" r="1.4"/></svg>';
 const CHEV = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg>';
 const THUMB = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 9.5h3.2V21H2zM21.6 11.1c0-1.05-.86-1.9-1.9-1.9h-5.13l.77-3.71.024-.26c0-.39-.16-.75-.42-1.01L13.96 3l-6.02 6.03c-.35.35-.56.83-.56 1.36V19c0 1.05.86 1.9 1.9 1.9h7.6c.76 0 1.42-.46 1.7-1.12l2.55-5.95c.08-.2.12-.4.12-.63z"/></svg>';
+const DL = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7L8 10.5 11.5 7M3 13.5h10"/></svg>';
 
 // ---------- auth ----------
 async function checkAuth() {
@@ -147,6 +148,81 @@ async function removeOpp(id) {
   toast("Deleted");
 }
 
+// ---------- download edition (client-side zip) ----------
+// GitHub blob URL -> raw URL (the public repo serves raw files with permissive CORS,
+// so the browser can fetch each document and zip them with no server round-trip):
+//   https://github.com/<owner>/<repo>/blob/<branch>/<path>
+//   -> https://raw.githubusercontent.com/<owner>/<repo>/<branch>/<path>
+function blobToRaw(url) {
+  return url.replace(
+    /^https:\/\/github\.com\/([^/]+)\/([^/]+)\/blob\/(.+)$/,
+    "https://raw.githubusercontent.com/$1/$2/$3",
+  );
+}
+
+// Derive the edition slug (zip name) and each file's path relative to that slug, so the
+// zip preserves subfolders (e.g. application/) under a single edition root.
+function editionPaths(docs) {
+  const rels = docs.map((d) => {
+    const m = d.url.match(/\/editions\/(.+)$/);
+    return m ? decodeURIComponent(m[1]) : (d.label || d.url).replace(/[^\w.-]+/g, "_");
+  });
+  const slug = rels[0].split("/")[0] || "edition";
+  const paths = rels.map((r) => (r.startsWith(slug + "/") ? r.slice(slug.length + 1) : r));
+  return { zipName: slug, paths };
+}
+
+async function downloadEdition(btn, id) {
+  const o = (STATE.opportunities || []).find((x) => x.id === id);
+  if (!o || !o.documents || !o.documents.length || btn.dataset.busy) return;
+
+  const label = btn.querySelector("span");
+  const original = label ? label.textContent : "";
+  btn.dataset.busy = "1";
+  btn.disabled = true;
+  if (label) label.textContent = "Zipping…";
+
+  const { zipName, paths } = editionPaths(o.documents);
+  const zip = new JSZip();
+  const failed = [];
+  await Promise.all(o.documents.map(async (d, i) => {
+    try {
+      const res = await fetch(blobToRaw(d.url));
+      if (!res.ok) throw new Error(String(res.status));
+      zip.file(paths[i], await res.blob());
+    } catch {
+      failed.push(d.label || paths[i]);
+    }
+  }));
+
+  const got = o.documents.length - failed.length;
+  if (!got) { toast("Download failed — no files could be fetched"); resetDlBtn(btn, label, original); return; }
+
+  try {
+    const blob = await zip.generateAsync({ type: "blob" });
+    const href = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = href;
+    a.download = `${zipName}.zip`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(href), 4000);
+    toast(failed.length
+      ? `Downloaded ${got} of ${o.documents.length} — skipped: ${failed.join(", ")}`
+      : `Downloaded ${got} ${got === 1 ? "file" : "files"}`);
+  } catch {
+    toast("Could not build the zip");
+  }
+  resetDlBtn(btn, label, original);
+}
+
+function resetDlBtn(btn, label, original) {
+  delete btn.dataset.busy;
+  btn.disabled = false;
+  if (label) label.textContent = original;
+}
+
 // ---------- identity ----------
 function actor() { return localStorage.getItem("inland_actor") || "anon"; }
 function setActor(name) {
@@ -245,7 +321,13 @@ function card(o) {
   const lockNote = awaiting ? `<span class="badge-awaiting">Needs research to pursue</span>` : "";
 
   const documents = (o.documents && o.documents.length)
-    ? `<div class="documents"><span class="k">Documents</span><ul>${o.documents.map((d) => `<li><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.label || d.url)} ↗</a></li>`).join("")}</ul></div>`
+    ? `<div class="documents">
+        <div class="documents-head">
+          <span class="k">Documents</span>
+          <button class="mini doc-dl" data-download="${o.id}" title="Download all ${o.documents.length} files as a zip" aria-label="Download all documents as a zip">${DL}<span>Download all</span></button>
+        </div>
+        <ul>${o.documents.map((d) => `<li><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.label || d.url)} ↗</a></li>`).join("")}</ul>
+      </div>`
     : "";
 
   const body = `<div class="card-body"><div class="card-body-inner"><div class="card-body-pad">
@@ -366,6 +448,8 @@ function bindCards() {
     el.addEventListener("change", (e) => { e.stopPropagation(); patch(el.dataset.id, { country: el.value }); }));
   document.querySelectorAll("[data-duplicate]").forEach((b) =>
     b.addEventListener("click", (e) => { e.stopPropagation(); duplicateOpp(b.dataset.duplicate); }));
+  document.querySelectorAll("[data-download]").forEach((b) =>
+    b.addEventListener("click", (e) => { e.stopPropagation(); downloadEdition(b, b.dataset.download); }));
   document.querySelectorAll("[data-move]").forEach((b) =>
     b.addEventListener("click", () => patch(b.dataset.id, { status: b.dataset.move })));
   document.querySelectorAll("[data-del]").forEach((b) =>

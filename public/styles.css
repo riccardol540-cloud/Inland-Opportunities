@@ -274,6 +274,12 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
 .documents ul { margin: 0; padding-left: 18px; }
 .documents li { margin: 3px 0; }
 .documents a { font-style: italic; }
+.documents-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 5px; }
+.documents-head .k { display: inline; margin-bottom: 0; }
+.doc-dl { display: inline-flex; align-items: center; gap: 6px; padding: 5px 9px; flex-shrink: 0; }
+.doc-dl svg { width: 12px; height: 12px; transition: transform 0.16s ease; }
+.doc-dl:hover svg { transform: translateY(1px); }
+@media (prefers-reduced-motion: reduce) { .doc-dl svg { transition: none; } .doc-dl:hover svg { transform: none; } }
 
 .card-field { width: 100%; border: 1px solid var(--divider); background: var(--field); border-radius: var(--radius); padding: 8px 10px; font-size: 15px; margin-top: 4px; }
 select.card-field { font-family: var(--font-body); cursor: pointer; }
