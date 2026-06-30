@@ -630,18 +630,71 @@
     ],
     "researched": true,
     "flagged": false,
-    "production": "none",
+    "production": "drafted",
     "documents": [
       {
         "label": "Research brief",
         "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/research-brief.md"
+      },
+      {
+        "label": "Deep-research report",
+        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/deep-research-report.md"
+      },
+      {
+        "label": "Selected story leads",
+        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/selected-story-leads.md"
+      },
+      {
+        "label": "Topics + Contacts (xlsx)",
+        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/INLAND_Georgia_Topics_Contacts.xlsx"
+      },
+      {
+        "label": "Pitch deck (pptx)",
+        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/INLAND_Georgia_Pitch.pptx"
+      },
+      {
+        "label": "Pitch (web/html)",
+        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/INLAND_Georgia_Pitch.html"
+      },
+      {
+        "label": "Overview (PDF)",
+        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/INLAND_Georgia_Overview.pdf"
+      },
+      {
+        "label": "Application — Project statement (description + proposal)",
+        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/project-statement.md"
+      },
+      {
+        "label": "Application — Portfolio of past work",
+        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/portfolio-past-work.md"
+      },
+      {
+        "label": "Application — Proposed-project image edit",
+        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/proposed-project-image-edit.md"
+      },
+      {
+        "label": "Application — Photographer bio & CV",
+        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/photographer-bio-cv.md"
+      },
+      {
+        "label": "Application — Checklist, fee & submission",
+        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/application-checklist.md"
+      },
+      {
+        "label": "Application — Budget (indicative)",
+        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/budget.md"
+      },
+      {
+        "label": "Application — Timeline",
+        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/timeline.md"
       }
     ],
-    "status": "archived",
+    "status": "pursuing",
     "owner": "",
     "notes": "",
     "addedBy": "scout",
     "addedAt": "2026-06-24",
+    "country": "Georgia",
     "history": [
       {
         "at": "2026-06-24T07:50:21.805Z",
@@ -672,21 +725,25 @@
         }
       },
       {
-        "at": "2026-06-24T08:44:07.650Z",
-        "by": "Riccardo",
+        "at": "2026-06-24T10:00:00.000Z",
+        "by": "producer",
         "changes": {
-          "vote": 0
+          "production": "in_progress",
+          "note": "Producer started: W. Eugene Smith Grant application anchored on a Georgia edition (Issue 02 as the photographer's prior cohesive body of work; a proposed humanistic continuation among Georgia's highland custodians)."
         }
       },
       {
-        "at": "2026-06-24T08:56:08.213Z",
-        "by": "Riccardo",
+        "at": "2026-06-24T12:30:00.000Z",
+        "by": "producer",
         "changes": {
-          "status": "archived"
+          "production": "drafted",
+          "note": "Drafted full INLAND Georgia asset set + W. Eugene Smith application (working title 'The Quiet Country'): deep-research report (16 leads), 12 selected leads, Topics+Contacts xlsx, pitch (pptx/html), overview PDF, and Smith application docs (project statement within the 2000/3000-char limits, portfolio-of-past-work spec on Issue 02, 40-frame proposed image edit, bio/CV template, checklist/fee, budget, timeline). Desk research; named custodians, the applicant photographer, consents, 2026 deadline/fee and field windows to confirm. For review before submission."
         }
       }
     ],
-    "votes": {}
+    "votes": {
+      "Riccardo": 1
+    }
   },
   {
     "id": "lucie-foundation-scholarship-2026",
