@@ -82,7 +82,19 @@ export async function readData() {
   if (!res.ok) throw new Error(`GitHub read failed: ${res.status} ${await res.text()}`);
   const json = await res.json();
   const content = Buffer.from(json.content, "base64").toString("utf8");
-  return { data: JSON.parse(content), sha: json.sha };
+  return { data: normalizeDoc(JSON.parse(content)), sha: json.sha };
+}
+
+// Tolerate a legacy/corrupted shape where the file is a bare array of opportunities
+// instead of the { meta, opportunities } envelope. Wrapping here keeps the dashboard
+// rendering and lets the next write persist the correct shape (self-healing).
+function normalizeDoc(parsed) {
+  if (Array.isArray(parsed)) {
+    return { meta: { schemaVersion: 1, lastUpdated: null }, opportunities: parsed };
+  }
+  parsed = parsed || {};
+  parsed.opportunities = parsed.opportunities || [];
+  return parsed;
 }
 
 // Commits the updated document back to the repo. Pass the sha from readData().

@@ -1,865 +1,872 @@
-[
-  {
-    "title": "Let's try to find something doable in Romania",
-    "link": "https://www.icr.ro/pagini/programul-cantemir-2023-program-de-finantare-pentru-proiecte-culturale/en",
-    "addedBy": "Riccardo",
-    "country": "Romania",
-    "id": "opp-1782290582161",
-    "status": "new",
-    "researched": true,
-    "fit": 4,
-    "votes": {},
-    "production": "none",
-    "documents": [
-      {
-        "label": "Research brief",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/opp-1782290582161/research-brief.md"
-      }
-    ],
-    "owner": "Riccardo",
-    "history": [],
-    "addedAt": "2026-06-24",
-    "funder": "Romanian Cultural Institute (ICR)",
-    "channel": "cultural-institute",
-    "deadline": "2027-02-14",
-    "budget": "Up to RON 100,000 (~€20,000)",
-    "eligibility": "EU-based cultural entity; project must promote Romanian culture internationally (published/distributed outside Romania). INLAND’s Romania edition — a print magazine for international audiences — qualifies directly.",
-    "fitRationale": "CANTEMIR funds visual arts including photography, targets international promotion of Romanian culture — INLAND’s Romania edition is a direct fit; budget covers production and publication.",
-    "territory": "Romania — Maramureș folk culture & wooden churches, Danube Delta Lipovan fishing communities, Transylvanian Saxon villages, transhumance shepherds (UNESCO ICH 2023)",
-    "requiredDocs": [
-      "Project description",
-      "Budget",
-      "Timeline",
-      "Partner letter from Romanian cultural institution",
-      "Proof of prior international cultural activity (published issues)"
-    ],
-    "flagged": false
+{
+  "meta": {
+    "schemaVersion": 1,
+    "lastUpdated": "2026-06-30T11:07:06.135Z",
+    "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
-  {
-    "id": "opp-1782162300119",
-    "title": "Goethe-Institut — Africa–Europe Partnerships for Culture (Visual Arts / Mobility)",
-    "funder": "Goethe-Institut",
-    "channel": "cultural-institute",
-    "link": "https://on-the-move.org/news/goethe-institut-mobility-grants-artists-and-culture-professionals-sub-saharan-africa-and",
-    "deadline": "2026-09-15",
-    "budget": "Mobility up to €4,000 (travel); Visual Arts strand larger (production)",
-    "eligibility": "Artists/cultural professionals collaborating between Sub-Saharan Africa and Europe.",
-    "fit": 4,
-    "fitRationale": "Direct territory match for the in-progress Rwanda edition; funds Africa–Europe co-creation. Mobility = scouting trip; Visual Arts = production.",
-    "territory": "Rwanda (in-progress edition)",
-    "requiredDocs": [
-      "Project description",
-      "Partner confirmation (African + European)",
-      "Budget"
-    ],
-    "researched": true,
-    "production": "drafted",
-    "documents": [
-      {
-        "label": "Deep-research report",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/deep-research-report.md"
-      },
-      {
-        "label": "Selected story leads",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/selected-story-leads.md"
-      },
-      {
-        "label": "Topics + Contacts (xlsx)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/INLAND_Angola_Topics_Contacts.xlsx"
-      },
-      {
-        "label": "Pitch deck (pptx)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/INLAND_Angola_Pitch.pptx"
-      },
-      {
-        "label": "Pitch (web/html)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/INLAND_Angola_Pitch.html"
-      },
-      {
-        "label": "Overview (PDF)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/INLAND_Angola_Overview.pdf"
-      },
-      {
-        "label": "Application — Project description",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/application/project-description.md"
-      },
-      {
-        "label": "Application — Partners & confirmation",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/application/partners.md"
-      },
-      {
-        "label": "Application — Budget",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/application/budget.md"
-      },
-      {
-        "label": "Application — Timeline",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/application/timeline.md"
+  "opportunities": [
+    {
+      "title": "Let's try to find something doable in Romania",
+      "link": "https://www.icr.ro/pagini/programul-cantemir-2023-program-de-finantare-pentru-proiecte-culturale/en",
+      "addedBy": "Riccardo",
+      "country": "Romania",
+      "id": "opp-1782290582161",
+      "status": "new",
+      "researched": true,
+      "fit": 4,
+      "votes": {},
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/opp-1782290582161/research-brief.md"
+        }
+      ],
+      "owner": "Riccardo",
+      "history": [],
+      "addedAt": "2026-06-24",
+      "funder": "Romanian Cultural Institute (ICR)",
+      "channel": "cultural-institute",
+      "deadline": "2027-02-14",
+      "budget": "Up to RON 100,000 (~€20,000)",
+      "eligibility": "EU-based cultural entity; project must promote Romanian culture internationally (published/distributed outside Romania). INLAND’s Romania edition — a print magazine for international audiences — qualifies directly.",
+      "fitRationale": "CANTEMIR funds visual arts including photography, targets international promotion of Romanian culture — INLAND’s Romania edition is a direct fit; budget covers production and publication.",
+      "territory": "Romania — Maramureș folk culture & wooden churches, Danube Delta Lipovan fishing communities, Transylvanian Saxon villages, transhumance shepherds (UNESCO ICH 2023)",
+      "requiredDocs": [
+        "Project description",
+        "Budget",
+        "Timeline",
+        "Partner letter from Romanian cultural institution",
+        "Proof of prior international cultural activity (published issues)"
+      ],
+      "flagged": false
+    },
+    {
+      "id": "opp-1782162300119",
+      "title": "Goethe-Institut — Africa–Europe Partnerships for Culture (Visual Arts / Mobility)",
+      "funder": "Goethe-Institut",
+      "channel": "cultural-institute",
+      "link": "https://on-the-move.org/news/goethe-institut-mobility-grants-artists-and-culture-professionals-sub-saharan-africa-and",
+      "deadline": "2026-09-15",
+      "budget": "Mobility up to €4,000 (travel); Visual Arts strand larger (production)",
+      "eligibility": "Artists/cultural professionals collaborating between Sub-Saharan Africa and Europe.",
+      "fit": 4,
+      "fitRationale": "Direct territory match for the in-progress Rwanda edition; funds Africa–Europe co-creation. Mobility = scouting trip; Visual Arts = production.",
+      "territory": "Rwanda (in-progress edition)",
+      "requiredDocs": [
+        "Project description",
+        "Partner confirmation (African + European)",
+        "Budget"
+      ],
+      "researched": true,
+      "production": "drafted",
+      "documents": [
+        {
+          "label": "Deep-research report",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/deep-research-report.md"
+        },
+        {
+          "label": "Selected story leads",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/selected-story-leads.md"
+        },
+        {
+          "label": "Topics + Contacts (xlsx)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/INLAND_Angola_Topics_Contacts.xlsx"
+        },
+        {
+          "label": "Pitch deck (pptx)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/INLAND_Angola_Pitch.pptx"
+        },
+        {
+          "label": "Pitch (web/html)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/INLAND_Angola_Pitch.html"
+        },
+        {
+          "label": "Overview (PDF)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/INLAND_Angola_Overview.pdf"
+        },
+        {
+          "label": "Application — Project description",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/application/project-description.md"
+        },
+        {
+          "label": "Application — Partners & confirmation",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/application/partners.md"
+        },
+        {
+          "label": "Application — Budget",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/application/budget.md"
+        },
+        {
+          "label": "Application — Timeline",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/angola-goethe-2026/application/timeline.md"
+        }
+      ],
+      "status": "pursuing",
+      "owner": "",
+      "notes": "",
+      "addedBy": "Riccardo",
+      "addedAt": "2026-06-22",
+      "history": [
+        {
+          "at": "2026-06-22T21:05:00.119Z",
+          "by": "Riccardo",
+          "changes": {
+            "duplicatedFrom": "goethe-africa-europe-2026"
+          }
+        },
+        {
+          "at": "2026-06-22T21:05:17.248Z",
+          "by": "Riccardo",
+          "changes": {
+            "country": "Angola"
+          }
+        },
+        {
+          "at": "2026-06-22T21:06:46.967Z",
+          "by": "Riccardo",
+          "changes": {
+            "status": "pursuing"
+          }
+        },
+        {
+          "at": "2026-06-22T21:06:54.753Z",
+          "by": "Riccardo",
+          "changes": {
+            "status": "new"
+          }
+        },
+        {
+          "at": "2026-06-22T21:14:24.404Z",
+          "by": "anon",
+          "changes": {
+            "status": "pursuing"
+          }
+        },
+        {
+          "at": "2026-06-22T21:14:27.281Z",
+          "by": "anon",
+          "changes": {
+            "status": "new"
+          }
+        },
+        {
+          "at": "2026-06-23T09:23:06.513Z",
+          "by": "Riccardo",
+          "changes": {
+            "status": "pursuing"
+          }
+        },
+        {
+          "at": "2026-06-23T09:35:46.042Z",
+          "by": "Riccardo",
+          "changes": {
+            "status": "new"
+          }
+        },
+        {
+          "at": "2026-06-23T09:35:49.402Z",
+          "by": "Riccardo",
+          "changes": {
+            "status": "pursuing"
+          }
+        },
+        {
+          "at": "2026-06-23T10:00:00.000Z",
+          "by": "producer",
+          "changes": {
+            "production": "in_progress",
+            "note": "Producer started: Angola edition, Africa–Europe Visual Arts/Mobility strand"
+          }
+        },
+        {
+          "at": "2026-06-23T11:30:00.000Z",
+          "by": "producer",
+          "changes": {
+            "production": "drafted",
+            "note": "Drafted full INLAND Angola asset set + Goethe application docs (working title 'The Fire That Stays Lit'): deep-research report, 12 selected leads, Topics+Contacts xlsx, pitch (pptx/html), overview PDF, project description/partners/budget/timeline. Desk research; named custodians, partner confirmation and budget to confirm in the field. For review before submission."
+          }
+        }
+      ],
+      "votes": {},
+      "country": "Angola"
+    },
+    {
+      "id": "goethe-africa-europe-2026",
+      "title": "Goethe-Institut — Africa–Europe Partnerships for Culture (Visual Arts / Mobility)",
+      "funder": "Goethe-Institut",
+      "channel": "cultural-institute",
+      "link": "https://on-the-move.org/news/goethe-institut-mobility-grants-artists-and-culture-professionals-sub-saharan-africa-and",
+      "deadline": "2026-09-15",
+      "budget": "Mobility up to €4,000 (travel); Visual Arts strand larger (production)",
+      "eligibility": "Artists/cultural professionals collaborating between Sub-Saharan Africa and Europe.",
+      "fit": 4,
+      "fitRationale": "Direct territory match for the in-progress Rwanda edition; funds Africa–Europe co-creation. Mobility = scouting trip; Visual Arts = production.",
+      "territory": "Rwanda (in-progress edition)",
+      "requiredDocs": [
+        "Project description",
+        "Partner confirmation (African + European)",
+        "Budget"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "drafted",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/research-brief.md"
+        },
+        {
+          "label": "Deep-research report",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/deep-research-report.md"
+        },
+        {
+          "label": "Selected story leads",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/selected-story-leads.md"
+        },
+        {
+          "label": "Topics + Contacts (xlsx)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/INLAND_Rwanda_Topics_Contacts.xlsx"
+        },
+        {
+          "label": "Pitch deck (pptx)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/INLAND_Rwanda_Pitch.pptx"
+        },
+        {
+          "label": "Pitch (web/html)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/INLAND_Rwanda_Pitch.html"
+        },
+        {
+          "label": "Overview (PDF)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/INLAND_Rwanda_Overview.pdf"
+        },
+        {
+          "label": "Application — Project description",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/application/project-description.md"
+        },
+        {
+          "label": "Application — Partners & confirmation",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/application/partners.md"
+        },
+        {
+          "label": "Application — Budget",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/application/budget.md"
+        },
+        {
+          "label": "Application — Timeline",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/application/timeline.md"
+        }
+      ],
+      "status": "pursuing",
+      "owner": "",
+      "notes": "Quarterly mobility deadlines (next 15 Sep 2026); Visual Arts strand within €8M 2025–28 programme.",
+      "addedBy": "scout",
+      "addedAt": "2026-06-22",
+      "history": [
+        {
+          "at": "2026-06-22T20:04:05.940Z",
+          "by": "anon",
+          "changes": {
+            "flagged": true
+          }
+        },
+        {
+          "at": "2026-06-22T20:04:08.567Z",
+          "by": "anon",
+          "changes": {
+            "flagged": false
+          }
+        },
+        {
+          "at": "2026-06-22T20:04:11.141Z",
+          "by": "anon",
+          "changes": {
+            "flagged": true
+          }
+        },
+        {
+          "at": "2026-06-22T20:04:17.198Z",
+          "by": "anon",
+          "changes": {
+            "flagged": false
+          }
+        },
+        {
+          "at": "2026-06-22T20:31:58.461Z",
+          "by": "anon",
+          "changes": {
+            "vote": 1
+          }
+        },
+        {
+          "at": "2026-06-22T20:32:01.094Z",
+          "by": "anon",
+          "changes": {
+            "vote": -1
+          }
+        },
+        {
+          "at": "2026-06-22T20:32:04.530Z",
+          "by": "anon",
+          "changes": {
+            "vote": 1
+          }
+        },
+        {
+          "at": "2026-06-22T20:32:05.674Z",
+          "by": "anon",
+          "changes": {
+            "vote": 1
+          }
+        },
+        {
+          "at": "2026-06-22T20:32:08.732Z",
+          "by": "anon",
+          "changes": {
+            "vote": 0
+          }
+        },
+        {
+          "at": "2026-06-22T20:37:36.000Z",
+          "by": "producer",
+          "changes": {
+            "production": "in_progress",
+            "note": "Producer started: Rwanda edition, Africa–Europe Visual Arts strand"
+          }
+        },
+        {
+          "at": "2026-06-22T20:50:27.000Z",
+          "by": "producer",
+          "changes": {
+            "production": "drafted",
+            "note": "Drafted full INLAND Rwanda asset set + application docs for the Africa–Europe Visual Arts/Mobility strands. For review before submission."
+          }
+        },
+        {
+          "at": "2026-06-22T20:58:33.984Z",
+          "by": "Riccardo",
+          "changes": {
+            "status": "pursuing"
+          }
+        },
+        {
+          "at": "2026-06-22T21:05:46.639Z",
+          "by": "Riccardo",
+          "changes": {
+            "country": "Rwanda"
+          }
+        }
+      ],
+      "votes": {},
+      "country": "Rwanda"
+    },
+    {
+      "id": "goethe-ikf-2026-r2",
+      "title": "Goethe-Institut — International Coproduction Fund (IKF), Round 2",
+      "funder": "Goethe-Institut",
+      "channel": "cultural-institute",
+      "link": "https://www.goethe.de/en/kul/foe/int/ikf.html",
+      "deadline": "2026-10-01",
+      "budget": "€15,000–30,000 (fees, travel, production)",
+      "eligibility": "Cross-border collaboration with a German/Goethe partner; INLAND qualifies as EU producer with a co-production partner.",
+      "fit": 2,
+      "fitRationale": "Producer review: the IKF funds PERFORMING ARTS ONLY (music, theatre, dance, performance) and explicitly excludes film/visual-arts/publishing — so a standard INLAND magazine edition does not qualify. Only viable as a reframed performing-arts co-production (e.g. Bhand Pather / Dard-Shina music) with a Germany-based theatre partner. Recommend redirecting to the Goethe Africa–Europe Visual Arts fund. See research brief, Producer review.",
+      "territory": "Open — pairs with a new edition co-produced with a local partner",
+      "requiredDocs": [
+        "Project description",
+        "Budget",
+        "Timeline",
+        "Co-production/partner agreement",
+        "Team CVs"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-ikf-2026-r2/research-brief.md"
+        }
+      ],
+      "status": "archived",
+      "owner": "",
+      "notes": "Prendono solo performance art",
+      "addedBy": "scout",
+      "addedAt": "2026-06-22",
+      "history": [
+        {
+          "at": "2026-06-22T20:08:25.395Z",
+          "by": "anon",
+          "changes": {
+            "status": "pursuing"
+          }
+        },
+        {
+          "at": "2026-06-22T20:22:53.000Z",
+          "by": "producer",
+          "changes": {
+            "production": "in_progress",
+            "note": "Producer started: IKF R2 × Kashmir edition"
+          }
+        },
+        {
+          "at": "2026-06-22T20:29:36.000Z",
+          "by": "producer",
+          "changes": {
+            "production": "none",
+            "fit": 2,
+            "note": "Stopped: IKF is performing-arts-only per official Goethe guidelines; magazine edition ineligible. Reverted; recommend Africa–Europe fund or a reframed performing-arts co-production. No assets produced."
+          }
+        },
+        {
+          "at": "2026-06-22T20:31:13.777Z",
+          "by": "anon",
+          "changes": {
+            "status": "archived"
+          }
+        },
+        {
+          "at": "2026-06-22T20:31:27.012Z",
+          "by": "anon",
+          "changes": {
+            "notes": "Prendono soli performance art"
+          }
+        },
+        {
+          "at": "2026-06-22T20:31:45.065Z",
+          "by": "anon",
+          "changes": {
+            "notes": "Prendono solioperformance art"
+          }
+        },
+        {
+          "at": "2026-06-22T20:44:42.936Z",
+          "by": "anon",
+          "changes": {
+            "status": "pursuing"
+          }
+        },
+        {
+          "at": "2026-06-22T20:44:46.835Z",
+          "by": "anon",
+          "changes": {
+            "status": "archived"
+          }
+        },
+        {
+          "at": "2026-06-22T21:06:11.382Z",
+          "by": "Riccardo",
+          "changes": {
+            "notes": "Prendono solo performance art"
+          }
+        }
+      ]
+    },
+    {
+      "id": "institut-francais-mediterranee-photo-2026",
+      "title": "Institut français — Mediterranean photography support (publication + production)",
+      "funder": "Institut français",
+      "channel": "cultural-institute",
+      "link": "https://www.institutfrancais.com/en/programs",
+      "deadline": "2026-10-01",
+      "budget": "Publication: editing & printing costs covered in full; Production: support for new photographic work (Mediterranean theme)",
+      "eligibility": "Open to all professional photographers who have already exhibited or published, regardless of age or nationality; project must take the Mediterranean world as its theme. INLAND (Italy-based) qualifies.",
+      "fit": 4,
+      "fitRationale": "Nationality-open, theme-locked to the Mediterranean, and it covers INLAND's exact cost centres — editing/printing a finished edition (publication) or a fresh field shoot (production). Issue 03 (Isole Minori) already proves the register.",
+      "territory": "Mediterranean world (open) — candidate angles: northern Morocco/Rif–Tétouan; Tunisian islands; southern Italy/Basilicata",
+      "requiredDocs": [
+        "Photographic project / image edit (completed for publication strand)",
+        "Editorial / publication project description + Mediterranean-theme statement",
+        "Photographer track record (prior exhibition/publication)",
+        "Budget (editing & production costs)",
+        "Timeline to publication"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "drafted",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/research-brief.md"
+        },
+        {
+          "label": "Deep-research report",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/deep-research-report.md"
+        },
+        {
+          "label": "Selected story leads",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/selected-story-leads.md"
+        },
+        {
+          "label": "Topics + Contacts (xlsx)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/INLAND_Tunisia_Topics_Contacts.xlsx"
+        },
+        {
+          "label": "Pitch deck (pptx)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/INLAND_Tunisia_Pitch.pptx"
+        },
+        {
+          "label": "Pitch (web/html)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/INLAND_Tunisia_Pitch.html"
+        },
+        {
+          "label": "Overview (PDF)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/INLAND_Tunisia_Overview.pdf"
+        },
+        {
+          "label": "Application — Project description (Mediterranean theme)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/application/project-description.md"
+        },
+        {
+          "label": "Application — Photographic project (image edit)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/application/photographic-project.md"
+        },
+        {
+          "label": "Application — Track record",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/application/track-record.md"
+        },
+        {
+          "label": "Application — Budget",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/application/budget.md"
+        },
+        {
+          "label": "Application — Timeline",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/application/timeline.md"
+        }
+      ],
+      "status": "pursuing",
+      "owner": "",
+      "notes": "",
+      "addedBy": "scout",
+      "addedAt": "2026-06-23",
+      "history": [
+        {
+          "at": "2026-06-23T09:23:35.951Z",
+          "by": "Riccardo",
+          "changes": {
+            "country": "Tunisia"
+          }
+        },
+        {
+          "at": "2026-06-23T15:21:02.921Z",
+          "by": "Riccardo",
+          "changes": {
+            "status": "pursuing"
+          }
+        },
+        {
+          "at": "2026-06-23T16:00:00.000Z",
+          "by": "producer",
+          "changes": {
+            "production": "in_progress",
+            "note": "Producer started: Tunisia edition for the Institut français Mediterranean photography support (publication + production strands)"
+          }
+        },
+        {
+          "at": "2026-06-23T17:30:00.000Z",
+          "by": "producer",
+          "changes": {
+            "production": "drafted",
+            "note": "Drafted full INLAND Tunisia asset set + Institut français application docs (working title 'The Palm in the Sea'): deep-research report, 12 selected leads, Topics+Contacts xlsx, pitch (pptx/html), overview PDF, and application (project description + Mediterranean-theme statement, photographic project/image edit, track record, budget, timeline). Desk research; named custodians, IF strand/routing and budget to confirm. For review before submission."
+          }
+        }
+      ],
+      "country": "Tunisia"
+    },
+    {
+      "id": "anna-lindh-med-capitals-2026",
+      "title": "Anna Lindh Foundation — Mediterranean Capitals of Culture & Dialogue 2026 (2nd Call, Matera & Tétouan)",
+      "funder": "Anna Lindh Foundation",
+      "channel": "partnership",
+      "link": "https://on-the-move.org/news/anna-lindh-foundation-projects-mediterranean-capitals-culture-2026-italy-morocco",
+      "deadline": "2026-07-04",
+      "budget": "Small up to €2,500; Medium €2,500–5,000",
+      "eligibility": "Intercultural entities from the 43 Euro-Med countries running cultural/intercultural activities in Matera (Italy) or Tétouan (Morocco), non-profit, no ticket sales. INLAND (Italy) eligible.",
+      "fit": 3,
+      "fitRationale": "Both cities are genuine INLAND territory (Matera/Basilicata; Tétouan→Rif), but the call funds participatory city activities/dialogue, not a publication, and the budget is small — best as a pilot/relationship + scouting foothold, not edition funding. URGENT: deadline 4 Jul 2026.",
+      "territory": "Tétouan/Rif (Morocco) or Matera (Italy)",
+      "requiredDocs": [
+        "Activity concept (intercultural aims, location)",
+        "Work plan & budget (≤ €5,000, non-profit, no ticketing)",
+        "Team (3–5 people)",
+        "Local venue / partner indication"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/anna-lindh-med-capitals-2026/research-brief.md"
+        }
+      ],
+      "status": "archived",
+      "owner": "",
+      "notes": "",
+      "addedBy": "scout",
+      "addedAt": "2026-06-23",
+      "history": [
+        {
+          "at": "2026-06-23T09:24:06.633Z",
+          "by": "Riccardo",
+          "changes": {
+            "status": "archived"
+          }
+        }
+      ]
+    },
+    {
+      "id": "w-eugene-smith-humanistic-2026",
+      "title": "W. Eugene Smith Grant in Humanistic Photography 2026",
+      "funder": "W. Eugene Smith Memorial Fund",
+      "channel": "public-fund",
+      "link": "https://www.smithfund.org/eugene-smith-grant",
+      "deadline": "2026-09-30",
+      "budget": "US$30,000 main grant + two US$10,000 finalist grants",
+      "eligibility": "Open to photographers of any nationality; honours long-form humanistic documentary in the tradition of W. Eugene Smith. INLAND applies via/with a commissioned photographer on an edition's body of work.",
+      "fit": 4,
+      "fitRationale": "Humanistic, long-term documentary essay about the human condition — INLAND's exact register; production-scale budget. Applicant is the photographer, so INLAND partners with / nominates its edition photographer. Deadline recurs ~late Sept (call opens ~1 July); confirm when the 2026 cycle posts.",
+      "territory": "Open — pairs with any in-progress INLAND edition (the photographer's body of work on its custodians)",
+      "requiredDocs": [
+        "Project proposal / statement",
+        "Portfolio of past work (prior cohesive project)",
+        "Proposed-project image edit",
+        "Photographer bio / CV",
+        "Application fee (fee waiver available)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "drafted",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/research-brief.md"
+        },
+        {
+          "label": "Deep-research report",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/deep-research-report.md"
+        },
+        {
+          "label": "Selected story leads",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/selected-story-leads.md"
+        },
+        {
+          "label": "Topics + Contacts (xlsx)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/INLAND_Georgia_Topics_Contacts.xlsx"
+        },
+        {
+          "label": "Pitch deck (pptx)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/INLAND_Georgia_Pitch.pptx"
+        },
+        {
+          "label": "Pitch (web/html)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/INLAND_Georgia_Pitch.html"
+        },
+        {
+          "label": "Overview (PDF)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/INLAND_Georgia_Overview.pdf"
+        },
+        {
+          "label": "Application — Project statement (description + proposal)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/project-statement.md"
+        },
+        {
+          "label": "Application — Portfolio of past work",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/portfolio-past-work.md"
+        },
+        {
+          "label": "Application — Proposed-project image edit",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/proposed-project-image-edit.md"
+        },
+        {
+          "label": "Application — Photographer bio & CV",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/photographer-bio-cv.md"
+        },
+        {
+          "label": "Application — Checklist, fee & submission",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/application-checklist.md"
+        },
+        {
+          "label": "Application — Budget (indicative)",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/budget.md"
+        },
+        {
+          "label": "Application — Timeline",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/timeline.md"
+        }
+      ],
+      "status": "pursuing",
+      "owner": "",
+      "notes": "",
+      "addedBy": "scout",
+      "addedAt": "2026-06-24",
+      "country": "Georgia",
+      "history": [
+        {
+          "at": "2026-06-24T07:50:21.805Z",
+          "by": "Riccardo",
+          "changes": {
+            "vote": 1
+          }
+        },
+        {
+          "at": "2026-06-24T07:50:31.610Z",
+          "by": "Riccardo",
+          "changes": {
+            "status": "pursuing"
+          }
+        },
+        {
+          "at": "2026-06-24T07:50:42.217Z",
+          "by": "Riccardo",
+          "changes": {
+            "status": "new"
+          }
+        },
+        {
+          "at": "2026-06-24T07:50:48.008Z",
+          "by": "Riccardo",
+          "changes": {
+            "status": "pursuing"
+          }
+        },
+        {
+          "at": "2026-06-24T10:00:00.000Z",
+          "by": "producer",
+          "changes": {
+            "production": "in_progress",
+            "note": "Producer started: W. Eugene Smith Grant application anchored on a Georgia edition (Issue 02 as the photographer's prior cohesive body of work; a proposed humanistic continuation among Georgia's highland custodians)."
+          }
+        },
+        {
+          "at": "2026-06-24T12:30:00.000Z",
+          "by": "producer",
+          "changes": {
+            "production": "drafted",
+            "note": "Drafted full INLAND Georgia asset set + W. Eugene Smith application (working title 'The Quiet Country'): deep-research report (16 leads), 12 selected leads, Topics+Contacts xlsx, pitch (pptx/html), overview PDF, and Smith application docs (project statement within the 2000/3000-char limits, portfolio-of-past-work spec on Issue 02, 40-frame proposed image edit, bio/CV template, checklist/fee, budget, timeline). Desk research; named custodians, the applicant photographer, consents, 2026 deadline/fee and field windows to confirm. For review before submission."
+          }
+        }
+      ],
+      "votes": {
+        "Riccardo": 1
       }
-    ],
-    "status": "pursuing",
-    "owner": "",
-    "notes": "",
-    "addedBy": "Riccardo",
-    "addedAt": "2026-06-22",
-    "history": [
-      {
-        "at": "2026-06-22T21:05:00.119Z",
-        "by": "Riccardo",
-        "changes": {
-          "duplicatedFrom": "goethe-africa-europe-2026"
+    },
+    {
+      "id": "lucie-foundation-scholarship-2026",
+      "title": "Lucie Foundation Scholarship 2026 (Documentary / Photojournalism)",
+      "funder": "Lucie Foundation",
+      "channel": "public-fund",
+      "link": "https://www.luciefoundation.org/programs/scholarship/",
+      "deadline": "2026-08-31",
+      "budget": "Cash US$3,000 (Professional) / US$1,000 (Emerging) + camera gear; group exhibition touring House of Lucie galleries incl. Ostuni (Italy)",
+      "eligibility": "Open worldwide to professional and emerging photographers 18+; dedicated Documentary/Photojournalism category. INLAND-commissioned photographer eligible.",
+      "fit": 3,
+      "fitRationale": "Documentary/photojournalism category fits INLAND's register; budget is modest (a prize, not edition funding), but the touring exhibition — including Ostuni (Italy) — is a useful visibility/relationship foothold and the entry is low-burden. Deadline to confirm (winners announced Oct 2026; call is live now).",
+      "territory": "Open — any INLAND edition's documentary body of work",
+      "requiredDocs": [
+        "20-image project edit",
+        "Project proposal / statement",
+        "Photographer bio",
+        "Submission fee (~US$15–25 per entry)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/lucie-foundation-scholarship-2026/research-brief.md"
         }
-      },
-      {
-        "at": "2026-06-22T21:05:17.248Z",
-        "by": "Riccardo",
-        "changes": {
-          "country": "Angola"
+      ],
+      "status": "pursuing",
+      "owner": "",
+      "notes": "",
+      "addedBy": "scout",
+      "addedAt": "2026-06-24",
+      "history": [
+        {
+          "at": "2026-06-24T08:31:24.800Z",
+          "by": "Riccardo",
+          "changes": {
+            "vote": 1
+          }
+        },
+        {
+          "at": "2026-06-24T08:31:31.022Z",
+          "by": "Riccardo",
+          "changes": {
+            "status": "pursuing"
+          }
+        },
+        {
+          "at": "2026-06-24T08:44:03.052Z",
+          "by": "Riccardo",
+          "changes": {
+            "vote": 0
+          }
         }
-      },
-      {
-        "at": "2026-06-22T21:06:46.967Z",
-        "by": "Riccardo",
-        "changes": {
-          "status": "pursuing"
+      ],
+      "votes": {}
+    },
+    {
+      "id": "carmignac-photojournalism-2026",
+      "title": "Carmignac Photojournalism Award — 15th Edition (Southeast Asia)",
+      "funder": "Fondation Carmignac",
+      "channel": "public-fund",
+      "link": "https://www.fondationcarmignac.com/en/photojournalism-award/",
+      "deadline": "2026-08-19",
+      "budget": "€50,000 production grant + travelling exhibition and monograph (premiered at Visa pour l'Image)",
+      "eligibility": "Open to photographers of all nationalities, individual or collaborative; INLAND-eligible via a commissioned photographer. 2026 edition theme/territory is fixed: Southeast Asia.",
+      "fit": 2,
+      "fitRationale": "Big budget (€50k) and a real territory (SE Asia coastal/fishing communities hold rich living traditions), BUT the 15th-edition brief is investigative reporting on illegal fishing and human/environmental rights violations — an adversarial/exposé register that clashes with INLAND's 'continuity over crisis, tension not attack' discipline. Stretch; surfaced for the humans to weigh. Recommend not pursuing unless an INLAND-register angle on the set theme is found.",
+      "territory": "Southeast Asia (coastal/fishing communities) — set by the 15th-edition theme",
+      "requiredDocs": [
+        "Project proposal on the set theme",
+        "Portfolio of past work",
+        "Budget / production plan",
+        "CV",
+        "Letter of intent"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/carmignac-photojournalism-2026/research-brief.md"
         }
-      },
-      {
-        "at": "2026-06-22T21:06:54.753Z",
-        "by": "Riccardo",
-        "changes": {
-          "status": "new"
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "",
+      "addedBy": "scout",
+      "addedAt": "2026-06-24",
+      "history": [
+        {
+          "at": "2026-06-26T09:19:29.355Z",
+          "by": "Riccardo",
+          "changes": {
+            "vote": 1
+          }
+        },
+        {
+          "at": "2026-06-26T09:19:37.113Z",
+          "by": "Riccardo",
+          "changes": {
+            "status": "pursuing"
+          }
+        },
+        {
+          "at": "2026-06-26T09:20:02.394Z",
+          "by": "Riccardo",
+          "changes": {
+            "status": "new"
+          }
         }
-      },
-      {
-        "at": "2026-06-22T21:14:24.404Z",
-        "by": "anon",
-        "changes": {
-          "status": "pursuing"
-        }
-      },
-      {
-        "at": "2026-06-22T21:14:27.281Z",
-        "by": "anon",
-        "changes": {
-          "status": "new"
-        }
-      },
-      {
-        "at": "2026-06-23T09:23:06.513Z",
-        "by": "Riccardo",
-        "changes": {
-          "status": "pursuing"
-        }
-      },
-      {
-        "at": "2026-06-23T09:35:46.042Z",
-        "by": "Riccardo",
-        "changes": {
-          "status": "new"
-        }
-      },
-      {
-        "at": "2026-06-23T09:35:49.402Z",
-        "by": "Riccardo",
-        "changes": {
-          "status": "pursuing"
-        }
-      },
-      {
-        "at": "2026-06-23T10:00:00.000Z",
-        "by": "producer",
-        "changes": {
-          "production": "in_progress",
-          "note": "Producer started: Angola edition, Africa–Europe Visual Arts/Mobility strand"
-        }
-      },
-      {
-        "at": "2026-06-23T11:30:00.000Z",
-        "by": "producer",
-        "changes": {
-          "production": "drafted",
-          "note": "Drafted full INLAND Angola asset set + Goethe application docs (working title 'The Fire That Stays Lit'): deep-research report, 12 selected leads, Topics+Contacts xlsx, pitch (pptx/html), overview PDF, project description/partners/budget/timeline. Desk research; named custodians, partner confirmation and budget to confirm in the field. For review before submission."
-        }
+      ],
+      "votes": {
+        "Riccardo": 1
       }
-    ],
-    "votes": {},
-    "country": "Angola"
-  },
-  {
-    "id": "goethe-africa-europe-2026",
-    "title": "Goethe-Institut — Africa–Europe Partnerships for Culture (Visual Arts / Mobility)",
-    "funder": "Goethe-Institut",
-    "channel": "cultural-institute",
-    "link": "https://on-the-move.org/news/goethe-institut-mobility-grants-artists-and-culture-professionals-sub-saharan-africa-and",
-    "deadline": "2026-09-15",
-    "budget": "Mobility up to €4,000 (travel); Visual Arts strand larger (production)",
-    "eligibility": "Artists/cultural professionals collaborating between Sub-Saharan Africa and Europe.",
-    "fit": 4,
-    "fitRationale": "Direct territory match for the in-progress Rwanda edition; funds Africa–Europe co-creation. Mobility = scouting trip; Visual Arts = production.",
-    "territory": "Rwanda (in-progress edition)",
-    "requiredDocs": [
-      "Project description",
-      "Partner confirmation (African + European)",
-      "Budget"
-    ],
-    "researched": true,
-    "flagged": false,
-    "production": "drafted",
-    "documents": [
-      {
-        "label": "Research brief",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/research-brief.md"
-      },
-      {
-        "label": "Deep-research report",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/deep-research-report.md"
-      },
-      {
-        "label": "Selected story leads",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/selected-story-leads.md"
-      },
-      {
-        "label": "Topics + Contacts (xlsx)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/INLAND_Rwanda_Topics_Contacts.xlsx"
-      },
-      {
-        "label": "Pitch deck (pptx)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/INLAND_Rwanda_Pitch.pptx"
-      },
-      {
-        "label": "Pitch (web/html)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/INLAND_Rwanda_Pitch.html"
-      },
-      {
-        "label": "Overview (PDF)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/INLAND_Rwanda_Overview.pdf"
-      },
-      {
-        "label": "Application — Project description",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/application/project-description.md"
-      },
-      {
-        "label": "Application — Partners & confirmation",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/application/partners.md"
-      },
-      {
-        "label": "Application — Budget",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/application/budget.md"
-      },
-      {
-        "label": "Application — Timeline",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-africa-europe-2026/application/timeline.md"
-      }
-    ],
-    "status": "pursuing",
-    "owner": "",
-    "notes": "Quarterly mobility deadlines (next 15 Sep 2026); Visual Arts strand within €8M 2025–28 programme.",
-    "addedBy": "scout",
-    "addedAt": "2026-06-22",
-    "history": [
-      {
-        "at": "2026-06-22T20:04:05.940Z",
-        "by": "anon",
-        "changes": {
-          "flagged": true
-        }
-      },
-      {
-        "at": "2026-06-22T20:04:08.567Z",
-        "by": "anon",
-        "changes": {
-          "flagged": false
-        }
-      },
-      {
-        "at": "2026-06-22T20:04:11.141Z",
-        "by": "anon",
-        "changes": {
-          "flagged": true
-        }
-      },
-      {
-        "at": "2026-06-22T20:04:17.198Z",
-        "by": "anon",
-        "changes": {
-          "flagged": false
-        }
-      },
-      {
-        "at": "2026-06-22T20:31:58.461Z",
-        "by": "anon",
-        "changes": {
-          "vote": 1
-        }
-      },
-      {
-        "at": "2026-06-22T20:32:01.094Z",
-        "by": "anon",
-        "changes": {
-          "vote": -1
-        }
-      },
-      {
-        "at": "2026-06-22T20:32:04.530Z",
-        "by": "anon",
-        "changes": {
-          "vote": 1
-        }
-      },
-      {
-        "at": "2026-06-22T20:32:05.674Z",
-        "by": "anon",
-        "changes": {
-          "vote": 1
-        }
-      },
-      {
-        "at": "2026-06-22T20:32:08.732Z",
-        "by": "anon",
-        "changes": {
-          "vote": 0
-        }
-      },
-      {
-        "at": "2026-06-22T20:37:36.000Z",
-        "by": "producer",
-        "changes": {
-          "production": "in_progress",
-          "note": "Producer started: Rwanda edition, Africa–Europe Visual Arts strand"
-        }
-      },
-      {
-        "at": "2026-06-22T20:50:27.000Z",
-        "by": "producer",
-        "changes": {
-          "production": "drafted",
-          "note": "Drafted full INLAND Rwanda asset set + application docs for the Africa–Europe Visual Arts/Mobility strands. For review before submission."
-        }
-      },
-      {
-        "at": "2026-06-22T20:58:33.984Z",
-        "by": "Riccardo",
-        "changes": {
-          "status": "pursuing"
-        }
-      },
-      {
-        "at": "2026-06-22T21:05:46.639Z",
-        "by": "Riccardo",
-        "changes": {
-          "country": "Rwanda"
-        }
-      }
-    ],
-    "votes": {},
-    "country": "Rwanda"
-  },
-  {
-    "id": "goethe-ikf-2026-r2",
-    "title": "Goethe-Institut — International Coproduction Fund (IKF), Round 2",
-    "funder": "Goethe-Institut",
-    "channel": "cultural-institute",
-    "link": "https://www.goethe.de/en/kul/foe/int/ikf.html",
-    "deadline": "2026-10-01",
-    "budget": "€15,000–30,000 (fees, travel, production)",
-    "eligibility": "Cross-border collaboration with a German/Goethe partner; INLAND qualifies as EU producer with a co-production partner.",
-    "fit": 2,
-    "fitRationale": "Producer review: the IKF funds PERFORMING ARTS ONLY (music, theatre, dance, performance) and explicitly excludes film/visual-arts/publishing — so a standard INLAND magazine edition does not qualify. Only viable as a reframed performing-arts co-production (e.g. Bhand Pather / Dard-Shina music) with a Germany-based theatre partner. Recommend redirecting to the Goethe Africa–Europe Visual Arts fund. See research brief, Producer review.",
-    "territory": "Open — pairs with a new edition co-produced with a local partner",
-    "requiredDocs": [
-      "Project description",
-      "Budget",
-      "Timeline",
-      "Co-production/partner agreement",
-      "Team CVs"
-    ],
-    "researched": true,
-    "flagged": false,
-    "production": "none",
-    "documents": [
-      {
-        "label": "Research brief",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/goethe-ikf-2026-r2/research-brief.md"
-      }
-    ],
-    "status": "archived",
-    "owner": "",
-    "notes": "Prendono solo performance art",
-    "addedBy": "scout",
-    "addedAt": "2026-06-22",
-    "history": [
-      {
-        "at": "2026-06-22T20:08:25.395Z",
-        "by": "anon",
-        "changes": {
-          "status": "pursuing"
-        }
-      },
-      {
-        "at": "2026-06-22T20:22:53.000Z",
-        "by": "producer",
-        "changes": {
-          "production": "in_progress",
-          "note": "Producer started: IKF R2 × Kashmir edition"
-        }
-      },
-      {
-        "at": "2026-06-22T20:29:36.000Z",
-        "by": "producer",
-        "changes": {
-          "production": "none",
-          "fit": 2,
-          "note": "Stopped: IKF is performing-arts-only per official Goethe guidelines; magazine edition ineligible. Reverted; recommend Africa–Europe fund or a reframed performing-arts co-production. No assets produced."
-        }
-      },
-      {
-        "at": "2026-06-22T20:31:13.777Z",
-        "by": "anon",
-        "changes": {
-          "status": "archived"
-        }
-      },
-      {
-        "at": "2026-06-22T20:31:27.012Z",
-        "by": "anon",
-        "changes": {
-          "notes": "Prendono soli performance art"
-        }
-      },
-      {
-        "at": "2026-06-22T20:31:45.065Z",
-        "by": "anon",
-        "changes": {
-          "notes": "Prendono solioperformance art"
-        }
-      },
-      {
-        "at": "2026-06-22T20:44:42.936Z",
-        "by": "anon",
-        "changes": {
-          "status": "pursuing"
-        }
-      },
-      {
-        "at": "2026-06-22T20:44:46.835Z",
-        "by": "anon",
-        "changes": {
-          "status": "archived"
-        }
-      },
-      {
-        "at": "2026-06-22T21:06:11.382Z",
-        "by": "Riccardo",
-        "changes": {
-          "notes": "Prendono solo performance art"
-        }
-      }
-    ]
-  },
-  {
-    "id": "institut-francais-mediterranee-photo-2026",
-    "title": "Institut français — Mediterranean photography support (publication + production)",
-    "funder": "Institut français",
-    "channel": "cultural-institute",
-    "link": "https://www.institutfrancais.com/en/programs",
-    "deadline": "2026-10-01",
-    "budget": "Publication: editing & printing costs covered in full; Production: support for new photographic work (Mediterranean theme)",
-    "eligibility": "Open to all professional photographers who have already exhibited or published, regardless of age or nationality; project must take the Mediterranean world as its theme. INLAND (Italy-based) qualifies.",
-    "fit": 4,
-    "fitRationale": "Nationality-open, theme-locked to the Mediterranean, and it covers INLAND's exact cost centres — editing/printing a finished edition (publication) or a fresh field shoot (production). Issue 03 (Isole Minori) already proves the register.",
-    "territory": "Mediterranean world (open) — candidate angles: northern Morocco/Rif–Tétouan; Tunisian islands; southern Italy/Basilicata",
-    "requiredDocs": [
-      "Photographic project / image edit (completed for publication strand)",
-      "Editorial / publication project description + Mediterranean-theme statement",
-      "Photographer track record (prior exhibition/publication)",
-      "Budget (editing & production costs)",
-      "Timeline to publication"
-    ],
-    "researched": true,
-    "flagged": false,
-    "production": "drafted",
-    "documents": [
-      {
-        "label": "Research brief",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/research-brief.md"
-      },
-      {
-        "label": "Deep-research report",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/deep-research-report.md"
-      },
-      {
-        "label": "Selected story leads",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/selected-story-leads.md"
-      },
-      {
-        "label": "Topics + Contacts (xlsx)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/INLAND_Tunisia_Topics_Contacts.xlsx"
-      },
-      {
-        "label": "Pitch deck (pptx)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/INLAND_Tunisia_Pitch.pptx"
-      },
-      {
-        "label": "Pitch (web/html)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/INLAND_Tunisia_Pitch.html"
-      },
-      {
-        "label": "Overview (PDF)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/INLAND_Tunisia_Overview.pdf"
-      },
-      {
-        "label": "Application — Project description (Mediterranean theme)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/application/project-description.md"
-      },
-      {
-        "label": "Application — Photographic project (image edit)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/application/photographic-project.md"
-      },
-      {
-        "label": "Application — Track record",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/application/track-record.md"
-      },
-      {
-        "label": "Application — Budget",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/application/budget.md"
-      },
-      {
-        "label": "Application — Timeline",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/institut-francais-mediterranee-photo-2026/application/timeline.md"
-      }
-    ],
-    "status": "pursuing",
-    "owner": "",
-    "notes": "",
-    "addedBy": "scout",
-    "addedAt": "2026-06-23",
-    "history": [
-      {
-        "at": "2026-06-23T09:23:35.951Z",
-        "by": "Riccardo",
-        "changes": {
-          "country": "Tunisia"
-        }
-      },
-      {
-        "at": "2026-06-23T15:21:02.921Z",
-        "by": "Riccardo",
-        "changes": {
-          "status": "pursuing"
-        }
-      },
-      {
-        "at": "2026-06-23T16:00:00.000Z",
-        "by": "producer",
-        "changes": {
-          "production": "in_progress",
-          "note": "Producer started: Tunisia edition for the Institut français Mediterranean photography support (publication + production strands)"
-        }
-      },
-      {
-        "at": "2026-06-23T17:30:00.000Z",
-        "by": "producer",
-        "changes": {
-          "production": "drafted",
-          "note": "Drafted full INLAND Tunisia asset set + Institut français application docs (working title 'The Palm in the Sea'): deep-research report, 12 selected leads, Topics+Contacts xlsx, pitch (pptx/html), overview PDF, and application (project description + Mediterranean-theme statement, photographic project/image edit, track record, budget, timeline). Desk research; named custodians, IF strand/routing and budget to confirm. For review before submission."
-        }
-      }
-    ],
-    "country": "Tunisia"
-  },
-  {
-    "id": "anna-lindh-med-capitals-2026",
-    "title": "Anna Lindh Foundation — Mediterranean Capitals of Culture & Dialogue 2026 (2nd Call, Matera & Tétouan)",
-    "funder": "Anna Lindh Foundation",
-    "channel": "partnership",
-    "link": "https://on-the-move.org/news/anna-lindh-foundation-projects-mediterranean-capitals-culture-2026-italy-morocco",
-    "deadline": "2026-07-04",
-    "budget": "Small up to €2,500; Medium €2,500–5,000",
-    "eligibility": "Intercultural entities from the 43 Euro-Med countries running cultural/intercultural activities in Matera (Italy) or Tétouan (Morocco), non-profit, no ticket sales. INLAND (Italy) eligible.",
-    "fit": 3,
-    "fitRationale": "Both cities are genuine INLAND territory (Matera/Basilicata; Tétouan→Rif), but the call funds participatory city activities/dialogue, not a publication, and the budget is small — best as a pilot/relationship + scouting foothold, not edition funding. URGENT: deadline 4 Jul 2026.",
-    "territory": "Tétouan/Rif (Morocco) or Matera (Italy)",
-    "requiredDocs": [
-      "Activity concept (intercultural aims, location)",
-      "Work plan & budget (≤ €5,000, non-profit, no ticketing)",
-      "Team (3–5 people)",
-      "Local venue / partner indication"
-    ],
-    "researched": true,
-    "flagged": false,
-    "production": "none",
-    "documents": [
-      {
-        "label": "Research brief",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/anna-lindh-med-capitals-2026/research-brief.md"
-      }
-    ],
-    "status": "archived",
-    "owner": "",
-    "notes": "",
-    "addedBy": "scout",
-    "addedAt": "2026-06-23",
-    "history": [
-      {
-        "at": "2026-06-23T09:24:06.633Z",
-        "by": "Riccardo",
-        "changes": {
-          "status": "archived"
-        }
-      }
-    ]
-  },
-  {
-    "id": "w-eugene-smith-humanistic-2026",
-    "title": "W. Eugene Smith Grant in Humanistic Photography 2026",
-    "funder": "W. Eugene Smith Memorial Fund",
-    "channel": "public-fund",
-    "link": "https://www.smithfund.org/eugene-smith-grant",
-    "deadline": "2026-09-30",
-    "budget": "US$30,000 main grant + two US$10,000 finalist grants",
-    "eligibility": "Open to photographers of any nationality; honours long-form humanistic documentary in the tradition of W. Eugene Smith. INLAND applies via/with a commissioned photographer on an edition's body of work.",
-    "fit": 4,
-    "fitRationale": "Humanistic, long-term documentary essay about the human condition — INLAND's exact register; production-scale budget. Applicant is the photographer, so INLAND partners with / nominates its edition photographer. Deadline recurs ~late Sept (call opens ~1 July); confirm when the 2026 cycle posts.",
-    "territory": "Open — pairs with any in-progress INLAND edition (the photographer's body of work on its custodians)",
-    "requiredDocs": [
-      "Project proposal / statement",
-      "Portfolio of past work (prior cohesive project)",
-      "Proposed-project image edit",
-      "Photographer bio / CV",
-      "Application fee (fee waiver available)"
-    ],
-    "researched": true,
-    "flagged": false,
-    "production": "drafted",
-    "documents": [
-      {
-        "label": "Research brief",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/research-brief.md"
-      },
-      {
-        "label": "Deep-research report",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/deep-research-report.md"
-      },
-      {
-        "label": "Selected story leads",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/selected-story-leads.md"
-      },
-      {
-        "label": "Topics + Contacts (xlsx)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/INLAND_Georgia_Topics_Contacts.xlsx"
-      },
-      {
-        "label": "Pitch deck (pptx)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/INLAND_Georgia_Pitch.pptx"
-      },
-      {
-        "label": "Pitch (web/html)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/INLAND_Georgia_Pitch.html"
-      },
-      {
-        "label": "Overview (PDF)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/INLAND_Georgia_Overview.pdf"
-      },
-      {
-        "label": "Application — Project statement (description + proposal)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/project-statement.md"
-      },
-      {
-        "label": "Application — Portfolio of past work",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/portfolio-past-work.md"
-      },
-      {
-        "label": "Application — Proposed-project image edit",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/proposed-project-image-edit.md"
-      },
-      {
-        "label": "Application — Photographer bio & CV",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/photographer-bio-cv.md"
-      },
-      {
-        "label": "Application — Checklist, fee & submission",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/application-checklist.md"
-      },
-      {
-        "label": "Application — Budget (indicative)",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/budget.md"
-      },
-      {
-        "label": "Application — Timeline",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/w-eugene-smith-humanistic-2026/application/timeline.md"
-      }
-    ],
-    "status": "pursuing",
-    "owner": "",
-    "notes": "",
-    "addedBy": "scout",
-    "addedAt": "2026-06-24",
-    "country": "Georgia",
-    "history": [
-      {
-        "at": "2026-06-24T07:50:21.805Z",
-        "by": "Riccardo",
-        "changes": {
-          "vote": 1
-        }
-      },
-      {
-        "at": "2026-06-24T07:50:31.610Z",
-        "by": "Riccardo",
-        "changes": {
-          "status": "pursuing"
-        }
-      },
-      {
-        "at": "2026-06-24T07:50:42.217Z",
-        "by": "Riccardo",
-        "changes": {
-          "status": "new"
-        }
-      },
-      {
-        "at": "2026-06-24T07:50:48.008Z",
-        "by": "Riccardo",
-        "changes": {
-          "status": "pursuing"
-        }
-      },
-      {
-        "at": "2026-06-24T10:00:00.000Z",
-        "by": "producer",
-        "changes": {
-          "production": "in_progress",
-          "note": "Producer started: W. Eugene Smith Grant application anchored on a Georgia edition (Issue 02 as the photographer's prior cohesive body of work; a proposed humanistic continuation among Georgia's highland custodians)."
-        }
-      },
-      {
-        "at": "2026-06-24T12:30:00.000Z",
-        "by": "producer",
-        "changes": {
-          "production": "drafted",
-          "note": "Drafted full INLAND Georgia asset set + W. Eugene Smith application (working title 'The Quiet Country'): deep-research report (16 leads), 12 selected leads, Topics+Contacts xlsx, pitch (pptx/html), overview PDF, and Smith application docs (project statement within the 2000/3000-char limits, portfolio-of-past-work spec on Issue 02, 40-frame proposed image edit, bio/CV template, checklist/fee, budget, timeline). Desk research; named custodians, the applicant photographer, consents, 2026 deadline/fee and field windows to confirm. For review before submission."
-        }
-      }
-    ],
-    "votes": {
-      "Riccardo": 1
     }
-  },
-  {
-    "id": "lucie-foundation-scholarship-2026",
-    "title": "Lucie Foundation Scholarship 2026 (Documentary / Photojournalism)",
-    "funder": "Lucie Foundation",
-    "channel": "public-fund",
-    "link": "https://www.luciefoundation.org/programs/scholarship/",
-    "deadline": "2026-08-31",
-    "budget": "Cash US$3,000 (Professional) / US$1,000 (Emerging) + camera gear; group exhibition touring House of Lucie galleries incl. Ostuni (Italy)",
-    "eligibility": "Open worldwide to professional and emerging photographers 18+; dedicated Documentary/Photojournalism category. INLAND-commissioned photographer eligible.",
-    "fit": 3,
-    "fitRationale": "Documentary/photojournalism category fits INLAND's register; budget is modest (a prize, not edition funding), but the touring exhibition — including Ostuni (Italy) — is a useful visibility/relationship foothold and the entry is low-burden. Deadline to confirm (winners announced Oct 2026; call is live now).",
-    "territory": "Open — any INLAND edition's documentary body of work",
-    "requiredDocs": [
-      "20-image project edit",
-      "Project proposal / statement",
-      "Photographer bio",
-      "Submission fee (~US$15–25 per entry)"
-    ],
-    "researched": true,
-    "flagged": false,
-    "production": "none",
-    "documents": [
-      {
-        "label": "Research brief",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/lucie-foundation-scholarship-2026/research-brief.md"
-      }
-    ],
-    "status": "pursuing",
-    "owner": "",
-    "notes": "",
-    "addedBy": "scout",
-    "addedAt": "2026-06-24",
-    "history": [
-      {
-        "at": "2026-06-24T08:31:24.800Z",
-        "by": "Riccardo",
-        "changes": {
-          "vote": 1
-        }
-      },
-      {
-        "at": "2026-06-24T08:31:31.022Z",
-        "by": "Riccardo",
-        "changes": {
-          "status": "pursuing"
-        }
-      },
-      {
-        "at": "2026-06-24T08:44:03.052Z",
-        "by": "Riccardo",
-        "changes": {
-          "vote": 0
-        }
-      }
-    ],
-    "votes": {}
-  },
-  {
-    "id": "carmignac-photojournalism-2026",
-    "title": "Carmignac Photojournalism Award — 15th Edition (Southeast Asia)",
-    "funder": "Fondation Carmignac",
-    "channel": "public-fund",
-    "link": "https://www.fondationcarmignac.com/en/photojournalism-award/",
-    "deadline": "2026-08-19",
-    "budget": "€50,000 production grant + travelling exhibition and monograph (premiered at Visa pour l'Image)",
-    "eligibility": "Open to photographers of all nationalities, individual or collaborative; INLAND-eligible via a commissioned photographer. 2026 edition theme/territory is fixed: Southeast Asia.",
-    "fit": 2,
-    "fitRationale": "Big budget (€50k) and a real territory (SE Asia coastal/fishing communities hold rich living traditions), BUT the 15th-edition brief is investigative reporting on illegal fishing and human/environmental rights violations — an adversarial/exposé register that clashes with INLAND's 'continuity over crisis, tension not attack' discipline. Stretch; surfaced for the humans to weigh. Recommend not pursuing unless an INLAND-register angle on the set theme is found.",
-    "territory": "Southeast Asia (coastal/fishing communities) — set by the 15th-edition theme",
-    "requiredDocs": [
-      "Project proposal on the set theme",
-      "Portfolio of past work",
-      "Budget / production plan",
-      "CV",
-      "Letter of intent"
-    ],
-    "researched": true,
-    "flagged": false,
-    "production": "none",
-    "documents": [
-      {
-        "label": "Research brief",
-        "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/carmignac-photojournalism-2026/research-brief.md"
-      }
-    ],
-    "status": "new",
-    "owner": "",
-    "notes": "",
-    "addedBy": "scout",
-    "addedAt": "2026-06-24",
-    "history": [
-      {
-        "at": "2026-06-26T09:19:29.355Z",
-        "by": "Riccardo",
-        "changes": {
-          "vote": 1
-        }
-      },
-      {
-        "at": "2026-06-26T09:19:37.113Z",
-        "by": "Riccardo",
-        "changes": {
-          "status": "pursuing"
-        }
-      },
-      {
-        "at": "2026-06-26T09:20:02.394Z",
-        "by": "Riccardo",
-        "changes": {
-          "status": "new"
-        }
-      }
-    ],
-    "votes": {
-      "Riccardo": 1
-    }
-  }
-]
+  ]
+}

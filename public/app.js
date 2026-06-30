@@ -28,7 +28,7 @@ const DL = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-wi
 
 // ---------- auth ----------
 async function checkAuth() {
-  const r = await fetch("/api/login");
+  const r = await fetch("/api/login", { cache: "no-store" });
   const j = await r.json();
   return j.authed;
 }
@@ -51,9 +51,28 @@ $("#logout").addEventListener("click", async () => {
 
 // ---------- data ----------
 async function load() {
-  const r = await fetch("/api/opportunities");
+  let r;
+  try {
+    r = await fetch("/api/opportunities", { cache: "no-store" });
+  } catch {
+    showLoadError("Network error — couldn't reach the server. Check your connection and Refresh.");
+    return;
+  }
   if (r.status === 401) { showGate(); return; }
-  STATE = await r.json();
+  if (!r.ok) {
+    let msg = `Failed to load opportunities — HTTP ${r.status}`;
+    try { const j = await r.json(); if (j && j.error) msg += ` · ${j.error}`; } catch {}
+    showLoadError(msg);
+    return;
+  }
+  let data;
+  try { data = await r.json(); } catch { data = null; }
+  if (!data || !Array.isArray(data.opportunities)) {
+    showLoadError("Loaded, but the data was empty or malformed. Try Refresh; if it persists, check the server.");
+    return;
+  }
+  hideLoadError();
+  STATE = data;
   render();
 }
 async function patch(id, changes) {
@@ -590,6 +609,8 @@ function toast(msg) {
 }
 function showGate() { $("#gate").classList.remove("hidden"); $("#app").classList.add("hidden"); }
 function showApp() { $("#gate").classList.add("hidden"); $("#app").classList.remove("hidden"); }
+function showLoadError(msg) { const el = $("#load-error"); if (!el) return; el.textContent = msg; el.classList.remove("hidden"); }
+function hideLoadError() { const el = $("#load-error"); if (!el) return; el.textContent = ""; el.classList.add("hidden"); }
 
 async function boot() { showApp(); renderIdentity(); await load(); }
 

@@ -157,6 +157,18 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
 .identity:hover { border-color: var(--accent); color: var(--accent); }
 .identity b { font-weight: 500; color: var(--accent); }
 
+/* ---- Load error banner -------------------------------------------------- */
+.load-error {
+  margin: 16px 0 2px;
+  padding: 10px 14px;
+  border: 1px solid var(--danger);
+  border-radius: var(--radius);
+  background: rgba(138, 58, 58, 0.08);
+  color: var(--danger);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
 /* ---- Legend ------------------------------------------------------------- */
 .legend { display: flex; gap: 8px; align-items: center; margin: 16px 0 2px; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
 .legend-label { font-family: var(--font-label); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; }
