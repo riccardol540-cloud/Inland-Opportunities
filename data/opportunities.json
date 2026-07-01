@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-06-30T18:25:18.803Z",
+    "lastUpdated": "2026-07-01T00:00:00.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -874,6 +874,79 @@
       "votes": {
         "Riccardo": 1
       }
+    },
+    {
+      "id": "allianz-kulturstiftung-europe-2026",
+      "title": "Allianz Kulturstiftung — \"The Art of Bringing Europe Together\" (translocal project grant)",
+      "funder": "Allianz Kulturstiftung (Allianz Foundation)",
+      "channel": "public-fund",
+      "link": "https://on-the-move.org/news/allianz-kulturstiftung-call-projects-art-bringing-europe-together",
+      "deadline": "2026-12-01",
+      "budget": "€40,000–€80,000 (max 50% of total project costs; co-financing required)",
+      "eligibility": "European cultural actors running translocal projects (partners from different countries/regions); funds non-profit partners and projects. INLAND qualifies via a non-profit partner + a cross-border partner.",
+      "fit": 3,
+      "fitRationale": "Real budget and a rolling door; the 'translocal / across borders' frame is a natural home for an INLAND borderland-and-minority edition. Held at 3 by the ≥50% co-financing requirement and the non-profit framing (needs the right applicant structure). Rolling submissions; board decides in July and December.",
+      "territory": "Translocal Europe — lead candidate: the Arbëreshë (Albanian-speaking, Byzantine-rite communities of Calabria/Basilicata/Sicily) in dialogue with Albania: endangered language, ritual laments, Easter Vallja dances",
+      "requiredDocs": [
+        "Project description (translocal concept + 'bringing Europe together' angle)",
+        "Partners & letters of intent (cross-border + non-profit partner)",
+        "Budget (showing ≥50% co-financing)",
+        "Timeline / work plan",
+        "Team CVs / track record"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/allianz-kulturstiftung-europe-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "Rolling call — no hard deadline; deadline field points at the next (Dec 2026) board decision. Needs ≥50% co-financing and a non-profit + cross-border partner. Allianz Foundation site 403'd automated fetch; confirm terms at allianzfoundation.org.",
+      "addedBy": "scout",
+      "addedAt": "2026-07-01",
+      "history": [],
+      "votes": {},
+      "country": "Italy / Albania (Arbëreshë)"
+    },
+    {
+      "id": "phmuseum-women-photographers-2026",
+      "title": "PhMuseum 2026 Women Photographers Grant",
+      "funder": "PhMuseum",
+      "channel": "public-fund",
+      "link": "https://phmuseum.com/grants/2026-women-photographers-grant",
+      "deadline": "2026-10-10",
+      "budget": "€10,000 total cash prize pool + publication, exhibition and portfolio visibility",
+      "eligibility": "Open worldwide to women and non-binary photographers 18+, professional or emerging. INLAND applies via a commissioned woman photographer presenting an edition's body of work.",
+      "fit": 3,
+      "fitRationale": "Documentary/visual-storytelling register squarely in INLAND's tradition, run by a respected Italian platform (Bologna). A prize, not production funding, and the applicant must be the photographer — works when a commissioned woman photographer carries an edition's series. Solid opportunistic 3.",
+      "territory": "Open — any in-progress INLAND edition's documentary body of work, carried by its woman photographer (e.g. women-led / ritual-lament threads from the Georgia, Tunisia or Rwanda/Angola research)",
+      "requiredDocs": [
+        "Project series edit (cohesive body of work)",
+        "Project statement / narrative",
+        "Photographer bio",
+        "Entry fee (~€25–30 per project)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/phmuseum-women-photographers-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "Reduced entry fee €25 until 19 Sept, €30 until 10 Oct; judging Oct–Nov, shortlist before 20 Nov. Confirm 2026 cash split and final entry date on the official grant page.",
+      "addedBy": "scout",
+      "addedAt": "2026-07-01",
+      "history": [],
+      "votes": {},
+      "country": ""
     }
   ]
 }
