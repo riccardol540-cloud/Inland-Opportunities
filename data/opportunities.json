@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-07-02T08:43:57.927Z",
+    "lastUpdated": "2026-07-08T09:00:00.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -963,6 +963,111 @@
       "history": [],
       "votes": {},
       "country": ""
+    },
+    {
+      "id": "le-stanze-immagini-trame-acqua-2026",
+      "title": "Le Stanze della Fotografia — Open Call 2026 \"Immagini e trame d'acqua\" (water & heritage)",
+      "funder": "Fondazione Le Stanze della Fotografia (Venice)",
+      "channel": "public-fund",
+      "link": "https://www.lestanzedellafotografia.it/en/homepage/open-call",
+      "deadline": "2026-09-30",
+      "budget": "No cash grant confirmed — selection into a curated exhibition at Le Stanze della Fotografia, Venice (visibility / relationship foothold)",
+      "eligibility": "Free and open internationally to photographers, videomakers and writers (adults). INLAND (Italy-based, published) qualifies directly.",
+      "fit": 3,
+      "fitRationale": "Squarely in INLAND's register — place-based visual storytelling on water within cultural/landscape heritage, in INLAND's own photo+text+video format — but it is an exhibition selection, not edition funding. Best as a low-burden Venice visibility foothold and a way to field-test a water-heritage lead.",
+      "territory": "Italy — under-documented water cultures: Sardinia (Cabras/Santa Giusta reed-boat 'fassoni' fishers, bottarga, San Salvatore race) or the Po Delta (Comacchio eel-fishing 'casoni' & 'vallanti'); call also admits other UNESCO water heritage worldwide",
+      "requiredDocs": [
+        "Selected images / video / text on the water-heritage theme",
+        "Short project statement tying work to a cultural/landscape (UNESCO-adjacent) water heritage",
+        "Author details (submit by email by 30 Sep 2026)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/le-stanze-immagini-trame-acqua-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "Free entry; submit by email (opencallstanze@gmail.com). Deadline 30 Sep 2026 unless extended. Official page 403'd automated fetch — re-verify specs, rights and any production/travel contribution on lestanzedellafotografia.it.",
+      "addedBy": "scout",
+      "addedAt": "2026-07-08",
+      "history": [],
+      "votes": {},
+      "country": "Italy"
+    },
+    {
+      "id": "eidolon-grant-vernacular-2026",
+      "title": "Eidolon Grant 2026 — Vernacular / Everyday Photography (€25,000)",
+      "funder": "Eidolon Centre for Everyday Photography",
+      "channel": "public-fund",
+      "link": "https://everydayphotography.org/centre/grant-2026",
+      "deadline": "2026-09-30",
+      "budget": "€25,000 total across two categories; spendable on fees, travel, preparation/production and partner costs",
+      "eligibility": "International, free entry — artists, scholars, researchers and professionals of vernacular photography. INLAND / a commissioned researcher-photographer eligible.",
+      "fit": 3,
+      "fitRationale": "Adjacent but real money on a free entry. Eidolon funds vernacular/archival image cultures rather than newly commissioned documentary, but a territory's own vernacular photographic memory (family albums, studio portraiture, migration photos) is exactly an archive of a place 'before it becomes history' — a well-framed proposal sits alongside a future edition.",
+      "territory": "Open — pair with a territory's vernacular photographic memory: highland Georgia/Caucasus (Soviet-era studio & family photography) or the Arbëreshë (diaspora family albums, Vallja/wedding/lament photographs)",
+      "requiredDocs": [
+        "Project proposal (Contemporary or Historical category) + statement of past relevant work",
+        "Budget / use-of-funds plan",
+        "Portfolio / prior work sample; author details"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/eidolon-grant-vernacular-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "Free entry; deadline 30 Sep 2026 23:59. Confirm the exact split of the €25k across categories, whether an organisation (not only an individual) may apply, and whether newly commissioned (vs archive-based) work qualifies, on everydayphotography.org.",
+      "addedBy": "scout",
+      "addedAt": "2026-07-08",
+      "history": [],
+      "votes": {},
+      "country": ""
+    },
+    {
+      "id": "strategia-fotografia-mic-2027",
+      "title": "Strategia Fotografia (MiC / DGCC) — national fund for commissioning & editorial photography [RADAR: 2026 closed, annual]",
+      "funder": "Ministero della Cultura — Direzione Generale Creatività Contemporanea (DGCC)",
+      "channel": "public-fund",
+      "link": "https://creativitacontemporanea.cultura.gov.it/strategia-fotografia/",
+      "deadline": "2027-04-15",
+      "budget": "€2,000,000 total (2026 ref): €1.3M Acquisition & Commissioning, €700k Promotion (exhibitions + editorial photography productions)",
+      "eligibility": "Italian national public fund. Area 1 outputs must be assigned to an Italian public collection (needs a public-institution partner); confirm whether a private cultural producer/publisher may apply directly to Sections II–IV on the official bando.",
+      "fit": 4,
+      "fitRationale": "Arguably the single most on-profile Italian national fund for INLAND, currently absent from the board. Section IV (editorial photography productions) maps onto funding an INLAND issue; Section II (commissioning new work) onto an edition's field photography. Held at 4 by the Italian-public-collection condition and unconfirmed private-applicant eligibility.",
+      "territory": "Italy (or Italy-anchored) — the Arbëreshë (Calabria/Basilicata/Sicily), Sardinian pastoral & lagoon cultures, or the Appennine 'aree interne'; commission new work for a public collection paired with an editorial production (the INLAND issue)",
+      "requiredDocs": [
+        "Project proposal per section (acquisition / commissioning / exhibition / editorial production)",
+        "Budget and work plan; partner Italian public collection (for Area 1)",
+        "Applicant credentials / track record; SPID/CIE registration on the DGCC Call Portal"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/strategia-fotografia-mic-2027/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "RADAR / recurring annual fund — the 2026 (6th) edition CLOSED 15 Apr 2026. Deadline shown (~15 Apr 2027) is an ESTIMATE for the next edition; DGCC typically opens late Feb, closes mid-Apr. Not currently open — confirm 2027 dates, sections and eligibility on the official avviso before treating as actionable. Sister call to watch: Italian Council (closed 31 Mar 2026, also annual).",
+      "addedBy": "scout",
+      "addedAt": "2026-07-08",
+      "history": [],
+      "votes": {},
+      "country": "Italy"
     }
   ]
 }
