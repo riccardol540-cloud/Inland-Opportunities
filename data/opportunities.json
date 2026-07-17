@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-07-17T16:43:03.707Z",
+    "lastUpdated": "2026-07-17T16:43:14.367Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -30,7 +30,9 @@
       "status": "pursuing",
       "researched": true,
       "fit": 4,
-      "votes": {},
+      "votes": {
+        "anon": 1
+      },
       "production": "none",
       "documents": [
         {
@@ -45,6 +47,13 @@
           "by": "anon",
           "changes": {
             "status": "pursuing"
+          }
+        },
+        {
+          "at": "2026-07-17T16:43:14.367Z",
+          "by": "anon",
+          "changes": {
+            "vote": 1
           }
         }
       ],
