@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-07-21T14:35:29.102Z",
+    "lastUpdated": "2026-07-21T14:35:33.515Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -1085,7 +1085,7 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/strategia-fotografia-mic-2027/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "pursuing",
       "owner": "",
       "notes": "RADAR / recurring annual fund — the 2026 (6th) edition CLOSED 15 Apr 2026. Deadline shown (~15 Apr 2027) is an ESTIMATE for the next edition; DGCC typically opens late Feb, closes mid-Apr. Not currently open — confirm 2027 dates, sections and eligibility on the official avviso before treating as actionable. Sister call to watch: Italian Council (closed 31 Mar 2026, also annual).",
       "addedBy": "scout",
@@ -1131,6 +1131,13 @@
           "by": "Riccardo",
           "changes": {
             "vote": 1
+          }
+        },
+        {
+          "at": "2026-07-21T14:35:33.515Z",
+          "by": "Riccardo",
+          "changes": {
+            "status": "pursuing"
           }
         }
       ],
