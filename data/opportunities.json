@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-07-21T14:35:33.515Z",
+    "lastUpdated": "2026-07-22T00:00:00.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -12,11 +12,28 @@
       "country": "Albania",
       "id": "opp-1782981837927",
       "status": "new",
-      "researched": false,
-      "fit": null,
+      "researched": true,
+      "fit": 4,
+      "fitRationale": "Albania is a genuine INLAND territory — a loud story (Hoxha isolation, bunkers, emigration) crowding out a quiet country of endangered living traditions with named custodians, locatable places and real seasons (iso-polyphony around Gjirokastër/Përmet; northern-Alps Kanun world & burrnesha; Vjosa river & Aromanian pastoralism). Scored on editorial fit; no single funder locked yet — see brief for routes (British Council CTC, next Creative Europe round, MiC Strategia Fotografia via the Arbëreshë, Allianz Arbëreshë↔Albania).",
+      "channel": "partnership",
+      "funder": "",
+      "budget": "Route-dependent (see brief): e.g. British Council CTC £5–15k; Creative Europe Cooperation up to €200k; MiC Strategia Fotografia (Arbëreshë bridge)",
+      "eligibility": "As an Italy/EU publisher INLAND can pursue Albania via cross-border partnership (Italy–Albania or UK–Italy) or an Italy-anchored Arbëreshë frame; direct Western Balkans (UNESCO CC4WBs) funds need an Albanian resident partner.",
+      "territory": "Albania — iso-polyphony (Lab/Tosk) custodians around Gjirokastër/Përmet/Vlorë; northern Alps Kanun world & the burrnesha (Theth, Kelmend, Dukagjin); Vjosa Wild River communities; Aromanian/Vlach transhumance (Voskopojë/Korçë); Lake Ohrid/Lin fishing",
+      "requiredDocs": [
+        "Project concept (custodians, places, seasonal scenes) + European/Mediterranean angle",
+        "Cross-border partner(s) — Albanian institution and/or UK/EU co-applicant",
+        "Budget and timeline",
+        "Proof of prior international cultural activity (published issues)"
+      ],
       "votes": {},
       "production": "none",
-      "documents": [],
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/opp-1782981837927/research-brief.md"
+        }
+      ],
       "owner": "Riccardo",
       "history": [
         {
@@ -1216,6 +1233,112 @@
       "notes": "Rolling — no deadline; apply anytime. Date shown is a nominal placeholder, not a real cut-off. Requires a letter of interest/commitment from a publishing outlet and a distribution plan; register the INLAND edition photographer/writer as applicant. Confirm current terms on pulitzercenter.org/grant-application.",
       "addedBy": "scout",
       "addedAt": "2026-07-15",
+      "history": [],
+      "votes": {},
+      "country": ""
+    },
+    {
+      "id": "tom-stoddart-gost-2026",
+      "title": "Tom Stoddart Award for Excellence (Ian Parry Fund × GOST Books)",
+      "funder": "Ian Parry Photojournalism Fund + GOST Books (media partner The Guardian)",
+      "channel": "public-fund",
+      "link": "https://www.ianparry.org/the-tom-stoddart-award-in-collaboration-with-gost-books",
+      "deadline": "2026-09-30",
+      "budget": "GOST Books photo book + £5,000 toward completion + expenses-paid Verona print trip + publication in The Guardian",
+      "eligibility": "Open worldwide, 18+, to established long-form documentary photographers with an in-depth project nearing completion and extensive enough for a book. INLAND applies via its commissioned edition photographer.",
+      "fit": 4,
+      "fitRationale": "INLAND is fundamentally a long-form documentary photobook publisher, so a 'project nearing completion, warranting a book' is the literal shape of an edition's photographic spine; GOST is a serious art-book house and Guardian publication is real visibility. Rewards near-finished work (not the field year) and the applicant must be the photographer — held at 4.",
+      "territory": "Open — pair with the edition holding the most complete body of work (lead: Georgia / Issue 02 custodians, or Isole Minori / Issue 03), reframed as one cohesive book-length essay",
+      "requiredDocs": [
+        "Short photographer biography",
+        "Book project description",
+        "Up to 40 images (proposed book edit)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/tom-stoddart-gost-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "Deadline extended to 30 Sep 2026 on the GOST site; applicant is an individual photographer (nominate/partner with the edition photographer). Re-confirm final date and image spec on the Picter application page (site.picter.com/ippg-tomstoddart-gost-photobook-grant-2026).",
+      "addedBy": "scout",
+      "addedAt": "2026-07-22",
+      "history": [],
+      "votes": {},
+      "country": ""
+    },
+    {
+      "id": "british-council-ctc-2026",
+      "title": "British Council — Connections Through Culture Grants 2026",
+      "funder": "British Council (Arts)",
+      "channel": "partnership",
+      "link": "https://arts.britishcouncil.org/connections-through-culture",
+      "deadline": "2026-08-12",
+      "budget": "£5,000–£15,000 per country partnership",
+      "eligibility": "Seeds new collaborations between a UK-based partner and a partner in an eligible participating country. Italy is a participating country, so INLAND (Italy) is eligible provided it teams with a UK cultural partner; non-audiovisual sectors incl. visual arts, photography, heritage, publishing are in scope.",
+      "fit": 3,
+      "fitRationale": "A genuine partnership-channel foothold (the third agreed channel), open now with a near deadline — but small money, UK-anchored, and a relationship seed rather than edition-production funding, so held at 3. Low-burden way to seed a UK–Italy INLAND collaboration or a UK leg for a future edition.",
+      "territory": "Collaboration is UK↔Italy; subject can be any INLAND territory. Best use: a UK partner (photography gallery, book publisher, area-studies dept) co-developing research or a UK launch for an in-progress edition, or the UK leg of an Italy-anchored edition (Arbëreshë / interior Italy).",
+      "requiredDocs": [
+        "Project concept (collaboration aims, cross-border rationale)",
+        "Confirmed UK partner + eligible-country partner",
+        "Simple budget (£5k–£15k) and activity plan",
+        "Applicant/partner profiles"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/british-council-ctc-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "URGENT — closes 12 Aug 2026 (opened 17 Jun 2026). Needs a named UK partner to be actionable (the binding constraint). Official FAQ 403'd automated fetch; re-verify Italy is in the 2026 country list, the exact Italy grant band, and whether a UK partner is mandatory on arts.britishcouncil.org before committing. Only pursue this cycle if a UK partner can be lined up quickly; else hold for the next round.",
+      "addedBy": "scout",
+      "addedAt": "2026-07-22",
+      "history": [],
+      "votes": {},
+      "country": ""
+    },
+    {
+      "id": "photovogue-open-call-2026",
+      "title": "PhotoVogue Global Open Call 2026 — \"Brave New Visions: Creativity as Rebellion\"",
+      "funder": "PhotoVogue (Vogue / Condé Nast), Milan",
+      "channel": "public-fund",
+      "link": "https://www.vogue.com/photovogue",
+      "deadline": "2026-09-11",
+      "budget": "$12,000 pool — Outstanding Vision $6,000, Vision $4,000, Rising Voice $2,000 (emerging) + PhotoVogue Festival exhibition + Vogue publication",
+      "eligibility": "Open worldwide, 18+, to photographers/videographers/multimedia artists (no AI-generated work). INLAND applies via its commissioned edition photographer.",
+      "fit": 2,
+      "fitRationale": "Low-burden (submit an existing edit) with real visibility (Vogue + festival), but a thematic stretch: the 2026 'Creativity as Rebellion' brief rewards a contemporary, oppositional, statement-driven register that runs against INLAND's continuity-over-crisis, tension-not-attack discipline. Surfaced as an opportunistic 2 because the week is thin; PhMuseum / Smith / Tom Stoddart are all better register matches.",
+      "territory": "Open — any edition's documentary series, framed (honestly) as persistence-as-quiet-rebellion against erasure/standardization",
+      "requiredDocs": [
+        "Project image edit (cohesive series)",
+        "Project statement / artist position",
+        "Photographer details; entry per platform terms"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/photovogue-open-call-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "Submissions 14 May–11 Sep 2026. Weak/opportunistic fit — confirm exact terms, any entry fee, and rights/usage on the official PhotoVogue open-call page, and judge whether an INLAND series can honestly answer the 'rebellion' brief before entering; if not, skip.",
+      "addedBy": "scout",
+      "addedAt": "2026-07-22",
       "history": [],
       "votes": {},
       "country": ""
