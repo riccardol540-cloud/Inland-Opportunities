@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-07-22T00:00:00.000Z",
+    "lastUpdated": "2026-07-29T00:00:00.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -1339,6 +1339,115 @@
       "notes": "Submissions 14 May–11 Sep 2026. Weak/opportunistic fit — confirm exact terms, any entry fee, and rights/usage on the official PhotoVogue open-call page, and judge whether an INLAND series can honestly answer the 'rebellion' brief before entering; if not, skip.",
       "addedBy": "scout",
       "addedAt": "2026-07-22",
+      "history": [],
+      "votes": {},
+      "country": ""
+    },
+    {
+      "id": "iwmf-women-journalists-2026",
+      "title": "IWMF Fund for Women Journalists (Howard G. Buffett Fund)",
+      "funder": "International Women's Media Foundation (IWMF)",
+      "channel": "public-fund",
+      "link": "https://www.iwmf.org/programs/fund-for-women-journalists/",
+      "deadline": "2026-12-31",
+      "budget": "Reporting grant — typically a few thousand USD toward reporting costs, travel and production (confirm current ceiling on the portal)",
+      "eligibility": "Open worldwide to women and non-binary journalists, staff or freelance, across all media (print, photography, audio, video). INLAND applies via a commissioned woman journalist/photographer carrying an edition's field work.",
+      "fit": 3,
+      "fitRationale": "Currently-open, rolling, worldwide documentary/journalism grant with a register that fits INLAND. Distinct from the Pulitzer entry by being women-and-non-binary-specific and always open, so it can be timed to a commissioned woman storyteller when a women-led thread is ready. Held at 3: modest budget, applicant must be the individual, and it rewards a defined story rather than the full field year.",
+      "territory": "Open — pair with a women-carried, women-subject thread. Lead candidate: Sardinia / Barbagia (Italy) — the attittu ritual laments of the women attittadoras and women's ceremonial bread-making (Orgosolo, Orune, Oliena); under-documented, women custodians, locatable, seasonal.",
+      "requiredDocs": [
+        "Reporting proposal (topic, location, angle, why under-reported)",
+        "Budget (travel and production)",
+        "Journalist/photographer CV + work samples / portfolio",
+        "Distribution / outlet indication (some streams)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/iwmf-women-journalists-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "Rolling — no fixed deadline (date shown is a nominal placeholder); decisions ~4–6 weeks after submission. Register the edition's woman photographer/writer as applicant. Official IWMF page 403'd automated fetch — confirm the current grant ceiling, eligible-expense list and any distribution requirement on iwmf.org / the Submittable portal. Companion: Kari Howard Fund for Narrative Journalism closed 12 Jul 2026 (annual) — watch 2027.",
+      "addedBy": "scout",
+      "addedAt": "2026-07-29",
+      "history": [],
+      "votes": {},
+      "country": ""
+    },
+    {
+      "id": "culture-moves-europe-mobility-2026",
+      "title": "Culture Moves Europe — Individual Mobility (Goethe / Creative Europe) [RADAR: between rounds]",
+      "funder": "European Union (Creative Europe), implemented by Goethe-Institut",
+      "channel": "cultural-institute",
+      "link": "https://www.goethe.de/en/kul/foe/cmm.html",
+      "deadline": "2026-10-31",
+      "budget": "Travel + subsistence contribution for a 7–60 day mobility (groups 7–21 days) with individual top-ups; not a production grant",
+      "eligibility": "Artists/cultural professionals legally resident in the 41 Creative Europe countries (Italy included), 18+, active in an eligible sector; individuals or groups of up to five. INLAND's editors/photographers qualify directly — no consortium, no co-financing.",
+      "fit": 3,
+      "fitRationale": "Cleanest, lowest-burden EU route to fund a scouting/field trip for a future edition — the 'mobility = scouting' use already valued on the board, but intra-European and open to Italy. Held at 3: travel/subsistence only (no production/print) and currently between rounds. Strategic value: pays for the pre-production reconnaissance that unlocks a new territory.",
+      "territory": "Destination is another Creative Europe country. Lead candidate: Portugal — Trás-os-Montes / Miranda do Douro: the Mirandese language, the pauliteiros stick-dancers, and the caretos masked winter-solstice rituals (Podence, UNESCO ICH). Endangered language + masked ritual + locatable villages + winter season; a country not yet on the board.",
+      "requiredDocs": [
+        "Description of the planned project and mobility (host contact in destination country)",
+        "Implementation plan and dates (7–60 days)",
+        "Simple budget / justification for top-ups",
+        "Applicant profile / portfolio"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/culture-moves-europe-mobility-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "RADAR / between rounds — the 2025–26 rolling call CLOSED 30 Apr 2026. Deadline shown (~31 Oct 2026) is an ESTIMATE for the next round, which historically re-opens in autumn with monthly review windows. Confirm the next call's opening and monthly deadlines on goethe.de/cmm and culture.ec.europa.eu before acting. A host/contact in the destination country is usually expected. Mobility only — pair with a production fund to finance the edition.",
+      "addedBy": "scout",
+      "addedAt": "2026-07-29",
+      "history": [],
+      "votes": {},
+      "country": ""
+    },
+    {
+      "id": "creative-europe-cooperation-2026",
+      "title": "Creative Europe — European Cooperation Projects (CULTURE) [RADAR: 2026 closed, annual]",
+      "funder": "European Union — Creative Europe (EACEA)",
+      "channel": "public-fund",
+      "link": "https://culture.ec.europa.eu/funding/calls/2026-european-cooperation-projects",
+      "deadline": "2027-05-05",
+      "budget": "~€60M pool, ~150 projects. Small Scale (min 3 entities/3 countries, up to 80% co-funding) and Medium Scale (min 5 entities/5 countries, up to 70%). Grants from tens of thousands into the hundreds of thousands of euros by tier.",
+      "eligibility": "Open to all cultural and creative sectors except audiovisual-only projects/consortia — publishing, photography, heritage and place-based storytelling in scope. Italy eligible. INLAND applies as/with a partner in a 3-country (Small) or 5-country (Medium) consortium.",
+      "fit": 4,
+      "fitRationale": "The single most on-profile EU production-scale route for an INLAND edition and, until now, absent from the board despite being named in sources.md. Cross-border framing is a natural home for INLAND's borderland/minority/cultural-continuity work; multi-year timelines can cover field embedding and print. Held at 4 by the real friction: a genuine multi-country consortium plus 20–30% co-financing.",
+      "territory": "A cross-border theme spanning several eligible countries. Lead candidate: the Aromanian (Vlach) world of the southern Balkans — a stateless Latin-language pastoral people whose transhumance, polyphonic song and craft survive across Greece, Albania, North Macedonia and Romania, anchorable to an Italian lead partner (named shepherd-cantor lineages; highland villages; the summer move to high pasture).",
+      "requiredDocs": [
+        "Project description (cooperation objectives, European added value, cross-border dimension)",
+        "Consortium of 3 (Small) or 5 (Medium) partner organisations from that many eligible countries + partnership letters",
+        "Budget showing required co-financing and work packages",
+        "Timeline / work plan; partner track records",
+        "EU Funding & Tenders portal registration (PIC)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/creative-europe-cooperation-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "RADAR — the 2026 call (CREA-CULT-2026-COOP) CLOSED 5 Apr/5 May 2026. Deadline shown (~5 May 2027) is an ESTIMATE for the next annual cycle, which typically opens in autumn for a spring deadline; confirm on the EU Funding & Tenders portal when the 2027 work programme publishes. Binding constraint is assembling the multi-country consortium and co-financing — begin lining up 2–4 partner cultural organisations now. Companion EU route: Culture Moves Europe (mobility) for pre-production scouting.",
+      "addedBy": "scout",
+      "addedAt": "2026-07-29",
       "history": [],
       "votes": {},
       "country": ""
