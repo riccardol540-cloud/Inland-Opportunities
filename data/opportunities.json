@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-07-29T18:14:16.641Z",
+    "lastUpdated": "2026-07-29T18:14:23.699Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -11,7 +11,7 @@
       "addedBy": "Riccardo",
       "country": "Albania",
       "id": "opp-1782981837927",
-      "status": "new",
+      "status": "pursuing",
       "researched": true,
       "fit": 4,
       "fitRationale": "Albania is a genuine INLAND territory — a loud story (Hoxha isolation, bunkers, emigration) crowding out a quiet country of endangered living traditions with named custodians, locatable places and real seasons (iso-polyphony around Gjirokastër/Përmet; northern-Alps Kanun world & burrnesha; Vjosa river & Aromanian pastoralism). Scored on editorial fit; no single funder locked yet — see brief for routes (British Council CTC, next Creative Europe round, MiC Strategia Fotografia via the Arbëreshë, Allianz Arbëreshë↔Albania).",
@@ -55,6 +55,13 @@
           "by": "Riccardo",
           "changes": {
             "vote": 0
+          }
+        },
+        {
+          "at": "2026-07-29T18:14:23.699Z",
+          "by": "Riccardo",
+          "changes": {
+            "status": "pursuing"
           }
         }
       ],
