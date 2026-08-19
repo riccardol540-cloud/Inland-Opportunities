@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-07-29T18:14:23.699Z",
+    "lastUpdated": "2026-08-19T00:00:00.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -1472,6 +1472,43 @@
       "history": [],
       "votes": {},
       "country": ""
+    },
+    {
+      "id": "european-heritage-hub-small-grants-2026",
+      "title": "European Heritage Hub — Small Grants Scheme (Western Balkans / South Caucasus / Ukraine–Moldova)",
+      "funder": "European Heritage Hub (Europa Nostra-led consortium, co-funded by the EU)",
+      "channel": "partnership",
+      "link": "https://www.europeanheritagehub.eu/call-for-applications-small-grants-scheme-for-heritage-related-projects-led-by-civil-society-in-eu-candidate-and-neighbouring-countries/",
+      "deadline": "2026-09-07",
+      "budget": "Small €2,000–10,000; Medium €10,000–30,000; Large €30,000–50,000",
+      "eligibility": "Applicant must be a civil-society / not-for-profit organisation based in an eligible country — Western Balkans (Albania, Bosnia & Herzegovina, Kosovo, Montenegro, North Macedonia, Serbia) or Armenia, Azerbaijan, Georgia, Moldova, Ukraine. INLAND (Italy, EU) is NOT an eligible lead applicant; it participates as a documentation/publishing partner to an in-region civil-society lead. Cross-border projects between eligible countries are encouraged.",
+      "fit": 3,
+      "fitRationale": "The one genuinely on-profile, currently-open route surfaced this week, and it maps directly onto three active board territories — the pursued Albania edition and the Georgia & Armenia research editions — funding intangible-heritage documentation on INLAND's exact register. Held at 3 by the binding eligibility constraint: the lead must be an in-region not-for-profit, so INLAND joins as documentation & publishing partner (the Kashmir embassy-partner model), not sole EU applicant. URGENT: closes 7 Sep 2026.",
+      "territory": "Eligible geography = Western Balkans + South Caucasus + Ukraine/Moldova. Board-aligned leads: Albania (Lab/Tosk iso-polyphony custodians around Gjirokastër/Përmet; northern-Alps Kanun world & burrnesha; Aromanian/Vlach transhumance) with an Albanian heritage NGO as lead; or Georgia / Armenia (highland pastoral & women's lament traditions, Lake Sevan fishing) with a local heritage NGO. The cross-border Aromanian/Vlach angle (Albania↔North Macedonia) is explicitly encouraged.",
+      "requiredDocs": [
+        "Project concept — intangible cultural-heritage aims, named custodians/communities, locatable places, seasonal scenes",
+        "In-region civil-society / not-for-profit LEAD applicant (Western Balkans or Caucasus/Ukraine–Moldova) + INLAND as documentation/publishing partner",
+        "Budget by grant size (Small / Medium / Large) and work plan",
+        "Timeline",
+        "Partner track records (INLAND's published issues as proof of prior international cultural activity)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/european-heritage-hub-small-grants-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "URGENT — closes 7 Sep 2026 (call opened ~20 Jul 2026). Binding constraint: the LEAD applicant must be an in-region civil-society / not-for-profit organisation, so this is only actionable if an Albanian (or Georgian/Armenian) heritage NGO can be lined up quickly with INLAND as documentation/publishing partner. Official site blocked automated fetch — confirm on europeanheritagehub.eu whether an EU/Italy publisher may be a named (non-lead) partner, the exact per-strand budgets, eligible costs, and project duration before committing. Distinct from CC4WBs 'Culture and Creativity for the Western Balkans' (small grants for individuals, referenced in the Albania brief).",
+      "addedBy": "scout",
+      "addedAt": "2026-08-19",
+      "history": [],
+      "votes": {},
+      "country": "Albania / Georgia / Armenia (partner-led)"
     }
   ]
 }
