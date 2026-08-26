@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-08-19T00:00:00.000Z",
+    "lastUpdated": "2026-08-26T00:00:00.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -1509,6 +1509,78 @@
       "history": [],
       "votes": {},
       "country": "Albania / Georgia / Armenia (partner-led)"
+    },
+    {
+      "id": "italian-council-mic-2027",
+      "title": "Italian Council (MiC / DGCC) — internationalising Italian art & editorial projects [RADAR: Ed. 15 closed Mar 2026, annual]",
+      "funder": "Ministero della Cultura — Direzione Generale Creatività Contemporanea (DGCC)",
+      "channel": "public-fund",
+      "link": "https://creativitacontemporanea.cultura.gov.it/italiancouncil-edizione15/",
+      "deadline": "2027-03-31",
+      "budget": "~€2.7M total (Ed. 15 ref.): Area 1–2 exhibitions/curatorial commissions abroad + international publishing/editorial projects; Area 3 €15,000 research/residency grants for Italian photographers/curators",
+      "eligibility": "Italian national fund to promote Italian visual art & creativity abroad. INLAND (Italy-based publisher, Italian photographers/editors) qualifies via Area 1–2 international editorial projects (an Italy-anchored edition distributed internationally); its photographers/editors qualify for Area 3 research grants.",
+      "fit": 4,
+      "fitRationale": "Arguably the single most on-profile Italian national fund for INLAND's editorial output, and until now absent from the board — explicitly named as a sister-call-to-watch in the Strategia Fotografia notes. Area 1–2 gives 'particular attention to international editorial projects' (funds an INLAND issue for international audiences); Area 3 pays an edition's field photographer. Held at 4 by the framing constraint (funded work must foreground Italian creativity abroad — fits an Italy-anchored edition) and by being between cycles.",
+      "territory": "Italy-anchored, Italian-authored, internationally distributed. Lead candidates: the Arbëreshë (Albanian-speaking, Byzantine-rite Calabria/Basilicata/Sicily — endangered language, ritual laments, Easter Vallja); Sardinia (Barbagia attittu laments & ceremonial bread; Cabras fassoni reed-boat fishers, building on Issue 03 Isole Minori); Appennine 'aree interne' (transhumance & craft).",
+      "requiredDocs": [
+        "Project proposal per Area (Area 1–2 international editorial/publishing project; or Area 3 research/residency)",
+        "Budget and work plan; for editorial projects an international distribution/launch dimension",
+        "Applicant credentials / track record (published issues) + Italian authorship",
+        "SPID/CIE registration on the DGCC Call Portal"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/italian-council-mic-2027/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "RADAR / recurring annual DGCC fund — the 15th edition (2026) CLOSED 31 Mar 2026 (portal opened 20 Feb 2026). Deadline shown (~31 Mar 2027) is an ESTIMATE for the next (16th) edition; DGCC typically opens late Feb for a late-Mar/Apr deadline. Not currently open. Official DGCC portal egress-blocked from the scan environment — figures from DGCC secondary reporting; re-verify areas, budget (~€2.7M) and eligibility on the official avviso. Sister DGCC call already tracked: Strategia Fotografia (closed 15 Apr 2026, annual).",
+      "addedBy": "scout",
+      "addedAt": "2026-08-26",
+      "history": [],
+      "votes": {},
+      "country": "Italy"
+    },
+    {
+      "id": "cei-cooperation-fund-2027",
+      "title": "CEI Cooperation Fund — cultural cooperation among CEI member states [RADAR: 2026 closed, annual]",
+      "funder": "Central European Initiative (CEI), Trieste",
+      "channel": "partnership",
+      "link": "https://www.cei.int/",
+      "deadline": "2027-05-29",
+      "budget": "Co-financing for cooperation actions — typically up to ~€25,000 per project, up to ~50% of costs (confirm on the 2027 call)",
+      "eligibility": "Open to public and private institutions registered in a CEI member state, NGOs/CSOs and international organisations. Italy is a founding CEI member, so — unlike the European Heritage Hub small grants — INLAND can be a LEAD or co-applicant, with partners from ≥2–3 CEI member states (which include Albania, Romania, N. Macedonia, Serbia, Montenegro, Moldova, Ukraine and others).",
+      "fit": 3,
+      "fitRationale": "A genuine partnership-channel route where INLAND can LEAD, in a geography that already carries three board territories (Albania & Romania pursued; the wider Balkans). The cross-border cooperation/mobility framing is a natural home for an INLAND borderland/minority/cultural-continuity edition. Held at 3 by the modest grant size (a seed/cooperation contribution, not edition-production funding), the ~50% co-financing expectation, and the multi-country-partner requirement — best as a relationship + mobility foothold that seeds a larger production bid.",
+      "territory": "A theme spanning several CEI member states. Lead candidates: Italy–Albania (Arbëreshë ↔ Albania — endangered language, ritual laments, Vallja; pairs with the pursued Albania edition); the Aromanian/Vlach world across Albania/N. Macedonia/Romania (stateless Latin-language pastoralists — transhumance, polyphony, craft) with an Italian lead; Danube/Maramureș threads tied to the pursued Romania edition.",
+      "requiredDocs": [
+        "Project description (cooperation objectives, cross-border/mobility dimension, cultural value)",
+        "Partners from ≥2–3 CEI member states + letters of support",
+        "Budget showing the required co-financing (~50%) and activity plan",
+        "Timeline / work plan; applicant & partner profiles (published issues as track record)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/cei-cooperation-fund-2027/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "RADAR / annual — the 2026 call CLOSED 29 May 2026, 12:00 CEST. Deadline shown (~29 May 2027) is an ESTIMATE for the next cycle. Not currently open. Primary pages (cei.int, enlargement-infohub.eu) egress-blocked from the scan environment — confirm the current grant ceiling, co-financing rate, minimum partner countries and eligible-cost list on cei.int before treating as actionable. Complements European Heritage Hub Small Grants (INLAND non-lead only) and Creative Europe Cooperation (production-scale, heavier consortium) — CEI is the lighter, INLAND-can-lead cooperation seed in the same geography.",
+      "addedBy": "scout",
+      "addedAt": "2026-08-26",
+      "history": [],
+      "votes": {},
+      "country": "Italy / Albania / Romania (cross-border)"
     }
   ]
 }
