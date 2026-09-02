@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-08-26T00:00:00.000Z",
+    "lastUpdated": "2026-09-02T06:17:41.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -1581,6 +1581,77 @@
       "history": [],
       "votes": {},
       "country": "Italy / Albania / Romania (cross-border)"
+    },
+    {
+      "id": "cortona-on-the-move-bartur-2026",
+      "title": "Cortona On The Move / BarTur Grant — documentary photography production grant [RADAR: 2026 closed, annual]",
+      "funder": "Cortona On The Move (festival) + BarTur Photo Award",
+      "channel": "public-fund",
+      "link": "https://www.cortonaonthemove.com/en/grant/",
+      "deadline": "2027-04-16",
+      "budget": "US$30,000 grand prize (professional) + two US$5,000 emerging (under-30) prizes; ~9 months to complete + exhibition at Cortona On The Move",
+      "eligibility": "Open internationally; grand prize open to professional photographers (no age cap). INLAND applies via a commissioned edition photographer with an in-progress documentary body of work.",
+      "fit": 4,
+      "fitRationale": "Funds completion of an in-progress documentary project on social/environmental/economic/CULTURAL issues — INLAND's field-work register — with a cash production grant plus a show at a top Italian documentary festival (INLAND's base). Pitch the continuity/human–nature thread, not a crisis exposé. Applicant is the photographer, so held at 4.",
+      "territory": "Open — pairs with any in-progress INLAND edition, carried by its photographer (e.g. Georgia highlands, Romania/transhumance, Tunisia, Rwanda/Angola field work)",
+      "requiredDocs": [
+        "Project proposal (in-progress documentary body of work)",
+        "Image edit of work underway",
+        "Photographer bio / CV & track record",
+        "Production plan / ~9-month timeline to exhibition"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/cortona-on-the-move-bartur-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "RADAR: 2026 cycle closed 16 Apr 2026; annual — next call expected ≈Mar–Apr 2027 (deadline field is an estimate, confirm on official site). COTM/BarTur sites were egress-blocked from the scan; figures from the 2026 cycle via reputable secondaries. Decide which edition's photographer carries it before the call opens.",
+      "addedBy": "scout",
+      "addedAt": "2026-09-02",
+      "history": [],
+      "votes": {},
+      "country": ""
+    },
+    {
+      "id": "leica-oskar-barnack-loba-2026",
+      "title": "Leica Oskar Barnack Award (LOBA) — humanist documentary (humanity & environment) [RADAR: 2026 judged, annual]",
+      "funder": "Leica Camera AG",
+      "channel": "public-fund",
+      "link": "https://www.leica-oskar-barnack-award.com",
+      "deadline": "2027-03-15",
+      "budget": "Main Award €40,000 + €10,000 equipment; Newcomer €10,000 (under-30) + Leica Q3; 10 finalists €2,500 each; separate LOBA Women Grant for a woman photographer's project",
+      "eligibility": "Professional photographers, international. Main & Newcomer are NOMINATION-ONLY (130+ nominators propose series). The LOBA Women Grant is OPEN to free submission by professional women photographers 21+ — the directly-applicable route; INLAND applies via a commissioned woman photographer.",
+      "fit": 3,
+      "fitRationale": "Thematic bullseye — LOBA's standing subject is documentary/conceptual work on 'the relationship between humanity and the environment', i.e. INLAND's human–nature-under-pressure theme — but access mechanics hold it at 3: the €40k Main Award is nomination-only (cultivate a nominator), and only the Women Grant is openly applicable (overlaps PhMuseum Women grant, larger platform).",
+      "territory": "Open — pairs with any in-progress edition on a human–nature thread (e.g. Kashmir Gujjar–Bakkarwal migration, Romania/Georgia transhumance, Tunisia water cultures), carried by its photographer",
+      "requiredDocs": [
+        "Project outline / statement on the human–environment theme (LOBA Women Grant route)",
+        "Image edit / documentary series",
+        "Photographer bio / professional track record (woman photographer, 21+)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/leica-oskar-barnack-loba-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "RADAR: 2026 cycle judged (winners announced 8 Oct 2026); annual — next cycle 2027 (deadline field is an estimate, confirm on official site; the open Women Grant historically opens H1). Two routes: LOBA Women Grant (open submission) or getting an edition photographer onto a nominator's radar for the Main Award — the highest-value action is relationship-building, flag for the humans.",
+      "addedBy": "scout",
+      "addedAt": "2026-09-02",
+      "history": [],
+      "votes": {},
+      "country": ""
     }
   ]
 }
