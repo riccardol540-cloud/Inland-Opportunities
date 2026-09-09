@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-09-02T06:17:41.000Z",
+    "lastUpdated": "2026-09-09T00:00:00.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -1649,6 +1649,114 @@
       "notes": "RADAR: 2026 cycle judged (winners announced 8 Oct 2026); annual — next cycle 2027 (deadline field is an estimate, confirm on official site; the open Women Grant historically opens H1). Two routes: LOBA Women Grant (open submission) or getting an edition photographer onto a nominator's radar for the Main Award — the highest-value action is relationship-building, flag for the humans.",
       "addedBy": "scout",
       "addedAt": "2026-09-02",
+      "history": [],
+      "votes": {},
+      "country": ""
+    },
+    {
+      "id": "journalismfund-crossborder-2026",
+      "title": "Journalismfund Europe — European Cross-border Grants Programme",
+      "funder": "Journalismfund Europe",
+      "channel": "public-fund",
+      "link": "https://www.journalismfund.eu/grants",
+      "deadline": "2026-10-01",
+      "budget": "€280,000 per round; covers research, reporting, travel, legal checks, expert support (paid 2/3 on signature, 1/3 after publication)",
+      "eligibility": "Open to journalists (staff or freelance) working in a cross-border team spanning at least two European countries. INLAND applies via its commissioned photographer/writer joined with a collaborator in a second European country; all end products qualify — explicitly including photo-reportages and non-fiction books, INLAND's exact output.",
+      "fit": 3,
+      "fitRationale": "A genuine production/reporting-cost route (not a prize) whose cross-border framing is a natural home for an INLAND borderland/minority edition, and whose eligible formats name photo-reportage and books outright. Held at 3 by the journalism/'societal impact' register and the two-country-team requirement.",
+      "territory": "Cross-border. Lead candidate: the Aromanian/Vlach world of the southern Balkans (stateless Latin-language pastoralists across Greece, Albania, North Macedonia, Romania) — a two-country team follows one named shepherd-cantor lineage and the summer high-pasture move. Alt: Arbëreshë (Italy) ↔ Albania.",
+      "requiredDocs": [
+        "Cross-border project proposal (angle, ≥2 countries, relevance)",
+        "Confirmed cross-border team (collaborator in a second European country)",
+        "Budget (research, travel, reporting, expert/legal costs)",
+        "Distribution / publication plan",
+        "Journalist(s) CV / portfolio"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/journalismfund-crossborder-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "Near deadline — next round closes 1 Oct 2026, 1 PM CET (four rounds/year: 19 Mar, 21 May, 30 Jul, 1 Oct), so a missed round rolls to the next. Binding constraint: a collaborator in a second European country. Official site (journalismfund.eu / grants.journalismfund.eu) egress-blocked from the scan — figures from the Journalismfund grants platform and reputable secondaries; re-confirm the 1 Oct round, per-round budget and eligible costs before applying. Lighter/faster than Creative Europe Cooperation (no consortium/co-financing); unlike Culture Moves Europe it funds the reporting/production, not just mobility.",
+      "addedBy": "scout",
+      "addedAt": "2026-09-09",
+      "history": [],
+      "votes": {},
+      "country": ""
+    },
+    {
+      "id": "sony-world-photography-2027",
+      "title": "Sony World Photography Awards 2027 — Series (formerly Professional) competition",
+      "funder": "Sony / World Photography Organisation",
+      "channel": "public-fund",
+      "link": "https://www.worldphoto.org/sony-world-photography-awards",
+      "deadline": "2027-01-12",
+      "budget": "Photographer of the Year US$25,000 + Sony equipment; category winners receive equipment; Somerset House (London) exhibition + awards book. Free to enter.",
+      "eligibility": "Open worldwide to photographers at all career stages, any device. The Series competition rewards a cohesive 5–10 image body of work. INLAND applies via its commissioned edition photographer entering an edition's documentary series; free entry = near-zero burden.",
+      "fit": 3,
+      "fitRationale": "The Series competition's documentary strand is a natural home for an INLAND edition's photographic spine, and the platform (Somerset House exhibition, global press, awards book) is serious visibility. Held at 3 because it is a prize/visibility play, not production funding, and the applicant must be the individual photographer — but free, low-effort entry makes it an easy opportunistic submission.",
+      "territory": "Open — pairs with whichever edition holds the most complete, exhibition-ready series (lead: Georgia / Issue 02 custodians, or Isole Minori / Issue 03; or in-progress Tunisia / Rwanda-Angola field work), entered under the documentary strand and framed as cultural continuity.",
+      "requiredDocs": [
+        "Cohesive image series (up to ~10 frames) for the chosen category",
+        "Short project statement / series narrative",
+        "Photographer details / bio"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/sony-world-photography-2027/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "Open for entries now; Series (formerly 'Professional') deadline 12 Jan 2027, 1 PM GMT. Free to enter. worldphoto.org / sony.eu press centre egress-blocked from the scan — details from the Sony 2027 competition-launch release and reputable secondaries; re-confirm the deadline, the 2027 category list (Professional renamed 'Series', new categories added) and image specs. Applicant is the photographer — decide which edition photographer carries it and confirm image rights before entry. Different jury/platform/zero cost vs the board's other photo prizes (Smith, PhMuseum, Tom Stoddart, LOBA, Cortona/BarTur).",
+      "addedBy": "scout",
+      "addedAt": "2026-09-09",
+      "history": [],
+      "votes": {},
+      "country": ""
+    },
+    {
+      "id": "alexia-grants-2026",
+      "title": "The Alexia Grants 2026 — Professional (Vision Grant)",
+      "funder": "The Alexia Foundation (Newhouse School, Syracuse University)",
+      "channel": "public-fund",
+      "link": "https://www.alexiafoundation.org/grants",
+      "deadline": "2027-02-13",
+      "budget": "Vision Grant US$20,000 + Sony camera/lens (runner-up US$750); three US$5,000 'Pop-Up' grants (conservation / environmental change / global health). US$50 submission fee (waivers available).",
+      "eligibility": "Open internationally to professional photographers/filmmakers. INLAND applies via its commissioned edition photographer with an in-progress or proposed body of work; the Vision Grant is a real production-scale sum, not a token prize.",
+      "fit": 3,
+      "fitRationale": "The Alexia brief rewards 'socially significant visual storytelling that fosters cultural understanding' — a register an INLAND cultural-continuity edition can answer honestly, at production scale (US$20k). Held at 3 by the grant's stronger 'inspire meaningful change'/social-issue lean and the individual-photographer applicant model.",
+      "territory": "Lead candidate: the pursued Albania edition's iso-polyphony custodians (Lab/Tosk singers around Gjirokastër/Përmet/Vlorë) — endangered UNESCO oral tradition, named ageing custodians, seasonal gatherings, framed as fostering cultural understanding of a European minority soundworld. Alts: Georgia highland custodians; Sardinia/Barbagia attittu laments; the Arbëreshë.",
+      "requiredDocs": [
+        "Project proposal / statement (socially significant, cultural-understanding story)",
+        "Image edit of the proposed/in-progress body of work",
+        "Photographer bio / CV & prior work",
+        "US$50 submission fee (or partner-organisation waiver)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/alexia-grants-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "The '2026' professional cycle is open now; Vision Grant deadline 13 Feb 2027, 11:59 pm EST; judged publicly in Syracuse. alexiafoundation.org / Visura egress-blocked from the scan — figures from the Alexia/Visura open-call listing and reputable secondaries; re-confirm the deadline, Vision-Grant/Pop-Up amounts and themes, fee/waiver mechanics and any distribution requirement. Applicant is the photographer — nominate/partner with the edition photographer and secure custodian consent. US-based, production-scale (US$20k) grant, distinct from the board's smaller prizes.",
+      "addedBy": "scout",
+      "addedAt": "2026-09-09",
       "history": [],
       "votes": {},
       "country": ""
