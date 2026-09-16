@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-09-09T00:00:00.000Z",
+    "lastUpdated": "2026-09-16T00:00:00.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -1760,6 +1760,43 @@
       "history": [],
       "votes": {},
       "country": ""
+    },
+    {
+      "id": "siae-per-chi-crea-2026",
+      "title": "SIAE “Per Chi Crea” 2026 (MiC × SIAE) — under-35 creation fund (arti visive / editoria)",
+      "funder": "SIAE — Società Italiana degli Autori ed Editori (for the Ministero della Cultura)",
+      "channel": "public-fund",
+      "link": "https://www.perchicrea.it",
+      "deadline": "2026-10-29",
+      "budget": "Over €13M across the edition; per-project grants vary by strand (creation strands historically low tens of thousands)",
+      "eligibility": "Young authors/artists under 35, resident in Italy or Italian citizens abroad, applying as individuals or under-35 groups/collectives (some strands: non-profit entities with an under-35 team). Sectors include arti visive (photography), letteratura/editoria and multimedia — INLAND applies via its under-35 authors on a new Italian body of work.",
+      "fit": 3,
+      "fitRationale": "Large, well-funded Italian public fund explicitly covering photography and publishing that would anchor a domestic INLAND edition (Isole Minori proves the register); held at 3 by the under-35 eligibility rule (application must be built around young authors, not the house) and the creation-strand framing.",
+      "territory": "Italy — the under-documented interior: Apennine transhumance & pastoral craft (Abruzzo–Molise tratturi); language islands (Arbëreshë Calabria/Basilicata/Sicily; Griko Salento); Sardinian cantu a tenore (Barbagia). No cross-border partner required.",
+      "requiredDocs": [
+        "Project description of the new work (custodians, places, seasonal scenes, Italian cultural value)",
+        "Proof of eligibility (under-35 author(s)/collective; Italian residence or citizenship abroad)",
+        "Budget (production of the new work)",
+        "Timeline",
+        "Team CVs / portfolio of the young author(s)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/siae-per-chi-crea-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "Verify the exact 2026 strand (e.g. Nuove Opere) and its per-project ceiling, and the individual-vs-collective-vs-entity eligibility, on the perchicrea.it bando before producing — site was egress-blocked at scan time. Deadline 29 Oct 2026 14:00; winners by 1 Mar 2027. Decisive question: can INLAND front the application under the under-35 rule?",
+      "addedBy": "scout",
+      "addedAt": "2026-09-16",
+      "history": [],
+      "votes": {},
+      "country": "Italy"
     }
   ]
 }
