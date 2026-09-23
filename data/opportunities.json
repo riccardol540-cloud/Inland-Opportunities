@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-09-16T00:00:00.000Z",
+    "lastUpdated": "2026-09-23T00:00:00.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -1797,6 +1797,76 @@
       "history": [],
       "votes": {},
       "country": "Italy"
+    },
+    {
+      "id": "world-press-photo-2027",
+      "title": "World Press Photo Contest 2027 — Stories & Long-Term Projects (documentary)",
+      "funder": "World Press Photo Foundation",
+      "channel": "public-fund",
+      "link": "https://www.worldpressphoto.org/contest",
+      "deadline": "2027-01-15",
+      "budget": "Free to enter; €1,000 per award, +€10,000 for Photo of the Year (+FUJIFILM camera); global travelling exhibition + yearbook",
+      "eligibility": "Open worldwide to professional photojournalists and documentary photographers. INLAND enters via its commissioned edition photographer; Stories (4–10) and Long-Term Projects (24–30 over ≥3 years) formats fit an edition’s photographic spine.",
+      "fit": 3,
+      "fitRationale": "WPP’s Stories and Long-Term Projects strands regularly reward place-based cultural-continuity documentary — INLAND’s register — with major global visibility (exhibition tour, yearbook, press) and zero entry cost. Held at 3: a prize/visibility play, not production funding; applicant is the individual photographer; WPP’s centre of gravity is news photojournalism, so the entry must sit in the documentary/long-term strand, framed as continuity not crisis.",
+      "territory": "Open — pairs with a published/in-progress edition’s documentary set (e.g. Georgia Issue 02 highland custodians or Isole Minori Issue 03 as a Story; Tunisia/Rwanda field work as a Long-Term Project)",
+      "requiredDocs": [
+        "Cohesive image set (Story 4–10 frames, or Long-Term Project 24–30 frames)",
+        "Accurate captions + verifiable context per frame",
+        "Short project statement / narrative",
+        "Photographer bio / details"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/world-press-photo-2027/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "RADAR: 2027 cycle opens ~1 Dec 2026, closes mid-Jan 2027 — exact dates/categories to confirm on worldpressphoto.org (egress-blocked at scan). Separate organisation from Sony/World Photography Organisation. Free entry.",
+      "addedBy": "scout",
+      "addedAt": "2026-09-23",
+      "history": [],
+      "votes": {}
+    },
+    {
+      "id": "catchlight-global-fellowship-2027",
+      "title": "CatchLight Global Fellowship 2027 (visual storytelling — photo, film, multimedia)",
+      "funder": "CatchLight",
+      "channel": "public-fund",
+      "link": "https://www.catchlight.io/global-fellowship",
+      "deadline": "2026-12-15",
+      "budget": "US$30,000 per Fellow + mentorship & professional development; free to submit (Submittable)",
+      "eligibility": "Open worldwide to professional and early-to-mid-career visual storytellers, explicitly incl. photographers, videographers, filmmakers, multimedia creators. INLAND (photography + digital stories + films) applies via a commissioned storyteller or an edition project team.",
+      "fit": 3,
+      "fitRationale": "Production-scale ($30k) support for visual storytelling that includes film/multimedia — INLAND’s exact output mix — and a global, open-eligibility, free application. Held at 3: CatchLight foregrounds social impact, community activation and innovative distribution, so a strong bid needs a tailored distribution/community-engagement angle around an edition, not the edition alone.",
+      "territory": "Open — pairs with an in-progress/upcoming edition framed with an innovative distribution + community-activation layer (e.g. bilingual local screenings, an oral-history return archive, partner distribution with a territory’s institutions)",
+      "requiredDocs": [
+        "Project proposal (storytelling project + distribution / community-impact plan)",
+        "Work samples / portfolio (photo, film or multimedia)",
+        "Applicant bio / CV and role",
+        "Budget / use-of-funds outline"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/catchlight-global-fellowship-2027/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "RADAR: 2027 cycle opens ~mid-Nov 2026 (launched at the Night of Photojournalism, Paris), ~1-month window, deadline ~mid-Dec — exact dates & 2027 emphasis to confirm on catchlight.io (egress-blocked at scan). Distinctive for funding film/multimedia + distribution, not only stills.",
+      "addedBy": "scout",
+      "addedAt": "2026-09-23",
+      "history": [],
+      "votes": {}
     }
   ]
 }
