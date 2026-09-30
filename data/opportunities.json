@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-09-23T00:00:00.000Z",
+    "lastUpdated": "2026-09-30T00:00:00.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -1867,6 +1867,113 @@
       "addedAt": "2026-09-23",
       "history": [],
       "votes": {}
+    },
+    {
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/eunic-spaces-of-culture-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "",
+      "addedBy": "scout",
+      "addedAt": "2026-09-30",
+      "history": [],
+      "votes": {},
+      "id": "eunic-spaces-of-culture-2026",
+      "title": "EUNIC — Spaces of Culture 2026 (Sub-Saharan Africa, cultural relations projects)",
+      "funder": "EUNIC (European Union National Institutes for Culture) with the European Commission / EU Delegations",
+      "channel": "partnership",
+      "link": "https://eunic.eu/news/spaces-of-culture-2026",
+      "deadline": "2026-06-21",
+      "budget": "Up to €50,000 per project (min. 5% partner co-funding)",
+      "eligibility": "Triangular partnership required: ≥3 local partners + ≥3 EUNIC members + an EU Delegation. INLAND cannot lead but can join as the European cultural partner inside a EUNIC-member-led cluster (Goethe / Institut français).",
+      "fit": 3,
+      "fitRationale": "Strong territory/editorial match — funds Africa–Europe cultural relations (€50k) and INLAND has two in-progress African editions (Rwanda, Angola) plus ties to the very institutes that lead these clusters. Held at 3 by the consortium structure: INLAND joins as partner, not lead, and a cluster + local partners + EU Delegation must be assembled.",
+      "territory": "Sub-Saharan Africa — pair with the in-progress Rwanda or Angola edition (Kigali/Luanda EUNIC cluster + named local custodian-partners)",
+      "requiredDocs": [
+        "Project concept co-developed with the triangular partnership",
+        "Partner mapping & letters of intent (local partners + EUNIC members + EU Delegation)",
+        "Budget (≥5% partner co-funding)",
+        "Timeline (Sep 2026 – Aug 2027)",
+        "Track record (published issues; drafted Rwanda/Angola assets)"
+      ]
+    },
+    {
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/roberto-cimetta-fund-mobility-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "",
+      "addedBy": "scout",
+      "addedAt": "2026-09-30",
+      "history": [],
+      "votes": {},
+      "id": "roberto-cimetta-fund-mobility-2026",
+      "title": "Roberto Cimetta Fund — General Fund for cultural & artistic mobility (Euro-MENA)",
+      "funder": "Roberto Cimetta Fund (RCF)",
+      "channel": "partnership",
+      "link": "https://www.cimettafund.org/en/",
+      "deadline": "",
+      "budget": "Travel grants (flights + travel costs) for a single mobility — scouting/relationship budget, not edition funding",
+      "eligibility": "Artists/cultural operators living and working in Europe, North Africa and the Middle East; priority to South/East mobility. Italy is in the eligible South-of-Europe zone, so INLAND qualifies.",
+      "fit": 3,
+      "fitRationale": "Small and travel-only (never edition funding), but a clean-eligibility, low-burden foothold to get a scout/photographer on the ground in a Mediterranean/MENA territory to meet custodians and build the local partner an edition needs. Uniquely reaches North Africa/the Mashriq, which Culture Moves mobility does not.",
+      "territory": "Mediterranean rim / MENA — e.g. northern Morocco (Rif/Tétouan) or Tunisia (islands/oases); first field contact for a future edition",
+      "requiredDocs": [
+        "Mobility request form (purpose, destination, dates)",
+        "Statement of long-term impact on the arts sector + networking dimension",
+        "Invitation / contact at destination",
+        "CV / track record (published issues)",
+        "Estimated travel budget"
+      ]
+    },
+    {
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/cap-prize-african-photography-2027/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "",
+      "addedBy": "scout",
+      "addedAt": "2026-09-30",
+      "history": [],
+      "votes": {},
+      "id": "cap-prize-african-photography-2027",
+      "title": "CAP Prize — International Prize for Contemporary African Photography (2027 cycle)",
+      "funder": "CAP Prize (with photo basel and partner institutions)",
+      "channel": "public-fund",
+      "link": "https://www.capprize.com/rules",
+      "deadline": "2027-02-07",
+      "budget": "Exposure award (no cash production grant): 5 winners of 25 shortlisted receive a series of international exhibitions + jury visibility",
+      "eligibility": "Open to everyone, any age/level/descent. Coherent series of 10–25 images created on the African continent or engaging an African diaspora (≤2 generations). INLAND applies via / nominates its edition photographer.",
+      "fit": 3,
+      "fitRationale": "Register and eligibility match cleanly (long-form coherent series on the continent) and map onto the in-progress Rwanda/Angola editions. A 3 because it is exposure, not funding — it cannot unlock an edition, but is a low-burden, high-visibility platform that builds the curator/publisher relationships INLAND runs on.",
+      "territory": "Africa / African diaspora — a coherent single-thread series from the Rwanda or Angola edition",
+      "requiredDocs": [
+        "Coherent series of 10–25 images (≥2500px long side, ≤5MB each)",
+        "Series title + short project statement",
+        "Photographer bio",
+        "Submission fee (confirm 2027 amount)"
+      ]
     }
   ]
 }
