@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-09-30T00:00:00.000Z",
+    "lastUpdated": "2026-10-07T00:00:00.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -1974,6 +1974,117 @@
         "Photographer bio",
         "Submission fee (confirm 2027 amount)"
       ]
+    },
+    {
+      "id": "fondazione-cariplo-nuovi-ponti-2026",
+      "title": "Fondazione Cariplo — \"Nuovi ponti culturali\" (culture as connective tissue of communities)",
+      "funder": "Fondazione Cariplo",
+      "channel": "public-fund",
+      "link": "https://www.fondazionecariplo.it/bando/nuovi-ponti-culturali/",
+      "deadline": "",
+      "budget": "€30,000–€150,000 per project (up to 70% of total cost); €4.5M total pot",
+      "eligibility": "Lead applicant must be a private NON-PROFIT cultural organisation (statute's main purpose = running cultural activities/places), active ≥1 year, based/active in Lombardy or Piedmont. INLAND (a for-profit publisher) is NOT an eligible lead — it joins as documentation/publishing partner of a Lombardy/Piedmont non-profit lead.",
+      "fit": 3,
+      "fitRationale": "The single most on-profile foundation in INLAND's home region and absent from the board; funds the 'Pluralismo' strand (artistic-cultural production reflecting under-represented communities) — a clean home for an INLAND edition on a Lombardy/Piedmont minority. Held at 3 by the non-profit-lead requirement (INLAND must partner, not lead) and the audience/representation framing.",
+      "territory": "Lombardy / Piedmont (funder geography) — lead candidates per research-angle.md: the Walser Germanic Alpine language islands (Macugnaga, Alagna Valsesia, Formazza — endangered Töitschu/Titsch, high-Alpine transhumance, timber architecture, seasonal festivals); Orobie/Valtellina 'bergamini' transhumance & mountain-dairy cycle; Cremona violin-making (UNESCO ICH, named luthier custodians).",
+      "requiredDocs": [
+        "Project concept (audiences/representation aim; custodians, places, seasonal scenes; cultural-bridge rationale)",
+        "Lombardy/Piedmont non-profit cultural organisation as LEAD applicant + INLAND as documentation/publishing partner (letters)",
+        "Budget showing ≥30% co-funding (grant ≤70%) and work plan",
+        "Timeline",
+        "Track record (published issues; partner's cultural activity)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/fondazione-cariplo-nuovi-ponti-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "Rolling — NO deadline ('senza scadenza'); open until the €4.5M pot is exhausted (deadline field intentionally blank). Binding constraint: the lead must be a Lombardy/Piedmont non-profit cultural org — line one up with INLAND as publishing/documentation partner. Official site egress-blocked at scan — confirm on the bando whether a for-profit publisher may be a named non-lead partner, the eligible-cost list, and that funds remain open. Theme is 'Nuovi pubblici'/'Pluralismo' (audiences & representation), so frame around an under-represented Lombardy/Piedmont community.",
+      "addedBy": "scout",
+      "addedAt": "2026-10-07",
+      "history": [],
+      "votes": {},
+      "country": "Italy (Lombardy/Piedmont)"
+    },
+    {
+      "id": "regione-lombardia-cultura-2026",
+      "title": "Regione Lombardia — cultural contributi 2026 (l.r. 50/86 iniziative di rilievo regionale; Avviso Unico Cultura)",
+      "funder": "Regione Lombardia — Assessorato alla Cultura",
+      "channel": "public-fund",
+      "link": "https://www.bandi.regione.lombardia.it/",
+      "deadline": "2026-11-16",
+      "budget": "l.r. 50/86: €2,500–€20,000 per initiative (fondo perduto; €990k pot). Avviso Unico Cultura 2026: contributi by ambito (patrimonio culturale, spettacolo, musei, biblioteche/archivi).",
+      "eligibility": "Public and private NON-PROFIT bodies (associations, foundations, committees, APS, social cooperatives, public entities). INLAND (for-profit publisher) is not a direct beneficiary — it participates via a Lombardy non-profit cultural partner hosting the manifestazione/patrimonio project, with INLAND as documentation & publishing partner.",
+      "fit": 3,
+      "fitRationale": "Genuine public money in INLAND's own region and absent from the board; low-burden and recurring. Held at 3: l.r. 50/86 funds events/exhibitions ('manifestazioni di rilievo regionale'), not a magazine, and both lines require a non-profit beneficiary — best as a Lombardy exhibition/public-programme foothold (or a patrimonio-documentation line via the Avviso Unico) accessed through a non-profit partner.",
+      "territory": "Lombardy (funder geography) — per research-angle.md: Cremona violin-making (UNESCO ICH; named luthier custodians); Orobie/Valtellina 'bergamini' transhumance; Po valley/Lomellina water-and-rice cultures (mondine memory, river fishing).",
+      "requiredDocs": [
+        "Domanda on the Bandi e Servizi platform (SPID/CIE), submitted by the non-profit lead",
+        "Description of the initiative/manifestazione of regional significance (or patrimonio project) with INLAND's documentation/publishing role",
+        "Budget (fondo perduto; co-funding as required) and programme/work plan",
+        "Timeline and Lombardy venue/partner",
+        "Track record (published issues; partner's activity)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/regione-lombardia-cultura-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "LIVE: l.r. 50/86 sportello open until 16 Nov 2026 (deadline field points there) — ~40 days out, not URGENT but near. Avviso Unico Cultura 2026 runs on separate windows — confirm the current one. Binding constraint: beneficiary must be a non-profit body, so secure a Lombardy non-profit cultural host with INLAND as partner. Confirm exact 2026 windows, beneficiary list and eligible costs on bandi.regione.lombardia.it (l.r. 50/86 and the patrimonio ambito of the Avviso Unico).",
+      "addedBy": "scout",
+      "addedAt": "2026-10-07",
+      "history": [],
+      "votes": {},
+      "country": "Italy (Lombardy)"
+    },
+    {
+      "id": "bagri-foundation-asian-culture-2026",
+      "title": "Bagri Foundation — Arts & Culture Grants (traditional/contemporary Asian culture)",
+      "funder": "The Bagri Foundation (UK)",
+      "channel": "cultural-institute",
+      "link": "https://www.bagrifoundation.org/",
+      "deadline": "",
+      "budget": "£5,000–£150,000 (typically 10–40% of total project cost)",
+      "eligibility": "Lead applicant must be a UK registered charity, CIO, CIC, exempt charity or experienced creative collective (individuals NOT eligible); project must include established/mid-career artists from Asia or the diasporas and yield a tangible public outcome. INLAND is not an eligible lead — it joins via a UK not-for-profit host + an Asian/diaspora artist-principal.",
+      "fit": 3,
+      "fitRationale": "A rare grant that could underwrite INLAND's under-funded Asian editions (Uzbekistan research, Kashmir in-progress) at production scale (up to £150k). Held at 3 by a double constraint: a UK not-for-profit must lead and an Asia/diaspora artist must be a principal, so INLAND reaches it only through a structured partnership (mirrors the British Council CTC UK-host pattern).",
+      "territory": "INLAND's Asian pipeline — Uzbekistan (Boysun spring rituals/UNESCO ICH; Bukhara suzani & last master artisans; Karakalpak life on the dried Aral) or Kashmir (carried by a Kashmiri-diaspora artist: Baand Pather, wanwun songs, Karewa saffron), with the loud story kept as background per research-angle.md.",
+      "requiredDocs": [
+        "Expression of Interest, then full application, submitted by the UK not-for-profit lead",
+        "Project concept promoting the sharing of Asian culture, naming the Asia/diaspora artist(s) and the tangible public outcome",
+        "Budget showing co-financing (grant = 10–40% of costs)",
+        "Timeline / delivery plan",
+        "Track records (UK host; published issues; the Asian artist's practice)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/bagri-foundation-asian-culture-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "RADAR / annual two-stage — the 2026/27 round's EOI ran 9 Feb–11 Mar 2026 (full apps 17 Apr 2026) and is CLOSED; next round expected to re-open ~autumn 2026 (deadline field blank until confirmed). Binding constraints: a UK not-for-profit lead + an artist from Asia/the diasporas, grant only 10–40% of costs. Confirm the next EOI window and whether a non-UK editorial partner may be named, on bagrifoundation.org. Pairs with the Uzbekistan/Kashmir editions, which lack dedicated funding on the board.",
+      "addedBy": "scout",
+      "addedAt": "2026-10-07",
+      "history": [],
+      "votes": {},
+      "country": "Uzbekistan / Kashmir (UK-hosted)"
     }
   ]
 }
