@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-10-07T00:00:00.000Z",
+    "lastUpdated": "2026-10-21T06:30:34.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -1018,12 +1018,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/phmuseum-women-photographers-2026/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "Reduced entry fee €25 until 19 Sept, €30 until 10 Oct; judging Oct–Nov, shortlist before 20 Nov. Confirm 2026 cash split and final entry date on the official grant page.",
       "addedBy": "scout",
       "addedAt": "2026-07-01",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "country": ""
     },
@@ -1053,12 +1062,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/le-stanze-immagini-trame-acqua-2026/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "Free entry; submit by email (opencallstanze@gmail.com). Deadline 30 Sep 2026 unless extended. Official page 403'd automated fetch — re-verify specs, rights and any production/travel contribution on lestanzedellafotografia.it.",
       "addedBy": "scout",
       "addedAt": "2026-07-08",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "country": "Italy"
     },
@@ -1088,12 +1106,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/eidolon-grant-vernacular-2026/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "Free entry; deadline 30 Sep 2026 23:59. Confirm the exact split of the €25k across categories, whether an organisation (not only an individual) may apply, and whether newly commissioned (vs archive-based) work qualifies, on everydayphotography.org.",
       "addedBy": "scout",
       "addedAt": "2026-07-08",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "country": ""
     },
@@ -1284,12 +1311,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/tom-stoddart-gost-2026/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "Deadline extended to 30 Sep 2026 on the GOST site; applicant is an individual photographer (nominate/partner with the edition photographer). Re-confirm final date and image spec on the Picter application page (site.picter.com/ippg-tomstoddart-gost-photobook-grant-2026).",
       "addedBy": "scout",
       "addedAt": "2026-07-22",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "country": ""
     },
@@ -1320,12 +1356,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/british-council-ctc-2026/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "URGENT — closes 12 Aug 2026 (opened 17 Jun 2026). Needs a named UK partner to be actionable (the binding constraint). Official FAQ 403'd automated fetch; re-verify Italy is in the 2026 country list, the exact Italy grant band, and whether a UK partner is mandatory on arts.britishcouncil.org before committing. Only pursue this cycle if a UK partner can be lined up quickly; else hold for the next round.",
       "addedBy": "scout",
       "addedAt": "2026-07-22",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "country": ""
     },
@@ -1355,12 +1400,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/photovogue-open-call-2026/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "Submissions 14 May–11 Sep 2026. Weak/opportunistic fit — confirm exact terms, any entry fee, and rights/usage on the official PhotoVogue open-call page, and judge whether an INLAND series can honestly answer the 'rebellion' brief before entering; if not, skip.",
       "addedBy": "scout",
       "addedAt": "2026-07-22",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "country": ""
     },
@@ -1391,12 +1445,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/iwmf-women-journalists-2026/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "Rolling — no fixed deadline (date shown is a nominal placeholder); decisions ~4–6 weeks after submission. Register the edition's woman photographer/writer as applicant. Official IWMF page 403'd automated fetch — confirm the current grant ceiling, eligible-expense list and any distribution requirement on iwmf.org / the Submittable portal. Companion: Kari Howard Fund for Narrative Journalism closed 12 Jul 2026 (annual) — watch 2027.",
       "addedBy": "scout",
       "addedAt": "2026-07-29",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "country": ""
     },
@@ -1427,12 +1490,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/culture-moves-europe-mobility-2026/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "RADAR / between rounds — the 2025–26 rolling call CLOSED 30 Apr 2026. Deadline shown (~31 Oct 2026) is an ESTIMATE for the next round, which historically re-opens in autumn with monthly review windows. Confirm the next call's opening and monthly deadlines on goethe.de/cmm and culture.ec.europa.eu before acting. A host/contact in the destination country is usually expected. Mobility only — pair with a production fund to finance the edition.",
       "addedBy": "scout",
       "addedAt": "2026-07-29",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "country": ""
     },
@@ -1501,12 +1573,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/european-heritage-hub-small-grants-2026/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "URGENT — closes 7 Sep 2026 (call opened ~20 Jul 2026). Binding constraint: the LEAD applicant must be an in-region civil-society / not-for-profit organisation, so this is only actionable if an Albanian (or Georgian/Armenian) heritage NGO can be lined up quickly with INLAND as documentation/publishing partner. Official site blocked automated fetch — confirm on europeanheritagehub.eu whether an EU/Italy publisher may be a named (non-lead) partner, the exact per-strand budgets, eligible costs, and project duration before committing. Distinct from CC4WBs 'Culture and Creativity for the Western Balkans' (small grants for individuals, referenced in the Albania brief).",
       "addedBy": "scout",
       "addedAt": "2026-08-19",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "country": "Albania / Georgia / Armenia (partner-led)"
     },
@@ -1644,12 +1725,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/leica-oskar-barnack-loba-2026/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "RADAR: 2026 cycle judged (winners announced 8 Oct 2026); annual — next cycle 2027 (deadline field is an estimate, confirm on official site; the open Women Grant historically opens H1). Two routes: LOBA Women Grant (open submission) or getting an edition photographer onto a nominator's radar for the Main Award — the highest-value action is relationship-building, flag for the humans.",
       "addedBy": "scout",
       "addedAt": "2026-09-02",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "country": ""
     },
@@ -1681,12 +1771,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/journalismfund-crossborder-2026/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "Near deadline — next round closes 1 Oct 2026, 1 PM CET (four rounds/year: 19 Mar, 21 May, 30 Jul, 1 Oct), so a missed round rolls to the next. Binding constraint: a collaborator in a second European country. Official site (journalismfund.eu / grants.journalismfund.eu) egress-blocked from the scan — figures from the Journalismfund grants platform and reputable secondaries; re-confirm the 1 Oct round, per-round budget and eligible costs before applying. Lighter/faster than Creative Europe Cooperation (no consortium/co-financing); unlike Culture Moves Europe it funds the reporting/production, not just mobility.",
       "addedBy": "scout",
       "addedAt": "2026-09-09",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "country": ""
     },
@@ -1716,12 +1815,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/sony-world-photography-2027/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "Open for entries now; Series (formerly 'Professional') deadline 12 Jan 2027, 1 PM GMT. Free to enter. worldphoto.org / sony.eu press centre egress-blocked from the scan — details from the Sony 2027 competition-launch release and reputable secondaries; re-confirm the deadline, the 2027 category list (Professional renamed 'Series', new categories added) and image specs. Applicant is the photographer — decide which edition photographer carries it and confirm image rights before entry. Different jury/platform/zero cost vs the board's other photo prizes (Smith, PhMuseum, Tom Stoddart, LOBA, Cortona/BarTur).",
       "addedBy": "scout",
       "addedAt": "2026-09-09",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "country": ""
     },
@@ -1789,12 +1897,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/siae-per-chi-crea-2026/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "Verify the exact 2026 strand (e.g. Nuove Opere) and its per-project ceiling, and the individual-vs-collective-vs-entity eligibility, on the perchicrea.it bando before producing — site was egress-blocked at scan time. Deadline 29 Oct 2026 14:00; winners by 1 Mar 2027. Decisive question: can INLAND front the application under the under-35 rule?",
       "addedBy": "scout",
       "addedAt": "2026-09-16",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "country": "Italy"
     },
@@ -1825,12 +1942,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/world-press-photo-2027/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "RADAR: 2027 cycle opens ~1 Dec 2026, closes mid-Jan 2027 — exact dates/categories to confirm on worldpressphoto.org (egress-blocked at scan). Separate organisation from Sony/World Photography Organisation. Free entry.",
       "addedBy": "scout",
       "addedAt": "2026-09-23",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {}
     },
     {
@@ -1878,12 +2004,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/eunic-spaces-of-culture-2026/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "",
       "addedBy": "scout",
       "addedAt": "2026-09-30",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "id": "eunic-spaces-of-culture-2026",
       "title": "EUNIC — Spaces of Culture 2026 (Sub-Saharan Africa, cultural relations projects)",
@@ -1914,12 +2049,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/roberto-cimetta-fund-mobility-2026/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "",
       "addedBy": "scout",
       "addedAt": "2026-09-30",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "id": "roberto-cimetta-fund-mobility-2026",
       "title": "Roberto Cimetta Fund — General Fund for cultural & artistic mobility (Euro-MENA)",
@@ -1950,12 +2094,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/cap-prize-african-photography-2027/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "",
       "addedBy": "scout",
       "addedAt": "2026-09-30",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "id": "cap-prize-african-photography-2027",
       "title": "CAP Prize — International Prize for Contemporary African Photography (2027 cycle)",
@@ -2040,12 +2193,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/regione-lombardia-cultura-2026/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "LIVE: l.r. 50/86 sportello open until 16 Nov 2026 (deadline field points there) — ~40 days out, not URGENT but near. Avviso Unico Cultura 2026 runs on separate windows — confirm the current one. Binding constraint: beneficiary must be a non-profit body, so secure a Lombardy non-profit cultural host with INLAND as partner. Confirm exact 2026 windows, beneficiary list and eligible costs on bandi.regione.lombardia.it (l.r. 50/86 and the patrimonio ambito of the Avviso Unico).",
       "addedBy": "scout",
       "addedAt": "2026-10-07",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "country": "Italy (Lombardy)"
     },
@@ -2077,12 +2239,21 @@
           "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/bagri-foundation-asian-culture-2026/research-brief.md"
         }
       ],
-      "status": "new",
+      "status": "archived",
       "owner": "",
       "notes": "RADAR / annual two-stage — the 2026/27 round's EOI ran 9 Feb–11 Mar 2026 (full apps 17 Apr 2026) and is CLOSED; next round expected to re-open ~autumn 2026 (deadline field blank until confirmed). Binding constraints: a UK not-for-profit lead + an artist from Asia/the diasporas, grant only 10–40% of costs. Confirm the next EOI window and whether a non-UK editorial partner may be named, on bagrifoundation.org. Pairs with the Uzbekistan/Kashmir editions, which lack dedicated funding on the board.",
       "addedBy": "scout",
       "addedAt": "2026-10-07",
-      "history": [],
+      "history": [
+        {
+          "at": "2026-10-21T06:30:34.000Z",
+          "by": "claude",
+          "changes": {
+            "status": "archived",
+            "note": "Inbox cleanup requested by Riccardo: deadline passed, unverified, or lower-priority for end-2026/2027."
+          }
+        }
+      ],
       "votes": {},
       "country": "Uzbekistan / Kashmir (UK-hosted)"
     }
