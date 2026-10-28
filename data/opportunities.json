@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-10-21T06:30:34.000Z",
+    "lastUpdated": "2026-10-28T06:15:04.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -2256,6 +2256,116 @@
       ],
       "votes": {},
       "country": "Uzbekistan / Kashmir (UK-hosted)"
+    },
+    {
+      "id": "natgeo-human-thread-2026",
+      "title": "National Geographic Society — The Human Thread (storytelling on cultures & religions)",
+      "funder": "National Geographic Society (supported by Lilly Endowment Inc.)",
+      "channel": "public-fund",
+      "link": "https://www.nationalgeographic.org/explore/grants-investments",
+      "deadline": "2026-12-01",
+      "budget": "Level I up to US$20,000 (new to NGS, ~1 yr); Level II up to US$100,000 (established, ~2 yrs)",
+      "eligibility": "Open worldwide, applicants 18+ (apply in English, portfolio of prior media work). INLAND applies via its commissioned photographers/filmmakers; priority to those with lived experience or established relationships in the communities documented.",
+      "fit": 5,
+      "fitRationale": "Bullseye: a dedicated RFP (not the generic Explorer grant) within NatGeo's Human Histories & Cultures area, funding storytelling on the origins and living expressions of cultures and religions — documentary photography, film and oral history at production scale. INLAND's exact method; distinct from the now-closed Explorer Grants row.",
+      "territory": "Open worldwide — lead candidates in INLAND’s pipeline where faith/ritual origins and survivals are vivid: Armenia (research edition — oldest Christian culture with living pre-Christian survivals: Vardavar, duduk & sacred chant, highland pilgrimage, Yazidi shrine-keepers) or Georgia’s highland shrine faith (Khevsureti/Svaneti khati custodians).",
+      "requiredDocs": [
+        "Project proposal submitted to the specific Human Thread RFP on the NGS Funding Portal",
+        "Portfolio of prior media work",
+        "Budget (Level I or II)",
+        "Timeline (project start ≥ 6 months after deadline)",
+        "Evidence of relationship/access to the community"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/natgeo-human-thread-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "RFP window 1 Oct–1 Dec 2026 (applies to the specific Human Thread RFP, not the general grant form). Confirm exact eligibility, level routing (I vs II) and portfolio rules on the NGS Funding Portal before drafting.",
+      "addedBy": "scout",
+      "addedAt": "2026-10-28",
+      "history": [],
+      "votes": {},
+      "country": "Open (Armenia / Georgia candidate)"
+    },
+    {
+      "id": "aftermath-project-postconflict-2026",
+      "title": "The Aftermath Project — 2026 Post-Conflict Grant",
+      "funder": "The Aftermath Project",
+      "channel": "public-fund",
+      "link": "https://www.theaftermathproject.org/application/2026-post-conflict-grant-application",
+      "deadline": "2026-12-01",
+      "budget": "US$25,000 production grant to one photographer (+ up to four finalists); free to enter",
+      "eligibility": "Open to photographers of any nationality working on post-conflict issues anywhere in the world. INLAND applies via a commissioned photographer.",
+      "fit": 3,
+      "fitRationale": "Register tension, surfaced for the humans (as with Carmignac): the subject is post-conflict 'aftermath', which can clash with INLAND's continuity-over-crisis discipline — yet INLAND's own question ('what survived?') maps onto aftermath told as lived cultural continuity, not reportage. Pursue only on a territory where the aftermath is carried through craft, song, faith and return.",
+      "territory": "A post-conflict territory told through survival, not spectacle — candidates: returnee/displaced communities of the Western Balkans (e.g. Bosnia’s Drina valley — katun transhumance, dairy craft and feasts resuming in once-emptied villages) or Georgia’s Abkhaz/Ossetian displaced keeping polyphony and the supra.",
+      "requiredDocs": [
+        "Project statement (post-conflict framing, read through continuity)",
+        "Portfolio / prior cohesive body of work",
+        "Proposed-project image edit",
+        "Photographer bio / CV"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/aftermath-project-postconflict-2026/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "Deadline midnight PST 1 Dec 2026; free entry; winner + up to 4 finalists announced end Dec. Applicant is the photographer. Pursue only if an INLAND-register (continuity-not-crisis) angle on a post-conflict territory is agreed.",
+      "addedBy": "scout",
+      "addedAt": "2026-10-28",
+      "history": [],
+      "votes": {},
+      "country": "Open (Western Balkans / Georgia candidate)"
+    },
+    {
+      "id": "idfa-bertha-fund-europe-2027",
+      "title": "IDFA Bertha Fund — IBF Europe (minority co-production, creative documentary)",
+      "funder": "IDFA Bertha Fund (IBF Europe)",
+      "channel": "partnership",
+      "link": "https://professionals.idfa.nl/training-funding/funding/about-the-idfa-bertha-fund/",
+      "deadline": "2027-01-15",
+      "budget": "Up to €40,000 per project (co-production contribution)",
+      "eligibility": "Applicant must be the European minority co-producer (≥20% share) from a Creative Europe MEDIA country — INLAND (Italy) qualifies — on a creative documentary (≥60 min) whose director is from an IBF-eligible (Global-South / under-integrated) country. Entries open 15 Nov 2026.",
+      "fit": 3,
+      "fitRationale": "Funds the FILM strand of an INLAND edition (not the print magazine), and requires a real EU + non-EU co-production with an eligible-country director. Adjacent but genuinely usable: INLAND acts as European minority co-producer on the documentary accompanying a non-EU edition. Mid-production to post-production stage only.",
+      "territory": "Set by the eligible-country partner — natural fit: Rwanda (in-progress edition) with a Rwandan-led creative documentary on a living-tradition custodian, INLAND as European minority co-producer. (Georgia is now a Creative Europe country, so a Georgian director likely counts as European — keep an IBF-list territory as lead.)",
+      "requiredDocs": [
+        "Co-production agreement (European minority ≥20% + non-EU lead producer)",
+        "Director from an IBF-eligible country (per IBF Europe country list)",
+        "Creative documentary ≥60 min, mid-/post-production stage",
+        "Budget & financing plan",
+        "Project description / treatment"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/idfa-bertha-fund-europe-2027/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "IBF Europe next deadline 15 Jan 2027 (entries open 15 Nov 2026); IBF Classic 10 Feb 2027. Documentary series and immersive/interactive excluded. Confirm the IBF Europe country list and the 20% minority rule with idfaberthafund@idfa.nl; needs a lead non-EU producer/director partner (maps to the Rwanda film).",
+      "addedBy": "scout",
+      "addedAt": "2026-10-28",
+      "history": [],
+      "votes": {},
+      "country": "Rwanda (candidate co-production)"
     }
   ]
 }
