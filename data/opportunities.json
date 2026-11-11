@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-10-28T06:15:04.000Z",
+    "lastUpdated": "2026-11-11T06:21:50.166Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -2366,6 +2366,75 @@
       "history": [],
       "votes": {},
       "country": "Rwanda (candidate co-production)"
+    },
+    {
+      "id": "ronan-guillou-grant-2027",
+      "title": "Ronan Guillou Grant 2026/2027 (4th ed.) — “Eyes Wide Open” (humanity & the sea)",
+      "funder": "The Eyes Wide Open association (Ronan Guillou Grant), France",
+      "channel": "public-fund",
+      "link": "https://theeyeswideopen.eu/en/the-ronan-guillou-grants/",
+      "deadline": "2026-11-15",
+      "budget": "€4,000 grant + 2-month residency in Sète (Feb–Jun 2027) + exhibition Sept 2027 (Musée de l’Étang de Thau, FLOW Biennial)",
+      "eligibility": "Professional photographers from Europe and the southern shores of the Mediterranean. INLAND (Italy/EU) eligible via a commissioned photographer.",
+      "fit": 3,
+      "fitRationale": "Human–sea/ecology theme is core INLAND (Issue 03 Isole Minori proved the register), but held at 3 by the call’s ‘progressive/militant’ advocacy framing (vs INLAND’s continuity-over-crisis discipline), a fixed 2-month Sète residency + possible Occitanie-reference requirement, and a modest €4k budget. URGENT: deadline 15 Nov 2026.",
+      "territory": "Étang de Thau / Sète lagoon (Occitanie) if the geographic reference holds — Bouzigues oyster & mussel farmers, Thau lagoon small-craft fishers, salt/lagoon-edge livelihoods under warming-water pressure; else an open Mediterranean island/coastal angle bridging to Isole Minori",
+      "requiredDocs": [
+        "Project statement (sea/future-synergy angle, reframed to INLAND’s restrained voice)",
+        "Photographer bio",
+        "Portfolio / prior cohesive body of work (Issue 03 Isole Minori)",
+        "Confirm applicant photographer, consents, and feasibility of the 2-month Sète residency"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/ronan-guillou-grant-2027/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "URGENT — deadline 15 Nov 2026. Residency/exhibition opportunity (not open edition-territory funding). 2025 ed. required an Occitanie reference; unconfirmed for this edition. Primary-source domains blocked by the session network policy — details cross-corroborated across PhMuseum / L’Œil de la Photographie / All About Photo; confirm deadline, geographic requirement and residency terms on theeyeswideopen.eu.",
+      "addedBy": "scout",
+      "addedAt": "2026-11-11",
+      "history": [],
+      "votes": {}
+    },
+    {
+      "id": "fotodoks-care-2027",
+      "title": "FOTODOKS Open Call 2027 — “Care” (documentary photography festival, Munich)",
+      "funder": "FOTODOKS — Festival for Contemporary Documentary Photography (Munich)",
+      "channel": "partnership",
+      "link": "https://fotodoks.de",
+      "deadline": "2026-11-20",
+      "budget": "Free to enter; selected photographers get an artist fee from €500 (collectives more) + travel paid; exhibited at the festival (Munich, Oct 2027)",
+      "eligibility": "Open internationally; individuals, duos and collectives. One existing project of 5–10 images on the theme. INLAND eligible with an existing body of work.",
+      "fit": 3,
+      "fitRationale": "Serious contemporary-documentary festival in INLAND’s exact register; theme ‘Care’ maps onto custodianship/care of endangered knowledge, and it takes EXISTING work (near-zero burden — submit a finished edition edit). Held at 3 because it is exhibition/visibility with a modest fee, not edition funding. URGENT: deadline 20 Nov 2026.",
+      "territory": "No new territory needed — place an existing INLAND body of work under the ‘Care’ frame (Isole Minori island custodianship; or a Georgia/Faroe sequence on care of tradition & kin)",
+      "requiredDocs": [
+        "One project of 5–10 images on ‘Care’ (edit from an existing INLAND edition)",
+        "Short project statement (English or German)",
+        "Photographer / contributor credits"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/fotodoks-care-2027/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "URGENT — deadline 20 Nov 2026 (results ~March 2027). Free, low-burden visibility foothold (not edition funding). Primary-source domain blocked by the session network policy — details cross-corroborated across PhMuseum Awards / GoodStuffWeekly / Monographica / Fast Forward; one outlier listing showed a different theme, majority confirm ‘Care’. Confirm theme, deadline and fee on fotodoks.de.",
+      "addedBy": "scout",
+      "addedAt": "2026-11-11",
+      "history": [],
+      "votes": {}
     }
   ]
 }
