@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "lastUpdated": "2026-11-11T06:21:50.166Z",
+    "lastUpdated": "2026-11-18T06:11:56.000Z",
     "note": "Single source of truth for the INLAND opportunity pipeline. Written by the Scout (Claude), edited by collaborators via the dashboard, and read by the Producer (Claude). Do not rename fields without updating the dashboard and the _inland playbooks."
   },
   "opportunities": [
@@ -2435,6 +2435,73 @@
       "addedAt": "2026-11-11",
       "history": [],
       "votes": {}
+    },
+    {
+      "id": "fotofestiwal-lodz-2027",
+      "title": "Fotofestiwal (Łódź) — Open Call 2027 (Open Program / FUTURES nomination)",
+      "funder": "Fotofestiwal — International Festival of Photography, Łódź (Foundation of Visual Education)",
+      "channel": "partnership",
+      "link": "https://fotofestiwal.com/2026/en/open-program-2027/",
+      "deadline": "2026-11-30",
+      "budget": "6 projects exhibited; €1,000 artist fee each + ~€600 production & ~€300 travel (per organiser); possible FUTURES platform nomination; €15 entry (waivers on request)",
+      "eligibility": "Open to artists/collectives from anywhere, no subject or age restriction; lens-based/documentary work. INLAND (or its commissioned photographer) can submit an edition body of work.",
+      "fit": 3,
+      "fitRationale": "Respected international documentary-photography festival; exhibition + modest fee, not edition funding, but a possible FUTURES nomination is a Europe-wide visibility/relationship foothold. URGENT: closes 30 Nov 2026.",
+      "territory": "Open — any INLAND edition’s documentary body of work (e.g. Isole Minori / Georgia / Faroe archives), 15–25 image series",
+      "requiredDocs": [
+        "Project / image series (via Picter)",
+        "Project statement",
+        "Artist or collective bio",
+        "Entry fee €15 (or waiver request)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/fotofestiwal-lodz-2027/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "",
+      "addedBy": "scout",
+      "addedAt": "2026-11-18",
+      "history": []
+    },
+    {
+      "id": "belfast-photo-festival-2027",
+      "title": "Belfast Photo Festival 2027 — International Open Call (Open Submission)",
+      "funder": "Belfast Photo Festival",
+      "channel": "partnership",
+      "link": "https://www.belfastphotofestival.com/",
+      "deadline": "2027-02-05",
+      "budget": "Public exhibition (festival 3–27 Jun 2027); juried by Tate/MoMA/Centre Pompidou/PhotoVogue/NYT/IPFA; entry £22 early-bird (to 11 Dec 2026) / £26 standard. No cash grant.",
+      "eligibility": "Open worldwide to photographers, artists, curators, archives and collectives aged 16+; photographic/lens-based work. INLAND eligible.",
+      "fit": 3,
+      "fitRationale": "No set theme, so an INLAND edition’s existing essay fits with no reframing; high-profile jury (Tate, MoMA, Pompidou, PhotoVogue, NYT) makes selection a strong visibility/relationship foothold. Exposure, not production funding.",
+      "territory": "Open — any INLAND edition’s documentary body of work (finished, people-anchored series)",
+      "requiredDocs": [
+        "Body of work / image series (via Picter)",
+        "Project title + statement",
+        "Entry fee (£22 early-bird to 11 Dec 2026, else £26)"
+      ],
+      "researched": true,
+      "flagged": false,
+      "production": "none",
+      "documents": [
+        {
+          "label": "Research brief",
+          "url": "https://github.com/riccardol540-cloud/Inland-Opportunities/blob/main/editions/belfast-photo-festival-2027/research-brief.md"
+        }
+      ],
+      "status": "new",
+      "owner": "",
+      "notes": "",
+      "addedBy": "scout",
+      "addedAt": "2026-11-18",
+      "history": []
     }
   ]
 }
